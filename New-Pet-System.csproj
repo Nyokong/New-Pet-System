@@ -67,7 +67,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="back.jpg" />
     <Content Include="default.aspx" />
+    <Content Include="doc.jpg" />
+    <Content Include="doctor.jpg" />
+    <Content Include="dog.jpg" />
+    <Content Include="favicon.ico" />
+    <Content Include="favicon_index.ico" />
+    <Content Include="favicon_staff.ico" />
+    <Content Include="home.png" />
+    <Content Include="nwu.png" />
+    <Content Include="pet.jpg" />
+    <Content Include="pukke.png" />
+    <Content Include="vet.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -13,6 +13,7 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
+            width: 100%;
             /*background-image: url('back.jp \g');
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -29,6 +30,7 @@
         }
 
         header{
+            width: 100%;
             display: flex;
             padding: 0 5%;
             justify-content: space-between;
@@ -100,7 +102,8 @@
         }
 
         #middle1{
-            height: 100%;
+            width: 100%;
+            height: 500%;
             background-color: #FF7F50;
         }
 
@@ -153,7 +156,7 @@
         }
 
         .scroll-container {
-            height: 150%;
+            height: 350%;
             background-image: url("back.jpg");
             background-repeat: no-repeat;
             background-size: cover;
@@ -211,7 +214,7 @@
         .image-container {
             width: 100%;
             overflow: auto;
-      
+        
 
         img{
             float: left;
@@ -238,10 +241,72 @@
 
     </style>
 </head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+<body style="height: 579px">
+<form id="form1" runat="server">
+    <header>
+        <img src="" width="120" alt="Pet-Pals Logo"/>
+
+        <nav class="main-nav">
+            <a href="default.aspx" id="selected">Home </a>
+            <a href="contact.aspx"> Contact </a>
+            <a href="book.aspx"> Sign in </a>
+            <a href="about.aspx"> About </a>
+        </nav>
+
+    </header>
+
+    <section id="intro">
+        <div style="width: 50%;">
+            <h1> Best Local Vet In Free-State </h1>
+            <p> At Pet-Pals Animal Clinic, we're your local vet clinic committed to keeping pets healthy and tails wagging. With experienced care and a love for animals, we provide a stress-free haven where your furry companions' well-being is our top priority.</p>
+            <a href="" class="b-come"> Become a Member </a>
         </div>
-    </form>
+
+        <video controls="controls">
+            <source src="vetVideo.MOV"/>
+        </video>
+    </section>
+
+    <section id="middle1">
+        <h1> What we do at Pet-Pals Clinic </h1>
+      <div class="gallery-container">
+        <div class="image_container">
+          <div class="image-content">
+            <div class="pic"><img src="doctor.jpg" alt="Image 1"/></div>
+            <div class="pic"><img src="pet.jpg" alt="Image 2"/></div>
+            <div class="pic"><img src="vet.jpg" alt="Image 3"/></div>
+            <div class="pic"><img src="doc.jpg" alt="Image 4"/></div>
+            <div class="pic"><img src="dog.jpg" alt="Image 5"/></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="scroll-container">
+        <h1> Vision & Mission </h1>
+        <div class="scroll-content">
+            <div class="item">Advancing Animal Health and Well-being <br/> "Our vision is to lead in advancing the health and 
+                well-being of animals through exceptional veterinary care, innovative treatments, and dedicated client education."</div>
+            <div class="item">Championing Compassionate Care</div>
+            <div class="item">Elevating the Human-Animal Bond</div>
+            <div class="item">Pioneering Preventive Medicine</div>
+            <div class="item">Setting Standards of Excellence</div>
+            <div class="item">Empowering Pet Owners</div>
+            <div class="item">Community-Centered Animal Care</div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
+
+        <div class="image-container">
+            <img src="pukke.png" alt="North-West University (Potch)" width="150"/>
+            <p> Team 7 - System Analyst Corp </p>
+        </div>
+
+    </footer>
+
+</form>
+
 </body>
 </html>

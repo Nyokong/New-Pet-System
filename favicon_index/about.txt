@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Montaga
+- Font Author: Copyright (c) 2011, Alejandra Rodriguez (ale_guez@yahoo.com.ar http://twitter.com/ale_guez), with Reserved Font Name "Montaga"
+- Font Source: http://fonts.gstatic.com/s/montaga/v13/H4cnBX2Ml8rCkEO_0gYQ7LO5mqc.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

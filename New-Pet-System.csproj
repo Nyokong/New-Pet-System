@@ -72,9 +72,25 @@
     <Content Include="doc.jpg" />
     <Content Include="doctor.jpg" />
     <Content Include="dog.jpg" />
-    <Content Include="favicon.ico" />
-    <Content Include="favicon_index.ico" />
-    <Content Include="favicon_staff.ico" />
+    <Content Include="favicon_client\android-chrome-192x192.png" />
+    <Content Include="favicon_client\android-chrome-512x512.png" />
+    <Content Include="favicon_client\apple-touch-icon.png" />
+    <Content Include="favicon_client\favicon-16x16.png" />
+    <Content Include="favicon_client\favicon-32x32.png" />
+    <Content Include="favicon_client\favicon.ico" />
+    <Content Include="favicon_index\about.txt" />
+    <Content Include="favicon_index\android-chrome-192x192.png" />
+    <Content Include="favicon_index\android-chrome-512x512.png" />
+    <Content Include="favicon_index\apple-touch-icon.png" />
+    <Content Include="favicon_index\favicon-16x16.png" />
+    <Content Include="favicon_index\favicon-32x32.png" />
+    <Content Include="favicon_index\favicon_index.ico" />
+    <Content Include="favicon_io\android-chrome-192x192.png" />
+    <Content Include="favicon_io\android-chrome-512x512.png" />
+    <Content Include="favicon_io\apple-touch-icon.png" />
+    <Content Include="favicon_io\favicon-16x16.png" />
+    <Content Include="favicon_io\favicon-32x32.png" />
+    <Content Include="favicon_io\favicon_staff.ico" />
     <Content Include="home.png" />
     <Content Include="nwu.png" />
     <Content Include="pet.jpg" />
@@ -94,6 +110,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="favicon_client\site.webmanifest" />
+    <Content Include="favicon_client\Thumbs.db" />
+    <Content Include="favicon_index\site.webmanifest" />
+    <Content Include="favicon_index\Thumbs.db" />
+    <Content Include="favicon_io\site.webmanifest" />
+    <Content Include="favicon_io\Thumbs.db" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

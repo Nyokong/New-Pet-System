@@ -80,6 +80,7 @@
     <Content Include="pet.jpg" />
     <Content Include="pukke.png" />
     <Content Include="vet.jpg" />
+    <Content Include="vetVideo.MOV" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

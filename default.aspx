@@ -248,9 +248,10 @@
 
         <nav class="main-nav">
             <a href="default.aspx" id="selected">Home </a>
-            <a href="contact.aspx"> Contact </a>
-            <a href="book.aspx"> Sign in </a>
             <a href="about.aspx"> About </a>
+            <a href="book.aspx"> Sign In </a>
+            <a href="faq.aspx"> FAQs </a>
+           <a href="contact.aspx"> Contact Us</a>
         </nav>
 
     </header>

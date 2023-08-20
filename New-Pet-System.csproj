@@ -67,11 +67,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="about.aspx" />
     <Content Include="back.jpg" />
+    <Content Include="contact.aspx" />
     <Content Include="default.aspx" />
     <Content Include="doc.jpg" />
     <Content Include="doctor.jpg" />
     <Content Include="dog.jpg" />
+    <Content Include="faq.aspx" />
     <Content Include="favicon_client\android-chrome-192x192.png" />
     <Content Include="favicon_client\android-chrome-512x512.png" />
     <Content Include="favicon_client\apple-touch-icon.png" />
@@ -95,11 +98,26 @@
     <Content Include="nwu.png" />
     <Content Include="pet.jpg" />
     <Content Include="pukke.png" />
+    <Content Include="signin.aspx" />
     <Content Include="vet.jpg" />
     <Content Include="vetVideo.MOV" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -107,7 +125,21 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="faq.aspx.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="faq.aspx.designer.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="signin.aspx.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signin.aspx.designer.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon_client\site.webmanifest" />

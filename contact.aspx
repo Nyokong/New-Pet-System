@@ -59,6 +59,10 @@
             margin: 50px auto;
         }
 
+        .map{
+            padding: 50px;
+        }
+
         .contact-box{
             background: #fff;
             display: flex;
@@ -77,10 +81,13 @@
         }
 
         h1{
+            margin-left: 25px;
             margin-bottom: 10px;
         }
 
         .container p{
+            font-size: 16px;
+            margin-left: 25px;
             margin-bottom: 40px;
         }
 
@@ -196,8 +203,12 @@
     </header>
 
     <div class="container">
-        <h1> Connect With Us </h1>
+        <h1 style="font-size: 36px;"> Connect With Us </h1><br/><br />
         <p> We would love to respond to your queries and help you succeed.<br /> Feel free to get in touch with us</p>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28489.56224448469!2d27.77220117431641!3d-26.801909999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e945c37a16813ab%3A0xf28285d687df2f8e!2sSasolburg%20Veterinary%20%2F%20Veearts!5e0!3m2!1sen!2sza!4v1692491936921!5m2!1sen!2sza" width="900" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
         <div class="contact-box">
             <div class="contact-left">

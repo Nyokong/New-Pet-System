@@ -74,6 +74,7 @@
     <Content Include="doc.jpg" />
     <Content Include="doctor.jpg" />
     <Content Include="dog.jpg" />
+    <Content Include="download.png" />
     <Content Include="faq.aspx" />
     <Content Include="favicon_client\android-chrome-192x192.png" />
     <Content Include="favicon_client\android-chrome-512x512.png" />
@@ -99,6 +100,7 @@
     <Content Include="pet.jpg" />
     <Content Include="pukke.png" />
     <Content Include="signin.aspx" />
+    <Content Include="signup.aspx" />
     <Content Include="vet.jpg" />
     <Content Include="vetVideo.MOV" />
     <Content Include="Web.config" />
@@ -140,6 +142,13 @@
     <Compile Include="signin.aspx.designer.cs">
       <DependentUpon>signin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="signup.aspx.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup.aspx.designer.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon_client\site.webmanifest" />
@@ -172,6 +181,8 @@
           <DevelopmentServerPort>59040</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>https://localhost:44393/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>https://localhost:44393/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -11,7 +11,7 @@
     <style type="text/css">
 
         body{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Roboto;
             margin: 0;
         }
 
@@ -58,7 +58,7 @@
         .image-container {
             width: 100%;
             overflow: auto;
-        
+        }
 
         img{
             float: left;
@@ -80,14 +80,14 @@
 </head>
 <body>
     <header>
-        <img src="" width="120" alt="Pet-Pals Logo"/>
+        <!--<img src="" width="120" alt="Pet-Pals Logo"/>-->
 
         <nav class="main-nav">
-            <a href="default.aspx"> Home </a>
+            <!--<a href="default.aspx"> Home </a>
             <a href="about.aspx" id="selected"> About </a>
             <a href="signin.aspx"> Sign In </a>
             <a href="faq.aspx"> FAQs </a>
-            <a href="contact.aspx"> Contact Us</a>
+            <a href="contact.aspx"> Contact Us</a>-->
         </nav>
 
     </header>

@@ -7,6 +7,7 @@
     <title>Pet-Pals Animal Clinic</title>
 
     <link rel="icon" type="image/jpg" href="favicon_index/favicon.ico"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style type="text/css">
 
@@ -96,9 +97,9 @@
             background-color: #454fc1;
         }
 
-        video{
-            width: 40%;
-            border-radius: 20px;
+        #intro-video{
+            width: 500px;
+            height: auto;
         }
 
         #middle1{
@@ -214,7 +215,7 @@
         .image-container {
             width: 100%;
             overflow: auto;
-        
+        }
 
         img{
             float: left;
@@ -244,7 +245,7 @@
 <body style="height: 579px">
 <form id="form1" runat="server">
     <header>
-        <img src="" width="120" alt="Pet-Pals Logo"/>
+        <img src="download.png" width="120" alt="Pet-Pals Logo"/>
 
         <nav class="main-nav">
             <a href="default.aspx" id="selected">Home </a>
@@ -260,11 +261,12 @@
         <div style="width: 50%;">
             <h1> Best Local Vet In Free-State </h1>
             <p> At Pet-Pals Animal Clinic, we're your local vet clinic committed to keeping pets healthy and tails wagging. With experienced care and a love for animals, we provide a stress-free haven where your furry companions' well-being is our top priority.</p>
-            <a href="" class="b-come"> Become a Member </a>
+            <a href="signup.aspx" class="b-come"> Become a Member </a>
         </div>
 
-        <video controls="controls">
-            <source src="vetVideo.MOV"/>
+        <video id="intro-video" controls="controls" autoplay="autoplay">
+            <source src="vetVideo.MOV" />
+            Your browser does not support the video tag.
         </video>
     </section>
 
@@ -309,5 +311,29 @@
 
 </form>
 
+    <script>
+        var myVideo = document.getElementById("intro-video");
+
+
+        $(document).ready(function () {
+            var myVideo = document.getElementById("intro-video");
+
+            $.ajax({
+                url: "default.aspx",
+                success: function (data) {
+                    $(myVideo).html(data);
+
+                    if (myVideo.paused) {
+                        console.log("The video is paused");
+                        myVideo.play();
+                    } else {
+                        console.log("The video is playing");
+                    }
+                }
+            });
+
+        });
+
+    </script>
 </body>
 </html>

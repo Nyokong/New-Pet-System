@@ -58,7 +58,7 @@
         .image-container {
             width: 100%;
             overflow: auto;
-        
+        }
 
         img{
             float: left;
@@ -80,14 +80,14 @@
 </head>
 <body>
     <header>
-        <img src="" width="120" alt="Pet-Pals Logo"/>
+        <!--<img src="" width="120" alt="Pet-Pals Logo"/>-->
 
         <nav class="main-nav">
-            <a href="default.aspx"> Home </a>
+            <!--<a href="default.aspx"> Home </a>
             <a href="about.aspx"> About </a>
             <a href="contact.aspx"> Sign In </a>
             <a href="faq.aspx" id="selected"> FAQs </a>
-            <a href="contact.aspx"> Contact Us</a>
+            <a href="contact.aspx"> Contact Us</a>-->
         </nav>
 
     </header>

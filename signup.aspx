@@ -1,12 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="New_Pet_System.contact" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signup.aspx.cs" Inherits="New_Pet_System.signup" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Contact Us</title>
-
-    <link rel="icon" type="image/jpg" href="favicon_io/favicon.ico"/>
+    <title>Pet-Pals | Sign-Up</title>
+     <link rel="icon" type="image/jpg" href="favicon_io/favicon.ico"/>
 
     <style type="text/css">
 
@@ -186,35 +185,11 @@
         }
 
     </style>
-
 </head>
 <body>
-     <header>
-        <!--<img src="" width="120" alt="Pet-Pals Logo"/>-->
-
-        <nav class="main-nav">
-           <a href="default.aspx">Home </a>
-            <a href="about.aspx"> About </a>
-            <a href="signin.aspx"> Sign In </a>
-            <a href="faq.aspx"> FAQs </a>
-            <a href="contact.aspx" id="selected"> Contact Us</a>
-        </nav>
-
-    </header>
-
-    <div class="container">
-        <h1 style="font-size: 36px;"> Connect With Us </h1><br/><br />
-        <p> We would love to respond to your queries and help you succeed.<br /> Feel free to get in touch with us</p>
-
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28489.56224448469!2d27.77220117431641!3d-26.801909999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e945c37a16813ab%3A0xf28285d687df2f8e!2sSasolburg%20Veterinary%20%2F%20Veearts!5e0!3m2!1sen!2sza!4v1692491936921!5m2!1sen!2sza" width="900" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-        <div class="contact-box">
-            <div class="contact-left">
-                <h3> Send your request </h3>
-
-                <form>
+    <form id="form1" runat="server">
+        <div class="form-container">
+            
                     <div class="input-row">
                         <div class="input-group">
                             <label> Name: </label>
@@ -244,49 +219,8 @@
 
                     <button type="submit"> SEND </button>
 
-                </form>
-            </div>
-            <div class="contact-right">
-                <h3> Reach Us </h3>
-
-                <table>
-                    <tr>
-                        <td> Email: </td>
-                        <td> petpalsclinic@outlook.com </td>
-                    </tr>
-
-                    <tr>
-                        <td> Phone: </td>
-                        <td> +27 18 789 9273</td>
-                    </tr>
-
-                    <tr>
-                        <td> Address: </td>
-                        <td>   #928, Albert Luthuli Rd <br/>
-                               Cresta Bengarulu, Koromangla <br/>
-                               Sasolburg, Free State <br />
-                               2798
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <form id="form1" runat="server">
-        <div>
+               
         </div>
     </form>
-
-    <footer class="footer">
-        <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
-
-        <div class="image-container">
-            <img src="pukke.png" alt="North-West University (Potch)" width="150"/>
-            <p> Team 7 - System Analyst Corp </p>
-        </div>
-
-    </footer>
-
 </body>
 </html>

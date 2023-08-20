@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signin.aspx.cs" Inherits="New_Pet_System.signin" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signin.aspx.cs" Inherits="New_Pet_System.signin" %>
 
 <!DOCTYPE html>
 
@@ -11,11 +11,12 @@
     <style type="text/css">
 
         body{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family :Arial, Arial, Helvetica, sans-serif;
             margin: 0;
         }
 
         header{
+            width: 100%;
             display: flex;
             padding: 0 5%;
             justify-content: space-between;
@@ -46,9 +47,14 @@
         #selected{color: #5762D5}
 
         .footer{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+
             padding: 20px;
             background-color: #483D8B;
-            height: 180px;
+            height: 150px;
             width: 100%;
             color: black;
             text-align: center;
@@ -80,14 +86,14 @@
 </head>
 <body>
      <header>
-        <!--<img src="" width="120" alt="Pet-Pals Logo"/>-->
+      <img src="download.png" width="120" alt="Pet-Pals Logo"/>
 
         <nav class="main-nav">
-            <!--<a href="default.aspx">Home </a>
+            <a href="default.aspx" id="selected">Home </a>
             <a href="about.aspx"> About </a>
-            <a href="signin.aspx" id="selected"> Sign In </a>
+            <a href="signin.aspx"> Sign In </a>
             <a href="faq.aspx"> FAQs </a>
-            <a href="contact.aspx"> Contact Us </a>-->
+           <a href="contact.aspx"> Contact Us</a>
         </nav>
     </header>
 
@@ -100,7 +106,7 @@
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
 
         <div class="image-container">
-            <img src="pukke.png" alt="North-West University (Potch)" width="150"/>
+            <img src="pukke.png" alt="North-West University (Potch)" width="100"/>
             <p> Team 7 - System Analyst Corp </p>
         </div>
 

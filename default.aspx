@@ -319,7 +319,7 @@
             var myVideo = document.getElementById("intro-video");
 
             $.ajax({
-                url: "default.aspx",
+                url: "/default.aspx",
                 success: function (data) {
                     $(myVideo).html(data);
 

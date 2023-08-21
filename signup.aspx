@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Pet-Pals | Sign-Up</title>
-     <link rel="icon" type="image/jpg" href="favicon_io/favicon.ico"/>
+     <link rel="icon" type="favicon_client" href="favicon_client/favicon.i-co"/>
 
     <style type="text/css">
 

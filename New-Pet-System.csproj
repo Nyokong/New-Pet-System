@@ -69,13 +69,19 @@
   <ItemGroup>
     <Content Include="about.aspx" />
     <Content Include="back.jpg" />
-    <Content Include="contact.aspx" />
-    <Content Include="default.aspx" />
+    <Content Include="contact.aspx">
+      <BrowseToURL>/contact.aspx</BrowseToURL>
+    </Content>
+    <Content Include="default.aspx">
+      <BrowseToURL>/default.aspx</BrowseToURL>
+    </Content>
     <Content Include="doc.jpg" />
     <Content Include="doctor.jpg" />
     <Content Include="dog.jpg" />
     <Content Include="download.png" />
-    <Content Include="faq.aspx" />
+    <Content Include="faq.aspx">
+      <BrowseToURL>/faq.aspx</BrowseToURL>
+    </Content>
     <Content Include="favicon_client\android-chrome-192x192.png" />
     <Content Include="favicon_client\android-chrome-512x512.png" />
     <Content Include="favicon_client\apple-touch-icon.png" />

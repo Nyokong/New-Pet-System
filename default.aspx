@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="New_Pet_System._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="/default.aspx.cs" Inherits="New_Pet_System._default" %>
 
 <!DOCTYPE html>
 
@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Pet-Pals Animal Clinic</title>
 
-    <link rel="icon" type="image/jpg" href="favicon_index/favicon_index.ico"/>
+   <link rel="icon" type="favicon_index" href="favicon_index/favicon_index.ico"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style type="text/css">
@@ -32,8 +32,8 @@
             display: flex;
             padding: 0 5%;
             justify-content: space-between;
-            box-shadow: 0px 10px 25px #000000;
-            height: 80px;
+            /*box-shadow: 0px 10px 25px #000000;*/
+            height: 30px;
             background-color: #F7C5CC;
         }
 
@@ -217,6 +217,7 @@
         img{
             float: left;
             margin-right: 10px;
+            height: 30px;
         }
 
         .footer p {

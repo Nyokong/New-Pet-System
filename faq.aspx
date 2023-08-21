@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Sign In</title>
 
-    <link rel="icon" type="image/jpg" href="favicon_io/favicon.ico"/>
+    <link rel="icon" type="image/jpg" href="favicon_client/favicon.ico"/>
 
     <style type="text/css">
 

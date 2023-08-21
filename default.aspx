@@ -321,7 +321,7 @@
             $.ajax({
                 url: "default.aspx",
                 success: function (data) {
-                    $(myVideo).html(data);
+                    //$(myVideo).html(data);
 
                     if (myVideo.paused) {
                         console.log("The video is paused");

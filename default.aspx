@@ -15,10 +15,7 @@
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             width: 100%;
-            /*background-image: url('back.jp \g');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;*/
+
         }
         .auto-style1 {
             width: 305px;

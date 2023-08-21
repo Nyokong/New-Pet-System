@@ -4,9 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Sign In</title>
+    <title>Frequently Asked Questions</title>
 
-    <link rel="icon" type="image/jpg" href="favicon_client/favicon.ico"/>
+    <link rel="icon" type="favicon_index" href="favicon_index/favicon_index.ico"/>
 
     <style type="text/css">
 
@@ -89,10 +89,10 @@
       <img src="download.png" width="120" alt="Pet-Pals Logo"/>
 
         <nav class="main-nav">
-            <a href="default.aspx" id="selected">Home </a>
+            <a href="default.aspx" >Home </a>
             <a href="about.aspx"> About </a>
             <a href="signin.aspx"> Sign In </a>
-            <a href="faq.aspx"> FAQs </a>
+            <a href="faq.aspx" id="selected"> FAQs </a>
            <a href="contact.aspx"> Contact Us</a>
         </nav>
     </header>

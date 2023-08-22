@@ -33,30 +33,10 @@
             justify-content: space-between;
             /*box-shadow: 0px 10px 25px #000000;*/
             height: 70px;
-            background-color: #2e2f37;
+            background-color: #4b4b5c;
         }
 
-        .main-nav{
-            display: flex;
-            padding: 10px;
-            column-gap: 80px;
-            padding: 20px;
-            margin: auto;
-        }
-
-        a{
-            text-decoration: none;
-            font-size: 20px;
-            color: #000000;
-            font-family: Arial, Arial, Helvetica, sans-serif;
-        }
-
-        .main-nav a:hover{
-            color: #fb6376;
-        }
-
-        #selected{color: #5762D5}
-
+        
         #intro{
             display: flex;
             width: 1100px;
@@ -240,9 +220,8 @@
         .logo-icon{
             height: 50px;
             width: auto;
-            margin:5px;
-            display: block;
-            vertical-align: central;
+            margin: 2.5px 25px;
+            display: flex;
         }
 
         .logo-icon img{
@@ -254,30 +233,59 @@
         .logo-icon #logo-name{
             color: white;
             width: 200px;
-            margin-left: 3px;
-            margin-right: 3px;
-            text-align: center;
+            display: flex;
+            margin: 0px 10px;
         }
+
+        .logo-icon #logo-name h1{
+            margin: 15px 0px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .main-nav{
+            display: flex;
+            padding: 10px;
+            column-gap: 80px;
+            padding: 20px;
+            margin: auto;
+        }
+
+        .main-nav a{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            font-family: Arial, Arial, Helvetica, sans-serif;
+        }
+
+        .main-nav a:hover{
+            color: #e23b3b;
+        }
+
+        #selected{color: #fa8282;}
+
 
     </style>
 </head>
 <body style="height: 579px">
 <form id="form1" runat="server">
-    <header>
+    <header class="header-menu">
         <div class="logo-icon">
             <img src="icons8-pet-100.png" width="120" alt="Pet-Pals Logo"/>
-            <h1 id="logo-name">
-                Pet Pals
-            </h1>
+            <div id="logo-name">
+                <h1 >Pet Pals</h1>
+            </div>
         </div>
 
-        <nav class="main-nav">
-            <a href="default.aspx" id="selected">Home </a>
-            <a href="about.aspx"> About </a>
-            <a href="signin.aspx"> Sign In </a>
-            <a href="faq.aspx"> FAQs </a>
-           <a href="contact.aspx"> Contact Us</a>
-        </nav>
+        <div class="nav-menu">
+            <nav class="main-nav">
+                <a href="default.aspx" id="selected">Home </a>
+                <a href="about.aspx"> About </a>
+                <a href="signin.aspx"> Sign In </a>
+                <a href="faq.aspx"> FAQs </a>
+               <a href="contact.aspx"> Contact Us</a>
+            </nav>
+        </div>
 
     </header>
 
@@ -349,7 +357,7 @@
 
                     if (myVideo.paused) {
                         console.log("The video is paused");
-                        myVideo.play();
+                        //myVideo.play();
                     } else {
                         console.log("The video is playing");
                     }

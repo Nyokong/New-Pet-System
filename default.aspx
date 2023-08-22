@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Pet-Pals Animal Clinic</title>
 
-   <link rel="icon" type="favicon_index" href="favicon_index/favicon_index.ico"/>
+   <link rel="icon" type="image/jpg" href="favicon_index/favicon_index.ico"/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style type="text/css">

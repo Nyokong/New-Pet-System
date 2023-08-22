@@ -82,11 +82,38 @@
             font-size: 16px;
         }
 
+        .logo-icon{
+            height: 50px;
+            width: auto;
+            margin:5px;
+            display: block;
+            vertical-align: central;
+        }
+
+        .logo-icon img{
+            height: 50px;
+            width: 50px;
+            margin: 5px;
+        }
+
+        .logo-icon #logo-name{
+            color: white;
+            width: 200px;
+            margin-left: 3px;
+            margin-right: 3px;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
      <header>
-      <img src="download.png" width="120" alt="Pet-Pals Logo"/>
+        <div class="logo-icon">
+            <img src="icons8-pet-100.png" width="120" alt="Pet-Pals Logo"/>
+            <h1 id="logo-name">
+                Pet Pals
+            </h1>
+        </div>
 
         <nav class="main-nav">
             <a href="default.aspx" >Home </a>

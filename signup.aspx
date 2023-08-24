@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Pet-Pals | Sign-Up</title>
-     <link rel="icon" type="favicon_client" href="favicon_client/favicon.i-co"/>
+     <link rel="icon" type="img/jpg" href="favicon_client/favicon.ico"/>
 
     <style type="text/css">
 
@@ -53,104 +53,49 @@
 
         #selected{color: #5762D5}
 
-        .container{
-            width: 80%;
+        form{
+            width: 400px;
+            background-color: #EEEFF1;
+            border: solid 1px #3c404a2f;
+            border-radius: 15px;
+            color:#3d414a;
+            padding: 25px;
             margin: 50px auto;
         }
 
-        .map{
-            padding: 50px;
+        .fields:focus{
+            border: solid 1px #57d596;
         }
 
-        .contact-box{
-            background: #fff;
-            display: flex;
-        }
-
-        .contact-left{
-            flex-basis: 60%;
-            padding: 40px 60px;
-        }
-
-        .contact-right{
-            flex-basis: 40%;
-            padding: 40px;
-            background-color: #1c00b5;
-            color: #fff;
-        }
-
-        h1{
-            margin-left: 25px;
-            margin-bottom: 10px;
-        }
-
-        .container p{
+        .fields{
+            width: 94%;
             font-size: 16px;
-            margin-left: 25px;
-            margin-bottom: 40px;
-        }
-
-        .input-row{
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .input-row .input-group{
-            flex-basis: 45%;
-        }
-
-        input{
-            width: 100%;
+            padding: 5px 10px;
+            border-radius: 10px;
             border: none;
-            border-bottom: 1px solid #ccc;
-            outline: none;
-            padding-bottom: 5px;
+            margin-bottom: 17px;
         }
 
-        textarea{
-            width: 100%;
-            border: 1px solid #ccc;
-            outline: none;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        label{
-            margin-bottom: 6px;
-            display: block;
-            color: #1c00b5;
+        form a{
+            color: #5762D5;
+            text-decoration: none;
+            font-size: 16px;
         }
 
         button{
-            background-color: #1c00b5;
-            width: 100px;
+            width: 100%;
+            background-color: #5762D5;
             border: none;
-            outline: none;
-            color: #fff;
-            height: 35px;
-            border-radius: 30px;
-            margin-top: 20px;
-            box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+            border-radius: 10px;
+            color: white;
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
         }
 
-        .contact-left h3{
-            color: #1c00b5;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .contact-right h3{
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-
-        tr rd:first-child{
-            padding-right: 20px;
-        }
-
-        tr td{
-            padding-top: 20px; 
+        button:hover{
+            background-color: #4751c0;
+            cursor: pointer;
         }
 
         .footer{
@@ -187,40 +132,28 @@
     </style>
 </head>
 <body>
+
+    <h1> Signup </h1>
+
     <form id="form1" runat="server">
-        <div class="form-container">
+
+        <label for="name"> Full name: </label><br/>
+        <input class="fields" type="text" id="name" required="required"/><br/>
+
+        <label for="email"> Email: </label><br/>
+        <input class="fields" type="email" id="email" required="required"/><br/>
+
+        <label for="phone"> Phone number: </label><br/>
+        <input class="fields" type="tel" required="required"/><br/>
+
+        <label for="pass"> Password: </label><br/>
+        <input class="fields" type="password" id="pass" required="required"/><br/>
+
+        <input type="checkbox" id="agree" required="required"/><label for="agree"> I accept the <a href="google.com"> terms of use. </a></label><br/>
+
+        <br/><br/>
+        <button type="submit"> Signup</button>
             
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label> Name: </label>
-                            <input type="text" placeholder="Mr Moremi"/> 
-                        </div>
-
-                        <div class="input-group">
-                            <label> Cellphone: </label>
-                            <input type="text" placeholder="+27 67 864 0387"/> 
-                        </div>
-                    </div>
-
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label> Email: </label>
-                            <input type="email" placeholder="olebogengmoremi84@gmail.com"/> 
-                        </div>
-
-                        <div class="input-group">
-                            <label> Subject: </label>
-                            <input type="text" placeholder="Vet Service"/> 
-                        </div>
-                    </div>
-
-                    <label> Message </label>
-                    <textarea rows="5" placeholder="Your Message"></textarea>
-
-                    <button type="submit"> SEND </button>
-
-               
-        </div>
     </form>
 </body>
 </html>

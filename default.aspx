@@ -10,6 +10,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style type="text/css">
+        :root {
+          --nav_background : #1d1d1f;
+          --nav-btn-bg-color: #4f4b4b;
+          
+          --nav-height : 70px;
+        }
 
         body{
             font-family: Arial, Helvetica, sans-serif;
@@ -32,8 +38,15 @@
             display: flex;
             justify-content: space-between;
             /*box-shadow: 0px 10px 25px #000000;*/
-            height: 70px;
-            background-color: #4b4b5c;
+            height: var(--nav-height);
+            background-color: var(--nav_background);
+        }
+
+        <!--Super links-->
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         
@@ -251,6 +264,11 @@
             margin: auto;
         }
 
+        .nav-menu{
+            display: flex;
+            height: var(--nav-height);
+        }
+
         .main-nav a{
             text-decoration: none;
             font-size: 20px;
@@ -263,6 +281,33 @@
         }
 
         #selected{color: #fa8282;}
+
+        .nav-menu .signup-signin-nav{
+            height: var(--nav-height ) ;
+            width:auto;
+            padding: 0px 20px;
+            margin: 0px 20px;
+            display: flex;
+        }
+
+        .nav-menu .signup-signin-nav #id-sign-up{
+            color: #fff;
+            margin: auto;
+            background-color: var(--nav-btn-bg-color);
+            height: calc(var(--nav-height) - 30px);
+            width: 100px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-menu .signup-signin-nav #id-sign-up:hover{
+            color: var(--nav-btn-bg-color);
+            background-color: #fff;
+        }
 
 
     </style>
@@ -279,27 +324,31 @@
 
         <div class="nav-menu">
             <nav class="main-nav">
-                <a href="default.aspx" id="selected">Home </a>
+                <!--<a href="default.aspx" id="selected">Home </a>-->
                 <a href="about.aspx"> About </a>
-                <a href="signin.aspx"> Sign In </a>
                 <a href="faq.aspx"> FAQs </a>
                <a href="contact.aspx"> Contact Us</a>
             </nav>
+            <div class="signup-signin-nav">
+                <a id="id-sign-up" href="signup.aspx"> Sign Up </a>
+            </div>
         </div>
 
     </header>
 
     <section id="intro">
-        <div style="width: 50%;">
+        <div id="id-tab-1" style="width: 50%;">
             <h1> Best Local Vet In Free-State </h1>
             <p> At Pet-Pals Animal Clinic, we're your local vet clinic committed to keeping pets healthy and tails wagging. With experienced care and a love for animals, we provide a stress-free haven where your furry companions' well-being is our top priority.</p>
             <a href="signup.aspx" class="b-come"> Become a Member </a>
         </div>
 
-        <video id="intro-video" controls="controls" autoplay="autoplay">
-            <source src="vetVideo.MOV" />
-            Your browser does not support the video tag.
-        </video>
+        <div id="id-tab-2">
+            <video id="intro-video" controls="controls" autoplay="autoplay">
+                <source src="vetVideo.MOV" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </section>
 
     <section id="middle1">

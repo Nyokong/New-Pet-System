@@ -377,7 +377,6 @@
             margin: 0px 10px;
             background-color: var(--nav-btn-bg-color);
         }
-
     </style>
 </head>
 <body style="height: 579px">

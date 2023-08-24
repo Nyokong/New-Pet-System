@@ -47,6 +47,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 70px;
+            background-color: #4b4b5c;
         }
 
         
@@ -332,6 +334,12 @@
             <div class="signup-signin-nav">
                 <a id="id-sign-up" href="signup.aspx"> Sign Up </a>
             </div>
+                <a href="default.aspx" id="selected">Home </a>
+                <a href="about.aspx"> About </a>
+                <a href="signin.aspx"> Sign In </a>
+                <a href="faq.aspx"> FAQs </a>
+               <a href="contact.aspx"> Contact Us</a>
+            </nav>
         </div>
 
     </header>

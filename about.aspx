@@ -136,8 +136,8 @@
             <img src="pukke.png" alt="North-West University (Potch)" width="100"/>
             <p> Team 7 - System Analyst Corp </p>
         </div>
-
+        <h1> new Changes guys </h1>
     </footer>
-
+    <h1> New COde is my code </h1>
 </body>
 </html>

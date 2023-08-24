@@ -68,6 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="App_Data\PetPalsClinic.mdf" />
+    <Content Include="App_Data\PetPalsClinic_log.ldf">
+      <DependentUpon>PetPalsClinic.mdf</DependentUpon>
+    </Content>
     <Content Include="back.jpg" />
     <Content Include="contact.aspx">
       <BrowseToURL>/contact.aspx</BrowseToURL>

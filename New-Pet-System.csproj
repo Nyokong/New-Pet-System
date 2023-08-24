@@ -108,7 +108,9 @@
     <Content Include="pet.png" />
     <Content Include="pukke.png" />
     <Content Include="signin.aspx" />
-    <Content Include="signup.aspx" />
+    <Content Include="signup.aspx">
+      <BrowseToURL>/signup.aspx</BrowseToURL>
+    </Content>
     <Content Include="vet.jpg" />
     <Content Include="vetVideo.MOV" />
     <Content Include="Web.config" />

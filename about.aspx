@@ -24,6 +24,7 @@
             height: 80px;
             background-color: #F7C5CC;
         }
+            
 
         .main-nav{
             display: flex;
@@ -138,6 +139,22 @@
         </div>
         <h1> new Changes guys </h1>
     </footer>
-    <h1> New COde is my code </h1>
+    
 </body>
+    <div class="heading">
+        <h1>About Us</h1>
+        <p>AReece goes to a pet clinic because he is a goat</p>
+    </div>
+    <div class="contatiner">
+        <section class="about">
+            <div class="about-image">
+                <img src="website.jpg">
+            </div>
+            <div class="about-content">
+                <h2>Pet Pals</h2>
+                <p>Reece da goat no cap</p>
+                <a  href="" class="read more">Read More</a>
+            </div>
+        </section>"
+    </div>
 </html>

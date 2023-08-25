@@ -109,6 +109,7 @@
     <Content Include="pet.jpg" />
     <Content Include="pet.png" />
     <Content Include="pukke.png" />
+    <Content Include="Reece.jpg" />
     <Content Include="signin.aspx">
       <BrowseToURL>/signin.aspx</BrowseToURL>
     </Content>

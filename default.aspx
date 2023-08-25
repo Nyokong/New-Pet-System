@@ -39,8 +39,6 @@
             width: 548px;
         }
 
-        
-
         <!--Super links-->
         a{
             display: flex;
@@ -449,6 +447,7 @@
           <h1>Content</h1>
 
           <div class="class-gallery-container">
+              <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
               <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
               <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
               <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>

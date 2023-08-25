@@ -11,7 +11,7 @@
 
     <style type="text/css">
         :root {
-          --nav_background : #1d1d1f;
+          --nav_background : #333333;
           --nav-btn-bg-color: #4f4b4b;
           --off-white: #f3f3f3;
           
@@ -39,14 +39,7 @@
             width: 548px;
         }
 
-        header{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            /*box-shadow: 0px 10px 25px #000000;*/
-            height: var(--nav-height);
-            background-color: var(--nav_background);
-        }
+        
 
         <!--Super links-->
         a{
@@ -174,10 +167,10 @@
 
         .footer{
             padding: 20px;
-            background-color: #483D8B;
+            background-color: var(--nav_background);
             height: 180px;
-            width: 100%;
-            color: black;
+            width: auto;
+            color: #fff;
             text-align: center;
             font-weight: bold;
         }
@@ -228,6 +221,16 @@
             margin: 15px 0px;
             display: table-cell;
             vertical-align: middle;
+        }
+
+        /* the navigation menu starts here */
+        header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            /*box-shadow: 0px 10px 25px #000000;*/
+            height: var(--nav-height);
+            background-color: var(--nav_background);
         }
 
         .main-nav{
@@ -283,6 +286,8 @@
             background-color: #fff;
         }
 
+        /* the nav menu ends here */
+
         #intro{
             width: auto;
             padding: 10px 40px;
@@ -294,7 +299,7 @@
         #intro #id-tab-1{
             background-color: var(--nav_background);
             height: var(--tab-height);
-            width: auto;
+            width: 50%;
             color: #fff;
             padding: 20px 40px;
         }
@@ -331,8 +336,11 @@
         #intro #id-tab-2{
             background-color: var(--off-white);
             height: var(--tab-height);
-            width: auto;
+            width: 50%;
             padding: 20px;
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
         }
 
         #intro #id-tab-2 h1{
@@ -341,8 +349,18 @@
         }
 
         #intro #id-tab-2 h2{
-            font-size: 30px;
+            font-size: 20px;
             margin: 5px 0px 20px 0px;
+        }
+
+        #intro #id-tab-2 .class-box-contained{
+            font-size: 70px;
+            display: flex;
+            min-width: 100%;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            scroll-snap-align: center;
         }
 
         #id-middle-1{
@@ -412,14 +430,17 @@
         </div>
 
         <div id="id-tab-2">
-            <h1>Medicine</h1>
+            <div class="class-box-contained">1</div>
+            <div class="class-box-contained">2</div>
+            <div class="class-box-contained">3</div>
+           <!-- <h1>Medicine</h1>
             <h2>Is Love <3</h2>
             <div id="id-intro video">
                  <video id="intro-video" controls="controls" autoplay="autoplay">
                     <source src="vetVideo.MOV" />
                     Your browser does not support the video tag.
                 </video>
-            </div>
+            </div>-->
         </div>
     </section>
 
@@ -436,6 +457,7 @@
         </div>
     </section>
 
+    <!--
     <div class="scroll-container">
         <h1> Vision & Mission </h1>
         <div class="scroll-content">
@@ -449,7 +471,7 @@
             <div class="item">Community-Centered Animal Care</div>
         </div>
     </div>
-
+    -->
     <footer class="footer">
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
 

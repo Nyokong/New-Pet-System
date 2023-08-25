@@ -409,13 +409,12 @@
 
         <div class="nav-menu">
             <nav class="main-nav">
-                <!--<a href="default.aspx" id="selected">Home </a>-->
                 <a href="about.aspx"> About </a>
                 <a href="faq.aspx"> FAQs </a>
                <a href="contact.aspx"> Contact Us</a>
             </nav>
             <div class="signup-signin-nav">
-                <a id="id-sign-up" href="signup.aspx"> Sign Up </a>
+                <a id="id-sign-up" href="signin.aspx"> Sign In </a>
             </div>
         </div>
 

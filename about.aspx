@@ -16,14 +16,14 @@
             margin: 0;
         }
 
+
         header{
             width: 100%;
             display: flex;
-            padding: 0 5%;
             justify-content: space-between;
-            box-shadow: 0px 10px 25px #000000;
-            height: 80px;
-            background-color: #F7C5CC;
+            /*box-shadow: 0px 10px 25px #000000;*/
+            height: var(--nav-height);
+            background-color: var(--nav_background);
         }
             
 
@@ -138,7 +138,71 @@
             height: auto;
             margin: 0 auto;
         }
+        .social-links{
+            margin-bottom: 20px;
+        }
+        .social-links a{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            color: #fff;
+            background-color: #333;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            transition: all 0.4s ease;
 
+        }
+        .social-links a:hover{
+            transform: translateY(-3px);
+        }
+        .btn{
+            text-decoration: none;
+            color: #fff;
+            display: inline-block;
+            padding:10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform:uppercase;
+            border-radius: 5px;
+            background-color: #333;
+            transition: all 0.4s ease;
+        }
+        .btn:hover{
+            transform: translateY(-3px);
+        }
+        @media screen and (max-width: 768px){
+            .row{
+                flex-direction: column;
+            }
+            .flex{
+                max-width: 100%;
+            }
+            .about-us h2{
+                font-size: 31px;
+            }
+            .about-us p{
+                font-size: 16px;
+            }
+            .social-links a{
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+                margin-right: 5px;
+            }
+            .btn{
+                font-size: 16px;
+                padding: 8px 16px;
+                margin-bottom: 30px;
+
+            }
+
+            }
+
+        }
         
 
     </style>

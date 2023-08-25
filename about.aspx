@@ -152,7 +152,7 @@
             </div>
             <div class="about-content">
                 <h2>Pet Pals</h2>
-                <p>Reece da goat no cap</p>
+                <p>Reece  </p>
                 <a  href="" class="read more">Read More</a>
             </div>
         </section>"

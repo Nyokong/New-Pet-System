@@ -11,17 +11,23 @@
 
     <style type="text/css">
         :root {
-          --nav_background : #1d1d1f;
+          --nav_background : #333333;
           --nav-btn-bg-color: #4f4b4b;
+          --off-white: #f3f3f3;
           
           --nav-height : 70px;
+          --tab-height: 450px;
+
+          --btn-BG-off-white: #f2f2f2;
+          --btn-FR-white: #fff;
+          --btn-FR-black: #000;
         }
 
         body{
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             width: 100%;
-
+            background-color: #eaeaea;
         }
         .auto-style1 {
             width: 305px;
@@ -33,14 +39,7 @@
             width: 548px;
         }
 
-        header{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            /*box-shadow: 0px 10px 25px #000000;*/
-            height: var(--nav-height);
-            background-color: var(--nav_background);
-        }
+        
 
         <!--Super links-->
         a{
@@ -51,23 +50,6 @@
             background-color: #4b4b5c;
         }
 
-        
-        #intro{
-            display: flex;
-            width: 1100px;
-            margin: 100px auto;
-            justify-content: space-between;
-        }
-
-        #intro h1{
-            font-size: 30px;
-        }
-
-        #intro p{
-            font-size: 18px;
-            margin-bottom: 40px;
-            color: #3c404A;
-        }
         .b-come{
             background-color: #5762d5;
             color: white;
@@ -91,17 +73,6 @@
         #intro-video{
             width: 500px;
             height: auto;
-        }
-
-        #middle1{
-            width: 100%;
-            height: 500%;
-            background-color: #FF7F50;
-        }
-
-        #middle1 h1{
-            text-align: center;
-            color: black;
         }
 
         .gallery-container {
@@ -196,10 +167,10 @@
 
         .footer{
             padding: 20px;
-            background-color: #483D8B;
+            background-color: var(--nav_background);
             height: 180px;
-            width: 100%;
-            color: black;
+            width: auto;
+            color: #fff;
             text-align: center;
             font-weight: bold;
         }
@@ -226,13 +197,6 @@
             font-size: 16px;
         }
 
-        .b-come{
-            height: 80px;
-            width: 200px;
-            background-color: #454fc1;
-            color: #F7C5CC;
-        }
-
         .logo-icon{
             height: 50px;
             width: auto;
@@ -257,6 +221,16 @@
             margin: 15px 0px;
             display: table-cell;
             vertical-align: middle;
+        }
+
+        /* the navigation menu starts here */
+        header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            /*box-shadow: 0px 10px 25px #000000;*/
+            height: var(--nav-height);
+            background-color: var(--nav_background);
         }
 
         .main-nav{
@@ -312,7 +286,115 @@
             background-color: #fff;
         }
 
+        /* the nav menu ends here */
 
+        #intro{
+            width: auto;
+            padding: 10px 40px;
+            height: auto;
+            display: flex;
+            margin: 20px 0px;
+        }
+
+        #intro #id-tab-1{
+            background-color: var(--nav_background);
+            height: var(--tab-height);
+            width: 50%;
+            color: #fff;
+            padding: 20px 40px;
+        }
+
+        #intro #id-tab-1 h1{
+            font-size: 70px;
+            margin: 20px 0px 5px 0px;
+        }
+
+        #intro #id-tab-1 #id-intro-text{
+            margin: 120px 0px 10px 0px;
+        }
+
+        #intro #id-tab-1 #id-become-member{
+            color:  var(--btn-FR-black);
+            margin: 40px 0px 20px 0px;
+            background-color: var(--btn-BG-off-white);
+            height: 100px);
+            width: 150px;
+            padding: 20px 40px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #intro #id-tab-1 #id-become-member:hover{
+            color: #fff;
+            background-color: #5aae42;
+        }
+
+        #intro #id-tab-2{
+            background-color: var(--off-white);
+            height: var(--tab-height);
+            width: 50%;
+            padding: 20px;
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+        }
+
+        #intro #id-tab-2 h1{
+            font-size: 70px;
+            margin: 5px 0px 0px 0px;
+        }
+
+        #intro #id-tab-2 h2{
+            font-size: 20px;
+            margin: 5px 0px 20px 0px;
+        }
+
+        #intro #id-tab-2 .class-box-contained{
+            font-size: 70px;
+            display: flex;
+            min-width: 100%;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            scroll-snap-align: center;
+        }
+
+        #id-middle-1{
+            width: auto;
+            height: auto;
+            padding: 5px 40px;
+            background-color: var(--off-white);
+        }
+
+        #id-middle-1 .class-divider h1{
+            color: #fff;
+            font-size: 70px;
+            margin: 0px 0px 10px 0px;
+        }
+
+        #id-middle-1 .class-divider{
+            width: auto;
+            height: auto;
+            padding: 40px;
+            background-color: var(--nav_background);
+        }
+
+        #id-middle-1 .class-divider .class-gallery-container{
+            height: 200px;
+            width: auto;
+            display: flex;
+        }
+
+        #id-middle-1 .class-divider .class-gallery-container .class-image-tab{
+            height: 200px;
+            width: 200px;
+            margin: 0px 10px;
+            background-color: var(--nav-btn-bg-color);
+        }
     </style>
 </head>
 <body style="height: 579px">
@@ -341,34 +423,41 @@
 
     <section id="intro">
         <div id="id-tab-1" style="width: 50%;">
-            <h1> Best Local Vet In Free-State </h1>
-            <p> At Pet-Pals Animal Clinic, we're your local vet clinic committed to keeping pets healthy and tails wagging. With experienced care and a love for animals, we provide a stress-free haven where your furry companions' well-being is our top priority.</p>
-            <a href="signup.aspx" class="b-come"> Become a Member </a>
+            <h1> Best Local Vet </h1>
+            <h3> In the Free-State </h3>
+            <p id="id-intro-text"> At Pet-Pals Animal Clinic, we're your local vet clinic committed to keeping pets healthy and tails wagging. With experienced care and a love for animals, we provide a stress-free haven where your furry companions' well-being is our top priority.</p>
+            <a id="id-become-member" href="signup.aspx"> Become a Member </a>
         </div>
 
         <div id="id-tab-2">
-            <video id="intro-video" controls="controls" autoplay="autoplay">
-                <source src="vetVideo.MOV" />
-                Your browser does not support the video tag.
-            </video>
+            <div class="class-box-contained">1</div>
+            <div class="class-box-contained">2</div>
+            <div class="class-box-contained">3</div>
+           <!-- <h1>Medicine</h1>
+            <h2>Is Love <3</h2>
+            <div id="id-intro video">
+                 <video id="intro-video" controls="controls" autoplay="autoplay">
+                    <source src="vetVideo.MOV" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>-->
         </div>
     </section>
 
-    <section id="middle1">
-        <h1> What we do at Pet-Pals Clinic </h1>
-      <div class="gallery-container">
-        <div class="image_container">
-          <div class="image-content">
-            <div class="pic"><img src="doctor.jpg" alt="Image 1"/></div>
-            <div class="pic"><img src="pet.jpg" alt="Image 2"/></div>
-            <div class="pic"><img src="vet.jpg" alt="Image 3"/></div>
-            <div class="pic"><img src="doc.jpg" alt="Image 4"/></div>
-            <div class="pic"><img src="dog.jpg" alt="Image 5"/></div>
+    <section id="id-middle-1">
+        <div class="class-divider">
+          <h1>Content</h1>
+
+          <div class="class-gallery-container">
+              <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
+              <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
+              <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
+              <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
           </div>
         </div>
-      </div>
     </section>
 
+    <!--
     <div class="scroll-container">
         <h1> Vision & Mission </h1>
         <div class="scroll-content">
@@ -382,7 +471,7 @@
             <div class="item">Community-Centered Animal Care</div>
         </div>
     </div>
-
+    -->
     <footer class="footer">
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
 

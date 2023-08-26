@@ -306,7 +306,7 @@
             color:  var(--btn-FR-black);
             margin: 40px 0px 20px 0px;
             background-color: var(--btn-BG-off-white);
-            height: 100px);
+            height: 100px;
             width: 150px;
             padding: 20px 40px;
             text-decoration: none;

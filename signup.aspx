@@ -201,6 +201,11 @@
             align-items: center;
         }
 
+        .class-sign-up #id-box-container form .btn-sign-up #id-btn-sign-up{
+            height: auto;
+            width: 100px;
+        }
+
         label{
             font-size: 21px;
             padding: 5px;
@@ -295,11 +300,11 @@
             </div>
             <form id="form" runat="server">
 
-                <label for="name"> Full name: </label><br/>
-                <input class="fields" type="text" id="name" required="required" placeholder="Enter Full Name: "/><br/>
+                <label for="name"> Name: </label><br/>
+                <input class="fields" type="text" id="name" required="required" placeholder="Enter First Name: "/><br/>
 
-                <label for="email"> Email: </label><br/>
-                <input class="fields" type="email" id="email" required="required" placeholder="Enter email: "/><br/>
+                <label for="lastname"> Surname: </label><br/>
+                <input class="fields" type="text" id="lastname" required="required" placeholder="Enter Last Name: "/><br/>
 
                 <label for="phone"> Phone number: </label><br/>
                 <input class="fields" type="tel" required="required" placeholder="Enter phone number: "/><br/>

@@ -39,8 +39,6 @@
             width: 548px;
         }
 
-        
-
         <!--Super links-->
         a{
             display: flex;

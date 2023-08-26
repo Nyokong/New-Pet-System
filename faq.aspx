@@ -247,6 +247,18 @@
             cursor: pointer;
             z-index: 9999;
         }
+
+        /* Chatbot container */
+        #chatbot-container {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 9998;
+        }
    
     </style>
 </head>
@@ -524,21 +536,26 @@
 
     </footer>
       <div class="floating-tab" id="ask-question-tab">Ask a Question</div>
+    <div id="chatbot-container">
+        <!-- Your chatbot interface goes here -->
+        <div id="chatbot-content">
+            <p>Welcome to the chatbot! Feel free to ask a question.</p>
+        </div>
+        <input type="text" id="user-input" placeholder="Type your question here">
+        <button id="send-button">Send</button>
+    </div>
 
     <script>
-        // JavaScript to handle the floating tab
+        // JavaScript to handle the floating tab and chatbot
         const tab = document.getElementById("ask-question-tab");
+        const chatbotContainer = document.getElementById("chatbot-container");
 
-        // Function to scroll smoothly to the top of the page
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+        function toggleChatbot() {
+            chatbotContainer.style.display = chatbotContainer.style.display === "block" ? "none" : "block";
         }
 
         // Attach click event to the tab
-        tab.addEventListener("click", scrollToTop);
+        tab.addEventListener("click", toggleChatbot);
     </script>>
 </body>
 </html>

@@ -152,7 +152,24 @@
     <div class="inner-layer">
         <div class="container">
             <div class="row">
-                
+                <div class="col-sm-7">
+                    <div class="content">
+
+                    </div>
+
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-data">
+                        <div class="form-head">
+
+                        </div>
+                        <div class="form-body">
+                            <div class="row form-row">
+                                <input type="text" class="form-control" value="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

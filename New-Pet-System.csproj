@@ -67,17 +67,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="about.aspx" />
-    <Content Include="App_Data\PetPalsClinic.mdf" />
-    <Content Include="App_Data\PetPalsClinic_log.ldf">
-      <DependentUpon>PetPalsClinic.mdf</DependentUpon>
+    <Content Include="about.aspx">
+      <BrowseToURL>/about.aspx</BrowseToURL>
     </Content>
     <Content Include="back.jpg" />
     <Content Include="contact.aspx">
       <BrowseToURL>/contact.aspx</BrowseToURL>
     </Content>
     <Content Include="default.aspx">
-      <BrowseToURL>/default.aspx</BrowseToURL>
+      <BrowseToURL>default.aspx</BrowseToURL>
     </Content>
     <Content Include="doc.jpg" />
     <Content Include="doctor.jpg" />
@@ -111,13 +109,15 @@
     <Content Include="pet.jpg" />
     <Content Include="pet.png" />
     <Content Include="pukke.png" />
-    <Content Include="signin.aspx" />
-    <Content Include="signup.aspx">
-      <BrowseToURL>/signup.aspx</BrowseToURL>
+    <Content Include="Reece.jpg" />
+    <Content Include="signin.aspx">
+      <BrowseToURL>/signin.aspx</BrowseToURL>
     </Content>
+    <Content Include="signup.aspx" />
     <Content Include="vet.jpg" />
     <Content Include="vetVideo.MOV" />
     <Content Include="Web.config" />
+    <Content Include="website.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="about.aspx.cs">

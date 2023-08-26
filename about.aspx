@@ -7,6 +7,7 @@
     <title>About Us</title>
 
     <link rel="icon" type="favicon_index" href="favicon_index/favicon_index.ico"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <style type="text/css">
 
@@ -24,6 +25,7 @@
             height: 80px;
             background-color: #F7C5CC;
         }
+            
 
         .main-nav{
             display: flex;
@@ -47,19 +49,15 @@
         #selected{color: #5762D5}
 
         .footer{
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            z-index: 10;
-
             padding: 20px;
             background-color: #483D8B;
-            height: 150px;
+            height: 180px;
             width: 100%;
             color: black;
             text-align: center;
             font-weight: bold;
         }
+
 
         .image-container {
             width: 100%;
@@ -102,7 +100,46 @@
             margin-left: 3px;
             margin-right: 3px;
             text-align: center;
+
         }
+        .about-us{
+            padding: 80px 0px;
+        }
+
+        /*the main about page - container*/
+
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            padding: 20px;
+            flex-direction: row;
+        }
+        .flex{
+            max-width: 50%;
+            padding: 20px;
+        }
+        .about-us h2{
+            font-size: 45px;
+            colour:#333;
+        }
+        .about-us h3{
+            font-size: 22px;
+            color:#888;
+        }
+        .about-us p{
+            font-size: 18px;
+            line-height: 1.5;
+            color: #555;
+        }
+        .about-us img{
+            display: block;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        
 
     </style>
 </head>
@@ -124,10 +161,30 @@
         </nav>
     </header>
 
-    <form id="form1" runat="server">
-        <div>
+    <div class="about-us">
+        <div class="container">
+            <div class="flex">
+                <h2>About Us</h2>
+                <h3>Discover Our Team's Story</h3>
+                <p>Reece,Break inside your conservatory, leave it desecrated, yeah
+                Take away your crown and the throne with all of its emerald stones
+                Diamonds, rubies and gold
+                Killin' your soldiers, I'm in your chambers burnin' the scrolls
+                Destroyin' everythin' you own, I'm like Achilles in Troy
+                They can't fuck with the boy
+                P2 comin soon, it's time to silence the noise</p>
+                <div class="social-links">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </div>
+                <a href="" class="btn">Learn More</a>
+            </div>
+            <div class="flex">
+                <img src="Reece.jpg">
+            </div>
         </div>
-    </form>
+    </div>
 
     <footer class="footer">
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
@@ -138,6 +195,5 @@
         </div>
         <h1> new Changes guys </h1>
     </footer>
-    <h1> New COde is my code </h1>
-</body>
+    </body>
 </html>

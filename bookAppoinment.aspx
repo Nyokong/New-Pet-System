@@ -32,7 +32,6 @@
         body{
             font-family: Arial, sans-serif;
             padding: 0;
-            /*background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);*/
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             font-size: 14px;
@@ -49,10 +48,9 @@
 
         .main-nav{
             display: flex;
-            padding: 10px;
             column-gap: 80px;
             padding: 20px;
-            margin: auto;
+            margin: 0px 30px;
         }
 
         .nav-menu{
@@ -74,7 +72,7 @@
         #selected{color: #fa8282;}
 
         
-        .footer{
+       .footer{
             padding: 20px;
             background-color: var(--nav_background);
             height: 180px;
@@ -106,6 +104,28 @@
             font-size: 16px;
         }
 
+        .logo-icon{
+            height: 50px;
+            width: auto;
+            margin:5px;
+            display: block;
+            vertical-align: central;
+        }
+
+        .logo-icon img{
+            height: 50px;
+            width: 50px;
+            margin: 5px;
+        }
+
+        .logo-icon #logo-name{
+            color: white;
+            width: 200px;
+            margin-left: 3px;
+            margin-right: 3px;
+            text-align: center;
+        }
+
     </style>
 
 </head>
@@ -128,6 +148,15 @@
         </div>
 
     </header>
+
+    <div class="inner-layer">
+        <div class="container">
+            <div class="row">
+                
+            </div>
+        </div>
+
+    </div>
 
     <form id="form1" runat="server">
         <div>

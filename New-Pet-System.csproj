@@ -110,6 +110,7 @@
     <Content Include="nwu.png" />
     <Content Include="pet.jpg" />
     <Content Include="pet.png" />
+    <Content Include="Profile.aspx" />
     <Content Include="pukke.png" />
     <Content Include="signin.aspx" />
     <Content Include="signup.aspx">
@@ -147,6 +148,13 @@
     </Compile>
     <Compile Include="faq.aspx.designer.cs">
       <DependentUpon>faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signin.aspx.cs">

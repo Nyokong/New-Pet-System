@@ -29,16 +29,7 @@
             width: 100%;
             background-color: #eaeaea;
         }
-        .auto-style1 {
-            width: 305px;
-        }
-        .auto-style18 {
-            width: 100%;
-        }
-        .auto-style20 {
-            width: 548px;
-        }
-
+        
         <!--Super links-->
         a{
             display: flex;
@@ -393,6 +384,10 @@
             margin: 0px 10px;
             background-color: var(--nav-btn-bg-color);
         }
+        .auto-style2 {
+            color: #FFFFFF;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body style="height: 579px">
@@ -455,56 +450,8 @@
         </div>
     </section>
 
-    <!--
-    <div class="scroll-container">
-        <h1> Vision & Mission </h1>
-        <div class="scroll-content">
-            <div class="item">Advancing Animal Health and Well-being <br/> "Our vision is to lead in advancing the health and 
-                well-being of animals through exceptional veterinary care, innovative treatments, and dedicated client education."</div>
-            <div class="item">Championing Compassionate Care</div>
-            <div class="item">Elevating the Human-Animal Bond</div>
-            <div class="item">Pioneering Preventive Medicine</div>
-            <div class="item">Setting Standards of Excellence</div>
-            <div class="item">Empowering Pet Owners</div>
-            <div class="item">Community-Centered Animal Care</div>
-        </div>
-    </div>
-    -->
-    <footer class="footer">
-        <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
-
-        <div class="image-container">
-            <img src="pukke.png" alt="North-West University (Potch)" width="150"/>
-            <p> Team 7 - System Analyst Corp </p>
-        </div>
-
-    </footer>
-
 </form>
-
-    <script>
-        var myVideo = document.getElementById("intro-video");
-
-
-        $(document).ready(function () {
-            var myVideo = document.getElementById("intro-video");
-
-            $.ajax({
-                url: "/default.aspx",
-                success: function (data) {
-                    //$(myVideo).html(data);
-
-                    if (myVideo.paused) {
-                        console.log("The video is paused");
-                        //myVideo.play();
-                    } else {
-                        console.log("The video is playing");
-                    }
-                }
-            });
-
-        });
-
-    </script>
+    <p class="auto-style2">
+        /=</p>
 </body>
 </html>

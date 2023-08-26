@@ -259,11 +259,50 @@
             font-size: 16px;
         }
 
+        .logo-icon{
+            height: 50px;
+            width: auto;
+            margin:5px;
+            display: block;
+            vertical-align: central;
+        }
+
+        .logo-icon img{
+            height: 50px;
+            width: 50px;
+            margin: 5px;
+        }
+
+        .logo-icon #logo-name{
+            color: white;
+            width: 200px;
+            margin-left: 3px;
+            margin-right: 3px;
+            text-align: center;
+        }
+
+        .auto-style1 {
+            height: 86px;
+            font-size: x-large;
+        }
+        .auto-style2 {
+            height: 22px;
+        }
+        .auto-style3 {
+            height: 22px;
+            width: 414px;
+        }
+        .auto-style4 {
+            width: 414px;
+        }
+
     </style>
 </head>
 <body>
-    <header class="header-menu">
-        <div class="logo-icon">
+
+    <form id="form1" runat="server">
+     <header>
+       <div class="logo-icon">
             <img src="icons8-pet-100.png" width="120" alt="Pet-Pals Logo"/>
             <div id="logo-name">
                 <h1 >Pet Pals</h1>
@@ -279,8 +318,33 @@
             </nav>
         </div>
 
+        <nav class="main-nav">
+            <a href="default.aspx" id="selected">Home </a>
+            <a href="about.aspx"> About </a>
+            <a href="signin.aspx"> Sign In </a>
+            <a href="faq.aspx"> FAQs </a>
+           <a href="contact.aspx"> Contact Us</a>
+        </nav>
+         <table style="width: 100%; height: 157px;">
+             <tr>
+                 <td class="auto-style1" colspan="3" style="text-align: center"><strong>Sign In</strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style3">Username</td>
+                 <td class="auto-style2">
+                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                 </td>
+                 <td class="auto-style2"></td>
+             </tr>
+             <tr>
+                 <td class="auto-style4">Password</td>
+                 <td>
+                     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                 </td>
+                 <td>&nbsp;</td>
+             </tr>
+         </table>
     </header>
-
     <div class="class-sign-up">
         <div id="id-box-container">
             <div id="id-signup-icon">
@@ -316,5 +380,10 @@
 
     </footer>
 
-</body>
+        <div style="height: 75px; margin-top: 109px">
+        </div>
+        
+    </form>
+
+    </body>
 </html>

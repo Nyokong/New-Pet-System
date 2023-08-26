@@ -15,7 +15,7 @@ namespace New_Pet_System
     {
 
         /// <summary>
-        /// form1 control.
+        /// form control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.

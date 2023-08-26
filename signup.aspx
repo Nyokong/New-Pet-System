@@ -201,6 +201,11 @@
             align-items: center;
         }
 
+        .class-sign-up #id-box-container form .btn-sign-up #id-btn-sign-up{
+            height: auto;
+            width: 100px;
+        }
+
         label{
             font-size: 21px;
             padding: 5px;

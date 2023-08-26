@@ -64,7 +64,7 @@
             color: #fff;
             text-align: center;
             font-weight: bold;
-            margin-top: 638px;
+            margin-top: 161px;
         }
 
         .image-container {
@@ -186,55 +186,68 @@
         }
         .accordion
         {
-            background-color: white;
-            color: rgba(0,0,0, 0.8);
-            cursor: pointer;
-            font-size: 1.2rem;
-            width: 100%;
-            padding: 2rem 2.5rem;
-            border: none;
-            outline: none;
-            transition: 0.4s;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
+        
+           margin: 60px auto;
+           width: 600px;
         }
-       .accordion i 
+       .accordion li 
        {
-           font-size: 1.6rem;
+          list-style:none;
+          width: 100%;
+          margin: 20px;
+          padding: 10px;
+          border-radius: 8px;
+          background: #e3edf7;
            
        }
-       .active,
-       .accordion::after hover
+       .accordion li label
        {
-           background-color: white;
+           display: flex;
+           align-items: center;
+           padding: 10px;
+           font-size: 18px;
+           font-weight: 500;
+           cursor: pointer;
+       }
+       label::before{
+           content: '+';
 
        }
-       .panel
+       input[type = "radio"]
        {
-           padding: 0 18px;
-           background-color: white;
            display: none;
+       }
+       .accordion .content
+       {
+           color: #555;
+           padding: 0 10px;
+           line-height: 26px;
+           max-height: 0;
            overflow: hidden;
-           background-color: white;
-           padding: 0 2rem 2.5rem;
+           transition: max-height 0.5s, padding 0.5s;
+
        }
-       .panel p
+       .accordion input[type="radio"]:checked + label + .content
        {
-           color: rgba(0,0,0,0.7);
-           font-size: 1.2rem;
-           line-height: 1.4;
+           max-height: 400px;
+           padding: 10px 10px 20px;
        }
-       .FAQ
+        .accordion input[type="radio"]:checked + label::before
        {
-           border: 1px solid rgba(0,0,0,0.1);
-           margin: 10px 0;
+           content: '-';
        }
-       .FAQ.active
-       {
-           border: none;
-       }
+        .floating-tab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #e23b3b;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            z-index: 9999;
+        }
+   
     </style>
 </head>
 <body>
@@ -261,243 +274,246 @@
     </header>
 
     <div class="FAQactive">
-
-        <button class ="accordion">
-           1. What is the Pet-Pals Clinic System?
-           <i class="fa-solid fa-chevron-down" ></i>
-        </button>
-        <div class="panel">
-            <p>
-                The Pet-Pals Clinic System is a comprehensive software solution 
-                designed to streamline and enhance the operations of veterinary 
-                clinics and pet care facilities. It offers features like appointment 
-                scheduling, medical record management, billing, and more.
-            </p>
+        <div class="logo-icon">
+            <img src="FAQ.png" width="120" alt="faq Icon"/>
+            <div id="faq Icon">
+                <h1 >Frequently Asked Questions</h1>
+            </div>
         </div>
-    </div>
-    <div class ="faq">
-        <button class=" accordion">
-            2. How can I schedule an appointment for my pet?
-             <i class="fa-solid fa-chevron-down" ></i>
 
-        </button>
-        <div class ="panel">
-            <p>
-            Scheduling an appointment is easy! You can either call our clinic directly
-            or use our online portal to select a suitable date and time for your pet's visit. 
-            The system will guide you through the process.
-            </p>
+        <ul class ="accordion">
+            <li>
+               <input type="radio" name ="accordion" id ="first" />
+               <label for ="first">What is the Pet-Pals Clinic System?</label>
+               <div class="content">
+                    <p>
+                    The Pet-Pals Clinic System is a comprehensive software solution 
+                    designed to streamline and enhance the operations of veterinary 
+                    clinics and pet care facilities. It offers features like appointment 
+                    scheduling, medical record management, billing, and more.
+                    </p>
+               </div>
+           </li>
+        </ul>
+      </div>
+    <div class ="FAQactive">
+        <ul class="accordion">
+           <li>
+                <input type="radio" name ="accordion" id ="second" />
+                <label for ="second"> How can I schedule an appointment for my pet?</label>
+                <div class="content">
+                <p>
+                    Scheduling an appointment is easy! You can either call our clinic directly
+                    or use our online portal to select a suitable date and time for your pet's visit. 
+                    The system will guide you through the process.
+                </p>
+               </div>
+            </li>
+          </ul>
         </div>
-       </div>
-      <div class ="faq">
-        <button class=" accordion">
-            3. Can I access my pet's medical records online?
-             <i class="fa-solid fa-chevron-down" ></i>
+       <div class="FAQactive">
 
-        </button>
-        <div class ="panel">
-            <p>
-            Yes, you can! Our clinic system securely stores your pet's medical history,
-            vaccination records, and treatment details. By logging into your account,
-            you can access and review these records at any time.
-            </p>
-        </div>
-       </div>
-      <div class ="faq">
-        <button class=" accordion">
-            4. Is my personal and pet's information safe in the system?
-             <i class="fa-solid fa-chevron-down" ></i>
+        <ul class ="accordion">
+            <li>
+               <input type="radio" name ="accordion" id ="third" />
+               <label for ="third">Can I access my pet's medical records online?</label>
+               <div class="content">
+                    <p>
+                        Yes, you can! Our clinic system securely stores your pet's medical history,
+                        vaccination records, and treatment details. By logging into your account,
+                        you can access and review these records at any time.
+                    </p>
+               </div>
+           </li>
+        </ul>
+      </div>
+     <div class="FAQactive">
 
-        </button>
-        <div class ="panel">
-            <p>
-            Absolutely. We prioritize the security of your information. Our clinic system 
-            employs advanced encryption and security measures to ensure that all data, 
-            including personal and pet-related details, is protected from unauthorized access.
-            </p>
-        </div>
-       </div>
-      <div class ="faq">
-        <button class=" accordion">
-           5. Is my personal and pet's information safe in the system?
-             <i class="fa-solid fa-chevron-down" ></i>
+        <ul class ="accordion">
+            <li>
+               <input type="radio" name ="accordion" id ="fourth" />
+               <label for ="fourth">Is my personal and pet's information safe in the system?</label>
+               <div class="content">
+                    <p>
+                        Absolutely. We prioritize the security of your information. Our clinic system 
+                        employs advanced encryption and security measures to ensure that all data, 
+                        including personal and pet-related details, is protected from unauthorized access.
+                    </p>
+               </div>
+           </li>
+        </ul>
+      </div>
+        <div class="FAQactive">
 
-        </button>
-        <div class ="panel">
-            <p>
-            The billing process is simplified through our clinic system. After each visit, 
-            you'll receive an itemized bill outlining the services provided.
-            You can choose to pay online through the portal or in-person at the clinic.
-            </p>
-        </div>
-       </div>
-      <div class ="faq">
-        <button class=" accordion">
-            6. Can I request prescription refills through the system?
-             <i class="fa-solid fa-chevron-down" ></i>
+        <ul class ="accordion">
+            <li>
+               <input type="radio" name ="accordion" id ="firth" />
+               <label for ="firth">Is my personal and pet's information safe in the system?</label>
+               <div class="content">
+                    <p>
+                         The billing process is simplified through our clinic system. After each visit, 
+                         you'll receive an itemized bill outlining the services provided.
+                         You can choose to pay online through the portal or in-person at the clinic.
+                    </p>
+               </div>
+           </li>
+        </ul>
+      </div>
+        <div class="FAQactive">
 
-        </button>
-        <div class ="panel">
-            <p>
-            Yes, you can request prescription refills online. Log in to your account, 
-            navigate to your pet's profile, and select the medications that need refilling. 
-            Our team will review the request and notify you when the prescription is ready.
-            </p>
-        </div>
-       </div>
-          <div class ="faq">
-        <button class=" accordion">
-            7. What if I need to reschedule or cancel an appointment?
-             <i class="fa-solid fa-chevron-down" ></i>
+        <ul class ="accordion">
+            <li>
+               <input type="radio" name ="accordion" id ="sixth" />
+               <label for ="sixth">Can I request prescription refills through the system?</label>
+               <div class="content">
+                    <p>
+                        Yes, you can request prescription refills online. Log in to your account, 
+                        navigate to your pet's profile, and select the medications that need refilling. 
+                        Our team will review the request and notify you when the prescription is ready.
+                    </p>
+               </div>
+           </li>
+        </ul>
+      </div>
+        <div class="FAQactive">
 
-        </button>
-        <div class ="panel">
-            <p>
-            Life can be unpredictable, and we understand that. You can reschedule or cancel 
-            appointments through the system. Just log in, navigate to the appointment section, 
-            and follow the prompts to make the necessary changes.
-            </p>
-        </div>
-       </div>
-          <div class ="faq">
-        <button class=" accordion">
-            8. Is the system mobile-friendly?
-             <i class="fa-solid fa-chevron-down" ></i>
+        <ul class ="accordion">
+            <li>
+               <input type="radio" name ="accordion" id ="seventh" />
+               <label for ="seventh">What if I need to reschedule or cancel an appointment?</label>
+               <div class="content">
+                    <p>
+                        Life can be unpredictable, and we understand that. You can reschedule or cancel 
+                        appointments through the system. Just log in, navigate to the appointment section, 
+                        and follow the prompts to make the necessary changes.
+                    </p>
+               </div>
+           </li>
+        </ul>
+      </div>
+        <div class="FAQactive">
 
-        </button>
-        <div class ="panel">
-            <p>
-            Yes, the Pet-Pals Clinic System is optimized for mobile use. You can access it 
-            through your smartphone or tablet's web browser, making it convenient to manage 
-            your pet's appointments and records on the go.
-            </p>
-        </div>
-       </div>
-          <div class ="faq">
-        <button class=" accordion">
-            9. How do I set up reminders for my pet's appointments and treatments?
-             <i class="fa-solid fa-chevron-down" ></i>
+        <ul class ="accordion">
+            <li>
+               <input type="radio" name ="accordion" id ="eighth" />
+               <label for ="eighth">Is the system mobile-friendly?</label>
+               <div class="content">
+                    <p>
+                        Yes, the Pet-Pals Clinic System is optimized for mobile use. You can access it 
+                        through your smartphone or tablet's web browser, making it convenient to manage 
+                        your pet's appointments and records on the go.
+                    </p>
+               </div>
+           </li>
+        </ul>
+      </div>
+        <div class="FAQactive">
 
-        </button>
-        <div class ="panel">
-            <p>
-            Our system provides automatic reminders via email or text messages for upcoming 
-            appointments, vaccinations, and treatments. You can customize your notification
-            preferences within your account settings.
-            </p>
-        </div>
-       </div>
-          <div class ="faq">
-        <button class=" accordion">
-            10. Can I update my contact information through the system??
-             <i class="fa-solid fa-chevron-down" ></i>
+        <ul class ="accordion">
+            <li>
+               <input type="radio" name ="accordion" id ="nineth" />
+               <label for ="nineth">How do I set up reminders for my pet's appointments and treatments?</label>
+               <div class="content">
+                    <p>
+                        Our system provides automatic reminders via email or text messages for upcoming 
+                        appointments, vaccinations, and treatments. You can customize your notification
+                        preferences within your account settings.
+                    </p>
+               </div>
+           </li>
+        </ul>
+      </div>
+        <div class="FAQactive">
 
-        </button>
-        <div class ="panel">
-            <p>
-            Certainly. If your contact information changes, you can easily update it in your 
-            account settings. Keeping your information up-to-date helps us communicate effectively 
-            regarding your pet's care.
-            </p>
-        </div>
-       </div>
-          <div class ="faq">
-        <button class=" accordion">
-            11. Is the system only for dogs and cats, or does it cover other pets too?
-             <i class="fa-solid fa-chevron-down" ></i>
+        <ul class ="accordion">
+            <li>
+               <input type="radio" name ="accordion" id ="tenth" />
+               <label for ="tenth">Can I update my contact information through the system?</label>
+               <div class="content">
+                    <p>
+                        Certainly. If your contact information changes, you can easily update it in your 
+                        account settings. Keeping your information up-to-date helps us communicate effectively 
+                        regarding your pet's care.
+                    </p>
+               </div>
+           </li>
+        </ul>
+      </div>
+        <div class="FAQactive">
 
-        </button>
-        <div class ="panel">
-            <p>
-            While our system is well-suited for dogs and cats, it can also be adapted to 
-            manage records and appointments for various other pets, including birds, rabbits, and small rodents.
-            </p>
-        </div>
-       </div>
-          <div class ="faq">
-        <button class=" accordion">
-            12. What do I do if I encounter technical issues with the system?
-             <i class="fa-solid fa-chevron-down" ></i>
+        <ul class ="accordion">
+            <li>
+               <input type="radio" name ="accordion" id ="eleventh" />
+               <label for ="eleventh">Is the system only for dogs and cats, or does it cover other pets too?</label>
+               <div class="content">
+                    <p>
+                        While our system is well-suited for dogs and cats, it can also be adapted to 
+                        manage records and appointments for various other pets, including birds, rabbits, and small rodents.
+                    </p>
+               </div>
+           </li>
+        </ul>
+      </div>
+        <div class="FAQactive">
 
-        </button>
-        <div class ="panel">
-            <p>
-            If you experience any technical difficulties or have questions about using the system, 
-            please reach out to our support team. They will be more than happy to assist you in resolving any issues.
-            </p>
-        </div>
-       </div>
-          <div class ="faq">
-        <button class=" accordion">
-            13. Can I provide feedback about my experience with the Pet-Pals Clinic System?
-             <i class="fa-solid fa-chevron-down" ></i>
+        <ul class ="accordion">
+            <li>
+               <input type="radio" name ="accordion" id ="twelveth" />
+               <label for ="twelveth">What do I do if I encounter technical issues with the system?</label>
+               <div class="content">
+                    <p>
+                        If you experience any technical difficulties or have questions about using the system, 
+                        please reach out to our support team. They will be more than happy to assist you in resolving any issues.
+                    </p>
+               </div>
+           </li>
+        </ul>
+      </div>
+        <div class="FAQactive">
 
-        </button>
-        <div class ="panel">
-            <p>
-            Of course! We value your feedback and strive to improve our services. Feel free to share 
-            your thoughts and suggestions through the system's feedback feature or directly with our staff during your visit.
-            </p>
-        </div>
-       </div>
-      <div class ="faq">
-        <button class=" accordion">
-            14. Is there a mobile app available for the clinic system?
-             <i class="fa-solid fa-chevron-down" ></i>
+        <ul class ="accordion">
+            <li>
+               <input type="radio" name ="accordion" id ="thirteenth" />
+               <label for ="thirteenth">Can I provide feedback about my experience with the Pet-Pals Clinic System?</label>
+               <div class="content">
+                    <p>
+                        Of course! We value your feedback and strive to improve our services. Feel free to share 
+                        your thoughts and suggestions through the system's feedback feature or directly with our staff during your visit.
+                    </p>
+               </div>
+           </li>
+        </ul>
+      </div>
+        <div class="FAQactive">
 
-        </button>
-        <div class ="panel">
-            <p>
-            Currently, we offer the clinic system through web browsers, but we are actively working on 
-            developing a mobile app to provide an even more seamless experience for our users.
-            </p>
-        </div>
-       </div>
-      <div class ="faq">
-        <button class=" accordion">
-            15. How do I create an account in the Pet-Pals Clinic System?
-             <i class="fa-solid fa-chevron-down" ></i>
+        <ul class ="accordion">
+            <li>
+               <input type="radio" name ="accordion" id ="fourteenth" />
+               <label for ="fourteenth">Is there a mobile app available for the clinic system?</label>
+               <div class="content">
+                    <p>
+                        Currently, we offer the clinic system through web browsers, but we are actively working on 
+                        developing a mobile app to provide an even more seamless experience for our users.
+                    </p>
+               </div>
+           </li>
+        </ul>
+      </div>
+        <div class="FAQactive">
 
-        </button>
-        <div class ="panel">
-            <p>
-            Creating an account is simple. You can do so by visiting our clinic's website and following 
-            the "Create Account" or "Sign Up" link. Provide the required information, and you'll be all set to start using the system.
-            </p>
-        </div>
-       </div>
-
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++)
-        {
-            acc[i].addEventListener("click", function () {
-
-                this.classList.toggle("active");
-                this.parentElement.classList.toggle("active");
-
-                var panel = this.nextElementSibling;
-                if (panel.style.display == "block") {
-                    panel.style.display = "none";
-
-                }
-                else
-                {
-                    panel.style.display = "block";
-
-                }
-            });
-            
-
-        }
-    </script>
-
-    
-        
-    
-
+        <ul class ="accordion">
+            <li>
+               <input type="radio" name ="accordion" id ="fifteenth" />
+               <label for ="fifteenth">How do I create an account in the Pet-Pals Clinic System?</label>
+               <div class="content">
+                    <p>
+                        Creating an account is simple. You can do so by visiting our clinic's website and following 
+                        the "Create Account" or "Sign Up" link. Provide the required information, and you'll be all set to start using the system.
+                    </p>
+               </div>
+           </li>
+        </ul>
+      </div>
     <footer class="footer">
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
 
@@ -507,6 +523,22 @@
         </div>
 
     </footer>
+      <div class="floating-tab" id="ask-question-tab">Ask a Question</div>
 
+    <script>
+        // JavaScript to handle the floating tab
+        const tab = document.getElementById("ask-question-tab");
+
+        // Function to scroll smoothly to the top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        // Attach click event to the tab
+        tab.addEventListener("click", scrollToTop);
+    </script>>
 </body>
 </html>

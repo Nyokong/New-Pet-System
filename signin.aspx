@@ -299,8 +299,6 @@
     </style>
 </head>
 <body>
-
-    <form id="form1" runat="server">
      <header>
        <div class="logo-icon">
             <img src="icons8-pet-100.png" width="120" alt="Pet-Pals Logo"/>
@@ -318,33 +316,8 @@
             </nav>
         </div>
 
-        <nav class="main-nav">
-            <a href="default.aspx" id="selected">Home </a>
-            <a href="about.aspx"> About </a>
-            <a href="signin.aspx"> Sign In </a>
-            <a href="faq.aspx"> FAQs </a>
-           <a href="contact.aspx"> Contact Us</a>
-        </nav>
-         <table style="width: 100%; height: 157px;">
-             <tr>
-                 <td class="auto-style1" colspan="3" style="text-align: center"><strong>Sign In</strong></td>
-             </tr>
-             <tr>
-                 <td class="auto-style3">Username</td>
-                 <td class="auto-style2">
-                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                 </td>
-                 <td class="auto-style2"></td>
-             </tr>
-             <tr>
-                 <td class="auto-style4">Password</td>
-                 <td>
-                     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                 </td>
-                 <td>&nbsp;</td>
-             </tr>
-         </table>
     </header>
+    
     <div class="class-sign-up">
         <div id="id-box-container">
             <div id="id-signup-icon">
@@ -379,11 +352,6 @@
         </div>
 
     </footer>
-
-        <div style="height: 75px; margin-top: 109px">
-        </div>
-        
-    </form>
-
+       
     </body>
 </html>

@@ -77,6 +77,7 @@
       <DependentUpon>PetPalsClinic.mdf</DependentUpon>
     </Content>
     <Content Include="back.jpg" />
+    <Content Include="bookAppoinment.aspx" />
     <Content Include="contact.aspx">
       <BrowseToURL>/contact.aspx</BrowseToURL>
     </Content>
@@ -117,7 +118,7 @@
     <Content Include="pukke.png" />
     <Content Include="Reece.jpg" />
     <Content Include="signin.aspx">
-      <BrowseToURL>/signin.aspx</BrowseToURL>
+      <BrowseToURL>signin.aspx</BrowseToURL>
     </Content>
     <Content Include="signup.aspx">
       <BrowseToURL>/signup.aspx</BrowseToURL>
@@ -134,6 +135,13 @@
     </Compile>
     <Compile Include="about.aspx.designer.cs">
       <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bookAppoinment.aspx.cs">
+      <DependentUpon>bookAppoinment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bookAppoinment.aspx.designer.cs">
+      <DependentUpon>bookAppoinment.aspx</DependentUpon>
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>

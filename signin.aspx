@@ -104,9 +104,26 @@
             text-align: center;
         }
 
+        .auto-style1 {
+            height: 86px;
+            font-size: x-large;
+        }
+        .auto-style2 {
+            height: 22px;
+        }
+        .auto-style3 {
+            height: 22px;
+            width: 414px;
+        }
+        .auto-style4 {
+            width: 414px;
+        }
+
     </style>
 </head>
 <body>
+
+    <form id="form1" runat="server">
      <header>
        <div class="logo-icon">
             <img src="icons8-pet-100.png" width="120" alt="Pet-Pals Logo"/>
@@ -122,13 +139,26 @@
             <a href="faq.aspx"> FAQs </a>
            <a href="contact.aspx"> Contact Us</a>
         </nav>
+         <table style="width: 100%; height: 157px;">
+             <tr>
+                 <td class="auto-style1" colspan="3" style="text-align: center"><strong>Sign In</strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style3">Username</td>
+                 <td class="auto-style2">
+                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                 </td>
+                 <td class="auto-style2"></td>
+             </tr>
+             <tr>
+                 <td class="auto-style4">Password</td>
+                 <td>
+                     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                 </td>
+                 <td>&nbsp;</td>
+             </tr>
+         </table>
     </header>
-
-    <form id="form1" runat="server">
-        <div>
-        </div>
-        
-    </form>
 
     <footer class="footer">
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
@@ -140,5 +170,10 @@
 
     </footer>
 
-</body>
+        <div style="height: 75px; margin-top: 109px">
+        </div>
+        
+    </form>
+
+    </body>
 </html>

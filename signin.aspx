@@ -259,11 +259,50 @@
             font-size: 16px;
         }
 
+        .logo-icon{
+            height: 50px;
+            width: auto;
+            margin:5px;
+            display: block;
+            vertical-align: central;
+        }
+
+        .logo-icon img{
+            height: 50px;
+            width: 50px;
+            margin: 5px;
+        }
+
+        .logo-icon #logo-name{
+            color: white;
+            width: 200px;
+            margin-left: 3px;
+            margin-right: 3px;
+            text-align: center;
+        }
+
+        .auto-style1 {
+            height: 86px;
+            font-size: x-large;
+        }
+        .auto-style2 {
+            height: 22px;
+        }
+        .auto-style3 {
+            height: 22px;
+            width: 414px;
+        }
+        .auto-style4 {
+            width: 414px;
+        }
+
     </style>
 </head>
 <body>
-    <header class="header-menu">
-        <div class="logo-icon">
+
+    <form id="form1" runat="server">
+     <header>
+       <div class="logo-icon">
             <img src="icons8-pet-100.png" width="120" alt="Pet-Pals Logo"/>
             <div id="logo-name">
                 <h1 >Pet Pals</h1>
@@ -278,37 +317,43 @@
                 <a href="contact.aspx"> Contact Us</a>
             </nav>
         </div>
-
     </header>
+        <form id="form" runat="server">
+                <asp:Label ID="Label1" runat="server" Text="[information]"></asp:Label>
+                <label for="Email"> Email: </label><br/>
+                     
+                <asp:TextBox cssClass="fields" ID="Email" runat="server"></asp:TextBox>
 
-    <div class="class-sign-up">
-        <div id="id-box-container">
-            <div id="id-signup-icon">
-                 <img src="favicon_client/favicon.ico" alt="profile-image"/>
-                 <h1> Sign In </h1>
-            </div>
-            <form id="form" runat="server">
+                <label for="Password"> Password: </label><br/>
+                <asp:TextBox cssClass="fields" ID="Password" runat="server"></asp:TextBox>
 
-                <label for="name"> Username: </label><br/>
-                <input class="fields" type="text" id="name" required="required" placeholder="Username: "/><br/>
-
-                <label for="email"> Email: </label><br/>
-                <input class="fields" type="email" id="email" required="required" placeholder="Email: "/><br/>
-                <asp:Label ID="lbl_conf" runat="server" Text="[Confirmation Message]"></asp:Label>
-                <label for="pass"> Password: </label><br/>
-                <input class="fields" type="password" id="pass" required="required" placeholder="Password: "/><br/><br/>
-
-                <label style="font-size: 16px;" for="signup"> Don't have an account ? Click <a href="signup.aspx"> here </a> to register an account. </label><br/>
-                <br/>
                 
                 <div class="btn-sign-up">
-                    <button id="id-btn-signup" type="submit"> Sign In </button>
+                    <button type="submit"> Sign Up </button>
                 </div>
-            
+         
             </form>
-        </div>    
-    </div>
-
+        <table style="width: 100%; height: 157px;">
+             <tr>
+                 <td class="auto-style1" colspan="3" style="text-align: center"><strong>Sign In</strong></td>
+             </tr>
+             <tr>
+                 <td class="auto-style3">Username</td>
+                 <asp:Label ID="lbl_conf" runat="server" Text="[information]"></asp:Label>
+                 <td class="auto-style2">
+                     
+                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                 </td>
+                 <td class="auto-style2"></td>
+             </tr>
+             <tr>
+                 <td class="auto-style4">Password</td>
+                 <td>
+                     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                 </td>
+                 <td>&nbsp;</td>
+             </tr>
+         </table>
     <footer class="footer">
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
 
@@ -319,5 +364,10 @@
 
     </footer>
 
-</body>
+        <div style="height: 75px; margin-top: 109px">
+        </div>
+        
+    </form>
+
+    </body>
 </html>

@@ -229,7 +229,7 @@
             font-weight: bold;
         }
 
-        button:hover{
+        #btn-sign-up:hover{
             background-color: #4751c0;
             cursor: pointer;
         }
@@ -317,13 +317,12 @@
                 <br/><br/>
                    </div>
                 <div class="btn-sign-up">
-                    <button type="submit"> Sign Up </button>
+                    <asp:Button ID="btn-sign-up" runat="server" type="submit" Text="Sign Up" />
                 </div>
                 <br/><br/>
                 <div class="sign-in">
-                    <p> Already have an account ? <br/> Click <a href="signin.aspx">here</a> to login </p>
+                    <p> No account?. <br/> Click <a href="signuo.aspx">here</a> To Create an account. </p>
                 </div>
-            
             </form>
         </div>    
     </div>

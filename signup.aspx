@@ -33,8 +33,6 @@
             padding: 0;
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
-            font-size: 14px;
-
         }
 
         /* the navigation menu starts here */
@@ -42,7 +40,6 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-            /*box-shadow: 0px 10px 25px #000000;*/
             height: var(--nav-height);
             background-color: var(--nav_background);
         }
@@ -73,31 +70,12 @@
 
         #selected{color: #fa8282;}
 
-        .nav-menu .signup-signin-nav{
+        .nav-menu{
             height: var(--nav-height ) ;
             width:auto;
             padding: 0px 20px;
             margin: 0px 20px;
             display: flex;
-        }
-
-        .nav-menu .signup-signin-nav #id-sign-up{
-            color: #fff;
-            margin: auto;
-            background-color: var(--nav-btn-bg-color);
-            height: calc(var(--nav-height) - 30px);
-            width: 100px;
-            text-decoration: none;
-            text-align: center;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .nav-menu .signup-signin-nav #id-sign-up:hover{
-            color: var(--nav-btn-bg-color);
-            background-color: #fff;
         }
 
         /* the nav menu ends here */
@@ -168,7 +146,7 @@
             flex-direction: column;
             height:100px;
             width: auto;
-            margin: 20px 0px 0px 0px;;
+            margin: 20px 0px 0px 0px;
         }
 
         .class-sign-up #id-box-container #id-signup-icon img{
@@ -215,9 +193,17 @@
             height: auto;
         }
 
-        .class-sign-up #id-box-container form #id-btn-sign-up{
+        .class-sign-up #id-box-container form .btn-sign-up{
             height: auto;
-            width: 50%;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .class-sign-up #id-box-container form .btn-sign-up #id-btn-sign-up{
+            height: auto;
+            width: 100px;
         }
 
         label{
@@ -231,7 +217,7 @@
             font-size: 18px;
         }
 
-        button{
+        #btnSubmit{
             width: 70%;
             height: 55px;
             background-color: #5762D5;
@@ -243,9 +229,14 @@
             font-weight: bold;
         }
 
-        button:hover{
+        #btnSubmit:hover{
             background-color: #4751c0;
             cursor: pointer;
+        }
+
+        .sign-in{
+            font-size: 17px;
+            text-align: center;
         }
 
         .footer{
@@ -292,7 +283,7 @@
 
         <div class="nav-menu">
             <nav class="main-nav">
-                <a href="default.aspx" id="selected">Home </a>
+                <a href="default.aspx">Home </a>
                 <a href="about.aspx"> About </a>
                 <a href="faq.aspx"> FAQs </a>
                 <a href="contact.aspx"> Contact Us</a>
@@ -309,25 +300,31 @@
             </div>
             <form id="form" runat="server">
 
-                <label for="name"> Full name: </label><br/>
-                <input class="fields" type="text" id="name" required="required" placeholder="Enter Full Name here: "/><br/>
+                <label for="name"> Name: </label><br/>
+                <asp:TextBox runat="server" class="fields" type="text" id="First_name" required="required" placeholder="Enter First Name: " OnTextChanged="First_name_TextChanged"/><br/>
 
-                <label for="email"> Email: </label><br/>
-                <input class="fields" type="email" id="email" required="required" placeholder="Enter email here: "/><br/>
-
-                <label for="phone"> Phone number: </label><br/>
-                <input class="fields" type="tell" required="required" placeholder="Enter phine number here: "/><br/>
+                <label for="lastname"> Surname: </label><br/>
+                <asp:TextBox runat="server" class="fields" type="text" id="Last_name" required="required" placeholder="Enter Last Name: " OnTextChanged="Lastname_TextChanged1"/><br/>
 
                 <label for="pass"> Password: </label><br/>
-                <input class="fields" type="password" id="pass" required="required"/ placeholder="Enter Password here: "><br/>
+                <asp:TextBox runat="server" class="fields" type="password" id="Password" required="required" placeholder="Enter Password: " OnTextChanged="Password_TextChanged"/><br/>
 
+                <label for="phone"> Email: </label><br/>
+                <asp:TextBox runat="server" class="fields" type="tel" required="optional" placeholder="Enter email: " ID="Email" OnTextChanged="Email_TextChanged"/><br/>
+
+                <label for="phone"> Phone number: </label><br/>
+                <asp:TextBox runat="server" class="fields" type="tel" required="optional" placeholder="Enter phone number: " ID="Phone" OnTextChanged="Phone_TextChanged"/><br/>
+                <br />
                 <div id="id-checkbox">
-                    <input type="checkbox" id="agree" required="required"/><label for="agree"> I accept to the <a href="google.com"> terms and conditions </a>  of use.</label><br/>
-                    <br/><br/>
-                </div>
-                
+                <asp:CheckBox runat="server" type="checkbox" id="Agree" required="required"/><label style="font-size: 15px;" for="agree"> I accept to the <a href="google.com"> terms and conditions </a>  of use.</label><br/>
+                <br/><br/>
+                   </div>
                 <div class="btn-sign-up">
-                    <button id="id-btn-signup" type="submit"> Sign Up </button>
+                    <asp:Button ID="btnSubmit" runat="server" CssClass="btn-sign-up" text="Sign Up"/> 
+                </div>
+                <br/><br/>
+                <div class="sign-in">
+                    <p> Already have an account ? <br/> Click <a href="signin.aspx">here</a> to login </p>
                 </div>
             
             </form>

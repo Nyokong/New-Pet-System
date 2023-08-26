@@ -39,8 +39,6 @@
             width: 548px;
         }
 
-        
-
         <!--Super links-->
         a{
             display: flex;
@@ -317,7 +315,7 @@
             color:  var(--btn-FR-black);
             margin: 40px 0px 20px 0px;
             background-color: var(--btn-BG-off-white);
-            height: 100px);
+            height: 100px;
             width: 150px;
             padding: 20px 40px;
             text-decoration: none;
@@ -416,7 +414,7 @@
                <a href="contact.aspx"> Contact Us</a>
             </nav>
             <div class="signup-signin-nav">
-                <a id="id-sign-up" href="signup.aspx"> Sign Up </a>
+                <a id="id-sign-up" href="signin.aspx"> Sign In </a>
             </div>
         </div>
 
@@ -450,6 +448,7 @@
           <h1>Content</h1>
 
           <div class="class-gallery-container">
+              <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
               <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
               <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
               <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>

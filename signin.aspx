@@ -294,7 +294,7 @@
 
                 <label for="email"> Email: </label><br/>
                 <input class="fields" type="email" id="email" required="required" placeholder="Email: "/><br/>
-
+                <asp:Label ID="lbl_conf" runat="server" Text="[Confirmation Message]"></asp:Label>
                 <label for="pass"> Password: </label><br/>
                 <input class="fields" type="password" id="pass" required="required" placeholder="Password: "/><br/><br/>
 

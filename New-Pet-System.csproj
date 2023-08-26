@@ -68,14 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
-    <Content Include="App_Data\Pet-Pals-Database.mdf" />
-    <Content Include="App_Data\Pet-Pals-Database_log.ldf">
-      <DependentUpon>Pet-Pals-Database.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\PetPalsClinic.mdf" />
     <Content Include="App_Data\PetPalsClinic_log.ldf">
       <DependentUpon>PetPalsClinic.mdf</DependentUpon>
-
     </Content>
     <Content Include="back.jpg" />
     <Content Include="contact.aspx">

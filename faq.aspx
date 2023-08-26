@@ -7,7 +7,12 @@
     <title>Frequently Asked Questions</title>
 
     <link rel="icon" type="favicon_index" href="favicon_index/favicon_index.ico"/>
-    <linkrel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"
+        />
 
     <style type="text/css">
         :root {
@@ -21,6 +26,7 @@
             --btn-BG-off-white: #f2f2f2;
             --btn-FR-white: #fff;
             --btn-FR-black: #000;
+            --manamela-color: #ac5252;
         }
 
         body {
@@ -209,6 +215,7 @@
        {
            padding: 0 18px;
            background-color: white;
+           display: none;
            overflow: hidden;
            background-color: white;
            padding: 0 2rem 2.5rem;
@@ -225,6 +232,9 @@
            margin: 10px 0;
        }
        .FAQ.active
+       {
+           border: none;
+       }
     </style>
 </head>
 <body>
@@ -238,6 +248,7 @@
 
         <div class="nav-menu">
             <nav class="main-nav">
+                <a href="default.aspx">Home </a>
                 <a href="about.aspx"> About </a>
                 <a href="faq.aspx" id ="selected"> FAQs </a>
                <a href="contact.aspx"> Contact Us</a>
@@ -249,11 +260,11 @@
 
     </header>
 
-    <div class="FAQ active">
+    <div class="FAQactive">
 
         <button class ="accordion">
-            What is the Pet-Pals Clinic System?
-            <i class="fa fa-paw fa-chevron-down" ></i>
+           1. What is the Pet-Pals Clinic System?
+           <i class="fa-solid fa-chevron-down" ></i>
         </button>
         <div class="panel">
             <p>
@@ -263,12 +274,12 @@
                 scheduling, medical record management, billing, and more.
             </p>
         </div>
-
     </div>
     <div class ="faq">
-        <button class =" accordion">
-            How can I schedule an appointment for my pet?
-             <i class="fa fa-paw fa-chevron-down" ></i>
+        <button class=" accordion">
+            2. How can I schedule an appointment for my pet?
+             <i class="fa-solid fa-chevron-down" ></i>
+
         </button>
         <div class ="panel">
             <p>
@@ -277,8 +288,211 @@
             The system will guide you through the process.
             </p>
         </div>
+       </div>
+      <div class ="faq">
+        <button class=" accordion">
+            3. Can I access my pet's medical records online?
+             <i class="fa-solid fa-chevron-down" ></i>
 
-    </div>
+        </button>
+        <div class ="panel">
+            <p>
+            Yes, you can! Our clinic system securely stores your pet's medical history,
+            vaccination records, and treatment details. By logging into your account,
+            you can access and review these records at any time.
+            </p>
+        </div>
+       </div>
+      <div class ="faq">
+        <button class=" accordion">
+            4. Is my personal and pet's information safe in the system?
+             <i class="fa-solid fa-chevron-down" ></i>
+
+        </button>
+        <div class ="panel">
+            <p>
+            Absolutely. We prioritize the security of your information. Our clinic system 
+            employs advanced encryption and security measures to ensure that all data, 
+            including personal and pet-related details, is protected from unauthorized access.
+            </p>
+        </div>
+       </div>
+      <div class ="faq">
+        <button class=" accordion">
+           5. Is my personal and pet's information safe in the system?
+             <i class="fa-solid fa-chevron-down" ></i>
+
+        </button>
+        <div class ="panel">
+            <p>
+            The billing process is simplified through our clinic system. After each visit, 
+            you'll receive an itemized bill outlining the services provided.
+            You can choose to pay online through the portal or in-person at the clinic.
+            </p>
+        </div>
+       </div>
+      <div class ="faq">
+        <button class=" accordion">
+            6. Can I request prescription refills through the system?
+             <i class="fa-solid fa-chevron-down" ></i>
+
+        </button>
+        <div class ="panel">
+            <p>
+            Yes, you can request prescription refills online. Log in to your account, 
+            navigate to your pet's profile, and select the medications that need refilling. 
+            Our team will review the request and notify you when the prescription is ready.
+            </p>
+        </div>
+       </div>
+          <div class ="faq">
+        <button class=" accordion">
+            7. What if I need to reschedule or cancel an appointment?
+             <i class="fa-solid fa-chevron-down" ></i>
+
+        </button>
+        <div class ="panel">
+            <p>
+            Life can be unpredictable, and we understand that. You can reschedule or cancel 
+            appointments through the system. Just log in, navigate to the appointment section, 
+            and follow the prompts to make the necessary changes.
+            </p>
+        </div>
+       </div>
+          <div class ="faq">
+        <button class=" accordion">
+            8. Is the system mobile-friendly?
+             <i class="fa-solid fa-chevron-down" ></i>
+
+        </button>
+        <div class ="panel">
+            <p>
+            Yes, the Pet-Pals Clinic System is optimized for mobile use. You can access it 
+            through your smartphone or tablet's web browser, making it convenient to manage 
+            your pet's appointments and records on the go.
+            </p>
+        </div>
+       </div>
+          <div class ="faq">
+        <button class=" accordion">
+            9. How do I set up reminders for my pet's appointments and treatments?
+             <i class="fa-solid fa-chevron-down" ></i>
+
+        </button>
+        <div class ="panel">
+            <p>
+            Our system provides automatic reminders via email or text messages for upcoming 
+            appointments, vaccinations, and treatments. You can customize your notification
+            preferences within your account settings.
+            </p>
+        </div>
+       </div>
+          <div class ="faq">
+        <button class=" accordion">
+            10. Can I update my contact information through the system??
+             <i class="fa-solid fa-chevron-down" ></i>
+
+        </button>
+        <div class ="panel">
+            <p>
+            Certainly. If your contact information changes, you can easily update it in your 
+            account settings. Keeping your information up-to-date helps us communicate effectively 
+            regarding your pet's care.
+            </p>
+        </div>
+       </div>
+          <div class ="faq">
+        <button class=" accordion">
+            11. Is the system only for dogs and cats, or does it cover other pets too?
+             <i class="fa-solid fa-chevron-down" ></i>
+
+        </button>
+        <div class ="panel">
+            <p>
+            While our system is well-suited for dogs and cats, it can also be adapted to 
+            manage records and appointments for various other pets, including birds, rabbits, and small rodents.
+            </p>
+        </div>
+       </div>
+          <div class ="faq">
+        <button class=" accordion">
+            12. What do I do if I encounter technical issues with the system?
+             <i class="fa-solid fa-chevron-down" ></i>
+
+        </button>
+        <div class ="panel">
+            <p>
+            If you experience any technical difficulties or have questions about using the system, 
+            please reach out to our support team. They will be more than happy to assist you in resolving any issues.
+            </p>
+        </div>
+       </div>
+          <div class ="faq">
+        <button class=" accordion">
+            13. Can I provide feedback about my experience with the Pet-Pals Clinic System?
+             <i class="fa-solid fa-chevron-down" ></i>
+
+        </button>
+        <div class ="panel">
+            <p>
+            Of course! We value your feedback and strive to improve our services. Feel free to share 
+            your thoughts and suggestions through the system's feedback feature or directly with our staff during your visit.
+            </p>
+        </div>
+       </div>
+      <div class ="faq">
+        <button class=" accordion">
+            14. Is there a mobile app available for the clinic system?
+             <i class="fa-solid fa-chevron-down" ></i>
+
+        </button>
+        <div class ="panel">
+            <p>
+            Currently, we offer the clinic system through web browsers, but we are actively working on 
+            developing a mobile app to provide an even more seamless experience for our users.
+            </p>
+        </div>
+       </div>
+      <div class ="faq">
+        <button class=" accordion">
+            15. How do I create an account in the Pet-Pals Clinic System?
+             <i class="fa-solid fa-chevron-down" ></i>
+
+        </button>
+        <div class ="panel">
+            <p>
+            Creating an account is simple. You can do so by visiting our clinic's website and following 
+            the "Create Account" or "Sign Up" link. Provide the required information, and you'll be all set to start using the system.
+            </p>
+        </div>
+       </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++)
+        {
+            acc[i].addEventListener("click", function () {
+
+                this.classList.toggle("active");
+                this.parentElement.classList.toggle("active");
+
+                var panel = this.nextElementSibling;
+                if (panel.style.display == "block") {
+                    panel.style.display = "none";
+
+                }
+                else
+                {
+                    panel.style.display = "block";
+
+                }
+            });
+            
+
+        }
+    </script>
 
     
         

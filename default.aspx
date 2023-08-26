@@ -410,7 +410,7 @@
 
         <div class="nav-menu">
             <nav class="main-nav">
-                <!--<a href="default.aspx" id="selected">Home </a>-->
+                <a href="default.aspx" id="selected">Home </a>
                 <a href="about.aspx"> About </a>
                 <a href="faq.aspx"> FAQs </a>
                <a href="contact.aspx"> Contact Us</a>

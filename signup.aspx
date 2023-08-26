@@ -212,7 +212,7 @@
             font-size: 18px;
         }
 
-        button{
+        #btnSubmit{
             width: 70%;
             height: 55px;
             background-color: #5762D5;
@@ -224,7 +224,7 @@
             font-weight: bold;
         }
 
-        button:hover{
+        #btnSubmit:hover{
             background-color: #4751c0;
             cursor: pointer;
         }
@@ -296,23 +296,26 @@
             <form id="form" runat="server">
 
                 <label for="name"> Name: </label><br/>
-                <input class="fields" type="text" id="name" required="required" placeholder="Enter First Name: "/><br/>
+                <asp:TextBox runat="server" class="fields" type="text" id="First_name" required="required" placeholder="Enter First Name: " OnTextChanged="First_name_TextChanged"/><br/>
 
                 <label for="lastname"> Surname: </label><br/>
-                <input class="fields" type="text" id="lastname" required="required" placeholder="Enter Last Name: "/><br/>
-
-                <label for="phone"> Phone number: </label><br/>
-                <input class="fields" type="tel" required="required" placeholder="Enter phone number: "/><br/>
+                <asp:TextBox runat="server" class="fields" type="text" id="Last_name" required="required" placeholder="Enter Last Name: " OnTextChanged="Lastname_TextChanged1"/><br/>
 
                 <label for="pass"> Password: </label><br/>
-                <input class="fields" type="password" id="pass" required="required" placeholder="Enter Password: "/><br/><br/>
+                <asp:TextBox runat="server" class="fields" type="password" id="Password" required="required" placeholder="Enter Password: " OnTextChanged="Password_TextChanged"/><br/>
 
+                <label for="phone"> Email: </label><br/>
+                <asp:TextBox runat="server" class="fields" type="tel" required="optional" placeholder="Enter email: " ID="Email" OnTextChanged="Email_TextChanged"/><br/>
+
+                <label for="phone"> Phone number: </label><br/>
+                <asp:TextBox runat="server" class="fields" type="tel" required="optional" placeholder="Enter phone number: " ID="Phone" OnTextChanged="Phone_TextChanged"/><br/>
+                <br />
                 <div id="id-checkbox">
-                <input type="checkbox" id="agree" required="required"/><label style="font-size: 15px;" for="agree"> I accept to the <a href="google.com"> terms and conditions </a>  of use.</label><br/>
+                <asp:CheckBox runat="server" type="checkbox" id="Agree" required="required"/><label style="font-size: 15px;" for="agree"> I accept to the <a href="google.com"> terms and conditions </a>  of use.</label><br/>
                 <br/><br/>
                    </div>
                 <div class="btn-sign-up">
-                    <button type="submit"> Sign Up </button>
+                    <asp:Button ID="btnSubmit" runat="server" CssClass="btn-sign-up" text="Sign Up"/> 
                 </div>
                 <br/><br/>
                 <div class="sign-in">

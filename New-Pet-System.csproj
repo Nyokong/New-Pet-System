@@ -75,7 +75,6 @@
     <Content Include="App_Data\PetPalsClinic.mdf" />
     <Content Include="App_Data\PetPalsClinic_log.ldf">
       <DependentUpon>PetPalsClinic.mdf</DependentUpon>
-
     </Content>
     <Content Include="back.jpg" />
     <Content Include="contact.aspx">
@@ -120,7 +119,9 @@
     <Content Include="signin.aspx">
       <BrowseToURL>/signin.aspx</BrowseToURL>
     </Content>
-    <Content Include="signup.aspx" />
+    <Content Include="signup.aspx">
+      <BrowseToURL>/signup.aspx</BrowseToURL>
+    </Content>
     <Content Include="vet.jpg" />
     <Content Include="vetVideo.MOV" />
     <Content Include="Web.config" />

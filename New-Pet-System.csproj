@@ -91,6 +91,12 @@
     <Content Include="faq.aspx">
       <BrowseToURL>/faq.aspx</BrowseToURL>
     </Content>
+    <Content Include="favicon_book\android-chrome-192x192.png" />
+    <Content Include="favicon_book\android-chrome-512x512.png" />
+    <Content Include="favicon_book\apple-touch-icon.png" />
+    <Content Include="favicon_book\favicon-16x16.png" />
+    <Content Include="favicon_book\favicon-32x32.png" />
+    <Content Include="favicon_book\favicon.ico" />
     <Content Include="favicon_client\android-chrome-192x192.png" />
     <Content Include="favicon_client\android-chrome-512x512.png" />
     <Content Include="favicon_client\apple-touch-icon.png" />
@@ -187,6 +193,8 @@
     <Content Include="favicon_index\Thumbs.db" />
     <Content Include="favicon_io\site.webmanifest" />
     <Content Include="favicon_io\Thumbs.db" />
+    <Content Include="favicon_book\site.webmanifest" />
+    <Content Include="favicon_book\Thumbs.db" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

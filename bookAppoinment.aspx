@@ -5,6 +5,109 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title> Book Appointment </title>
+    <link rel="icon" type="image/jpg" href="favicon_book/favicon.ico"/>
+
+    <style>
+    
+        :root {
+            --nav_background : #333333;
+            --nav-btn-bg-color: #4f4b4b;
+            --off-white: #f3f3f3;
+            --BG-sign-up: #333333;
+          
+            --nav-height : 70px;
+            --tab-height: 450px;
+
+            --btn-BG-off-white: #f2f2f2;
+            --btn-FR-white: #fff;
+            --btn-FR-black: #000;
+
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            padding: 0;
+            /*background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);*/
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* the navigation menu starts here */
+        header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            height: var(--nav-height);
+            background-color: var(--nav_background);
+        }
+
+        .main-nav{
+            display: flex;
+            padding: 10px;
+            column-gap: 80px;
+            padding: 20px;
+            margin: auto;
+        }
+
+        .nav-menu{
+            display: flex;
+            height: var(--nav-height);
+        }
+
+        .main-nav a{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            font-family: Arial, Arial, Helvetica, sans-serif;
+        }
+
+        .main-nav a:hover{
+            color: #e23b3b;
+        }
+
+        #selected{color: #fa8282;}
+
+        
+        .footer{
+            padding: 20px;
+            background-color: var(--nav_background);
+            height: 180px;
+            width: auto;
+            color: #fff;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .image-container {
+            width: 100%;
+            overflow: auto;
+        }
+
+        img{
+            float: left;
+            margin-right: 10px;
+            height: 30px;
+        }
+
+        .footer p {
+             margin: 0;
+             font-size: 16px;
+        }
+
+        h4{
+            margin-top: 20px;
+            padding: 20px 25px;
+            font-size: 16px;
+        }
+
+    </style>
+
 </head>
 <body>
      <header class="header-menu">

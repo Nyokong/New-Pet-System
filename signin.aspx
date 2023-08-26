@@ -210,7 +210,7 @@
             font-size: 18px;
         }
 
-        button{
+        #btnSubmit{
             width: 70%;
             height: 55px;
             background-color: #5762D5;
@@ -223,7 +223,7 @@
         }
 
         /*The hover link */
-        button:hover{
+        #btnSubmit:hover{
             background-color: #4751c0;
             cursor: pointer;
         }
@@ -345,6 +345,31 @@
              </tr>
          </table>
     </header>
+    <div class="class-sign-up">
+        <div id="id-box-container">
+            <div id="id-signup-icon">
+                 <img src="favicon_client/favicon.ico" alt="profile-image"/>
+                 <h1> Sign In </h1>
+            </div>
+            <form id="form" runat="server">
+
+                <label for="email"> Email: </label><br/>
+                <asp:TextBox runat="server" class="fields" type="email" id="Email" required="required" placeholder="Email: "/><br/>
+
+                <label for="pass"> Password: </label><br/>
+                <asp:TextBox runat="server" class="fields" type="password" id="pass" required="required" placeholder="Password: "/><br/><br/>
+
+                <label style="font-size: 16px;" for="signup"> Don't have an account ? Click <a href="signup.aspx"> here </a> to register an account. </label><br/>
+                <br/>
+                
+                <div class="btn-sign-up">
+                    <asp:Button runat="server" ID="btnSubmit" CssClass="btn-sign-up" text="Sign In" type="submit"/>  
+                </div>
+            
+            </form>
+        </div>    
+    </div>
+
     <footer class="footer">
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
 

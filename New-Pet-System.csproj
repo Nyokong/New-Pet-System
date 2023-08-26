@@ -68,14 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
-    <Content Include="App_Data\Pet-Pals-Database.mdf" />
-    <Content Include="App_Data\Pet-Pals-Database_log.ldf">
-      <DependentUpon>Pet-Pals-Database.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\PetPalsClinic.mdf" />
-    <Content Include="App_Data\PetPalsClinic_log.ldf">
-      <DependentUpon>PetPalsClinic.mdf</DependentUpon>
-    </Content>
     <Content Include="back.jpg" />
     <Content Include="bookAppoinment.aspx" />
     <Content Include="contact.aspx">
@@ -91,6 +83,12 @@
     <Content Include="faq.aspx">
       <BrowseToURL>/faq.aspx</BrowseToURL>
     </Content>
+    <Content Include="favicon_book\android-chrome-192x192.png" />
+    <Content Include="favicon_book\android-chrome-512x512.png" />
+    <Content Include="favicon_book\apple-touch-icon.png" />
+    <Content Include="favicon_book\favicon-16x16.png" />
+    <Content Include="favicon_book\favicon-32x32.png" />
+    <Content Include="favicon_book\favicon.ico" />
     <Content Include="favicon_client\android-chrome-192x192.png" />
     <Content Include="favicon_client\android-chrome-512x512.png" />
     <Content Include="favicon_client\apple-touch-icon.png" />
@@ -187,6 +185,8 @@
     <Content Include="favicon_index\Thumbs.db" />
     <Content Include="favicon_io\site.webmanifest" />
     <Content Include="favicon_io\Thumbs.db" />
+    <Content Include="favicon_book\site.webmanifest" />
+    <Content Include="favicon_book\Thumbs.db" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -194,6 +194,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

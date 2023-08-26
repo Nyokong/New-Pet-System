@@ -210,7 +210,7 @@
             font-size: 18px;
         }
 
-        button{
+        #btnSubmit{
             width: 70%;
             height: 55px;
             background-color: #5762D5;
@@ -223,7 +223,7 @@
         }
 
         /*The hover link */
-        button:hover{
+        #btnSubmit:hover{
             background-color: #4751c0;
             cursor: pointer;
         }
@@ -259,11 +259,48 @@
             font-size: 16px;
         }
 
+        .logo-icon{
+            height: 50px;
+            width: auto;
+            margin:5px;
+            display: block;
+            vertical-align: central;
+        }
+
+        .logo-icon img{
+            height: 50px;
+            width: 50px;
+            margin: 5px;
+        }
+
+        .logo-icon #logo-name{
+            color: white;
+            width: 200px;
+            margin-left: 3px;
+            margin-right: 3px;
+            text-align: center;
+        }
+
+        .auto-style1 {
+            height: 86px;
+            font-size: x-large;
+        }
+        .auto-style2 {
+            height: 22px;
+        }
+        .auto-style3 {
+            height: 22px;
+            width: 414px;
+        }
+        .auto-style4 {
+            width: 414px;
+        }
+
     </style>
 </head>
 <body>
-    <header class="header-menu">
-        <div class="logo-icon">
+     <header>
+       <div class="logo-icon">
             <img src="icons8-pet-100.png" width="120" alt="Pet-Pals Logo"/>
             <div id="logo-name">
                 <h1 >Pet Pals</h1>
@@ -280,7 +317,7 @@
         </div>
 
     </header>
-
+    
     <div class="class-sign-up">
         <div id="id-box-container">
             <div id="id-signup-icon">
@@ -289,20 +326,17 @@
             </div>
             <form id="form" runat="server">
 
-                <label for="name"> Username: </label><br/>
-                <input class="fields" type="text" id="name" required="required" placeholder="Username: "/><br/>
-
                 <label for="email"> Email: </label><br/>
-                <input class="fields" type="email" id="email" required="required" placeholder="Email: "/><br/>
-
+                <asp:TextBox runat="server" class="fields" type="email" id="Email" required="required" placeholder="Email: "/><br/>
+                <asp:Label ID="lbl_conf" runat="server" Text="[confirmation]"></asp:Label>
                 <label for="pass"> Password: </label><br/>
-                <input class="fields" type="password" id="pass" required="required" placeholder="Password: "/><br/><br/>
+                <asp:TextBox runat="server" class="fields" type="password" id="pass" required="required" placeholder="Password: "/><br/><br/>
 
                 <label style="font-size: 16px;" for="signup"> Don't have an account ? Click <a href="signup.aspx"> here </a> to register an account. </label><br/>
                 <br/>
                 
                 <div class="btn-sign-up">
-                    <button id="id-btn-signup" type="submit"> Sign In </button>
+                    <asp:Button runat="server" ID="btnSubmit" CssClass="btn-sign-up" text="Sign In" type="submit"/>  
                 </div>
             
             </form>
@@ -318,6 +352,6 @@
         </div>
 
     </footer>
-
-</body>
+       
+    </body>
 </html>

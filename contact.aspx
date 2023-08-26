@@ -10,6 +10,21 @@
 
     <style type="text/css">
 
+        :root {
+          --nav_background : #333333;
+          --nav-btn-bg-color: #4f4b4b;
+          --off-white: #f3f3f3;
+          --BG-sign-up: #333333;
+          
+          --nav-height : 70px;
+          --tab-height: 450px;
+
+          --btn-BG-off-white: #f2f2f2;
+          --btn-FR-white: #fff;
+          --btn-FR-black: #000;
+
+        }
+
         *{
             margin: 0;
             padding: 0;
@@ -18,19 +33,19 @@
         body{
             font-family: Arial, sans-serif;
             padding: 0;
-            background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+            /*background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);*/
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             font-size: 14px;
         }
 
+        /* the navigation menu starts here */
         header{
+            width: 100%;
             display: flex;
-            padding: 0 5%;
             justify-content: space-between;
-            box-shadow: 0px 10px 25px #000000;
-            height: 80px;
-            background-color: #F7C5CC;
+            height: var(--nav-height);
+            background-color: var(--nav_background);
         }
 
         .main-nav{
@@ -40,6 +55,53 @@
             padding: 20px;
             margin: auto;
         }
+
+        .nav-menu{
+            display: flex;
+            height: var(--nav-height);
+        }
+
+        .main-nav a{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            font-family: Arial, Arial, Helvetica, sans-serif;
+        }
+
+        .main-nav a:hover{
+            color: #e23b3b;
+        }
+
+        #selected{color: #fa8282;}
+
+        .nav-menu .signup-signin-nav{
+            height: var(--nav-height ) ;
+            width:auto;
+            padding: 0px 20px;
+            margin: 0px 20px;
+            display: flex;
+        }
+
+        .nav-menu .signup-signin-nav #id-sign-up{
+            color: #fff;
+            margin: auto;
+            background-color: var(--nav-btn-bg-color);
+            height: calc(var(--nav-height) - 30px);
+            width: 100px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-menu .signup-signin-nav #id-sign-up:hover{
+            color: var(--nav-btn-bg-color);
+            background-color: #fff;
+        }
+
+        /* the nav menu ends here */
 
         a{
             text-decoration: none;
@@ -156,10 +218,10 @@
 
         .footer{
             padding: 20px;
-            background-color: #483D8B;
+            background-color: var(--nav_background);
             height: 180px;
-            width: 100%;
-            color: black;
+            width: auto;
+            color: #fff;
             text-align: center;
             font-weight: bold;
         }
@@ -172,6 +234,7 @@
         img{
             float: left;
             margin-right: 10px;
+            height: 30px;
         }
 
         .footer p {
@@ -211,21 +274,25 @@
 
 </head>
 <body>
-     <header>
+    <header class="header-menu">
         <div class="logo-icon">
             <img src="icons8-pet-100.png" width="120" alt="Pet-Pals Logo"/>
-            <h1 id="logo-name">
-                Pet Pals
-            </h1>
+            <div id="logo-name">
+                <h1 >Pet Pals</h1>
+            </div>
         </div>
 
-        <nav class="main-nav">
-           <a href="default.aspx">Home </a>
-            <a href="about.aspx"> About </a>
-            <a href="signin.aspx"> Sign In </a>
-            <a href="faq.aspx"> FAQs </a>
-            <a href="contact.aspx" id="selected"> Contact Us</a>
-        </nav>
+        <div class="nav-menu">
+            <nav class="main-nav">
+                <a href="default.aspx">Home </a>
+                <a href="about.aspx"> About </a>
+                <a href="faq.aspx"> FAQs </a>
+               <a href="contact.aspx" id="selected"> Contact Us</a>
+            </nav>
+            <div class="signup-signin-nav">
+                <a id="id-sign-up" href="signup.aspx"> Sign In </a>
+            </div>
+        </div>
 
     </header>
 

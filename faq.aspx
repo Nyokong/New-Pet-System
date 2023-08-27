@@ -7,12 +7,7 @@
     <title>Frequently Asked Questions</title>
 
     <link rel="icon" type="favicon_index" href="favicon_index/favicon_index.ico"/>
-    <link
-        rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer"
-        />
+   
 
     <style type="text/css">
         :root {
@@ -252,6 +247,7 @@
         #chatbot-container {
             display: none;
             position: fixed;
+            height: 50vh;
             bottom: 80px;
             right: 20px;
             background-color: white;
@@ -530,7 +526,7 @@
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
 
         <div class="image-container">
-            <img src="pukke.png" alt="North-West University (Potch)" width="100px"/>
+            <img src="pukke.png" alt="North-West University (Potch)" width="100%"/>
             <p> Team 7 - System Analyst Corp </p>
         </div>
 
@@ -556,6 +552,6 @@
 
         // Attach click event to the tab
         tab.addEventListener("click", toggleChatbot);
-    </script>>
+    </script>
 </body>
 </html>

@@ -20,7 +20,7 @@ namespace New_Pet_System
         {
             conn.Open();
 
-            lbl_conf.Text = "Successful";
+            //lbl_conf.Text = "Successful";
 
             conn.Close();
         }

@@ -75,7 +75,7 @@
       <BrowseToURL>/contact.aspx</BrowseToURL>
     </Content>
     <Content Include="default.aspx">
-      <BrowseToURL>/default.aspx</BrowseToURL>
+      <BrowseToURL>default.aspx</BrowseToURL>
     </Content>
     <Content Include="doc.jpg" />
     <Content Include="doctor.jpg" />

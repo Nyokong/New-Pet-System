@@ -30,11 +30,35 @@
         }
 
         body{
-            font-family: Arial, sans-serif;
             padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:Arial, Arial, Helvetica, sans-serif;
             margin: 0;
             font-size: 14px;
+        }
+
+        .bf-container h1{
+            font-size: 40px;
+            color: #fff;
+        }
+
+        p{
+            color: #fff;
+        }
+
+        a{
+            text-decoration: none;
+            color: green;
+        }
+
+        .bf-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+            overflow-y: auto;
+            padding: 20px 16px;
+            background-color: #1d2228;
         }
 
         /* the navigation menu starts here */
@@ -70,7 +94,15 @@
         }
 
         #selected{color: #fa8282;}
+        
+        .bf-body{
+            width: 700px;
+            background-color: #1d1d2c;
+        }
 
+        .bf-head{
+            text-align: center;
+        }
         
        .footer{
             padding: 20px;
@@ -80,7 +112,7 @@
             color: #fff;
             text-align: center;
             font-weight: bold;
-        }
+       }
 
         .image-container {
             width: 100%;
@@ -149,31 +181,64 @@
 
     </header>
 
-    <div class="inner-layer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-7">
-                    <div class="content">
 
-                    </div>
+    <div class="bf-container">
 
-                </div>
-                <div class="col-sm-5">
-                    <div class="form-data">
-                        <div class="form-head">
-
-                        </div>
-                        <div class="form-body">
-                            <div class="row form-row">
-                                <input type="text" class="form-control" value="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="bf-body">
+            <div class="bf-head">
+                <h1> Appointment Booking Form </h1>
+                <p> |-Let's start to book now -| </p>
             </div>
-        </div>
 
+            <form class="bf-body-box">
+
+                <div class="bf-row">
+
+                    <div class="bf-col-6">
+                        <p> Your Name </p>
+                        <input type="text" name="fname" id="f_name"/>
+                    </div>
+
+                    <div class="bf-col-6">
+                        <p> Email Address </p>
+                        <input type="email" name="email" id="email"/>
+                    </div>
+
+                </div>
+
+                <div class="bf-row">
+
+                    <div class="bf-col-6">
+                        <p> Select Date </p>
+                        <input type="date" name="date" id="date" />
+                    </div>
+
+                    <div class="bf-col-6">
+                        <p> Select Number </p>
+                        <select name="s-select">
+                            <option> Select Number</option>
+                            <option value="1"> 1 </option>
+                            <option value="2"> 2 </option>
+                            <option value="3"> 3 </option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="bf-row">
+
+                    <div class="bf-col-3">
+                        <p> Your Name </p>
+                        <input type="submit" value="submit" id="fname"/>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
     </div>
+
 
     <form id="form1" runat="server">
         <div>

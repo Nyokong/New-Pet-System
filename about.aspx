@@ -12,7 +12,7 @@
     <style type="text/css">
 
         body{
-            font-family :Arial, Arial, Helvetica, sans-serif;
+            font-family:Arial, Arial, Helvetica, sans-serif;
             margin: 0;
         }
 

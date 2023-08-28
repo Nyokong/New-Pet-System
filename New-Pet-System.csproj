@@ -80,6 +80,14 @@
     </Content>
     <Content Include="doc.jpg" />
     <Content Include="doctor.jpg" />
+    <Content Include="doctor1.jpg" />
+    <Content Include="doctor2.jpg" />
+    <Content Include="doctor3.jpg" />
+    <Content Include="doctor4.jpg" />
+    <Content Include="doctor5.jpg" />
+    <Content Include="doctor6.jpg" />
+    <Content Include="doctor7.jpg" />
+    <Content Include="doctor8.jpg" />
     <Content Include="dog.jpg" />
     <Content Include="download.png" />
     <Content Include="faq.aspx">

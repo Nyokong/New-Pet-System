@@ -247,6 +247,98 @@
         .why_grid p{
             color: var(--text-light);
         }
+       
+        .doctors_header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .doctors_header_content p{
+            max-width: 600px;
+            color: var(--text-light);
+
+        }
+        .doctors_nav{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .doctors_nav span{
+            padding: 5px 15px;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            background-color: var(--primary-color-light);
+            cursor: pointer;
+        }
+
+        .doctors_grid{
+            margin-top: 4rem;
+            display: grid;
+           
+           
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+
+        }
+        .doctors_card{
+            text-align: center;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        
+        .doctors_card_image{
+            position: relative;
+            overflow: hidden;
+
+        }
+        .doctors_socials{
+
+            position: absolute;
+            left:0;
+            bottom: -4rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            transition: 0.5s;
+        }
+
+        .doctors_socials span{
+            display: inline-block;
+            padding: 6px 12px;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            background-color: var(--white);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .doctors_socials span:hover{
+            color: var(--primary-color);
+
+        }
+
+        .doctors_card:hover .doctors_socials{
+            bottom: 2rem;
+        }
+
+        .doctors_card h4{
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+
+
+        }
+        .doctors_card p{
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
             
 
             
@@ -291,7 +383,7 @@
                 <a href="" class="btn">Learn More</a>
             </div>
             <div class="flex">
-                <img src="about.jpg">
+                <img src="about.jpg"/>
             </div>
         </div>
     </div>
@@ -348,6 +440,51 @@
             <div class="doctors_nav">
                 <span><i class="ri-arrow-left-line"></i></span>
                 <span><i class="ri-arrow-right-line"></i></span>
+            </div>
+        </div>
+        <div class="doctors_grid">
+            <div class="doctors_card">
+                <div class="doctors_card_image">
+                    <img src="doctor7.jpg" alt="doctor" />
+                    <div class="doctors_socials">
+                        <span><i class="ri-instagram-line"></i></span>
+                        <span><i class="ri-facebook-fill"></i></span>
+                        <span><i class="ri-heart-fill"></i></span>
+                        <span><i class="ri-twitter-x-line"></i></span>
+                    </div>
+                </div>
+                <h4>Dr. Tshego Smith</h4>
+                <p>Speciality here</p>
+            </div>
+            </div>
+            <div class="doctors_grid">
+            <div class="doctors_card">
+                <div class="doctors_card_image">
+                    <img src="doctor6.jpg" alt="doctor" />
+                    <div class="doctors_socials">
+                        <span><i class="ri-instagram-line"></i></span>
+                        <span><i class="ri-facebook-fill"></i></span>
+                        <span><i class="ri-heart-fill"></i></span>
+                        <span><i class="ri-twitter-x-line"></i></span>
+                    </div>
+                </div>
+                <h4>Dr. JAmeson Anderson</h4>
+                <p>Speciality here</p>
+            </div>
+                </div>
+                <div class="doctors_grid">
+            <div class="doctors_card">
+                <div class="doctors_card_image">
+                    <img src="doctor5.jpg" alt="doctor" />
+                    <div class="doctors_socials">
+                        <span><i class="ri-instagram-line"></i></span>
+                        <span><i class="ri-facebook-fill"></i></span>
+                        <span><i class="ri-heart-fill"></i></span>
+                        <span><i class="ri-twitter-x-line"></i></span>
+                    </div>
+                </div>
+                <h4>Dr. Michael Lee</h4>
+                <p>Speciality here</p>
             </div>
         </div>
     </section>

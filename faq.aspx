@@ -244,7 +244,7 @@
         }
 
         /* Chatbot container */
-        #chatbot-container {
+        /*#chatbot-container {
             display: none;
             position: fixed;
             height: 50vh;
@@ -254,8 +254,188 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             z-index: 9998;
+        }*/
+        .chat-bar-collapsible
+        {
+            position: fixed;
+            bottom: 0;
+            right: 50px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
         }
+        .collapsible
+        {
+            background-color: rgb(82, 151, 255);
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 350px;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            border-radius: 10px 10px 0px 0px;
+            border: 3px solid white;
+            border-bottom: none;
+        }
+        .content
+        {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+        }
+        .full-chat-block
+        {
+            width: 350px;
+            background: white;
+            text-align: center;
+            overflow: auto;
+            scrollbar-width: none;
+            height: max-content;
+            transition: max-height 0.2s;
+
+        }
+        .outer-container
+        {
+            min-height: 500px;
+            bottom: 0%;
+            position: relative;
+        }
+        .chat-container
+        {
+            max-height: 500px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            scroll-behavior: smooth;
+            hyphens: auto;
+        }
+        .chat-container::-webkit-scrollbar
+        {
+            display: none;
+        }
+        .chat-bar-input-block
+        {
+            display: flex;
+            float: left;
+            box-sizing: border-box;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            background-color: rgb(235, 235, 235);
+            border-radius: 10px 10px 0px 0px;
+            padding:  10px 0px 10px 10px;
+        }
+        .chat-bar-icons {
+            display: flex;
+            justify-content: space-evenly;
+            box-sizing: border-box;
+            width: 25%;
+            float: right;
+            font-size: 20px;
+        }
+        #chat-icon hover
+        {
+            opacity: .7;
+        }
+        /*chat bubbles*/
+        #userInput
+        {
+            width: 75%;
+        }
+        .input-box
+        {
+            float: left;
+            border: none;
+            box-sizing: border-box;
+            width: 100%;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 16px;
+            color: #000;
+            background-color: white;
+            outline: none;
+        }
+        .userText
+        {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: normal;
+            text-align: right;
+            clear: both;
+        }
+        .userText span
+        {
+            line-height: 1.5em;
+            display: inline-block;
+            background: #5ca6fa;
+            padding: 10px;
+            border-radius: 8px;
+            border-bottom-right-radius: 2px;
+            max-width: 80%;
+            margin-right: 10px;
+            animation: floatup .5s forwards;
+        }
+        .botText
+        {
+            color: #000;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            font-size: 16px;
+            text-align: left;
+        }
+        .botText span
+        {
+            line-height: 1.5em;
+            display: inline-block;
+            background: #5ca6fa;
+            padding: 10px;
+            border-radius: 8px;
+            border-bottom-left-radius: 2px;
+            max-width: 80%;
+            margin-right: 10px;
+            animation: floatup .5s forwards;
+        }
+        @keyframes floatup
+        {
+            from
+            {
+                transform: translateY(14px);
+                opacity: .0;
+            }
+            to
+            {
+                transform: translateY(0px);
+                opacity: 1;
+
+            }
+        }
+        @media screen and (max-width:600px)
+        {
+            .full-chat-block
+            {
+                width: 100%;
+                border-radius;
+            }
+            .chat-bar-collapsible
+            {
+                position:fixed;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+            }
+            .collapsible
+            {
+                width: 100%;
+                border: 0px;
+                border-top: 3px solid white;
+                border-radius: 0px;
+            }
    
+        }
+
+     
     </style>
 </head>
 <body>
@@ -556,9 +736,9 @@
 
                              <div class ="chat-bar-icons">
                                    <i id="chat-icon" style ="color: crimson"; class="fa fa-fw fa-comments-o"
-                                       oneclick="heartButton()"></i>
+                                       onclick="heartButton()"></i>
                                  <i id="chat-icon" style ="color: #333"; class="fa fa-fw fa-comments-o"
-                                       oneclick="heartButton()"></i>
+                                       onclick="sendButton()"></i>
                              </div>
                          </div>
                          <div id="chat-bar-button">
@@ -572,16 +752,53 @@
      </div>
 
     <script>
-        // JavaScript to handle the floating tab and chatbot
-        const tab = document.getElementById("ask-question-tab");
-        const chatbotContainer = document.getElementById("chatbot-container");
+        var coll = document.getElementsByClassName("collapsible");
 
-        function toggleChatbot() {
-            chatbotContainer.style.display = chatbotContainer.style.display === "block" ? "none" : "block";
+        for (let i = 0; i < coll.length; i++)
+        {
+            coll[i].addEventListener("click", function ()
+            {
+                this.classList.toggle("active");
+
+                var content = this.nextElementSibling;
+
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+
+                }
+                else
+                {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+
+        }
+        function getTime() {
+            let today = new Date();
+            hours = today.getHours();
+            minutes = today.getMinutes();
+
+            if (hours < 10) {
+                hours = "0" + hours;
+            }
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            let time = hours + ":" + minutes;
+            return time;
         }
 
-        // Attach click event to the tab
-        tab.addEventListener("click", toggleChatbot);
+        function firstBotMessage()
+        {
+            let firstMessage = "What's supp nigga?"
+            document.getElementById("botStarterMessage").innerHTML = '<p class ="botText"><span>' + firstMessage + '</span></p';
+            let time = getTime();
+
+            $("#chat-timestamp").append(time);
+            document.getElementById("userInput").scrollIntoView(false);
+        }
+
+            
     </script>
 </body>
 </html>

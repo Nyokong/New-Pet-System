@@ -328,7 +328,7 @@
 
                 <label for="email"> Email: </label><br/>
                 <asp:TextBox runat="server" class="fields" type="email" id="Email" required="required" placeholder="Email: "/><br/>
-
+                <asp:Label ID="lbl_conf" runat="server" Text="[confirmation]"></asp:Label>
                 <label for="pass"> Password: </label><br/>
                 <asp:TextBox runat="server" class="fields" type="password" id="pass" required="required" placeholder="Password: "/><br/><br/>
 

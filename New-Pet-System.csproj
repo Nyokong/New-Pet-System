@@ -70,6 +70,7 @@
     <Content Include="about.aspx">
       <BrowseToURL>/about.aspx</BrowseToURL>
     </Content>
+    <Content Include="about.jpg" />
     <Content Include="back.jpg" />
     <Content Include="contact.aspx">
       <BrowseToURL>/contact.aspx</BrowseToURL>
@@ -118,6 +119,7 @@
     <Content Include="vetVideo.MOV" />
     <Content Include="Web.config" />
     <Content Include="website.jpg" />
+    <Content Include="whyUS.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="about.aspx.cs">

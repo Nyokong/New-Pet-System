@@ -8,6 +8,7 @@
 
     <link rel="icon" type="favicon_index" href="favicon_index/favicon_index.ico"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <style type="text/css">
 
@@ -135,7 +136,7 @@
         }
         .about-us img{
             display: block;
-            height: auto;
+            height: 400px;
             margin: 0 auto;
         }
         .social-links{
@@ -173,36 +174,84 @@
         .btn:hover{
             transform: translateY(-3px);
         }
-        @media screen and (max-width: 768px){
-            .row{
+        @media screen and (max-width: 768px)
+        {
+            .row {
                 flex-direction: column;
             }
-            .flex{
+
+            .flex {
                 max-width: 100%;
             }
-            .about-us h2{
+
+            .about-us h2 {
                 font-size: 31px;
             }
-            .about-us p{
+
+            .about-us p {
                 font-size: 16px;
             }
-            .social-links a{
+
+            .social-links a {
                 width: 30px;
                 height: 30px;
                 line-height: 30px;
                 font-size: 14px;
                 margin-right: 5px;
             }
-            .btn{
+
+            .btn {
                 font-size: 16px;
                 padding: 8px 16px;
                 margin-bottom: 30px;
-
             }
+        }
+        .why_container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            align-items:baseline;
 
-            }
 
         }
+        .why_image{
+            max-width: 400px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        .why_content p{
+            color: var(--text-light);
+        }
+        .why_grid{
+            margin=top: 4rem;
+            display: grid;
+            grid-template-columns: 80px auto;
+            gap: 2rem;
+
+        }
+        .why_grid span{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            border-radius: 10px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        .why_grid h4{
+            margin-bottom: 5rem;
+            font-size: 1.2rem;
+            font-weight:  600;
+            color: var(--text-dark);
+        }
+        .why_grid p{
+            color: var(--text-light);
+        }
+            
+
+            
+
+        
         
 
     </style>
@@ -230,13 +279,10 @@
             <div class="flex">
                 <h2>About Us</h2>
                 <h3>Discover Our Team's Story</h3>
-                <p>Reece,Break inside your conservatory, leave it desecrated, yeah
-                Take away your crown and the throne with all of its emerald stones
-                Diamonds, rubies and gold
-                Killin' your soldiers, I'm in your chambers burnin' the scrolls
-                Destroyin' everythin' you own, I'm like Achilles in Troy
-                They can't fuck with the boy
-                P2 comin soon, it's time to silence the noise</p>
+                <p>Welcome to Pet Pals, your trusted partner in pet care. 
+                   Established with a profound love for animals and a commitment 
+                   to their well-being, we are a dedicated veterinary clinic offering
+                   comprehensive and compassionate care to your beloved pets.</p>
                 <div class="social-links">
                     <a href=""><i class="fab fa-facebook-f"></i></a>
                     <a href=""><i class="fab fa-twitter"></i></a>
@@ -245,10 +291,52 @@
                 <a href="" class="btn">Learn More</a>
             </div>
             <div class="flex">
-                <img src="Reece.jpg">
+                <img src="about.jpg">
             </div>
         </div>
     </div>
+
+    <section class="section_container why_container">
+        <div class ="why_image">
+            <img src ="whyUS.jpg" alt="why choose us" />
+
+        </div>
+        <div class ="why_content">
+            <h2 class="section_header">Why Choose Us</h2>
+            <p>
+              With a steadfast commitment to your pet's well-being, our team of highly
+              trained healthcare proffessionals ensures that you receive nothing
+              short of exceptional patient experiences.
+            </p>
+            <div class="why_grid">
+                <span><i class="ri-hand-heart-fill"></i></span>
+                <div>
+                    <h4>Intensive Care</h4>
+                    <p>
+                      Our Intensive Care Unit is equipped with advanced technology and 
+                      stafffed by team of proffessionals.
+                    </p>
+                </div>
+                <span><i class="ri-truck-line"></i></span>
+                <div>
+                    <h4>Free Ambulance Car</h4>
+                    <p>
+                      A compassionate initiative to prioritize your pet's health and 
+                      well-being without any financial burden.
+                    </p>
+                </div>
+                <span><i class="ri-hospital-line"></i></span>
+                <div>
+                    <h4>Medical and Surgical</h4>
+                    <p>
+                      Our Medical and Surgical services offer advaced healthcare
+                      solutions to adress medical needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <footer class="footer">
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>

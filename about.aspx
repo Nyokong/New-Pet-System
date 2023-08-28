@@ -330,9 +330,24 @@
                     <h4>Medical and Surgical</h4>
                     <p>
                       Our Medical and Surgical services offer advaced healthcare
-                      solutions to adress medical needs.
+                      solutions to address medical needs.
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class ="section_container doctors_container">
+        <div class="doctors_header">
+            <div class="doctors_header_content">
+                <h2 class="section_header">Our  Special Doctors</h2>
+                <p>
+                    We take pride in our exceptional team of doctors, each a specialist
+                    in their respective fields.
+                </p>
+            </div>
+            <div class="doctors_nav">
+                <span><i class="ri-arrow-left-line"></i></span>
+                <span><i class="ri-arrow-right-line"></i></span>
             </div>
         </div>
     </section>

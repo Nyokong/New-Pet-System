@@ -7,7 +7,8 @@
     <title>Frequently Asked Questions</title>
 
     <link rel="icon" type="favicon_index" href="favicon_index/favicon_index.ico"/>
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
 
     <style type="text/css">
         :root {
@@ -706,7 +707,7 @@
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
 
         <div class="image-container">
-            <img src="pukke.png" alt="North-West University (Potch)" width="100%"/>
+            <img src="pukke.png" alt="North-West University (Potch)" width="100px"/>
             <p> Team 7 - System Analyst Corp </p>
         </div>
 
@@ -751,54 +752,105 @@
          </div>
      </div>
 
-    <script>
-        var coll = document.getElementsByClassName("collapsible");
+     <script>
+         
+             function getTime() {
+                 let today = new Date();
+             hours = today.getHours();
+             minutes = today.getMinutes();
 
-        for (let i = 0; i < coll.length; i++)
-        {
-            coll[i].addEventListener("click", function ()
-            {
-                this.classList.toggle("active");
-
-                var content = this.nextElementSibling;
-
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-
-                }
-                else
-                {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
-
+             if (hours < 10) {
+                 hours = "0" + hours;
         }
-        function getTime() {
-            let today = new Date();
-            hours = today.getHours();
-            minutes = today.getMinutes();
+             if (minutes < 10) {
+                 minutes = "0" + minutes;
+        }
+             let time = hours + ":" + minutes;
+             return time;
+    }
 
-            if (hours < 10) {
-                hours = "0" + hours;
+             function firstBotMessage() {
+                 let firstMessage = "What's up?";
+             document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
+             let time = getTime();
+             $("#chat-timestamp").append(time);
+             document.getElementById("userInput").scrollIntoView(false);
+    }
+
+             function getBotResponse(userText) {
+        // Replace this with your logic to generate bot responses
+        return "This is a sample bot response.";
+    }
+
+             function getResponse() {
+                 let userText = $("#textInput").val();
+
+             if (userText == "") {
+                 userText = "I Love Code Palace";
+        }
+
+             let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
+
+             $("#textInput").val("");
+             $("#chatbox").append(userHtml);
+             document.getElementById("chat-bar-bottom").scrollIntoView(true);
+
+        setTimeout(() => {
+                 getHardResponse(userText);
+        }, 1000);
+    }
+
+             function getHardResponse(userText) {
+                 let botResponse = getBotResponse(userText);
+             let botHtml = '<p class="botText"><span>' + botResponse + '</span></p>';
+             $("#chatbox").append(botHtml);
+             document.getElementById("chat-bar-bottom").scrollIntoView(true);
+    }
+
+             function buttonSendText(sampleText) {
+                 let userHtml = '<p class="userText"><span>' + sampleText + '</span></p>';
+             $("#textInput").val("");
+             $("#chatbox").append(userHtml);
+             document.getElementById("chat-bar-bottom").scrollIntoView(true);
+    }
+
+             function sendButton() {
+                 getResponse();
+    }
+
+             function heartButton() {
+                 buttonSendText("Heart clicked!");
+    }
+
+             $(document).ready(function () {
+                 firstBotMessage();
+
+             $("#chat-button").click(function () {
+                 $(".content").toggleClass("active");
+        });
+
+             $("#chat-icon-send").click(function () {
+                 getResponse();
+        });
+
+             $("#chat-icon-heart").click(function () {
+                 heartButton();
+        });
+
+             $("#textInput").keypress(function (e) {
+            if (e.which == 13) {
+                 getResponse();
             }
-            if (minutes < 10) {
-                minutes = "0" + minutes;
-            }
-            let time = hours + ":" + minutes;
-            return time;
+        });
+    });
+
+
+
+
         }
-
-        function firstBotMessage()
-        {
-            let firstMessage = "What's supp nigga?"
-            document.getElementById("botStarterMessage").innerHTML = '<p class ="botText"><span>' + firstMessage + '</span></p';
-            let time = getTime();
-
-            $("#chat-timestamp").append(time);
-            document.getElementById("userInput").scrollIntoView(false);
-        }
-
             
-    </script>
+    
+    
+      </script>
 </body>
 </html>

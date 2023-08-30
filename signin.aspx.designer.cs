@@ -13,7 +13,6 @@ namespace New_Pet_System
 
     public partial class signin
     {
-
         /// <summary>
         /// form control.
         /// </summary>
@@ -31,6 +30,15 @@ namespace New_Pet_System
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Email;
+
+        /// <summary>
+        /// lbl_conf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_conf;
 
         /// <summary>
         /// pass control.

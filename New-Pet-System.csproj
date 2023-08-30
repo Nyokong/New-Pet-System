@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="display3.jpg" />
     <Content Include="App_Data\NewPetPals-Data.mdf" />
     <Content Include="App_Data\NewPetPals-Data_log.ldf">
       <DependentUpon>NewPetPals-Data.mdf</DependentUpon>
@@ -76,6 +77,7 @@
     <Content Include="bookAppoinment.aspx">
       <BrowseToURL>bookAppoinment.aspx</BrowseToURL>
     </Content>
+    <Content Include="display2.jpg" />
     <Content Include="contact.aspx">
       <BrowseToURL>/contact.aspx</BrowseToURL>
     </Content>
@@ -113,6 +115,7 @@
     <Content Include="home.png" />
     <Content Include="icons8-pet-100.png" />
     <Content Include="bully.jpg" />
+    <Content Include="display1.jpg" />
     <Content Include="ntja.jpg" />
     <Content Include="nwu.png" />
     <Content Include="pet.jpg" />

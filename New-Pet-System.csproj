@@ -112,7 +112,7 @@
     <Content Include="pet.png" />
     <Content Include="pukke.png" />
     <Content Include="Reece.jpg" />
-    <Content Include="responsesjs.js" />
+    <Content Include="script.js" />
     <Content Include="signin.aspx">
       <BrowseToURL>signin.aspx</BrowseToURL>
     </Content>

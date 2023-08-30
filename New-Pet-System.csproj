@@ -74,7 +74,7 @@
     </Content>
     <Content Include="back.jpg" />
     <Content Include="bookAppoinment.aspx">
-      <BrowseToURL>/bookAppoinment.aspx</BrowseToURL>
+      <BrowseToURL>bookAppoinment.aspx</BrowseToURL>
     </Content>
     <Content Include="contact.aspx">
       <BrowseToURL>/contact.aspx</BrowseToURL>

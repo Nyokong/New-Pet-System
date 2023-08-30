@@ -34,6 +34,7 @@
             font-family:Arial, Arial, Helvetica, sans-serif;
             margin: 0;
             font-size: 14px;
+            color: black;
         }
 
         .bf-container h1{
@@ -59,6 +60,10 @@
             min-height: 100vh;
             overflow-y: auto;
             padding: 20px 16px;
+            background-image: url("bully.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
             /*background-color: #1d2228;*/
         }
 
@@ -98,7 +103,7 @@
         
         .bf-body{
             width: 800px;
-            background-color: #ADD8E6;
+            background-color: transparent;
             border-radius: 10px;
         }
 

@@ -7,12 +7,7 @@
     <title>Frequently Asked Questions</title>
 
     <link rel="icon" type="favicon_index" href="favicon_index/favicon_index.ico"/>
-    <link
-        rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer"
-        />
+   
 
     <style type="text/css">
         :root {
@@ -252,6 +247,7 @@
         #chatbot-container {
             display: none;
             position: fixed;
+            height: 50vh;
             bottom: 80px;
             right: 20px;
             background-color: white;
@@ -530,20 +526,50 @@
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
 
         <div class="image-container">
-            <img src="pukke.png" alt="North-West University (Potch)" width="100px"/>
+            <img src="pukke.png" alt="North-West University (Potch)" width="100%"/>
             <p> Team 7 - System Analyst Corp </p>
         </div>
 
     </footer>
-      <div class="floating-tab" id="ask-question-tab">Ask a Question</div>
-    <div id="chatbot-container">
-        <!-- Your chatbot interface goes here -->
-        <div id="chatbot-content">
-            <p>Welcome to the chatbot! Feel free to ask a question.</p>
-        </div>
-        <input type="text" id="user-input" placeholder="Type your question here">
-        <button id="send-button">Send</button>
-    </div>
+     <div class ="chat-bar-collapsible">
+         <button id="chat-button" type="button" class="collapsible">Chat With Us!
+             <i id="chat-icon" style ="color: #fff"; class="fa fa-fw fa-comments-o"></i>
+         </button>
+
+         <div class="content">
+             <div class ="full-chat-block">
+                 <!--Message Container-->
+                 <div class ="outer-container">
+                     <div class="chat-container">
+                         <!--Messages-->
+                         <div id="chatbox">
+                             <h5 id="chat-timestamp"></h5>
+                             <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                         </div>
+                         <!--User input box-->
+                         <div class="chat-bar-input-black">
+                             <div id="userInput">
+                                 <input type="text" id="textInput" class="input-box" name ="msg" 
+                                  placeholder="Tap Enter to send a message"/>
+                                 <p></p>
+                             </div>
+
+                             <div class ="chat-bar-icons">
+                                   <i id="chat-icon" style ="color: crimson"; class="fa fa-fw fa-comments-o"
+                                       oneclick="heartButton()"></i>
+                                 <i id="chat-icon" style ="color: #333"; class="fa fa-fw fa-comments-o"
+                                       oneclick="heartButton()"></i>
+                             </div>
+                         </div>
+                         <div id="chat-bar-button">
+                             <p></p>
+                         </div>
+
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
 
     <script>
         // JavaScript to handle the floating tab and chatbot
@@ -556,6 +582,6 @@
 
         // Attach click event to the tab
         tab.addEventListener("click", toggleChatbot);
-    </script>>
+    </script>
 </body>
 </html>

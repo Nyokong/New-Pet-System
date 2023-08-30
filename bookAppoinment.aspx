@@ -60,7 +60,7 @@
             min-height: 100vh;
             overflow-y: auto;
             padding: 20px 16px;
-            background-image: url("bully.jpg");
+            background-image: url("ntja.jpg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -99,12 +99,23 @@
             color: #e23b3b;
         }
 
+        .bf-col-6 {
+           margin: 2px 4px;
+           padding: 5px 8px;
+        }
+
+        .bf-col-3 {
+           margin: 2px 4px;
+           padding: 5px 8px;
+        }
+
         #selected{color: #fa8282;}
         
         .bf-body{
             width: 800px;
-            background-color: transparent;
+            backdrop-filter: blur(2px);
             border-radius: 10px;
+            box-shadow: rgba(0, 0, 0);
         }
 
         .bf-head{
@@ -112,7 +123,8 @@
         }
 
         .bf-body-box{
-            padding: 30px;
+            margin: 0px 10px;
+            padding: 40px;
         }
         
        .footer{
@@ -139,6 +151,10 @@
         .footer p {
              margin: 0;
              font-size: 16px;
+        }
+
+        .bf-row {
+            font-size: 18px;
         }
 
         h4{
@@ -220,19 +236,18 @@
                 <div class="bf-row">
 
                     <div class="bf-col-6">
-                        <p> Select Date </p>
+                        <p> Description: </p>
+                        <textarea rows="5" placeholder="Your Description"></textarea>
+                    </div>
+
+                    <div class="bf-col-6">
+                        <p> Select Date: </p>
                         <input type="date" name="date" id="date" />
                     </div>
 
                     <div class="bf-col-6">
-                        <p> Select Number </p>
-                        <select name="s-select">
-                            <option> Select Number</option>
-                            <option value="1"> 1 </option>
-                            <option value="2"> 2 </option>
-                            <option value="3"> 3 </option>
-                        </select>
-
+                        <p> Choose the time: </p>
+                        <input type="time" name="time" id="time" />
                     </div>
 
                 </div>
@@ -240,7 +255,6 @@
                 <div class="bf-row">
 
                     <div class="bf-col-3">
-                        <p> Your Name </p>
                         <input type="submit" value="submit" id="fname"/>
                     </div>
 

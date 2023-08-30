@@ -77,6 +77,8 @@
       <DependentUpon>PetPalsClinic.mdf</DependentUpon>
 
     </Content>
+    <Content Include="about.jpg" />
+    <Content Include="Admin.aspx" />
     <Content Include="back.jpg" />
     <Content Include="contact.aspx">
       <BrowseToURL>/contact.aspx</BrowseToURL>
@@ -86,6 +88,14 @@
     </Content>
     <Content Include="doc.jpg" />
     <Content Include="doctor.jpg" />
+    <Content Include="doctor1.jpg" />
+    <Content Include="doctor2.jpg" />
+    <Content Include="doctor3.jpg" />
+    <Content Include="doctor4.jpg" />
+    <Content Include="doctor5.jpg" />
+    <Content Include="doctor6.jpg" />
+    <Content Include="doctor7.jpg" />
+    <Content Include="doctor8.jpg" />
     <Content Include="dog.jpg" />
     <Content Include="download.png" />
     <Content Include="faq.aspx">
@@ -125,6 +135,7 @@
     <Content Include="vetVideo.MOV" />
     <Content Include="Web.config" />
     <Content Include="website.jpg" />
+    <Content Include="whyUS.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="about.aspx.cs">
@@ -133,6 +144,13 @@
     </Compile>
     <Compile Include="about.aspx.designer.cs">
       <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>

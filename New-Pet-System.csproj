@@ -69,8 +69,13 @@
   <ItemGroup>
     <Content Include="about.aspx" />
     <Content Include="App_Data\NewPetPals-Data.mdf" />
+    <Content Include="App_Data\NewPetPals-Data_log.ldf">
+      <DependentUpon>NewPetPals-Data.mdf</DependentUpon>
+    </Content>
     <Content Include="back.jpg" />
-    <Content Include="bookAppoinment.aspx" />
+    <Content Include="bookAppoinment.aspx">
+      <BrowseToURL>bookAppoinment.aspx</BrowseToURL>
+    </Content>
     <Content Include="contact.aspx">
       <BrowseToURL>/contact.aspx</BrowseToURL>
     </Content>
@@ -107,6 +112,8 @@
     <Content Include="favicon_io\favicon_staff.ico" />
     <Content Include="home.png" />
     <Content Include="icons8-pet-100.png" />
+    <Content Include="bully.jpg" />
+    <Content Include="ntja.jpg" />
     <Content Include="nwu.png" />
     <Content Include="pet.jpg" />
     <Content Include="pet.png" />
@@ -137,6 +144,7 @@
     </Compile>
     <Compile Include="bookAppoinment.aspx.designer.cs">
       <DependentUpon>bookAppoinment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="askQuestion.aspx.cs">
       <DependentUpon>askQuestion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

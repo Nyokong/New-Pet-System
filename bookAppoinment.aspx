@@ -30,11 +30,41 @@
         }
 
         body{
-            font-family: Arial, sans-serif;
             padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:Arial, Arial, Helvetica, sans-serif;
             margin: 0;
             font-size: 14px;
+            color: black;
+        }
+
+        .bf-container h1{
+            font-size: 32px;
+            color: #fff;
+            padding: 20px 10px;
+        }
+
+        p{
+            color: #fff;
+        }
+
+        a{
+            text-decoration: none;
+            color: green;
+        }
+
+        .bf-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+            overflow-y: auto;
+            padding: 20px 16px;
+            background-image: url("ntja.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            /*background-color: #1d2228;*/
         }
 
         /* the navigation menu starts here */
@@ -69,8 +99,33 @@
             color: #e23b3b;
         }
 
-        #selected{color: #fa8282;}
+        .bf-col-6 {
+           margin: 2px 4px;
+           padding: 5px 8px;
+        }
 
+        .bf-col-3 {
+           margin: 2px 4px;
+           padding: 5px 8px;
+        }
+
+        #selected{color: #fa8282;}
+        
+        .bf-body{
+            width: 800px;
+            backdrop-filter: blur(2px);
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0);
+        }
+
+        .bf-head{
+            text-align: center;
+        }
+
+        .bf-body-box{
+            margin: 0px 10px;
+            padding: 40px;
+        }
         
        .footer{
             padding: 20px;
@@ -80,7 +135,7 @@
             color: #fff;
             text-align: center;
             font-weight: bold;
-        }
+       }
 
         .image-container {
             width: 100%;
@@ -96,6 +151,10 @@
         .footer p {
              margin: 0;
              font-size: 16px;
+        }
+
+        .bf-row {
+            font-size: 18px;
         }
 
         h4{
@@ -149,31 +208,62 @@
 
     </header>
 
-    <div class="inner-layer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-7">
-                    <div class="content">
 
-                    </div>
+    <div class="bf-container">
 
-                </div>
-                <div class="col-sm-5">
-                    <div class="form-data">
-                        <div class="form-head">
-
-                        </div>
-                        <div class="form-body">
-                            <div class="row form-row">
-                                <input type="text" class="form-control" value="" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="bf-body">
+            <div class="bf-head">
+                <h1> Appointment Booking Form </h1>
+                <p> |-Let's start to book now -| </p>
             </div>
-        </div>
 
+            <form class="bf-body-box">
+
+                <div class="bf-row">
+
+                    <div class="bf-col-6">
+                        <p> Your Name </p>
+                        <input type="text" name="fname" id="f_name"/>
+                    </div>
+
+                    <div class="bf-col-6">
+                        <p> Email Address </p>
+                        <input type="email" name="email" id="email"/>
+                    </div>
+
+                </div>
+
+                <div class="bf-row">
+
+                    <div class="bf-col-6">
+                        <p> Description: </p>
+                        <textarea rows="5" placeholder="Your Description"></textarea>
+                    </div>
+
+                    <div class="bf-col-6">
+                        <p> Select Date: </p>
+                        <input type="date" name="date" id="date" />
+                    </div>
+
+                    <div class="bf-col-6">
+                        <p> Choose the time: </p>
+                        <input type="time" name="time" id="time" />
+                    </div>
+
+                </div>
+
+                <div class="bf-row">
+
+                    <div class="bf-col-3">
+                        <input type="submit" value="submit" id="fname"/>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
     </div>
+
 
     <form id="form1" runat="server">
         <div>

@@ -84,12 +84,7 @@
     <Content Include="faq.aspx">
       <BrowseToURL>/faq.aspx</BrowseToURL>
     </Content>
-    <Content Include="favicon_book\android-chrome-192x192.png" />
-    <Content Include="favicon_book\android-chrome-512x512.png" />
-    <Content Include="favicon_book\apple-touch-icon.png" />
-    <Content Include="favicon_book\favicon-16x16.png" />
-    <Content Include="favicon_book\favicon-32x32.png" />
-    <Content Include="favicon_book\favicon.ico" />
+    <Content Include="FAQ.png" />
     <Content Include="favicon_client\android-chrome-192x192.png" />
     <Content Include="favicon_client\android-chrome-512x512.png" />
     <Content Include="favicon_client\apple-touch-icon.png" />
@@ -106,6 +101,7 @@
     <Content Include="favicon_io\android-chrome-192x192.png" />
     <Content Include="favicon_io\android-chrome-512x512.png" />
     <Content Include="favicon_io\apple-touch-icon.png" />
+    <Content Include="favicon_io\FAQ.png" />
     <Content Include="favicon_io\favicon-16x16.png" />
     <Content Include="favicon_io\favicon-32x32.png" />
     <Content Include="favicon_io\favicon_staff.ico" />
@@ -141,6 +137,12 @@
     </Compile>
     <Compile Include="bookAppoinment.aspx.designer.cs">
       <DependentUpon>bookAppoinment.aspx</DependentUpon>
+    <Compile Include="askQuestion.aspx.cs">
+      <DependentUpon>askQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="askQuestion.aspx.designer.cs">
+      <DependentUpon>askQuestion.aspx</DependentUpon>
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>

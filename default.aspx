@@ -480,6 +480,7 @@
         #id-middle-2 #cont-2 #id-services-6{
             order: 6;
         }
+
     </style>
 </head>
 <body style="height: 579px">
@@ -494,6 +495,7 @@
 
         <div class="nav-menu">
             <nav class="main-nav">
+                <a href="default.aspx" id="selected">Home </a>
                 <a href="about.aspx"> About </a>
                 <a href="faq.aspx"> FAQs </a>
                <a href="contact.aspx"> Contact Us</a>

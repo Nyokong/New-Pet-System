@@ -37,8 +37,9 @@
         }
 
         .bf-container h1{
-            font-size: 40px;
+            font-size: 32px;
             color: #fff;
+            padding: 20px 10px;
         }
 
         p{
@@ -58,7 +59,7 @@
             min-height: 100vh;
             overflow-y: auto;
             padding: 20px 16px;
-            background-color: #1d2228;
+            /*background-color: #1d2228;*/
         }
 
         /* the navigation menu starts here */
@@ -96,12 +97,17 @@
         #selected{color: #fa8282;}
         
         .bf-body{
-            width: 700px;
-            background-color: #1d1d2c;
+            width: 800px;
+            background-color: #ADD8E6;
+            border-radius: 10px;
         }
 
         .bf-head{
             text-align: center;
+        }
+
+        .bf-body-box{
+            padding: 30px;
         }
         
        .footer{

@@ -30,16 +30,7 @@
             width: 100%;
             background-color: #eaeaea;
         }
-        .auto-style1 {
-            width: 305px;
-        }
-        .auto-style18 {
-            width: 100%;
-        }
-        .auto-style20 {
-            width: 548px;
-        }
-
+        
         <!--Super links-->
         a{
             display: flex;
@@ -394,7 +385,6 @@
             margin: 0px 10px;
             background-color: var(--nav-btn-bg-color);
         }
-
         #id-middle-2 
         {
             display: flex;
@@ -481,6 +471,15 @@
             order: 6;
         }
 
+        .class-box-contained img{
+            object-fit: fill;
+            width: 100%; 
+            max-width: 100%; 
+            height: auto;
+            display: block;
+        }
+
+
     </style>
 </head>
 <body style="height: 579px">
@@ -516,9 +515,15 @@
         </div>
 
         <div id="id-tab-2">
-            <div class="class-box-contained">1</div>
-            <div class="class-box-contained">2</div>
-            <div class="class-box-contained">3</div>
+            <div class="class-box-contained">
+                <img src="display1.jpg" alt="displayImage1"/>
+            </div>
+            <div class="class-box-contained">
+                <img src="display2.jpg" alt="displayImage2"/>
+            </div>
+            <div class="class-box-contained">
+                <img src="display3.jpg" alt="displayImage3"/>
+            </div>
            <!-- <h1>Medicine</h1>
             <h2>Is Love <3</h2>
             <div id="id-intro video">
@@ -631,31 +636,9 @@
 
     </footer>
 
+
 </form>
-
-    <script>
-        var myVideo = document.getElementById("intro-video");
-
-
-        $(document).ready(function () {
-            var myVideo = document.getElementById("intro-video");
-
-            $.ajax({
-                url: "/default.aspx",
-                success: function (data) {
-                    //$(myVideo).html(data);
-
-                    if (myVideo.paused) {
-                        console.log("The video is paused");
-                        //myVideo.play();
-                    } else {
-                        console.log("The video is playing");
-                    }
-                }
-            });
-
-        });
-
-    </script>
+    <p class="auto-style2">
+        /=</p>
 </body>
 </html>

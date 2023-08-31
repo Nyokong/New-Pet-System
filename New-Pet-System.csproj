@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="display3.jpg" />
     <Content Include="App_Data\NewPetPals-Data.mdf" />
     <Content Include="App_Data\NewPetPals-Data_log.ldf">
       <DependentUpon>NewPetPals-Data.mdf</DependentUpon>
@@ -76,8 +77,9 @@
     <Content Include="Admin.aspx" />
     <Content Include="back.jpg" />
     <Content Include="bookAppoinment.aspx">
-      <BrowseToURL>bookAppoinment.aspx</BrowseToURL>
+      <BrowseToURL>/bookAppoinment.aspx</BrowseToURL>
     </Content>
+    <Content Include="display2.jpg" />
     <Content Include="contact.aspx">
       <BrowseToURL>/contact.aspx</BrowseToURL>
     </Content>
@@ -128,6 +130,7 @@
     <Content Include="nwu.png" />
     <Content Include="pet.jpg" />
     <Content Include="pet.png" />
+    <Content Include="Profile.aspx" />
     <Content Include="pukke.png" />
     <Content Include="Reece.jpg" />
     <Content Include="signin.aspx">
@@ -157,19 +160,12 @@
     <Compile Include="bookAppoinment.aspx.designer.cs">
       <DependentUpon>bookAppoinment.aspx</DependentUpon>
     </Compile>
-    <Compile Include="askQuestion.aspx.cs">
-      <DependentUpon>askQuestion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="askQuestion.aspx.designer.cs">
-      <DependentUpon>askQuestion.aspx</DependentUpon>
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
-
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
@@ -198,6 +194,13 @@
     </Compile>
     <Compile Include="main.aspx.designer.cs">
       <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signin.aspx.cs">

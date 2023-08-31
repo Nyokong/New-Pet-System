@@ -13,5 +13,10 @@ namespace New_Pet_System
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

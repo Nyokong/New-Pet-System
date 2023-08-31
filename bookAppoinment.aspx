@@ -38,9 +38,9 @@
         }
 
         .bf-container h1{
-            font-size: 32px;
+            font-size: 36px;
             color: #fff;
-            padding: 20px 10px;
+            padding: 19px 10px;
         }
 
         p{
@@ -54,12 +54,12 @@
 
         .bf-container{
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: left;
+            align-items: flex-start;
             width: 100%;
             min-height: 100vh;
             overflow-y: auto;
-            padding: 20px 16px;
+            padding: 30px 0px;
             background-image: url("ntja.jpg");
             background-repeat: no-repeat;
             background-position: center;
@@ -100,8 +100,9 @@
         }
 
         .bf-col-6 {
-           margin: 2px 4px;
-           padding: 5px 8px;
+            margin-bottom: 5px;
+            margin: 2px 4px;
+            padding: 5px 8px;
         }
 
         .bf-col-3 {
@@ -110,16 +111,64 @@
         }
 
         #selected{color: #fa8282;}
+
+        .bf-row {
+           font-size: 18px;
+           display: flex;
+           flex: 3;
+        }
+        
+        .bf-col-6 p{
+            margin: 5px 0px;
+        }
+
+        .bf-col-3 {
+            padding: 30px;
+            margin-right: 80px;
+        }
+
+        .button{
+            color: white;
+            background-color: #5762D5;
+            font-size: 18px;
+            margin-left: 115px;
+            width: 150px; 
+            height: 50px; 
+            border-radius: 10px;
+        }
+
+        .button:hover{
+            background-color: #4751c0;
+            cursor: pointer;
+        }
+
+        .bf-col-6 input {
+            padding: 0px 5px;
+            font-size: 14px;
+            height: 20px;
+            margin-right: 60px;
+            border-radius: 10px;
+        }
         
         .bf-body{
+            position:absolute; 
+            left:80px; 
+            margin: 20px;
             width: 800px;
-            backdrop-filter: blur(2px);
-            border-radius: 10px;
-            box-shadow: rgba(0, 0, 0);
+            border-block-color: #e23b3b;
+            border-end-start-radius: 1px 2px;
         }
 
         .bf-head{
-            text-align: center;
+            margin: 0px;
+            padding: 20px 10px;
+            margin-left: 50px;
+        }
+
+        .bf-head p {
+            color: orangered;
+            font-size: 18px;
+            margin-left: 140px;
         }
 
         .bf-body-box{
@@ -151,10 +200,6 @@
         .footer p {
              margin: 0;
              font-size: 16px;
-        }
-
-        .bf-row {
-            font-size: 18px;
         }
 
         h4{
@@ -214,21 +259,49 @@
         <div class="bf-body">
             <div class="bf-head">
                 <h1> Appointment Booking Form </h1>
-                <p> |-Let's start to book now -| </p>
+                <p> |  Let's start to book now  | </p>
             </div>
 
-            <form class="bf-body-box">
+            <form class="bf-body-box" runat="server">
 
                 <div class="bf-row">
 
                     <div class="bf-col-6">
                         <p> Your Name </p>
-                        <input type="text" name="fname" id="f_name"/>
+                        <asp:TextBox runat="server" class="bf-col-6" type="text" name="fname" required="required" placeholder="Name" id="f_name" OnTextChanged="f_name_TextChanged"/>
                     </div>
 
                     <div class="bf-col-6">
                         <p> Email Address </p>
-                        <input type="email" name="email" id="email"/>
+                        <asp:TextBox runat="server" CssClass="bf-col-6" type="email" required="required" placeholder="Email Address" name="email" id="email"/>
+                    </div>
+
+                </div>
+
+                <div class="bf-row">
+
+                    <div class="bf-col-6">
+                        <p> Pet Species </p>
+                        <asp:TextBox runat="server" CssClass="bf-col-6" type="text" required="required" placeholder="Pet Species" name="pet" id="pet"/>
+                    </div>
+
+                    <div class="bf-col-6">
+                        <p> Choose Doctor </p>
+                        <asp:TextBox runat="server" CssClass="bf-col-6" type="text" required="required" name="doc" id="doc"/>
+                    </div>
+
+                </div>
+
+                <div class="bf-row">
+
+                    <div class="bf-col-6">
+                        <p> Select Date: </p>
+                        <input type="date" name="date" required="required" id="date" />
+                    </div>
+
+                    <div class="bf-col-6">
+                        <p> Choose the time: </p>
+                        <input type="time" name="time" required="required" id="time" />
                     </div>
 
                 </div>
@@ -237,17 +310,7 @@
 
                     <div class="bf-col-6">
                         <p> Description: </p>
-                        <textarea rows="5" placeholder="Your Description"></textarea>
-                    </div>
-
-                    <div class="bf-col-6">
-                        <p> Select Date: </p>
-                        <input type="date" name="date" id="date" />
-                    </div>
-
-                    <div class="bf-col-6">
-                        <p> Choose the time: </p>
-                        <input type="time" name="time" id="time" />
+                        <textarea rows="5" cols="59" required="required" placeholder="Your Description"></textarea>
                     </div>
 
                 </div>
@@ -255,7 +318,7 @@
                 <div class="bf-row">
 
                     <div class="bf-col-3">
-                        <input type="submit" value="submit" id="fname"/>
+                        <asp:Button runat="server" class="button" type="submit" Text="Book" id="submit" OnClick="submit_Click" />
                     </div>
 
                 </div>
@@ -263,12 +326,6 @@
             </form>
         </div>
     </div>
-
-
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
 
     <footer class="footer">
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>

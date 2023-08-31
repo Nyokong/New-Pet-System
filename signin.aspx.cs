@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace New_Pet_System
 {
@@ -18,12 +19,6 @@ namespace New_Pet_System
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            conn.Open();
-
-            lbl_conf.Text = "Successful";
-
-            conn.Close();
-
             // check for remember me cookie
             if (Request.Cookies["Email"] != null && Request.Cookies["Password"] != null)
             {
@@ -47,6 +42,10 @@ namespace New_Pet_System
                     rememberMeCookie.Values["Username"] = email;
                     rememberMeCookie.Expires = DateTime.Now.AddDays(7);
                     Response.Cookies.Add(rememberMeCookie);
+                    /**
+                    // Show the modal
+                    string script = "showModal();";
+                    ClientScript.RegisterClientScriptBlock(this.GetType(), "ShowModalScript", script, true);*/
                 }
                 else
                 {
@@ -58,7 +57,19 @@ namespace New_Pet_System
                     }
                 }
 
-                Response.Redirect("default.aspx"); // Redirect to the home page
+                // Register a startup script to show the modal using jQuery
+                string script = @"<script type='text/javascript'>
+                            $(document).ready(function() {
+                                $('#loginSuccessModal').modal('show');
+                            });
+                          </script>";
+
+                ClientScript.RegisterStartupScript(this.GetType(), "ShowModalScript", script);
+
+                // Trigger the Bootstrap modal after successful login
+                ScriptManager.RegisterStartupScript(this, GetType(), "LoginSuccessScript", "$('#loginSuccessModal').modal('show');", true);
+
+                //Response.Redirect("default.aspx"); // Redirect to the home page
             }
             else
             {
@@ -76,6 +87,7 @@ namespace New_Pet_System
             command.Parameters.AddWithValue("@Email", email);
             command.Parameters.AddWithValue("@Password", password);
             int count = Convert.ToInt32(command.ExecuteScalar());
+
             
             // close the connection
             conn.Close();

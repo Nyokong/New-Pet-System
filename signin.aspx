@@ -5,8 +5,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Sign In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
 
     <link rel="icon" type="image/jpg" href="favicon_client/favicon.ico"/>
+    <!-- bootsrap -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+       
 
     <style type="text/css">
 
@@ -210,7 +218,7 @@
             font-size: 18px;
         }
 
-        button{
+        #btnSubmit{
             width: 70%;
             height: 55px;
             background-color: #5762D5;
@@ -223,7 +231,7 @@
         }
 
         /*The hover link */
-        button:hover{
+        #btnSubmit:hover{
             background-color: #4751c0;
             cursor: pointer;
         }
@@ -299,8 +307,6 @@
     </style>
 </head>
 <body>
-
-    <form id="form1" runat="server">
      <header>
        <div class="logo-icon">
             <img src="icons8-pet-100.png" width="120" alt="Pet-Pals Logo"/>
@@ -318,33 +324,57 @@
             </nav>
         </div>
 
-        <nav class="main-nav">
-            <a href="default.aspx" id="selected">Home </a>
-            <a href="about.aspx"> About </a>
-            <a href="signin.aspx"> Sign In </a>
-            <a href="faq.aspx"> FAQs </a>
-           <a href="contact.aspx"> Contact Us</a>
-        </nav>
-         <table style="width: 100%; height: 157px;">
-             <tr>
-                 <td class="auto-style1" colspan="3" style="text-align: center"><strong>Sign In</strong></td>
-             </tr>
-             <tr>
-                 <td class="auto-style3">Username</td>
-                 <td class="auto-style2">
-                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                 </td>
-                 <td class="auto-style2"></td>
-             </tr>
-             <tr>
-                 <td class="auto-style4">Password</td>
-                 <td>
-                     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                 </td>
-                 <td>&nbsp;</td>
-             </tr>
-         </table>
     </header>
+    
+    <div class="class-sign-up">
+        <div id="id-box-container">
+            <div id="id-signup-icon">
+                 <img src="favicon_client/favicon.ico" alt="profile-image"/>
+                 <h1> Sign In </h1>
+            </div>
+            <form id="form" runat="server">
+
+                <label for="email"> Email: </label><br/>
+                <asp:TextBox runat="server" class="fields" type="email" ID="txt_email" required="required" placeholder="Email: "/><br/>
+                <asp:Label ID="lbl_conf" runat="server" Text="[confirmation]"></asp:Label>
+                <label for="pass"> Password: </label><br/>
+                <asp:TextBox runat="server" class="fields" type="password" ID="txt_pass" required="required" placeholder="Password: "/><br/><br/>
+
+                <label style="font-size: 16px;" for="signup"> Don't have an account ? Click <a href="signup.aspx"> here </a> to register an account. </label><br/>
+                <br/>
+                
+                <div class="btn-sign-up">
+                    <asp:Button runat="server" ID="btnSubmit" CssClass="btn-sign-up" text="Sign In" type="submit" OnClick="LoginButton_Click"/>  
+                </div>
+
+                <div id="id-remember">
+                    <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time" />
+                </div>
+            
+            </form>
+        </div>    
+    </div>
+
+    <div id="loginSuccessModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login Successful</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Welcome, you have successfully logged in!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <footer class="footer">
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
 
@@ -354,11 +384,12 @@
         </div>
 
     </footer>
-
-        <div style="height: 75px; margin-top: 109px">
-        </div>
-        
-    </form>
-
+         <script  type="text/javascript">
+             $(document).ready(function () {
+                 const myfunc = function () {
+                     console.log("bitch");
+                 }
+             });
+         </script>
     </body>
 </html>

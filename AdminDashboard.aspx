@@ -55,6 +55,9 @@
         .side-menu .brand-name{
             height: 10vh;
             display: flex;
+            border-block:groove;
+            block-size:fit-content;
+            border-block-color:aquamarine;
             align-items:center;
             justify-content: center;
         }
@@ -155,7 +158,7 @@
     <form id="form1" runat="server">
         <div class="side-menu">
             <div class="brand-name">
-                <h1><img src="" alt /> Pet-Pals</h1>
+                <h1><img src="pet60_w.png" alt="" /> Pet-Pals</h1>
             </div>
             <ul>
                 <li><img src="home30.png" alt="" />&nbsp; Home</li>

@@ -263,6 +263,11 @@
             cursor: pointer;
             background: #724ae8;
             border-radius: 50%;
+            transition: all 0.2s ease;
+        }
+        .show-chatbot .chatbot-toggler
+        {
+            transform: rotate(90deg);
         }
         .chatbot-toggler span
         {
@@ -288,8 +293,10 @@
             overflow: hidden;
             background: #fff;
             border-radius: 15px;
+            transform-origin: bottom right;
             box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
                         0 32px 64px -48px rgba(0,0,0,0.5);
+            transition: all 0.1s ease;
         }
         .show-chatbot .chatbot
         {
@@ -302,8 +309,9 @@
         .chatbot header
         {
             background: #724ae8;
-            padding 16px 0;
+            padding: 16px 0;
             text-align: center;
+            justify-content: center;
         }
         .chatbot header h2
         {
@@ -322,9 +330,9 @@
         }
         .chatbot .chatbox
         {
-            height: 350px;
+            height: 60vh;
             overflow-y: auto;
-            padding: 30px 20px 70px;
+            padding: 30px 20px 100px;
         }
         .chatbox .chat
         {
@@ -351,6 +359,7 @@
         {
             color: #fff;
             max-width: 75%;
+            white-space: pre-wrap;
             font-size: 0.95rem;
             padding: 12px 16px;
             border-radius: 10px 10px 0 10px;
@@ -420,7 +429,7 @@
      
     </style>
 </head>
-<body class="show-chatbot">
+<body>
    <header class="header-menu">
         <div class="logo-icon">
             <img src="icons8-pet-100.png" width="120" alt="Pet-Pals Logo"/>
@@ -700,7 +709,7 @@
     <div class="chatbot">
         <header>
             <h2>Chatbot</h2>
-            <span class ="material-symbols-outlined">close</span>
+            <span class ="close-btn material-symbols-outlined">close</span>
         </header>
         <ul class ="chatbox">
             <li class="chat incoming">

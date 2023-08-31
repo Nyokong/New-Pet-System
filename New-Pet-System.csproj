@@ -69,6 +69,9 @@
   <ItemGroup>
     <Content Include="about.aspx" />
     <Content Include="App_Data\NewPetPals-Data.mdf" />
+    <Content Include="App_Data\NewPetPals-Data_log.ldf">
+      <DependentUpon>NewPetPals-Data.mdf</DependentUpon>
+    </Content>
     <Content Include="back.jpg" />
     <Content Include="bookAppoinment.aspx" />
     <Content Include="contact.aspx">

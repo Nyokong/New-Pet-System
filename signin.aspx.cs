@@ -56,7 +56,23 @@ namespace New_Pet_System
                     }
                 }
 
+<<<<<<< HEAD
                 Response.Redirect("main.aspx"); // Redirect to the home page
+=======
+                // Register a startup script to show the modal using jQuery
+                string script = @"<script type='text/javascript'>
+                            $(document).ready(function() {
+                                $('#loginSuccessModal').modal('show');
+                            });
+                          </script>";
+
+                ClientScript.RegisterStartupScript(this.GetType(), "ShowModalScript", script);
+
+                // Trigger the Bootstrap modal after successful login
+                ScriptManager.RegisterStartupScript(this, GetType(), "LoginSuccessScript", "$('#loginSuccessModal').modal('show');", true);
+
+                //Response.Redirect("default.aspx"); // Redirect to the home page
+>>>>>>> master
             }
             else
             {

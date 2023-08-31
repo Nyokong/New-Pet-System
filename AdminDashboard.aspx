@@ -151,6 +151,24 @@
             left: 0;
             width: 100%;
         }
+        .container .content{
+            position: relative;
+            margin-top: 10vh;
+            min-height: 90vh;
+        }
+        .container .content .cards{
+            padding: 20px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .container .content .cards .card{
+            width: 250px;
+            height: 150px;
+            background: white;
+            margin: 20px 10px;
+        }
     </style>
 </head>
 
@@ -186,6 +204,28 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="content">
+                <div class="cards">
+                    <div class="card">
+                        <div class="box">
+                            <h1>2194</h1>
+                            <h3>Users</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="" alt="" />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <h1>2194</h1>
+                            <h3>Users</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="" alt="" />
+                        </div>
+                </div>
+                <div class="content-2"></div>
             </div>
         </div>
     </form>

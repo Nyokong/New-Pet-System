@@ -38,9 +38,9 @@
         }
 
         .bf-container h1{
-            font-size: 32px;
+            font-size: 41px;
             color: #fff;
-            padding: 20px 10px;
+            padding: 19px 10px;
         }
 
         p{
@@ -59,7 +59,7 @@
             width: 100%;
             min-height: 100vh;
             overflow-y: auto;
-            padding: 20px 16px;
+            padding: 30px 0px;
             background-image: url("ntja.jpg");
             background-repeat: no-repeat;
             background-position: center;
@@ -110,12 +110,18 @@
         }
 
         #selected{color: #fa8282;}
+
+        .bf-row {
+            inlin
+        }
         
         .bf-body{
+            position:absolute; 
+            left:80px; 
+            margin: 20px;
             width: 800px;
-            backdrop-filter: blur(2px);
-            border-radius: 10px;
-            box-shadow: rgba(0, 0, 0);
+            border-block-color: #e23b3b;
+            border-end-start-radius: 1px 2px;
         }
 
         .bf-head{
@@ -229,6 +235,20 @@
                     <div class="bf-col-6">
                         <p> Email Address </p>
                         <input type="email" name="email" id="email"/>
+                    </div>
+
+                </div>
+
+                <div class="bf-row">
+
+                    <div class="bf-col-6">
+                        <p> Your Pet </p>
+                        <input type="text" name="pet" id="pet"/>
+                    </div>
+
+                    <div class="bf-col-6">
+                        <p> Choose Doctor </p>
+                        <input type="text" name="doc" id="doc"/>
                     </div>
 
                 </div>

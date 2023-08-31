@@ -29,11 +29,22 @@
             width: 400px;
         }
 
+        .list-container a{
+            color: black;
+            text-decoration: none;
+        }
+
+        .list-container:hover{
+            cursor: pointer;
+            text-decoration: none;
+        }
+
         .contain-form {
             display: flex;
             align-items: stretch;
             justify-content: center;
             flex-direction: row;
+            margin-top: -50px;
         }
 
         .customer-form1 {
@@ -60,35 +71,30 @@
         <ul class="list-group">
           <li class="list-group-item active">Account</li>
           <a href="passwordForm.aspx"><li class="list-group-item">Password</li></a>
-          <li class="list-group-item">Settings</li>
-          <li class="list-group-item">Notification Settings</li>
+          <a href="customerSettings.aspx"><li class="list-group-item">Delete Account</li></a>
+          <a href="notificationSettings.aspx"><li class="list-group-item">Notification Settings</li></a>
         </ul>
     </div>
 
-    <form class="customer-form1">
+    <form class="customer-form1" runat="server">
       <div class="form-group">
-        <label for="exampleInputEmail1">First Name</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <label for="firstName">First Name</label>
+        <asp:TextBox runat="server" type="text" class="form-control" id="first_name" aria-describedby="emailHelp" placeholder="Enter First Name"/>
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Last Name</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
+        <label for="lastName">Last Name</label>
+        <asp:TextBox runat="server" type="text" class="form-control" id="last_name" placeholder="Enter Last Name"/>
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Email Address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+        <asp:TextBox runat="server" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Contact Number</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
       </div>
       <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
       </div>
-      <button type="submit" class="btn btn-primary">Update</button>
+      <asp:Button runat="server" type="submit" Text="Update" class="btn btn-primary"/>
    </form>
 </div>
 

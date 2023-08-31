@@ -29,15 +29,35 @@
             width: 400px;
         }
 
+        .list-container a{
+            color: black;
+            text-decoration: none;
+        }
+
+        .list-container:hover{
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .deleteAcc Button{
+            background-color: red;
+            color: black;
+        }
+
+        Button: hover{
+            background: red;
+        }
+
         .contain-form {
             display: flex;
             align-items: stretch;
             justify-content: center;
             flex-direction: row;
+            margin-top: -70px;
         }
 
         .customer-form1 {
-            margin-top: 140px;
+            margin-top: 200px;
             margin-bottom: 80px;
             margin-right: 250px;
             width: 300px;
@@ -50,7 +70,7 @@
 
     </header>
 
-    <h1> Settings </h1>
+    <h1> Delete Account </h1>
 
 
 <div class="contain-form">
@@ -59,28 +79,21 @@
         <ul class="list-group">
           <a href="customerProfile.aspx"><li class="list-group-item">Account</li></a>
           <a href="passwordForm.aspx"><li class="list-group-item">Password</li></a>
-          <li class="list-group-item active">Settings</li>
+          <li class="list-group-item active">Delete Account</li>
           <a href="notificationSettings.aspx"><li class="list-group-item">Notification Settings</li></a>
         </ul>
     </div>
 
-    <form class="customer-form1">
-      <div class="form-group">
-        <label for="exampleInputEmail1">First Name</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <form class="customer-form1" runat="server">
+       
+      <div class="form-group form-check">
+        <asp:CheckBox runat="server" type="checkbox" class="form-check-input" id="exampleCheck1"/>
+        <label class="form-check-label" for="exampleCheck1">Confirm that you want to delete the account! </label>
       </div>
 
-      <div class="form-group">
-        <label for="exampleInputPassword1">Last Name</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
+      <div class="deleteAcc">
+        <asp:Button runat="server" type="submit" Text="Delete Account" class="btn btn-primary"/>
       </div>
-  
-      <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Change Password</button>
    </form>
 </div>
 </body>

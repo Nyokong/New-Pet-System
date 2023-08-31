@@ -13,5 +13,14 @@ namespace New_Pet_System
 
     public partial class customerSettings
     {
+
+        /// <summary>
+        /// exampleCheck1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox exampleCheck1;
     }
 }

@@ -29,11 +29,22 @@
             width: 400px;
         }
 
+        .list-container a{
+            color: black;
+            text-decoration: none;
+        }
+
+        .list-container:hover{
+            cursor: pointer;
+            text-decoration: none;
+        }
+
         .contain-form {
             display: flex;
             align-items: stretch;
             justify-content: center;
             flex-direction: row;
+            margin-top: -50px;
         }
 
         .customer-form1 {
@@ -52,36 +63,43 @@
 
     <h1> Notification Settings </h1>
 
-
 <div class="contain-form">
 
     <div class="list-container">
         <ul class="list-group">
           <a href="customerProfile.aspx"><li class="list-group-item">Account</li></a>
-          <a href="passwordForm.aspx"><li class="list-group-item ">Password</li></a>
-         <a href="customerSettings.aspx"><li class="list-group-item">Settings</li></a>
+          <a href="passwordForm.aspx"><li class="list-group-item">Password</li></a>
+          <a href="customerSettings.aspx"><li class="list-group-item">Delete Account</li></a>
           <li class="list-group-item active">Notification Settings</li>
         </ul>
-    </div>
+     </div>
 
-    <form class="customer-form1">
-      <div class="form-group">
-        <label for="exampleInputEmail1">First Name</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
+     <form class="customer-form1" runat="server">
 
-      <div class="form-group">
-        <label for="exampleInputPassword1">Last Name</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
-      </div>
-  
       <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        <label class="form-check-label" for="exampleCheck1">Receve an email notification for the latest updates.</label>
       </div>
-      <button type="submit" class="btn btn-primary">Change Password</button>
-   </form>
+
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck2"/>
+        <label class="form-check-label" for="exampleCheck1">Receive Transaction Confirmations.</label>
+      </div>
+
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck3"/>
+        <label class="form-check-label" for="exampleCheck1">Reminders for appointments or events.</label>
+      </div>
+
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck4"/>
+        <label class="form-check-label" for="exampleCheck1">Receive Suspicious or unusual activity alerts.</label>
+      </div>
+
+      <asp:Button runat="server" type="submit" Text="Confirm Changes" class="btn btn-primary"/>
+
+     </form>
 </div>
+
 </body>
 </html>

@@ -136,6 +136,7 @@
     <Content Include="passwordForm.aspx" />
     <Content Include="pet.jpg" />
     <Content Include="pet.png" />
+    <Content Include="petDetails.aspx" />
     <Content Include="pukke.png" />
     <Content Include="Reece.jpg" />
     <Content Include="signin.aspx">
@@ -227,6 +228,13 @@
     </Compile>
     <Compile Include="passwordForm.aspx.designer.cs">
       <DependentUpon>passwordForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="petDetails.aspx.cs">
+      <DependentUpon>petDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="petDetails.aspx.designer.cs">
+      <DependentUpon>petDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signin.aspx.cs">

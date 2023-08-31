@@ -125,7 +125,9 @@
     <Content Include="home.png" />
     <Content Include="icons8-pet-100.png" />
     <Content Include="bully.jpg" />
-    <Content Include="main.aspx" />
+    <Content Include="main.aspx">
+      <BrowseToURL>/main.aspx</BrowseToURL>
+    </Content>
     <Content Include="ntja.jpg" />
     <Content Include="nwu.png" />
     <Content Include="pet.jpg" />

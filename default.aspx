@@ -481,6 +481,14 @@
             order: 6;
         }
 
+        .class-box-contained img{
+            object-fit: fill;
+            width: 100%; 
+            max-width: 100%; 
+            height: auto;
+            display: block;
+        }
+
     </style>
 </head>
 <body style="height: 579px">
@@ -516,9 +524,15 @@
         </div>
 
         <div id="id-tab-2">
-            <div class="class-box-contained">1</div>
-            <div class="class-box-contained">2</div>
-            <div class="class-box-contained">3</div>
+            <div class="class-box-contained">
+                <img src="display1.jpg" alt="displayImage1"/>
+            </div>
+            <div class="class-box-contained">
+                <img src="display2.jpg" alt="displayImage2"/>
+            </div>
+            <div class="class-box-contained">
+                <img src="display3.jpg" alt="displayImage3"/>
+            </div>
            <!-- <h1>Medicine</h1>
             <h2>Is Love <3</h2>
             <div id="id-intro video">

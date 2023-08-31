@@ -5,14 +5,17 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace New_Pet_System
 {
 
     public partial class signup : System.Web.UI.Page
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|/Pet-Pals-Database.mdf;Integrated Security=True");
-  
+        public SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\NewPetPals-Data.mdf;Integrated Security=True");
+        public SqlCommand command;
+        public SqlDataAdapter dataAdapt;
+        public SqlDataReader dataRead;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -42,7 +45,11 @@ namespace New_Pet_System
         {
 
         }
-    }
 
+        protected void Signup_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
 

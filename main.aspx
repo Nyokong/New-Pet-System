@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
      <title>Pet-Pals Animal Clinic</title>
     <link rel="icon" type="image/jpg" href="favicon_index/favicon_index.ico"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
 
     <style type="text/css">
@@ -19,6 +20,7 @@
 
             /* texts */
             --txt-black: #1a1a1a;
+            --txt-hover: rgb(219 135 98 / 0.70);
 
             /* sizes */
             --sz-top-header: 25px;
@@ -56,17 +58,43 @@
 
         /* main nav */
         header{
-            height: 100px;
+            height: auto;
             width: 100%;
             background-color: var(--fr-white);
             color: var(--txt-black);
         }
 
-        header .logo-icon{
+        header #id-logo-link{
             height: auto;
-            width: 30%;
             display: flex;
-            di
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        header #id-logo-link:hover{
+            color: var(--txt-hoverr);
+        }
+
+        header #id-logo-link i{
+            height: 30px;
+            width: 30px;
+            margin: 0px 10px;
+            font-size: 30px;
+            color: var(--txt-black);
+        }
+
+        header #id-logo-link h1{
+            height: 30px;
+            font-size: 25px;
+            width: auto;
+            color: var(--txt-black);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header #id-nav-links{
+            margin: 0px 20px;
         }
 
     </style>
@@ -80,31 +108,32 @@
             <p>Email : info@petpals.com</p>
         </div>
     </div>
-
     <header>
-        <div class="logo-icon">
-            <img src="icons8-pet-100.png" width="120" alt="Pet-Pals Logo"/>
-            <div id="logo-name">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" id="id-logo-link" href="main.aspx">
+                <i class='bx bxs-dog'></i>
                 <h1 >Pet Pals</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"><i class='bx bx-menu-alt-right' ></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav" id="id-nav-links">
+                <a class="nav-link" href="faq.aspx">FAQs</a>
+                <a class="nav-link" href="contact.aspx">Contact</a>
+                <a class="nav-link" href="about.aspx"">About Us</a>
+              </div>
             </div>
-        </div>
-
-        <div class="nav-menu">
-            <nav class="main-nav">
-                <a href="default.aspx" id="selected">Home </a>
-                <a href="about.aspx"> About </a>
-                <a href="faq.aspx"> FAQs </a>
-               <a href="contact.aspx"> Contact Us</a>
-            </nav>
-            <div class="signup-signin-nav">
-                <a id="id-sign-up" href="signin.aspx"> Sign In </a>
-            </div>
-        </div>
+          </div>
+        </nav>
     </header>
 
+
+
     <!-- bootsrap -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 </body>
 </html>

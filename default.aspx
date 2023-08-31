@@ -30,16 +30,7 @@
             width: 100%;
             background-color: #eaeaea;
         }
-        .auto-style1 {
-            width: 305px;
-        }
-        .auto-style18 {
-            width: 100%;
-        }
-        .auto-style20 {
-            width: 548px;
-        }
-
+        
         <!--Super links-->
         a{
             display: flex;
@@ -394,7 +385,6 @@
             margin: 0px 10px;
             background-color: var(--nav-btn-bg-color);
         }
-
         #id-middle-2 
         {
             display: flex;
@@ -488,6 +478,7 @@
             height: auto;
             display: block;
         }
+
 
     </style>
 </head>
@@ -645,31 +636,9 @@
 
     </footer>
 
+
 </form>
-
-    <script>
-        var myVideo = document.getElementById("intro-video");
-
-
-        $(document).ready(function () {
-            var myVideo = document.getElementById("intro-video");
-
-            $.ajax({
-                url: "/default.aspx",
-                success: function (data) {
-                    //$(myVideo).html(data);
-
-                    if (myVideo.paused) {
-                        console.log("The video is paused");
-                        //myVideo.play();
-                    } else {
-                        console.log("The video is playing");
-                    }
-                }
-            });
-
-        });
-
-    </script>
+    <p class="auto-style2">
+        /=</p>
 </body>
 </html>

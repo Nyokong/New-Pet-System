@@ -56,12 +56,7 @@ namespace New_Pet_System
                     }
                 }
 
-                //ClientScript.RegisterStartupScript(this.GetType(), "ShowModalScript", script);
-                string script = "myFunc();";
-                // Trigger the Bootstrap modal after successful login
-                ScriptManager.RegisterStartupScript(this.Page,Page.GetType(), "LogMessageScript", "$('#loginSuccessModal').modal('show');", true);
-
-                //Response.Redirect("default.aspx"); // Redirect to the home page
+                Response.Redirect("main.aspx"); // Redirect to the home page
             }
             else
             {

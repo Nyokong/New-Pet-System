@@ -4,15 +4,19 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
 
 namespace New_Pet_System
 {
     public partial class bookAppoinment : System.Web.UI.Page
     {
+
         // User input (date, time, doctor, etc.)
         DateTime selectedDate = DateTime.Parse("2023-09-01");
         TimeSpan selectedTime = TimeSpan.Parse("14:30:00");
         int selectedDoctorId = 1; // Assuming doctor ID
+
+
 
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -287,7 +287,14 @@
 
                     <div class="bf-col-6">
                         <p> Choose Doctor </p>
-                        <asp:TextBox runat="server" CssClass="bf-col-6" type="text" required="required" name="doc" id="doc"/>
+                        <asp:DropDownList runat="server" CssClass="bf-col-6" ID="DropDownList1" Required="true">
+                            <asp:ListItem Text="Select a Doctor" Value="" />
+                            <asp:ListItem Text="Doctor 1" Value="doctor1" />
+                            <asp:ListItem Text="Doctor 2" Value="doctor2" />
+                            <asp:ListItem Text="Doctor 3" Value="doctor3" />
+                            
+                        </asp:DropDownList>
+
                     </div>
 
                 </div>

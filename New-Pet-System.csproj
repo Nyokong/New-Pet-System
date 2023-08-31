@@ -68,12 +68,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="AdminDashboard.aspx" />
     <Content Include="App_Data\NewPetPals-Data.mdf" />
     <Content Include="App_Data\NewPetPals-Data_log.ldf">
       <DependentUpon>NewPetPals-Data.mdf</DependentUpon>
     </Content>
     <Content Include="about.jpg" />
-    <Content Include="Admin.aspx" />
+    <Content Include="Admin.aspx">
+      <BrowseToURL>Admin.aspx</BrowseToURL>
+    </Content>
     <Content Include="back.jpg" />
     <Content Include="bookAppoinment.aspx">
       <BrowseToURL>bookAppoinment.aspx</BrowseToURL>
@@ -94,6 +97,7 @@
     <Content Include="doctor6.jpg" />
     <Content Include="doctor7.jpg" />
     <Content Include="doctor8.jpg" />
+    <Content Include="DoctorDashboard.aspx" />
     <Content Include="dog.jpg" />
     <Content Include="download.png" />
     <Content Include="faq.aspx">
@@ -150,6 +154,13 @@
     <Compile Include="about.aspx.designer.cs">
       <DependentUpon>about.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="bookAppoinment.aspx.cs">
       <DependentUpon>bookAppoinment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -178,6 +189,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorDashboard.aspx.cs">
+      <DependentUpon>DoctorDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DoctorDashboard.aspx.designer.cs">
+      <DependentUpon>DoctorDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="faq.aspx.cs">
       <DependentUpon>faq.aspx</DependentUpon>

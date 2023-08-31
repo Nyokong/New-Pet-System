@@ -318,7 +318,7 @@
                 <div class="bf-row">
 
                     <div class="bf-col-3">
-                        <asp:Button runat="server" class="button" type="submit" Text="Book" id="submit" />
+                        <asp:Button runat="server" class="button" type="submit" Text="Book" id="submit" OnClick="submit_Click" />
                     </div>
 
                 </div>

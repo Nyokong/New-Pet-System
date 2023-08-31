@@ -127,7 +127,7 @@
             margin-right: 80px;
         }
 
-        button{
+        .button{
             color: white;
             background-color: #5762D5;
             font-size: 18px;
@@ -137,7 +137,7 @@
             border-radius: 10px;
         }
 
-        button:hover{
+        .button:hover{
             background-color: #4751c0;
             cursor: pointer;
         }
@@ -268,12 +268,12 @@
 
                     <div class="bf-col-6">
                         <p> Your Name </p>
-                        <asp:TextBox runat="server" CssClass="bf-col-6" type="text" name="fname" id="f_name"/>
+                        <asp:TextBox runat="server" class="bf-col-6" type="text" name="fname" required="required" placeholder="Name" id="f_name" OnTextChanged="f_name_TextChanged"/>
                     </div>
 
                     <div class="bf-col-6">
                         <p> Email Address </p>
-                        <asp:TextBox runat="server" CssClass="bf-col-6" type="email" name="email" id="email"/>
+                        <asp:TextBox runat="server" CssClass="bf-col-6" type="email" required="required" placeholder="Email Address" name="email" id="email"/>
                     </div>
 
                 </div>
@@ -282,12 +282,12 @@
 
                     <div class="bf-col-6">
                         <p> Pet Species </p>
-                        <asp:TextBox runat="server" CssClass="bf-col-6" type="text" name="pet" id="pet"/>
+                        <asp:TextBox runat="server" CssClass="bf-col-6" type="text" required="required" placeholder="Pet Species" name="pet" id="pet"/>
                     </div>
 
                     <div class="bf-col-6">
                         <p> Choose Doctor </p>
-                        <asp:TextBox runat="server" CssClass="bf-col-6" type="text" name="doc" id="doc"/>
+                        <asp:TextBox runat="server" CssClass="bf-col-6" type="text" required="required" name="doc" id="doc"/>
                     </div>
 
                 </div>
@@ -296,12 +296,12 @@
 
                     <div class="bf-col-6">
                         <p> Select Date: </p>
-                        <input type="date" name="date" id="date" />
+                        <input type="date" name="date" required="required" id="date" />
                     </div>
 
                     <div class="bf-col-6">
                         <p> Choose the time: </p>
-                        <input type="time" name="time" id="time" />
+                        <input type="time" name="time" required="required" id="time" />
                     </div>
 
                 </div>
@@ -310,7 +310,7 @@
 
                     <div class="bf-col-6">
                         <p> Description: </p>
-                        <textarea rows="5" cols="59" placeholder="Your Description"></textarea>
+                        <textarea rows="5" cols="59" required="required" placeholder="Your Description"></textarea>
                     </div>
 
                 </div>
@@ -318,7 +318,7 @@
                 <div class="bf-row">
 
                     <div class="bf-col-3">
-                        <button type="submit" id="submit"> Book </button>
+                        <asp:Button runat="server" class="button" type="submit" Text="Book" id="submit" />
                     </div>
 
                 </div>

@@ -13,5 +13,10 @@ namespace New_Pet_System
         {
 
         }
+
+        protected void f_name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,6 +30,19 @@
         h1,h2{
             color: white;
         }
+        .btn{
+            background: #f05462;
+            color:white;
+            padding: 5px 10px;
+            text-align: center;
+        }
+        .btn hover{
+            color:#f05462;
+            background:white;
+            padding: 3px 8px;
+            border: 2px solid #f05462;
+
+        }
 
         .side-menu{
             position:fixed;
@@ -57,6 +70,58 @@
             color:red;
 
         }
+        .container{
+            position:absolute;
+            right:0;
+            width:80vw;
+            height:80vh;
+
+        }
+        .container .header{
+            position: fixed;
+            top:0;
+            right:0;
+            width: 80vw;
+            height: 10vh;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            box-shadow: 0 4px 8px rgba(0, 0 , 0, 0.2);
+        }
+        .container .header .nav{
+            width: 90%;
+            display: flex;
+            align-items: center;
+        }
+        .container .header .nav .search{
+            flex: 3;
+            display: flex;
+            justify-content:center;
+        }
+        .container .header .nav .search input[type=text]{
+            border: none;
+            background: #d2d3d2;
+            padding: 10px;
+            width: 50%;
+            
+        }
+        .container .header .nav .search button{
+            width:40px;
+            height:40px;
+            border: none;
+            display:flex;
+            align-items: center;
+            justify-content:center;
+        }
+        .container .header .nav .search button img{
+            width:30px;
+            height:30px;
+        }
+        .container .header .nav .user{
+            flex: 1;
+            background: #bebbc3;
+        }
     </style>
 </head>
 
@@ -67,15 +132,28 @@
                 <h1>Pet-Pals</h1>
             </div>
             <ul>
-                <li><img src="home30.png" alt=""> Home</li>
-                <li><img src="admin30.png" alt=""> Admin</li>
-                <li><img src="employee30_1.png" alt=""> Employee</li>
-                <li><img src="customer30.png" alt=""> Customer</li>
-                <li><img src="record30.png" alt=""> Medical Records</li>
-                <li><img src="report30_1.png" alt=""> Report</li>
-                <li><img src="logout30.png" alt=""> Logout</li>
+                <li><img src="home30.png" alt="" />&nbsp; Home</li>
+                <li><img src="admin30.png" alt="" />&nbsp; Admin</li>
+                <li><img src="employee30_1.png" alt="" />&nbsp; Employee</li>
+                <li><img src="customer30.png" alt="" />&nbsp; Customer</li>
+                <li><img src="record30.png" alt="" />&nbsp; Medical Records</li>
+                <li><img src="report30_1.png" alt="" />&nbsp; Report</li>
+                <li><img src="logout30.png" alt="" />&nbsp; Logout</li>
             </ul>
 
+        </div> 
+        <div class="container">
+            <div class="header">
+                <div class="nav">
+                    <div class="search">
+                        <input type="text" placeholder="Search..." />
+                        <button type="submit"><img src="search30.png" alt="" /></button>
+                    </div>
+                    <div class="user">
+                        <a href="#" class="btn">Add New</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </form>
 

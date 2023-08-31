@@ -262,18 +262,18 @@
                 <p> |  Let's start to book now  | </p>
             </div>
 
-            <form class="bf-body-box">
+            <form class="bf-body-box" runat="server">
 
                 <div class="bf-row">
 
                     <div class="bf-col-6">
                         <p> Your Name </p>
-                        <input type="text" name="fname" id="f_name"/>
+                        <asp:TextBox runat="server" CssClass="bf-col-6" type="text" name="fname" id="f_name"/>
                     </div>
 
                     <div class="bf-col-6">
                         <p> Email Address </p>
-                        <input type="email" name="email" id="email"/>
+                        <asp:TextBox runat="server" CssClass="bf-col-6" type="email" name="email" id="email"/>
                     </div>
 
                 </div>
@@ -282,12 +282,12 @@
 
                     <div class="bf-col-6">
                         <p> Pet Species </p>
-                        <input type="text" name="pet" id="pet"/>
+                        <asp:TextBox runat="server" CssClass="bf-col-6" type="text" name="pet" id="pet"/>
                     </div>
 
                     <div class="bf-col-6">
                         <p> Choose Doctor </p>
-                        <input type="text" name="doc" id="doc"/>
+                        <asp:TextBox runat="server" CssClass="bf-col-6" type="text" name="doc" id="doc"/>
                     </div>
 
                 </div>
@@ -326,12 +326,6 @@
             </form>
         </div>
     </div>
-
-
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
 
     <footer class="footer">
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>

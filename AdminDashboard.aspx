@@ -31,7 +31,7 @@
             color: white;
         }
         .btn{
-            background: #f05462;
+            background:#74caef;
             color:white;
             padding: 5px 10px;
             text-align: center;
@@ -47,7 +47,7 @@
         .side-menu{
             position:fixed;
             background:  #0094ff;
-            width: 15vw;
+            width: 16vw;
             min-height: 100vh;
             display: flex;
             flex-direction:column;
@@ -103,7 +103,7 @@
             border: none;
             background: #d2d3d2;
             padding: 10px;
-            width: 50%;
+            width: 46%;
             
         }
         .container .header .nav .search button{
@@ -120,7 +120,33 @@
         }
         .container .header .nav .user{
             flex: 1;
-            background: #bebbc3;
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+        }
+        .container .header .nav .user img {
+            width: 40px;
+            height: 40px;
+        }
+        .container .header .nav .user .img-case{
+            position: relative;
+            width:50px;
+            height:50px;
+        }
+        .container .header .nav .user img{
+            width: 40px;
+            height:40px;
+        }
+        .container .header .nav .user .img-case{
+            position: relative;
+            width:50px;
+            height:50px;
+        }
+        .container .header .nav .user .img-case img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -129,7 +155,7 @@
     <form id="form1" runat="server">
         <div class="side-menu">
             <div class="brand-name">
-                <h1>Pet-Pals</h1>
+                <h1><img src="" alt /> Pet-Pals</h1>
             </div>
             <ul>
                 <li><img src="home30.png" alt="" />&nbsp; Home</li>
@@ -151,6 +177,10 @@
                     </div>
                     <div class="user">
                         <a href="#" class="btn">Add New</a>
+                        <img src="notify50.png" altr="" />
+                        <div class="img-case">
+                            <img src="user50.png" alt="" />
+                        </div>
                     </div>
                 </div>
             </div>

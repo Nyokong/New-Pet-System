@@ -82,7 +82,7 @@
       <BrowseToURL>/contact.aspx</BrowseToURL>
     </Content>
     <Content Include="default.aspx">
-      <BrowseToURL>/default.aspx</BrowseToURL>
+      <BrowseToURL>default.aspx</BrowseToURL>
     </Content>
     <Content Include="doc.jpg" />
     <Content Include="doctor.jpg" />
@@ -157,19 +157,12 @@
     <Compile Include="bookAppoinment.aspx.designer.cs">
       <DependentUpon>bookAppoinment.aspx</DependentUpon>
     </Compile>
-    <Compile Include="askQuestion.aspx.cs">
-      <DependentUpon>askQuestion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="askQuestion.aspx.designer.cs">
-      <DependentUpon>askQuestion.aspx</DependentUpon>
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
-
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>

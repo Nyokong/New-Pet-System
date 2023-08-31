@@ -320,7 +320,7 @@
                 <br/><br/>
                    </div>
                 <div class="btn-sign-up">
-                    <asp:Button ID="btnSubmit" runat="server" CssClass="btn-sign-up" text="Sign Up"/> 
+                    <asp:Button ID="btnSubmit" runat="server" CssClass="btn-sign-up" text="Sign Up" OnClick="Signup_Click"/> 
                 </div>
                 <br/><br/>
                 <div class="sign-in">

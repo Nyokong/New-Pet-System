@@ -84,7 +84,7 @@
       <BrowseToURL>/contact.aspx</BrowseToURL>
     </Content>
     <Content Include="default.aspx">
-      <BrowseToURL>default.aspx</BrowseToURL>
+      <BrowseToURL>/default.aspx</BrowseToURL>
     </Content>
     <Content Include="doc.jpg" />
     <Content Include="doctor.jpg" />
@@ -194,6 +194,7 @@
     </Compile>
     <Compile Include="main.aspx.designer.cs">
       <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
    
     <link rel ="stylesheet" href ="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <script src ="script.js" defer></script>
+    <script src="script.js" defer></script>
 
 
     <style type="text/css">
@@ -94,6 +94,7 @@
             width: auto;
             margin: 2.5px 25px;
             display: flex;
+            justify-content: center;
         }
 
         .logo-icon img{
@@ -365,6 +366,10 @@
             border-radius: 10px 10px 0 10px;
             background: #724ae8;
         }
+        .chatbox .chat p.error{
+            color: #721c24;
+            background: #f8d7da;
+        }
         .chatbox .incoming p
         {
             color: #000;
@@ -388,6 +393,7 @@
             width: 100%;
             border: none;
             outline: none;
+            max-height: 180px;
             font-size: 0.95rem;
             resize: none;
             padding: 16px 15px 16px 0;
@@ -716,9 +722,7 @@
                 <span class ="material-symbols-outlined">smart_toy</span>
                 <p>Hi there<br/> How can i help you today</p>
             </li>
-             <li class="chat outgoing">
-                <p></p>
-            </li>
+            
         </ul>
         <div class="chat-input">
             <textarea placeholder="Enter a message..."></textarea>

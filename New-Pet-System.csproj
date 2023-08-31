@@ -68,6 +68,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="App_Data\faq.mdf" />
+    <Content Include="App_Data\faqS.mdf" />
+    <Content Include="App_Data\faqS_log.ldf">
+      <DependentUpon>faqS.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\faq_log.ldf">
+      <DependentUpon>faq.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\NewPetPals-Data.mdf" />
     <Content Include="App_Data\NewPetPals-Data_log.ldf">
       <DependentUpon>NewPetPals-Data.mdf</DependentUpon>
@@ -78,7 +86,7 @@
       <BrowseToURL>/contact.aspx</BrowseToURL>
     </Content>
     <Content Include="default.aspx">
-      <BrowseToURL>/default.aspx</BrowseToURL>
+      <BrowseToURL>default.aspx</BrowseToURL>
     </Content>
     <Content Include="doc.jpg" />
     <Content Include="doctor.jpg" />

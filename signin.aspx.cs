@@ -18,12 +18,6 @@ namespace New_Pet_System
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            conn.Open();
-
-            lbl_conf.Text = "Successful";
-
-            conn.Close();
-
             // check for remember me cookie
             if (Request.Cookies["Email"] != null && Request.Cookies["Password"] != null)
             {

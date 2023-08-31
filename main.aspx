@@ -14,6 +14,7 @@
         :root {
             /* background */
             --bg-off : #f3f3f3;
+            --bg-black: #1a1a1a;
 
             /* front */
             --fr-white: #ffffff;
@@ -21,9 +22,11 @@
             /* texts */
             --txt-black: #1a1a1a;
             --txt-hover: rgb(219 135 98 / 0.70);
+            --txt-white: #fff;
 
             /* sizes */
             --sz-top-header: 25px;
+            --sz-hero: 400px;
         }
         body{
             background-color: var(--bg-off);
@@ -97,6 +100,70 @@
             margin: 0px 20px;
         }
 
+        #main-hero-tab{
+            height: calc(var(--sz-hero) + 40px);
+            width: 100%;
+            padding: 10px 50px;
+            background-color: var(--fr-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin-top: 10px;
+        }
+
+        #main-hero-tab #carouselExampleSlidesOnly{
+            height: calc(var(--sz-hero) - 40px);
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #main-hero-tab .carousel-item{
+            height: 400px;
+            width: 100%;
+        }
+
+        #main-hero-tab .carousel-item img{
+            object-fit: fill;
+        }
+
+        #main-hero-tab #id-side-bar{
+            height: 400px;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: center;
+            padding:10px;
+            color: var(--txt-white);
+            background-color: var(--bg-black);
+        }
+
+        #main-hero-tab #id-side-bar #id-mail-list-label{
+            height: 40%;
+        }
+
+        #main-hero-tab #id-side-bar #id-form-list{
+            height: 60%;
+            width: 100%;
+        }
+
+        #main-hero-tab #id-side-bar #id-form-group{
+            width: 100%;
+        }
+
+        #main-hero-tab #id-side-bar #id-form-group input{
+            width: 350px;
+            border-radius: 30px;
+        }
+
+        #main-hero-tab #id-side-bar button{
+            width: calc(350px-100px);
+            border-radius: 30px;
+        }
+
     </style>
 
 </head>
@@ -129,7 +196,43 @@
         </nav>
     </header>
 
+    <div id="main-hero-tab">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="doc.jpg" class="d-block w-100" alt="..."/>
+            </div>
+            <div class="carousel-item">
+              <img src="doctor2.jpg" class="d-block w-100" alt="..."/>
+            </div>
+            <div class="carousel-item">
+              <img src="doctor3.jpg" class="d-block w-100" alt="..."/>
+            </div>
+          </div>
+        </div>
 
+        <div id="id-side-bar">
+            <div id="id-mail-list-label">
+                <h1>Join our mail list</h1>
+                <h2>Get updates and coupons</h2>
+                <!--<p>Lorem ipsum dolor  magna aliqua. Ut enim ad minim veniam, quis nostrud  consequat. </p>-->
+            </div>
+            <div id="id-mail-list">
+                <form id="id-form-list">
+                  <div class="form-group" id="id-form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Join</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
 
     <!-- bootsrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

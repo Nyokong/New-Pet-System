@@ -303,7 +303,8 @@
 
                     <div class="bf-col-6">
                         <p> Select Date: </p>
-                             <asp:Calendar runat="server" ID="calendar" CssClass="bf-col-6" />
+                             <asp:Calendar runat="server" ID="calendar" CssClass="bf-col-6" AutoPostBack="true" OnSelectionChanged="calendar_SelectionChanged" />
+                             <asp:Label runat="server" ID="selectedDateLabel" />
                     </div>
 
                     <div class="bf-col-6">

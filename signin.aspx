@@ -327,16 +327,19 @@
             <form id="form" runat="server">
 
                 <label for="email"> Email: </label><br/>
-                <asp:TextBox runat="server" class="fields" type="email" id="Email" required="required" placeholder="Email: "/><br/>
+                <asp:TextBox runat="server" class="fields" type="email" ID="txt_email" required="required" placeholder="Email: "/><br/>
                 <asp:Label ID="lbl_conf" runat="server" Text="[confirmation]"></asp:Label>
                 <label for="pass"> Password: </label><br/>
-                <asp:TextBox runat="server" class="fields" type="password" id="pass" required="required" placeholder="Password: "/><br/><br/>
+                <asp:TextBox runat="server" class="fields" type="password" ID="txt_pass" required="required" placeholder="Password: "/><br/><br/>
 
                 <label style="font-size: 16px;" for="signup"> Don't have an account ? Click <a href="signup.aspx"> here </a> to register an account. </label><br/>
                 <br/>
                 
                 <div class="btn-sign-up">
-                    <asp:Button runat="server" ID="btnSubmit" CssClass="btn-sign-up" text="Sign In" type="submit"/>  
+                    <asp:Button runat="server" ID="btnSubmit" CssClass="btn-sign-up" text="Sign In" type="submit" OnClick="LoginButton_Click"/>  
+                </div>
+                <div id="id-remember">
+                    <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time" />
                 </div>
             
             </form>

@@ -73,6 +73,8 @@
     <Content Include="App_Data\NewPetPals-Data_log.ldf">
       <DependentUpon>NewPetPals-Data.mdf</DependentUpon>
     </Content>
+    <Content Include="about.jpg" />
+    <Content Include="Admin.aspx" />
     <Content Include="back.jpg" />
     <Content Include="bookAppoinment.aspx">
       <BrowseToURL>bookAppoinment.aspx</BrowseToURL>
@@ -86,6 +88,14 @@
     </Content>
     <Content Include="doc.jpg" />
     <Content Include="doctor.jpg" />
+    <Content Include="doctor1.jpg" />
+    <Content Include="doctor2.jpg" />
+    <Content Include="doctor3.jpg" />
+    <Content Include="doctor4.jpg" />
+    <Content Include="doctor5.jpg" />
+    <Content Include="doctor6.jpg" />
+    <Content Include="doctor7.jpg" />
+    <Content Include="doctor8.jpg" />
     <Content Include="dog.jpg" />
     <Content Include="download.png" />
     <Content Include="faq.aspx">
@@ -115,7 +125,7 @@
     <Content Include="home.png" />
     <Content Include="icons8-pet-100.png" />
     <Content Include="bully.jpg" />
-    <Content Include="display1.jpg" />
+    <Content Include="main.aspx" />
     <Content Include="ntja.jpg" />
     <Content Include="nwu.png" />
     <Content Include="pet.jpg" />
@@ -132,6 +142,7 @@
     <Content Include="vetVideo.MOV" />
     <Content Include="Web.config" />
     <Content Include="website.jpg" />
+    <Content Include="whyUS.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="about.aspx.cs">
@@ -152,8 +163,16 @@
       <DependentUpon>askQuestion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="askQuestion.aspx.designer.cs">
-      <DependentUpon>askQuestion.aspx</DependentUpon>
+	  <Compile Include="askQuestion.aspx.designer.cs">
+		  <DependentUpon>askQuestion.aspx</DependentUpon>
+	  </Compile>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
@@ -176,6 +195,13 @@
     <Compile Include="faq.aspx.designer.cs">
       <DependentUpon>faq.aspx</DependentUpon>
     </Compile>
+    <Compile Include="main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main.aspx.designer.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signin.aspx.cs">
       <DependentUpon>signin.aspx</DependentUpon>
@@ -188,9 +214,9 @@
       <DependentUpon>signup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="signup.aspx.designer.cs">
-      <DependentUpon>signup.aspx</DependentUpon>
-    </Compile>
+	  <Compile Include="signup.aspx.designer.cs">
+		  <DependentUpon>signup.aspx</DependentUpon>
+	  </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon_client\site.webmanifest" />

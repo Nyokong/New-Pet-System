@@ -68,7 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
-    <Content Include="customerProfile.aspx" />
+    <Content Include="customerProfile.aspx">
+      <BrowseToURL>/customerProfile.aspx</BrowseToURL>
+    </Content>
+    <Content Include="customerSettings.aspx" />
     <Content Include="display3.jpg" />
     <Content Include="App_Data\NewPetPals-Data.mdf" />
     <Content Include="App_Data\NewPetPals-Data_log.ldf">
@@ -127,8 +130,10 @@
     <Content Include="icons8-pet-100.png" />
     <Content Include="bully.jpg" />
     <Content Include="main.aspx" />
+    <Content Include="notificationSettings.aspx" />
     <Content Include="ntja.jpg" />
     <Content Include="nwu.png" />
+    <Content Include="passwordForm.aspx" />
     <Content Include="pet.jpg" />
     <Content Include="pet.png" />
     <Content Include="pukke.png" />
@@ -181,6 +186,13 @@
     <Compile Include="customerProfile.aspx.designer.cs">
       <DependentUpon>customerProfile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="customerSettings.aspx.cs">
+      <DependentUpon>customerSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customerSettings.aspx.designer.cs">
+      <DependentUpon>customerSettings.aspx</DependentUpon>
+    </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,6 +213,20 @@
     </Compile>
     <Compile Include="main.aspx.designer.cs">
       <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="notificationSettings.aspx.cs">
+      <DependentUpon>notificationSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="notificationSettings.aspx.designer.cs">
+      <DependentUpon>notificationSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="passwordForm.aspx.cs">
+      <DependentUpon>passwordForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="passwordForm.aspx.designer.cs">
+      <DependentUpon>passwordForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signin.aspx.cs">

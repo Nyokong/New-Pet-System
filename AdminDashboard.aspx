@@ -28,13 +28,13 @@
             list-style: none;
         }
         h1,h2{
-            color: #0094ff;
+            color: white;
         }
 
         .side-menu{
             position:fixed;
-            background: #f05462;
-            width: 20vw;
+            background:  #0094ff;
+            width: 15vw;
             min-height: 100vh;
             display: flex;
             flex-direction:column;
@@ -46,15 +46,15 @@
             justify-content: center;
         }
         .side-menu li{
-            font-size: 24px;
-            padding: 10px 40px;
+            font-size: 20px;
+            padding: 10px 30px;
             color: white;
-            display: flex;
+            display:flex;
             align-items:center;
         }
         .side-menu li:hover{
             background: white;
-            color:#f05462;
+            color:red;
 
         }
     </style>
@@ -64,16 +64,16 @@
     <form id="form1" runat="server">
         <div class="side-menu">
             <div class="brand-name">
-                <h1>Brand</h1>
+                <h1>Pet-Pals</h1>
             </div>
             <ul>
-                <li><img src="" alt=""> Home</li>
-                <li><img src="" alt=""> Admin</li>
-                <li><img src="" alt=""> Employee</li>
-                <li><img src="" alt=""> Customer</li>
-                <li><img src="" alt=""> Generate Report</li>
-                <li><img src="" alt=""> Help</li>
-                <li><img src="" alt=""> Logout</li>
+                <li><img src="home30.png" alt=""> Home</li>
+                <li><img src="admin30.png" alt=""> Admin</li>
+                <li><img src="employee30_1.png" alt=""> Employee</li>
+                <li><img src="customer30.png" alt=""> Customer</li>
+                <li><img src="record30.png" alt=""> Medical Records</li>
+                <li><img src="report30_1.png" alt=""> Report</li>
+                <li><img src="logout30.png" alt=""> Logout</li>
             </ul>
 
         </div>

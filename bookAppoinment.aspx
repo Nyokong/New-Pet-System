@@ -38,7 +38,7 @@
         }
 
         .bf-container h1{
-            font-size: 41px;
+            font-size: 36px;
             color: #fff;
             padding: 19px 10px;
         }
@@ -54,8 +54,8 @@
 
         .bf-container{
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: left;
+            align-items: flex-start;
             width: 100%;
             min-height: 100vh;
             overflow-y: auto;
@@ -100,8 +100,9 @@
         }
 
         .bf-col-6 {
-           margin: 2px 4px;
-           padding: 5px 8px;
+            margin-bottom: 5px;
+            margin: 2px 4px;
+            padding: 5px 8px;
         }
 
         .bf-col-3 {
@@ -112,7 +113,41 @@
         #selected{color: #fa8282;}
 
         .bf-row {
-            inlin
+           font-size: 18px;
+           display: flex;
+           flex: 3;
+        }
+        
+        .bf-col-6 p{
+            margin: 5px 0px;
+        }
+
+        .bf-col-3 {
+            padding: 30px;
+            margin-right: 80px;
+        }
+
+        button{
+            color: white;
+            background-color: #5762D5;
+            font-size: 18px;
+            margin-left: 115px;
+            width: 150px; 
+            height: 50px; 
+            border-radius: 10px;
+        }
+
+        button:hover{
+            background-color: #4751c0;
+            cursor: pointer;
+        }
+
+        .bf-col-6 input {
+            padding: 0px 5px;
+            font-size: 14px;
+            height: 20px;
+            margin-right: 60px;
+            border-radius: 10px;
         }
         
         .bf-body{
@@ -125,7 +160,15 @@
         }
 
         .bf-head{
-            text-align: center;
+            margin: 0px;
+            padding: 20px 10px;
+            margin-left: 50px;
+        }
+
+        .bf-head p {
+            color: orangered;
+            font-size: 18px;
+            margin-left: 140px;
         }
 
         .bf-body-box{
@@ -157,10 +200,6 @@
         .footer p {
              margin: 0;
              font-size: 16px;
-        }
-
-        .bf-row {
-            font-size: 18px;
         }
 
         h4{
@@ -220,7 +259,7 @@
         <div class="bf-body">
             <div class="bf-head">
                 <h1> Appointment Booking Form </h1>
-                <p> |-Let's start to book now -| </p>
+                <p> |  Let's start to book now  | </p>
             </div>
 
             <form class="bf-body-box">
@@ -242,7 +281,7 @@
                 <div class="bf-row">
 
                     <div class="bf-col-6">
-                        <p> Your Pet </p>
+                        <p> Pet Species </p>
                         <input type="text" name="pet" id="pet"/>
                     </div>
 
@@ -254,11 +293,6 @@
                 </div>
 
                 <div class="bf-row">
-
-                    <div class="bf-col-6">
-                        <p> Description: </p>
-                        <textarea rows="5" placeholder="Your Description"></textarea>
-                    </div>
 
                     <div class="bf-col-6">
                         <p> Select Date: </p>
@@ -274,8 +308,17 @@
 
                 <div class="bf-row">
 
+                    <div class="bf-col-6">
+                        <p> Description: </p>
+                        <textarea rows="5" cols="59" placeholder="Your Description"></textarea>
+                    </div>
+
+                </div>
+
+                <div class="bf-row">
+
                     <div class="bf-col-3">
-                        <input type="submit" value="submit" id="fname"/>
+                        <button type="submit" id="submit"> Book </button>
                     </div>
 
                 </div>

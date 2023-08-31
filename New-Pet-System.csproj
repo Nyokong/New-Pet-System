@@ -159,20 +159,12 @@
     <Compile Include="bookAppoinment.aspx.designer.cs">
       <DependentUpon>bookAppoinment.aspx</DependentUpon>
     </Compile>
-    <Compile Include="askQuestion.aspx.cs">
-      <DependentUpon>askQuestion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-	  <Compile Include="askQuestion.aspx.designer.cs">
-		  <DependentUpon>askQuestion.aspx</DependentUpon>
-	  </Compile>
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
-
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
@@ -214,9 +206,9 @@
       <DependentUpon>signup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-	  <Compile Include="signup.aspx.designer.cs">
-		  <DependentUpon>signup.aspx</DependentUpon>
-	  </Compile>
+    <Compile Include="signup.aspx.designer.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon_client\site.webmanifest" />

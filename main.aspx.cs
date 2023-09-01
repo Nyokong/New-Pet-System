@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace New_Pet_System
 {
-    public partial class askQuestion : System.Web.UI.Page
+    public partial class main : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

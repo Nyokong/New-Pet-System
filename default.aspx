@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="/default.aspx.cs" Inherits="New_Pet_System._default" %>
+﻿<%--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="/default.aspx.cs" Inherits="New_Pet_System._default" %>--%>
 
 <!DOCTYPE html>
 
@@ -21,6 +21,7 @@
           --btn-BG-off-white: #f2f2f2;
           --btn-FR-white: #fff;
           --btn-FR-black: #000;
+          --bg-services: rgb(180 211 226 / 0.90);
         }
 
         body{
@@ -29,16 +30,7 @@
             width: 100%;
             background-color: #eaeaea;
         }
-        .auto-style1 {
-            width: 305px;
-        }
-        .auto-style18 {
-            width: 100%;
-        }
-        .auto-style20 {
-            width: 548px;
-        }
-
+        
         <!--Super links-->
         a{
             display: flex;
@@ -393,6 +385,100 @@
             margin: 0px 10px;
             background-color: var(--nav-btn-bg-color);
         }
+        #id-middle-2 
+        {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 20px;
+            height: auto;
+            justify-items: center;
+        }
+
+        #id-middle-2 #cont-1{
+            display:flex;
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #id-middle-2 .class-services 
+        {
+            height: 350px;
+            width: 300px;
+            background-color: var(--bg-services);
+            color: var(--btn-BG-off-white);
+            border-radius: 5px;
+            box-shadow: rgb(0 0 0 / 0.65) 40px initial;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        #id-middle-2 .class-services .ser-tab-1{
+            height: 40%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #id-middle-2 .class-services .ser-tab-1 h1{
+            width: 100%;
+            font-size: 30px;
+            color: var(--btn-BG-off-white);
+        }
+
+        #id-middle-2 .class-services .ser-tab-1 img{
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+        }
+
+        #id-middle-2 #cont-1 #id-services-1{
+            order: 1;
+        }
+
+        #id-middle-2 #cont-1 #id-services-2{
+            order: 2;
+        }
+
+        #id-middle-2 #cont-1 #id-services-3{
+            order: 3;
+        }
+
+        /*  <!--container 2--> */
+        #id-middle-2 #cont-2{
+            display:flex;
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #id-middle-2 #cont-2 #id-services-4{
+            order: 4;
+        }
+
+        #id-middle-2 #cont-2 #id-services-5{
+            order: 5;
+        }
+
+        #id-middle-2 #cont-2 #id-services-6{
+            order: 6;
+        }
+
+        .class-box-contained img{
+            object-fit: fill;
+            width: 100%; 
+            max-width: 100%; 
+            height: auto;
+            display: block;
+        }
+
 
     </style>
 </head>
@@ -429,9 +515,15 @@
         </div>
 
         <div id="id-tab-2">
-            <div class="class-box-contained">1</div>
-            <div class="class-box-contained">2</div>
-            <div class="class-box-contained">3</div>
+            <div class="class-box-contained">
+                <img src="display1.jpg" alt="displayImage1"/>
+            </div>
+            <div class="class-box-contained">
+                <img src="display2.jpg" alt="displayImage2"/>
+            </div>
+            <div class="class-box-contained">
+                <img src="display3.jpg" alt="displayImage3"/>
+            </div>
            <!-- <h1>Medicine</h1>
             <h2>Is Love <3</h2>
             <div id="id-intro video">
@@ -455,6 +547,68 @@
               <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
           </div>
         </div>
+    </section>
+
+    <section id="id-middle-2">
+        <div id="cont-1">
+            <div class="class-services" id="id-services-1">
+                <div class="ser-tab-1">
+                    <h1>Sercvice 1</h1>
+                    <div class="ser-img"></div>
+                </div>
+                <div class="ser-tab-2">
+                    <p>Summary of services</p>
+                </div>
+            </div>
+            <div class="class-services" id="id-services-2">
+                <div class="ser-tab-1">
+                    <h1>Sercvice 1</h1>
+                    <div class="ser-img"></div>
+                </div>
+                <div class="ser-tab-2">
+                    <p>Summary of services</p>
+                </div>
+            </div>
+            <div class="class-services" id="id-services-3">
+                <div class="ser-tab-1">
+                    <h1>Sercvice 1</h1>
+                    <div class="ser-img"></div>
+                </div>
+                <div class="ser-tab-2">
+                    <p>Summary of services</p>
+                </div>
+            </div>
+        </div>
+        <div id="cont-2">
+            <div class="class-services" id="id-services-4"> 
+            <div class="ser-tab-1">
+                    <h1>Sercvice 1</h1>
+                    <div class="ser-img"></div>
+                </div>
+                <div class="ser-tab-2">
+                    <p>Summary of services</p>
+                </div>
+            </div>
+            <div class="class-services" id="id-services-5"> 
+            <div class="ser-tab-1">
+                    <h1>Sercvice 1</h1>
+                    <div class="ser-img"></div>
+                </div>
+                <div class="ser-tab-2">
+                    <p>Summary of services</p>
+                </div>
+            </div>
+            <div class="class-services" id="id-services-6"> 
+            <div class="ser-tab-1">
+                    <h1>Sercvice 1</h1>
+                    <div class="ser-img"></div>
+                </div>
+                <div class="ser-tab-2">
+                    <p>Summary of services</p>
+                </div>
+            </div>
+        </div>
+        
     </section>
 
     <!--
@@ -482,31 +636,9 @@
 
     </footer>
 
+
 </form>
-
-    <script>
-        var myVideo = document.getElementById("intro-video");
-
-
-        $(document).ready(function () {
-            var myVideo = document.getElementById("intro-video");
-
-            $.ajax({
-                url: "/default.aspx",
-                success: function (data) {
-                    //$(myVideo).html(data);
-
-                    if (myVideo.paused) {
-                        console.log("The video is paused");
-                        //myVideo.play();
-                    } else {
-                        console.log("The video is playing");
-                    }
-                }
-            });
-
-        });
-
-    </script>
+    <p class="auto-style2">
+        /=</p>
 </body>
 </html>

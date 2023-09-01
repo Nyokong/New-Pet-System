@@ -10,7 +10,7 @@
 
 namespace New_Pet_System
 {
-    public partial class askQuestion
+    public partial class Admin
     {
 
         /// <summary>

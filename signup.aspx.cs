@@ -43,11 +43,12 @@ namespace New_Pet_System
 
         }
 
-        protected void cbbAgree_CheckedChanged(object sender, EventArgs e)
+        protected void cbbAgree_CheckedChanged1(object sender, EventArgs e)
         {
-            btnSubmit.Vis = true;
+            btnSubmit.Enabled= cbbAgree.Checked;
         }
 
+       
         protected void Email_TextChanged(object sender, EventArgs e)
         {
 

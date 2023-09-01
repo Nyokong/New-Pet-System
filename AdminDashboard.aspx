@@ -240,7 +240,7 @@
                 height: 40px;
             }
             .side-menu li:hover{
-                background: pink;
+                background: white;
                 padding: 8px 38px;
                 border: 2px solid white;
             }
@@ -271,13 +271,13 @@
                 <h1><img src="pet60_w.png" alt="" /> Pet-Pals</h1>
             </div>
             <ul>
-                <li><img src="home30.png" alt="" />&nbsp; <span> Home<</span>/li>
-                <li><img src="admin30.png" alt="" />&nbsp; <span>Admin</span>  </li>
-                <li><img src="employee30_1.png" alt="" />&nbsp; <span>Employee</span>  </li>
-                <li><img src="customer30.png" alt="" />&nbsp; <span>ustomer</span>  C</li>
-                <li><img src="record30.png" alt="" />&nbsp; <span>Medical Records</span>  </li>
-                <li><img src="report30_1.png" alt="" />&nbsp; <span>Report</span>  </li>
-                <li><img src="profit30.png" alt="" />&nbsp; <span>Income</span>  </li>
+                <li><img src="home30.png" alt="" />&nbsp; <span> Home</span></li>
+                <li><img src="admin30.png" alt="" />&nbsp; <span>Admin</span></li>
+                <li><img src="employee30_1.png" alt="" />&nbsp; <span>Employee</span></li>
+                <li><img src="customer30.png" alt="" />&nbsp; <span>Customer</span></li>
+                <li><img src="record30.png" alt="" />&nbsp; <span>Medical Records</span> </li>
+                <li><img src="report30_1.png" alt="" />&nbsp; <span>Report</span></li>
+                <li><img src="profit30.png" alt="" />&nbsp; <span>Income</span></li>
             </ul>
 
         </div> 
@@ -305,7 +305,7 @@
                             <h3>Active Users</h3>
                         </div>
                         <div class="icon-case">
-                            <img src="users40.png" alt="" />
+                            <img src="users50.png" alt="" />
                         </div>
                     </div>
                     <div class="card">
@@ -314,7 +314,7 @@
                             <h3>Doctors Available</h3>
                         </div>
                         <div class="icon-case">
-                            <img src="vet40.png" alt="" />
+                            <img src="vet50.png" alt="" />
                         </div>
                         </div>
                     <div class="card">
@@ -323,7 +323,7 @@
                             <h3>Patients</h3>
                         </div>
                         <div class="icon-case">
-                            <img src="pet40.png" alt="" />
+                            <img src="pet50.png" alt="" />
                         </div>
                         </div>
                     <div class="card">
@@ -332,7 +332,7 @@
                             <h3>Income</h3>
                         </div>
                         <div class="icon-case">
-                            <img src="profit40.png" alt="" />
+                            <img src="income50.png" alt="" />
                         </div>
                 </div>
                 <div class="content-2">
@@ -370,9 +370,9 @@
                                 <th>Option</th>
                             </tr>
                             <tr>
-                                <td><img src="" alt="" /></td>
+                                <td><img src="person50.png" alt="" /></td>
                                 <td>John Steve Doe</td>
-                                <td><img src="" alt="" /></td>
+                                <td><a href="#" class="btn">View</a></td>        
                             </tr>
                         </table>
                     </div>

@@ -27,8 +27,12 @@
         li{
             list-style: none;
         }
-        h1,h2{
-            color: white;
+        h1,
+        h2{
+            color: #0d1212;
+        }
+        h3{
+            color: #8e8888;
         }
         .btn{
             background:#74caef;
@@ -157,7 +161,7 @@
             min-height: 90vh;
         }
         .container .content .cards{
-            padding: 20px 15px;
+            padding: 30px 15px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -168,6 +172,31 @@
             height: 150px;
             background: white;
             margin: 20px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .container .content .content-2{
+            min-height: 60vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .container .content .content-2 .recent-payments{
+            min-height: 50vh;
+            flex: 5;
+            background: white;
+            margin: 0 25px 25px 25px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .container .content .content-2 .new-students{
+            flex: 2;
+            background: white;
+            min-height: 50vh;
+            margin: 0 25px 25px 25px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     </style>
 </head>
@@ -185,7 +214,7 @@
                 <li><img src="customer30.png" alt="" />&nbsp; Customer</li>
                 <li><img src="record30.png" alt="" />&nbsp; Medical Records</li>
                 <li><img src="report30_1.png" alt="" />&nbsp; Report</li>
-                <li><img src="logout30.png" alt="" />&nbsp; Logout</li>
+                <li><img src="profit30.png" alt="" />&nbsp; Income</li>
             </ul>
 
         </div> 
@@ -209,23 +238,46 @@
                 <div class="cards">
                     <div class="card">
                         <div class="box">
-                            <h1>2194</h1>
-                            <h3>Users</h3>
+                            <h1>219</h1>
+                            <h3>Active Users</h3>
                         </div>
                         <div class="icon-case">
-                            <img src="" alt="" />
+                            <img src="users40.png" alt="" />
                         </div>
                     </div>
                     <div class="card">
                         <div class="box">
-                            <h1>2194</h1>
-                            <h3>Users</h3>
+                            <h1>50</h1>
+                            <h3>Doctors Available</h3>
                         </div>
                         <div class="icon-case">
-                            <img src="" alt="" />
+                            <img src="vet40.png" alt="" />
+                        </div>
+                        </div>
+                    <div class="card">
+                        <div class="box">
+                            <h1>19</h1>
+                            <h3>Patients</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="pet40.png" alt="" />
+                        </div>
+                        </div>
+                    <div class="card">
+                        <div class="box">
+                            <h1>R219400</h1>
+                            <h3>Income</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="profit40.png" alt="" />
                         </div>
                 </div>
-                <div class="content-2"></div>
+                <div class="content-2">
+                    <div class="recent-payments">
+                        <div class="title";
+                    </div>
+                    <div class="new-students"></div>
+                </div>
             </div>
         </div>
     </form>

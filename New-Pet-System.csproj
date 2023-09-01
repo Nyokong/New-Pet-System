@@ -68,6 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="customerProfile.aspx">
+      <BrowseToURL>/customerProfile.aspx</BrowseToURL>
+    </Content>
+    <Content Include="customerSettings.aspx" />
     <Content Include="display3.jpg" />
     <Content Include="App_Data\faqS.mdf" />
     <Content Include="App_Data\faqS_log.ldf">
@@ -132,13 +136,18 @@
     <Content Include="main.aspx">
       <BrowseToURL>/main.aspx</BrowseToURL>
     </Content>
+    <Content Include="main.aspx" />
+    <Content Include="notificationSettings.aspx" />
     <Content Include="ntja.jpg" />
     <Content Include="nwu.png" />
+    <Content Include="passwordForm.aspx" />
     <Content Include="pet.jpg" />
     <Content Include="pet.png" />
     <Content Include="Profile.aspx" />
+    <Content Include="petDetails.aspx" />
     <Content Include="pukke.png" />
     <Content Include="Reece.jpg" />
+    <Content Include="removePet.aspx" />
     <Content Include="script.js" />
     <Content Include="signin.aspx">
       <BrowseToURL>signin.aspx</BrowseToURL>
@@ -146,6 +155,7 @@
     <Content Include="signup.aspx">
       <BrowseToURL>/signup.aspx</BrowseToURL>
     </Content>
+    <Content Include="updatePetDetails.aspx" />
     <Content Include="vet.jpg" />
     <Content Include="vetVideo.MOV" />
     <Content Include="Web.config" />
@@ -181,6 +191,20 @@
     <Compile Include="contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="customerProfile.aspx.cs">
+      <DependentUpon>customerProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customerProfile.aspx.designer.cs">
+      <DependentUpon>customerProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customerSettings.aspx.cs">
+      <DependentUpon>customerSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customerSettings.aspx.designer.cs">
+      <DependentUpon>customerSettings.aspx</DependentUpon>
+    </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -206,10 +230,38 @@
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profile.aspx.designer.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
+	  <Compile Include="Profile.aspx.designer.cs">
+		  <DependentUpon>Profile.aspx</DependentUpon>
+	  </Compile>
+    <Compile Include="notificationSettings.aspx.cs">
+      <DependentUpon>notificationSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="notificationSettings.aspx.designer.cs">
+      <DependentUpon>notificationSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="passwordForm.aspx.cs">
+      <DependentUpon>passwordForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="passwordForm.aspx.designer.cs">
+      <DependentUpon>passwordForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="petDetails.aspx.cs">
+      <DependentUpon>petDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="petDetails.aspx.designer.cs">
+      <DependentUpon>petDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="removePet.aspx.cs">
+      <DependentUpon>removePet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="removePet.aspx.designer.cs">
+      <DependentUpon>removePet.aspx</DependentUpon>
+    </Compile>
     <Compile Include="signin.aspx.cs">
       <DependentUpon>signin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -223,6 +275,13 @@
     </Compile>
     <Compile Include="signup.aspx.designer.cs">
       <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updatePetDetails.aspx.cs">
+      <DependentUpon>updatePetDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updatePetDetails.aspx.designer.cs">
+      <DependentUpon>updatePetDetails.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

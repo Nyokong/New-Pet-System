@@ -88,7 +88,7 @@
       <BrowseToURL>/contact.aspx</BrowseToURL>
     </Content>
     <Content Include="default.aspx">
-      <BrowseToURL>default.aspx</BrowseToURL>
+      <BrowseToURL>/default.aspx</BrowseToURL>
     </Content>
     <Content Include="doc.jpg" />
     <Content Include="doctor.jpg" />
@@ -129,6 +129,9 @@
     <Content Include="home.png" />
     <Content Include="icons8-pet-100.png" />
     <Content Include="bully.jpg" />
+    <Content Include="main.aspx">
+      <BrowseToURL>/main.aspx</BrowseToURL>
+    </Content>
     <Content Include="main.aspx" />
     <Content Include="notificationSettings.aspx" />
     <Content Include="ntja.jpg" />
@@ -136,6 +139,7 @@
     <Content Include="passwordForm.aspx" />
     <Content Include="pet.jpg" />
     <Content Include="pet.png" />
+    <Content Include="Profile.aspx" />
     <Content Include="petDetails.aspx" />
     <Content Include="pukke.png" />
     <Content Include="Reece.jpg" />
@@ -217,6 +221,12 @@
     <Compile Include="main.aspx.designer.cs">
       <DependentUpon>main.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
     <Compile Include="notificationSettings.aspx.cs">
       <DependentUpon>notificationSettings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

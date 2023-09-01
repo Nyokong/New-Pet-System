@@ -14,7 +14,8 @@
         :root {
             /* background */
             --bg-off : #f3f3f3;
-            --bg-black: #1a1a1a;
+            --bg-black: #434e5c;
+            --bg-tint: #787878;
 
             /* front */
             --fr-white: #ffffff;
@@ -36,17 +37,17 @@
         /* top header */
         .top-header {
             height: var(--sz-top-header);
-            background-color: var(--fr-white);
             width: 100%;
             display:flex;
             justify-content: left;
             align-items: center;
             font-size: 10px;
-            color: var(--txt-black);
+            background-color: var(--bg-black);
+            color: var(--txt-white);
         }
 
         .top-header p{
-            color: black;
+            color: var(--txt-white);
             margin: 0px 20px;
             width: auto;
             font-weight: bold;
@@ -63,8 +64,8 @@
         header{
             height: auto;
             width: 100%;
-            background-color: var(--fr-white);
-            color: var(--txt-black);
+            background-color: var(--bg-black);
+            color: var(--txt-white);
         }
 
         header #id-logo-link{
@@ -75,7 +76,7 @@
         }
 
         header #id-logo-link:hover{
-            color: var(--txt-hoverr);
+            color: var(--txt-hover);
         }
 
         header #id-logo-link i{
@@ -83,14 +84,14 @@
             width: 30px;
             margin: 0px 10px;
             font-size: 30px;
-            color: var(--txt-black);
+            color: var(--txt-white);
         }
 
         header #id-logo-link h1{
             height: 30px;
             font-size: 25px;
             width: auto;
-            color: var(--txt-black);
+            color: var(--txt-white);
             display:flex;
             justify-content: center;
             align-items: center;
@@ -98,6 +99,12 @@
 
         header #id-nav-links{
             margin: 0px 20px;
+            color: var(--txt-white);
+        }
+
+        header #id-nav-links a{
+            margin: 0px 20px;
+            color: var(--txt-white);
         }
 
         #main-hero-tab{
@@ -164,6 +171,138 @@
             border-radius: 30px;
         }
 
+        .class-label{
+            height: 150px;
+            width: 100%;
+            background-color: var(--bg-black);
+            color:var(--fr-white);
+            display:flex;
+            align-items: center;
+            padding: 0px 40px;
+            margin: 20px 0px;
+            
+        }
+
+        .class-label h1{
+            font-size: 60px;
+            font-weight: 700;
+        }
+
+        #id-card-tab{
+            width: 100%;
+            padding: 30px 50px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            background-color: var(--fr-white);
+        }
+
+        #id-card-tab .card{
+            width: 286px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 20px;
+            height: calc(400px - 50px);
+            background-color: var(--fr-card);
+        }
+
+        #id-card-tab .card i{
+            height: 286px;
+            width: 286px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 70px;
+            background-color: var(--bg-black);
+            color: var(--fr-white);
+        }
+
+        #id-card-tab .card a{
+            width: 200px;
+            border-radius: 40px;
+        }
+
+        #id-testimonals{
+            height: auto;
+            padding-top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url("bully.jpg");
+            background-size: cover;
+        }
+
+        #id-testimonals h1{
+            height: 120px;
+            font-weight: 800;
+            font-size: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #id-testimonals .class-contains{
+            height: 500px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #id-testimonals .card{
+            height: 350px;
+            margin: 0px 20px;
+            width: 300px;
+            background-color: var(--fr-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: rgb(0 0 0 / 0.55) 10px inset;
+            border-radius: 30px;
+            flex-direction: column;
+        }
+
+        #id-testimonals .card img{
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            margin: 40px 0px 10px 0px;
+        }
+
+        #id-testimonals .card .card-body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        footer{
+            height: 300px;
+            color: var(--txt-white);
+            width: 100%;
+            background-color: var(--bg-black);
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .class-footer-contains{
+            width: 33%;
+            height: auto;
+        }
+
+        .class-footer-contains i{
+            font-size:200px;
+            color: var(--fr-white);
+        }
     </style>
 
 </head>
@@ -230,9 +369,71 @@
         </div>
     </div>
 
-    <div>
-
+    <div class="class-label">
+        <h1>
+            Our Services.
+        </h1>
     </div>
+
+    <div id="id-card-tab">
+        <div class="card" style="width: 18rem;">
+          <i class='bx bx-medal' ></i>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <i class='bx bx-plus-medical' ></i>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <i class='bx bxs-capsule' ></i>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+    </div>
+
+    <div id="id-testimonals">
+        <h1>
+            Testimonals
+        </h1>
+        <div class="class-contains">
+            <div class="card">
+              <img src="doctor.jpg" alt="Avatar"/>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="doctor1.jpg" alt="Avatar"/>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="class-footer-contains">
+            <i class='bx bxl-baidu'></i>
+        </div>
+        <div class="class-footer-contains"></div>
+        <div class="class-footer-contains"></div>
+    </footer>
 
     <!-- bootsrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

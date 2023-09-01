@@ -225,8 +225,9 @@
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profile.aspx.designer.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
+	  <Compile Include="Profile.aspx.designer.cs">
+		  <DependentUpon>Profile.aspx</DependentUpon>
+	  </Compile>
     <Compile Include="notificationSettings.aspx.cs">
       <DependentUpon>notificationSettings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

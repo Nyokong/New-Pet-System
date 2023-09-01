@@ -4,641 +4,440 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Pet-Pals Animal Clinic</title>
-
-   <link rel="icon" type="image/jpg" href="favicon_index/favicon_index.ico"/>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+     <title>Pet-Pals Animal Clinic</title>
+    <link rel="icon" type="image/jpg" href="favicon_index/favicon_index.ico"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
 
     <style type="text/css">
         :root {
-          --nav_background : #333333;
-          --nav-btn-bg-color: #4f4b4b;
-          --off-white: #f3f3f3;
-          
-          --nav-height : 70px;
-          --tab-height: 450px;
+            /* background */
+            --bg-off : #f3f3f3;
+            --bg-black: #434e5c;
+            --bg-tint: #787878;
 
-          --btn-BG-off-white: #f2f2f2;
-          --btn-FR-white: #fff;
-          --btn-FR-black: #000;
-          --bg-services: rgb(180 211 226 / 0.90);
+            /* front */
+            --fr-white: #ffffff;
+
+            /* texts */
+            --txt-black: #1a1a1a;
+            --txt-hover: rgb(219 135 98 / 0.70);
+            --txt-white: #fff;
+
+            /* sizes */
+            --sz-top-header: 25px;
+            --sz-hero: 400px;
         }
-
         body{
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
+            background-color: var(--bg-off);
             width: 100%;
-            background-color: #eaeaea;
         }
-        
-        <!--Super links-->
-        a{
-            display: flex;
-            justify-content: center;
+
+        /* top header */
+        .top-header {
+            height: var(--sz-top-header);
+            width: 100%;
+            display:flex;
+            justify-content: left;
             align-items: center;
-            height: 70px;
-            background-color: #4b4b5c;
+            font-size: 10px;
+            background-color: var(--bg-black);
+            color: var(--txt-white);
         }
 
-        .b-come{
-            background-color: #5762d5;
-            color: white;
-            padding: 10px 25px;
-            font-size: 22px;
-            font-weight: bold;
-            border-radius: 15px;
-            transition-duration: 0.3s;
-            display: block;
-            width: fit-content;
-            animation: slide-up 1s;
-            height: 70px;
-            width: 250px;
-        }
-
-        #intro a:hover{
-            cursor: pointer;
-            background-color: #454fc1;
-        }
-
-        #intro-video{
-            width: 500px;
-            height: auto;
-        }
-
-        .gallery-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .image_container {
-            margin: auto;
-            border-radius: 5px;
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap; 
-        }
-
-        .image-content {
-            display: inline-flex;
-        }
-
-        .pic {
-            width: 95px;
-            flex: 0 0 100%; 
-            margin: 0 5px; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .pic img {
-            width: 75%; 
-            height: auto; 
-        }
-
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .scroll-container {
-            height: 350%;
-            background-image: url("back.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 100%;
-            overflow: hidden; 
-        }
-
-        .scroll-container h1{
-            text-align: center;
-            color: white;
-        }
-
-        .scroll-content {
-            display: flex;
-            justify-content: center; 
-            animation: scroll 40s linear infinite;
-        }
-
-        .item {
-            background-color: #5762d5;
-            color: white;
-            padding: 10px 25px;
-            font-size: 22px;
-            font-weight: bold;
-            flex: 0 0 300px; 
-            height: 200px; 
-            margin: 10px;
-            border: 1px solid #ddd;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
-        }
-
-        /**
-        @keyframes scroll {
-            0% {
-            transform: translateX(-5);
-            }
-            100% {
-            transform: translateX(-100%); 
-            }
-        }*/
-
-
-        .footer{
-            padding: 20px;
-            background-color: var(--nav_background);
-            height: 180px;
-            width: auto;
-            color: #fff;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .image-container {
-            width: 100%;
-            overflow: auto;
-        }
-
-        img{
-            float: left;
-            margin-right: 10px;
-            height: 30px;
-        }
-
-        .footer p {
-             margin: 0;
-             font-size: 16px;
-        }
-
-        h4{
-            margin-top: 20px;
-            padding: 20px 25px;
-            font-size: 16px;
-        }
-
-        .logo-icon{
-            height: 50px;
-            width: auto;
-            margin: 2.5px 25px;
-            display: flex;
-        }
-
-        .logo-icon img{
-            height: 50px;
-            width: 50px;
-            margin: 5px;
-        }
-
-        .logo-icon #logo-name{
-            color: white;
-            width: 200px;
-            display: flex;
-            margin: 0px 10px;
-        }
-
-        .logo-icon #logo-name h1{
-            margin: 15px 0px;
-            display: table-cell;
-            vertical-align: middle;
-        }
-
-        /* the navigation menu starts here */
-        header{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            /*box-shadow: 0px 10px 25px #000000;*/
-            height: var(--nav-height);
-            background-color: var(--nav_background);
-        }
-
-        .main-nav{
-            display: flex;
-            padding: 10px;
-            column-gap: 80px;
-            padding: 20px;
-            margin: auto;
-        }
-
-        .nav-menu{
-            display: flex;
-            height: var(--nav-height);
-        }
-
-        .main-nav a{
-            text-decoration: none;
-            font-size: 20px;
-            color: white;
-            font-family: Arial, Arial, Helvetica, sans-serif;
-        }
-
-        .main-nav a:hover{
-            color: #e23b3b;
-        }
-
-        #selected{color: #fa8282;}
-
-        .nav-menu .signup-signin-nav{
-            height: var(--nav-height ) ;
-            width:auto;
-            padding: 0px 20px;
+        .top-header p{
+            color: var(--txt-white);
             margin: 0px 20px;
-            display: flex;
-        }
-
-        .nav-menu .signup-signin-nav #id-sign-up{
-            color: #fff;
-            margin: auto;
-            background-color: var(--nav-btn-bg-color);
-            height: calc(var(--nav-height) - 30px);
-            width: 100px;
-            text-decoration: none;
-            text-align: center;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .nav-menu .signup-signin-nav #id-sign-up:hover{
-            color: var(--nav-btn-bg-color);
-            background-color: #fff;
-        }
-
-        /* the nav menu ends here */
-
-        #intro{
             width: auto;
-            padding: 10px 40px;
+            font-weight: bold;
+        }
+
+        .top-header .contact-header{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        /* main nav */
+        header{
+            height: auto;
+            width: 100%;
+            background-color: var(--bg-black);
+            color: var(--txt-white);
+        }
+
+        header #id-logo-link{
             height: auto;
             display: flex;
-            margin: 20px 0px;
-        }
-
-        #intro #id-tab-1{
-            background-color: var(--nav_background);
-            height: var(--tab-height);
-            width: 50%;
-            color: #fff;
-            padding: 20px 40px;
-        }
-
-        #intro #id-tab-1 h1{
-            font-size: 70px;
-            margin: 20px 0px 5px 0px;
-        }
-
-        #intro #id-tab-1 #id-intro-text{
-            margin: 120px 0px 10px 0px;
-        }
-
-        #intro #id-tab-1 #id-become-member{
-            color:  var(--btn-FR-black);
-            margin: 40px 0px 20px 0px;
-            background-color: var(--btn-BG-off-white);
-            height: 100px;
-            width: 150px;
-            padding: 20px 40px;
-            text-decoration: none;
-            text-align: center;
-            border-radius: 50px;
-            display: flex;
+            flex-direction: row;
             justify-content: center;
-            align-items: center;
         }
 
-        #intro #id-tab-1 #id-become-member:hover{
-            color: #fff;
-            background-color: #5aae42;
+        header #id-logo-link:hover{
+            color: var(--txt-hover);
         }
 
-        #intro #id-tab-2{
-            background-color: var(--off-white);
-            height: var(--tab-height);
-            width: 50%;
-            padding: 20px;
-            display: flex;
-            overflow-x: scroll;
-            scroll-snap-type: x mandatory;
-        }
-
-        #intro #id-tab-2 h1{
-            font-size: 70px;
-            margin: 5px 0px 0px 0px;
-        }
-
-        #intro #id-tab-2 h2{
-            font-size: 20px;
-            margin: 5px 0px 20px 0px;
-        }
-
-        #intro #id-tab-2 .class-box-contained{
-            font-size: 70px;
-            display: flex;
-            min-width: 100%;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            scroll-snap-align: center;
-        }
-
-        #id-middle-1{
-            width: auto;
-            height: auto;
-            padding: 5px 40px;
-            background-color: var(--off-white);
-        }
-
-        #id-middle-1 .class-divider h1{
-            color: #fff;
-            font-size: 70px;
-            margin: 0px 0px 10px 0px;
-        }
-
-        #id-middle-1 .class-divider{
-            width: auto;
-            height: auto;
-            padding: 40px;
-            background-color: var(--nav_background);
-        }
-
-        #id-middle-1 .class-divider .class-gallery-container{
-            height: 200px;
-            width: auto;
-            display: flex;
-        }
-
-        #id-middle-1 .class-divider .class-gallery-container .class-image-tab{
-            height: 200px;
-            width: 200px;
+        header #id-logo-link i{
+            height: 30px;
+            width: 30px;
             margin: 0px 10px;
-            background-color: var(--nav-btn-bg-color);
+            font-size: 30px;
+            color: var(--txt-white);
         }
-        #id-middle-2 
-        {
+
+        header #id-logo-link h1{
+            height: 30px;
+            font-size: 25px;
+            width: auto;
+            color: var(--txt-white);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header #id-nav-links{
+            margin: 0px 20px;
+            color: var(--txt-white);
+        }
+
+        header #id-nav-links a{
+            margin: 0px 20px;
+            color: var(--txt-white);
+        }
+
+        #main-hero-tab{
+            height: calc(var(--sz-hero) + 40px);
+            width: 100%;
+            padding: 10px 50px;
+            background-color: var(--fr-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin-top: 10px;
+        }
+
+        #main-hero-tab #carouselExampleSlidesOnly{
+            height: calc(var(--sz-hero) - 40px);
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #main-hero-tab .carousel-item{
+            height: 400px;
+            width: 100%;
+        }
+
+        #main-hero-tab .carousel-item img{
+            object-fit: fill;
+        }
+
+        #main-hero-tab #id-side-bar{
+            height: 400px;
+            width: 40%;
             display: flex;
             flex-direction: column;
-            width: 100%;
-            padding: 20px;
-            height: auto;
-            justify-items: center;
-        }
-
-        #id-middle-2 #cont-1{
-            display:flex;
-            width: 100%;
-            height: auto;
-            justify-content: center;
+            justify-content: left;
             align-items: center;
+            padding:10px;
+            color: var(--txt-white);
+            background-color: var(--bg-black);
         }
 
-        #id-middle-2 .class-services 
-        {
-            height: 350px;
-            width: 300px;
-            background-color: var(--bg-services);
-            color: var(--btn-BG-off-white);
-            border-radius: 5px;
-            box-shadow: rgb(0 0 0 / 0.65) 40px initial;
-            font-size: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px;
-        }
-
-        #id-middle-2 .class-services .ser-tab-1{
+        #main-hero-tab #id-side-bar #id-mail-list-label{
             height: 40%;
+        }
+
+        #main-hero-tab #id-side-bar #id-form-list{
+            height: 60%;
+            width: 100%;
+        }
+
+        #main-hero-tab #id-side-bar #id-form-group{
+            width: 100%;
+        }
+
+        #main-hero-tab #id-side-bar #id-form-group input{
+            width: 350px;
+            border-radius: 30px;
+        }
+
+        #main-hero-tab #id-side-bar button{
+            width: calc(350px-100px);
+            border-radius: 30px;
+        }
+
+        .class-label{
+            height: 150px;
+            width: 100%;
+            background-color: var(--bg-black);
+            color:var(--fr-white);
+            display:flex;
+            align-items: center;
+            padding: 0px 40px;
+            margin: 20px 0px;
+            
+        }
+
+        .class-label h1{
+            font-size: 60px;
+            font-weight: 700;
+        }
+
+        #id-card-tab{
+            width: 100%;
+            padding: 30px 50px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            background-color: var(--fr-white);
+        }
+
+        #id-card-tab .card{
+            width: 286px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 20px;
+            height: calc(400px - 50px);
+            background-color: var(--fr-card);
+        }
+
+        #id-card-tab .card i{
+            height: 286px;
+            width: 286px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 70px;
+            background-color: var(--bg-black);
+            color: var(--fr-white);
+        }
+
+        #id-card-tab .card a{
+            width: 200px;
+            border-radius: 40px;
+        }
+
+        #id-testimonals{
+            height: auto;
+            padding-top: 20px;
             width: 100%;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url("bully.jpg");
+            background-size: cover;
         }
 
-        #id-middle-2 .class-services .ser-tab-1 h1{
-            width: 100%;
-            font-size: 30px;
-            color: var(--btn-BG-off-white);
-        }
-
-        #id-middle-2 .class-services .ser-tab-1 img{
-            height: 50px;
-            width: 50px;
-            border-radius: 100%;
-        }
-
-        #id-middle-2 #cont-1 #id-services-1{
-            order: 1;
-        }
-
-        #id-middle-2 #cont-1 #id-services-2{
-            order: 2;
-        }
-
-        #id-middle-2 #cont-1 #id-services-3{
-            order: 3;
-        }
-
-        /*  <!--container 2--> */
-        #id-middle-2 #cont-2{
-            display:flex;
-            width: 100%;
-            height: auto;
+        #id-testimonals h1{
+            height: 120px;
+            font-weight: 800;
+            font-size: 70px;
+            display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        #id-middle-2 #cont-2 #id-services-4{
-            order: 4;
+        #id-testimonals .class-contains{
+            height: 500px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        #id-middle-2 #cont-2 #id-services-5{
-            order: 5;
+        #id-testimonals .card{
+            height: 350px;
+            margin: 0px 20px;
+            width: 300px;
+            background-color: var(--fr-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: rgb(0 0 0 / 0.55) 10px inset;
+            border-radius: 30px;
+            flex-direction: column;
         }
 
-        #id-middle-2 #cont-2 #id-services-6{
-            order: 6;
+        #id-testimonals .card img{
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            margin: 40px 0px 10px 0px;
         }
 
-        .class-box-contained img{
-            object-fit: fill;
-            width: 100%; 
-            max-width: 100%; 
+        #id-testimonals .card .card-body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        footer{
+            height: 300px;
+            color: var(--txt-white);
+            width: 100%;
+            background-color: var(--bg-black);
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .class-footer-contains{
+            width: 33%;
             height: auto;
-            display: block;
         }
 
-
+        .class-footer-contains i{
+            font-size:200px;
+            color: var(--fr-white);
+        }
     </style>
+
 </head>
-<body style="height: 579px">
-<form id="form1" runat="server">
-    <header class="header-menu">
-        <div class="logo-icon">
-            <img src="icons8-pet-100.png" width="120" alt="Pet-Pals Logo"/>
-            <div id="logo-name">
-                <h1 >Pet Pals</h1>
-            </div>
-        </div>
-
-        <div class="nav-menu">
-            <nav class="main-nav">
-                <a href="default.aspx" id="selected">Home </a>
-                <a href="about.aspx"> About </a>
-                <a href="faq.aspx"> FAQs </a>
-               <a href="contact.aspx"> Contact Us</a>
-            </nav>
-            <div class="signup-signin-nav">
-                <a id="id-sign-up" href="signin.aspx"> Sign In </a>
-            </div>
-        </div>
-
-    </header>
-
-    <section id="intro">
-        <div id="id-tab-1" style="width: 50%;">
-            <h1> Best Local Vet </h1>
-            <h3> In the Free-State </h3>
-            <p id="id-intro-text"> At Pet-Pals Animal Clinic, we're your local vet clinic committed to keeping pets healthy and tails wagging. With experienced care and a love for animals, we provide a stress-free haven where your furry companions' well-being is our top priority.</p>
-            <a id="id-become-member" href="signup.aspx"> Become a Member </a>
-        </div>
-
-        <div id="id-tab-2">
-            <div class="class-box-contained">
-                <img src="display1.jpg" alt="displayImage1"/>
-            </div>
-            <div class="class-box-contained">
-                <img src="display2.jpg" alt="displayImage2"/>
-            </div>
-            <div class="class-box-contained">
-                <img src="display3.jpg" alt="displayImage3"/>
-            </div>
-           <!-- <h1>Medicine</h1>
-            <h2>Is Love <3</h2>
-            <div id="id-intro video">
-                 <video id="intro-video" controls="controls" autoplay="autoplay">
-                    <source src="vetVideo.MOV" />
-                    Your browser does not support the video tag.
-                </video>
-            </div>-->
-        </div>
-    </section>
-
-    <section id="id-middle-1">
-        <div class="class-divider">
-          <h1>Content</h1>
-
-          <div class="class-gallery-container">
-              <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
-              <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
-              <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
-              <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
-              <div class="class-image-tab"><!--<img src="doctor.jpg" alt="Image 1"/>--></div>
-          </div>
-        </div>
-    </section>
-
-    <section id="id-middle-2">
-        <div id="cont-1">
-            <div class="class-services" id="id-services-1">
-                <div class="ser-tab-1">
-                    <h1>Sercvice 1</h1>
-                    <div class="ser-img"></div>
-                </div>
-                <div class="ser-tab-2">
-                    <p>Summary of services</p>
-                </div>
-            </div>
-            <div class="class-services" id="id-services-2">
-                <div class="ser-tab-1">
-                    <h1>Sercvice 1</h1>
-                    <div class="ser-img"></div>
-                </div>
-                <div class="ser-tab-2">
-                    <p>Summary of services</p>
-                </div>
-            </div>
-            <div class="class-services" id="id-services-3">
-                <div class="ser-tab-1">
-                    <h1>Sercvice 1</h1>
-                    <div class="ser-img"></div>
-                </div>
-                <div class="ser-tab-2">
-                    <p>Summary of services</p>
-                </div>
-            </div>
-        </div>
-        <div id="cont-2">
-            <div class="class-services" id="id-services-4"> 
-            <div class="ser-tab-1">
-                    <h1>Sercvice 1</h1>
-                    <div class="ser-img"></div>
-                </div>
-                <div class="ser-tab-2">
-                    <p>Summary of services</p>
-                </div>
-            </div>
-            <div class="class-services" id="id-services-5"> 
-            <div class="ser-tab-1">
-                    <h1>Sercvice 1</h1>
-                    <div class="ser-img"></div>
-                </div>
-                <div class="ser-tab-2">
-                    <p>Summary of services</p>
-                </div>
-            </div>
-            <div class="class-services" id="id-services-6"> 
-            <div class="ser-tab-1">
-                    <h1>Sercvice 1</h1>
-                    <div class="ser-img"></div>
-                </div>
-                <div class="ser-tab-2">
-                    <p>Summary of services</p>
-                </div>
-            </div>
-        </div>
-        
-    </section>
-
-    <!--
-    <div class="scroll-container">
-        <h1> Vision & Mission </h1>
-        <div class="scroll-content">
-            <div class="item">Advancing Animal Health and Well-being <br/> "Our vision is to lead in advancing the health and 
-                well-being of animals through exceptional veterinary care, innovative treatments, and dedicated client education."</div>
-            <div class="item">Championing Compassionate Care</div>
-            <div class="item">Elevating the Human-Animal Bond</div>
-            <div class="item">Pioneering Preventive Medicine</div>
-            <div class="item">Setting Standards of Excellence</div>
-            <div class="item">Empowering Pet Owners</div>
-            <div class="item">Community-Centered Animal Care</div>
+<body>
+    <div class="top-header">
+        <div class="contact-header">
+            <p> Contact Details </p>
+            <p>Call : 012 232 3243</p>
+            <p>Email : info@petpals.com</p>
         </div>
     </div>
-    -->
-    <footer class="footer">
-        <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" id="id-logo-link" href="default.aspx">
+                <i class='bx bxs-dog'></i>
+                <h1 >Pet Pals</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"><i class='bx bx-menu-alt-right' ></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav" id="id-nav-links">
+                <a class="nav-link" href="faq.aspx">FAQs</a>
+                <a class="nav-link" href="contact.aspx">Contact</a>
+                <a class="nav-link" href="about.aspx"">About Us</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </header>
 
-        <div class="image-container">
-            <img src="pukke.png" alt="North-West University (Potch)" width="150"/>
-            <p> Team 7 - System Analyst Corp </p>
+    <div id="main-hero-tab">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="doc.jpg" class="d-block w-100" alt="..."/>
+            </div>
+            <div class="carousel-item">
+              <img src="doctor2.jpg" class="d-block w-100" alt="..."/>
+            </div>
+            <div class="carousel-item">
+              <img src="doctor3.jpg" class="d-block w-100" alt="..."/>
+            </div>
+          </div>
         </div>
 
+        <div id="id-side-bar">
+            <div id="id-mail-list-label">
+                <h1>Join our mail list</h1>
+                <h2>Get updates and coupons</h2>
+                <!--<p>Lorem ipsum dolor  magna aliqua. Ut enim ad minim veniam, quis nostrud  consequat. </p>-->
+            </div>
+            <div id="id-mail-list">
+                <form id="id-form-list">
+                  <div class="form-group" id="id-form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Join</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="class-label">
+        <h1>
+            Our Services.
+        </h1>
+    </div>
+
+    <div id="id-card-tab">
+        <div class="card" style="width: 18rem;">
+          <i class='bx bx-medal' ></i>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <i class='bx bx-plus-medical' ></i>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+          <i class='bx bxs-capsule' ></i>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+    </div>
+
+    <div id="id-testimonals">
+        <h1>
+            Testimonals
+        </h1>
+        <div class="class-contains">
+            <div class="card">
+              <img src="doctor.jpg" alt="Avatar"/>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="doctor1.jpg" alt="Avatar"/>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="class-footer-contains">
+            <i class='bx bxl-baidu'></i>
+        </div>
+        <div class="class-footer-contains"></div>
+        <div class="class-footer-contains"></div>
     </footer>
 
-
-</form>
-    <p class="auto-style2">
-        /=</p>
+    <!-- bootsrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 </body>
 </html>

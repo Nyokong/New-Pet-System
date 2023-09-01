@@ -73,13 +73,17 @@
     </Content>
     <Content Include="customerSettings.aspx" />
     <Content Include="display3.jpg" />
-    <Content Include="App_Data\NewPetPals-Data.mdf" />
-    <Content Include="App_Data\NewPetPals-Data_log.ldf">
+    <Content Include="App_Data\faqS.mdf" />
+    <Content Include="App_Data\faqS_log.ldf">
+      <DependentUpon>faqS.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\faq_log.ldf">
+      <DependentUpon>faq.mdf</DependentUpon>
+    </Content>
       <DependentUpon>NewPetPals-Data.mdf</DependentUpon>
     </Content>
     <Content Include="about.jpg" />
     <Content Include="Admin.aspx" />
-    <Content Include="back.jpg" />
     <Content Include="bookAppoinment.aspx">
       <BrowseToURL>/bookAppoinment.aspx</BrowseToURL>
     </Content>
@@ -144,6 +148,7 @@
     <Content Include="pukke.png" />
     <Content Include="Reece.jpg" />
     <Content Include="removePet.aspx" />
+    <Content Include="script.js" />
     <Content Include="signin.aspx">
       <BrowseToURL>signin.aspx</BrowseToURL>
     </Content>

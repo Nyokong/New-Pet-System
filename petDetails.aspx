@@ -10,7 +10,7 @@
 
     <style>
         header{
-            height: 50px;
+            height: 80px;
             background-color: grey;
             background-color: grey;
         }

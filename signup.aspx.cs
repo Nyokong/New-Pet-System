@@ -25,6 +25,7 @@ namespace New_Pet_System
             {
                 Response.Redirect("default.aspx");
             }
+            btnSubmit.Enabled = false;
         }
 
         protected void First_name_TextChanged(object sender, EventArgs e)
@@ -42,6 +43,11 @@ namespace New_Pet_System
 
         }
 
+        protected void cbbAgree_CheckedChanged(object sender, EventArgs e)
+        {
+            btnSubmit.Vis = true;
+        }
+
         protected void Email_TextChanged(object sender, EventArgs e)
         {
 
@@ -52,10 +58,8 @@ namespace New_Pet_System
 
         }
 
-        protected void Agree_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
+        
+       
 
         protected void Signup_Click(object sender, EventArgs e)
         {
@@ -84,17 +88,7 @@ namespace New_Pet_System
             Response.Cookies.Add(userCookie);
             Response.Redirect("default.aspx");
 
-            string script = @"<script type='text/javascript'>
-                            $(document).ready(function() {
-                                $('#SignUpSuccessModal').modal('show');
-                            });
-                          </script>";
-
-            ClientScript.RegisterStartupScript(this.GetType(), "ShowModalScript", script);
-
-            // Trigger the Bootstrap modal after successful login
-            ScriptManager.RegisterStartupScript(this, GetType(), "SignUpSuccessScript", "$('#SignUpSuccessModal').modal('show');", true);
-
+           
         }
     }
 }

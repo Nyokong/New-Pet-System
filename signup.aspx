@@ -316,7 +316,7 @@
                 <asp:TextBox runat="server" class="fields" type="tel" required="optional" placeholder="Enter phone number: " ID="txtPhone" OnTextChanged="Phone_TextChanged"/><br/>
                 <br />
                 <div id="id-checkbox">
-                <asp:CheckBox runat="server" type="checkbox" id="agree" required="required"/><label style="font-size: 15px;" for="agree"> I accept to the <a href="google.com"> terms and conditions </a>  of use.</label><br/>
+                <asp:CheckBox runat="server" type="checkbox" ID="cbbAgree" required="required" OnCheckedChanged="cbbAgree_CheckedChanged"/><label style="font-size: 15px;" for="agree"> I accept to the <a href="google.com"> terms and conditions </a>  of use.</label><br/>
                 <br/><br/>
                    </div>
                 <div class="btn-sign-up">

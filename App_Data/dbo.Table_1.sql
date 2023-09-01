@@ -1,3 +1,4 @@
+
 ﻿CREATE TABLE [dbo].[FaqTable]
 (
 	[userId] INT NOT NULL , 

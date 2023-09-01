@@ -40,12 +40,27 @@
             padding: 5px 10px;
             text-align: center;
         }
-        .btn hover{
+        .btn:hover{
             color:#f05462;
             background:white;
             padding: 3px 8px;
             border: 2px solid #f05462;
+        }
 
+        .title{
+            display:flex;
+            align-items:center;
+            justify-content: space-around;
+            padding: 15px 10px;
+            border-bottom: 2px solid #999;
+        }
+        table{
+            padding: 10px;
+
+        }
+        th,td{
+            text-align: left;
+            padding: 8px;
         }
 
         .side-menu{
@@ -95,6 +110,7 @@
             align-items: center;
             justify-content:center;
             box-shadow: 0 4px 8px rgba(0, 0 , 0, 0.2);
+            z-index: 1;
         }
         .container .header .nav{
             width: 90%;
@@ -159,6 +175,7 @@
             position: relative;
             margin-top: 10vh;
             min-height: 90vh;
+            background: white;
         }
         .container .content .cards{
             padding: 30px 15px;
@@ -190,6 +207,8 @@
             background: white;
             margin: 0 25px 25px 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display:flex;
+            flex-direction: column;
         }
         .container .content .content-2 .new-students{
             flex: 2;
@@ -197,7 +216,51 @@
             min-height: 50vh;
             margin: 0 25px 25px 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display:flex;
+            flex-direction: column;
         }
+        .container .content .content-2 .new-students table td:nth-child(1) img{
+            height:40px;
+            width: 40px;
+        }
+        @media screen and (max-width: 1050px){
+            .side-menu li{
+                font-size: 18px;
+            }
+        }
+        @media screen and (max-width: 940px){
+            .side-menu li span{
+                display: none;
+            }
+            .side-menu{
+                align-items: center;
+            }
+            .side-menu li img{
+                width: 40px;
+                height: 40px;
+            }
+            .side-menu li:hover{
+                background: pink;
+                padding: 8px 38px;
+                border: 2px solid white;
+            }
+        }
+         @media screen and (max-width: 536px){
+             .brand-name h1{
+                 font-size: 16px;
+             }
+             .container .content .cards{
+                 justify-content: center;
+             }
+             .side-menu li img{
+                 width: 30px;
+                 height: 30px;
+             }
+             .container .content .content-2 .recent-payments table th:nth-child(2),
+             .container .content .content-2 .recent-payments table th:nth-child(2){
+                 display:none;
+             }
+         }
     </style>
 </head>
 
@@ -208,13 +271,13 @@
                 <h1><img src="pet60_w.png" alt="" /> Pet-Pals</h1>
             </div>
             <ul>
-                <li><img src="home30.png" alt="" />&nbsp; Home</li>
-                <li><img src="admin30.png" alt="" />&nbsp; Admin</li>
-                <li><img src="employee30_1.png" alt="" />&nbsp; Employee</li>
-                <li><img src="customer30.png" alt="" />&nbsp; Customer</li>
-                <li><img src="record30.png" alt="" />&nbsp; Medical Records</li>
-                <li><img src="report30_1.png" alt="" />&nbsp; Report</li>
-                <li><img src="profit30.png" alt="" />&nbsp; Income</li>
+                <li><img src="home30.png" alt="" />&nbsp; <span> Home<</span>/li>
+                <li><img src="admin30.png" alt="" />&nbsp; <span>Admin</span>  </li>
+                <li><img src="employee30_1.png" alt="" />&nbsp; <span>Employee</span>  </li>
+                <li><img src="customer30.png" alt="" />&nbsp; <span>ustomer</span>  C</li>
+                <li><img src="record30.png" alt="" />&nbsp; <span>Medical Records</span>  </li>
+                <li><img src="report30_1.png" alt="" />&nbsp; <span>Report</span>  </li>
+                <li><img src="profit30.png" alt="" />&nbsp; <span>Income</span>  </li>
             </ul>
 
         </div> 
@@ -274,9 +337,45 @@
                 </div>
                 <div class="content-2">
                     <div class="recent-payments">
-                        <div class="title";
+                        <div class="title">
+                            <h2>Recent Payments</h2>
+                            <a href="#" class="btn">View All</a>
+                        </div>
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Pet</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Option</th>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>Bobby</td>
+                                <td>01 August 2023 10:00</td>
+                                <td>R300</td>
+                                <td><a href="#" class="btn">View</a></td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="new-students"></div>
+                    <div class="new-students">
+                        <div class="title">
+                            <h2>New Member</h2>
+                            <a href="#" class="btn">View All</a>
+                        </div>
+                        <table>
+                            <tr>
+                                <th>Profile</th>
+                                <th>Name</th>
+                                <th>Option</th>
+                            </tr>
+                            <tr>
+                                <td><img src="" alt="" /></td>
+                                <td>John Steve Doe</td>
+                                <td><img src="" alt="" /></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

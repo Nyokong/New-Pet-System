@@ -287,7 +287,14 @@
 
                     <div class="bf-col-6">
                         <p> Choose Doctor </p>
-                        <asp:TextBox runat="server" CssClass="bf-col-6" type="text" required="required" name="doc" id="doc"/>
+                        <asp:DropDownList runat="server" CssClass="bf-col-6" ID="DropDownList1" Required="true">
+                            <asp:ListItem Text="Select a Doctor" Value="" />
+                            <asp:ListItem Text="Dr Manamela" Value="doctor1" />
+                            <asp:ListItem Text="Dr Malvin" Value="doctor2" />
+                            <asp:ListItem Text="Dr Moremi" Value="doctor3" />
+                            
+                        </asp:DropDownList>
+
                     </div>
 
                 </div>
@@ -296,7 +303,8 @@
 
                     <div class="bf-col-6">
                         <p> Select Date: </p>
-                        <input type="date" name="date" required="required" id="date" />
+                             <asp:Calendar runat="server" ID="calendar" CssClass="bf-col-6" AutoPostBack="true" OnSelectionChanged="calendar_SelectionChanged" />
+                             <asp:Label runat="server" ID="selectedDateLabel" />
                     </div>
 
                     <div class="bf-col-6">

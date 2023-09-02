@@ -69,18 +69,20 @@
   <ItemGroup>
     <Content Include="about.aspx" />
     <Content Include="customerDashboard.aspx" />
+    <Content Include="App_Data\NewPetPals-Data_log.ldf">
+      <DependentUpon>NewPetPals-Data.mdf</DependentUpon>
+    </Content>
     <Content Include="customerProfile.aspx">
       <BrowseToURL>/customerProfile.aspx</BrowseToURL>
     </Content>
     <Content Include="customerSettings.aspx" />
     <Content Include="display3.jpg" />
     <Content Include="App_Data\NewPetPals-Data.mdf" />
-    <Content Include="App_Data\NewPetPals-Data_log.ldf">
+    <Content Include="App_Data\NewPetPals-Data.mdf_log.ldf">
       <DependentUpon>NewPetPals-Data.mdf</DependentUpon>
     </Content>
     <Content Include="about.jpg" />
     <Content Include="Admin.aspx" />
-    <Content Include="back.jpg" />
     <Content Include="bookAppoinment.aspx">
       <BrowseToURL>bookAppoinment.aspx</BrowseToURL>
     </Content>
@@ -148,6 +150,7 @@
     <Content Include="pukke.png" />
     <Content Include="Reece.jpg" />
     <Content Include="removePet.aspx" />
+    <Content Include="script.js" />
     <Content Include="signin.aspx">
       <BrowseToURL>signin.aspx</BrowseToURL>
     </Content>
@@ -155,7 +158,7 @@
       <BrowseToURL>/signup.aspx</BrowseToURL>
     </Content>
     <Content Include="updatePetDetails.aspx" />
-    <Content Include="vet.jpg" />
+    <Content Include="TermsAndConditions.aspx" />
     <Content Include="vetVideo.MOV" />
     <Content Include="Web.config" />
     <Content Include="website.jpg" />
@@ -295,6 +298,12 @@
     </Compile>
     <Compile Include="updatePetDetails.aspx.designer.cs">
       <DependentUpon>updatePetDetails.aspx</DependentUpon>
+    <Compile Include="TermsAndConditions.aspx.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TermsAndConditions.aspx.designer.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

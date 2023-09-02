@@ -6,17 +6,24 @@
 <head runat="server">
     <title>Terms and Conditions</title>
 </head>
+
+    <style>
+
+    </style>
+
 <body>
     <form id="form1" runat="server">
         <div>
             <h1>Terms and Conditions for Pet Pals</h1>
 
             <h2>1. Appointment and Cancellation Policies:</h2>
-            <p>Clients can schedule appointments by phone or through our website.
-               Please provide at least 24 hours' notice for appointment cancellations.
-               A cancellation fee may apply for missed appointments without proper notice. </p>
+                <ul>
+                    <li> Clients can schedule appointments by phone or through our website. </li>
+                    <li> Please provide at least 24 hours' notice for appointment cancellations. </li>
+                    <li>  A cancellation fee may apply for missed appointments without proper notice. </li>
+                </ul>
 
-            <h2> 2. Payment Terms:</h2>
+              <h2> 2. Payment Terms:</h2>
             <p>We accept payment by cash, credit cards, and EFTs.
                Payment is due at the time of service or upon discharge of your pet.
                Late payment may incur additional fees or interest charges.</p>
@@ -90,8 +97,6 @@
              <h3>By using our services, you acknowledge that you have read, understood, and agreed to these terms and conditions.</h3>
 
         </div>
-
-
 
     </form>
 </body>

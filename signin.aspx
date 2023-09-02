@@ -4,27 +4,32 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Sign In</title>
+    <title>PetPals | Sign In</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="icon" type="image/jpg" href="favicon_index/favicon_index.ico"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
-
-    <link rel="icon" type="image/jpg" href="favicon_client/favicon.ico"/>
 
     <style type="text/css">
 
         :root {
-            --nav_background : #333333;
-            --nav-btn-bg-color: #4f4b4b;
-            --off-white: #f3f3f3;
-            --BG-sign-up: #333333;
-          
-            --nav-height : 70px;
-            --tab-height: 450px;
+            /* background */
+            --bg-off : #f3f3f3;
+            --bg-black: #434e5c;
+            --bg-tint: #787878;
 
-            --btn-BG-off-white: #f2f2f2;
-            --btn-FR-white: #fff;
-            --btn-FR-black: #000;
+            /* front */
+            --fr-white: #ffffff;
 
+            /* texts */
+            --txt-black: #1a1a1a;
+            --txt-hover: rgb(219 135 98 / 0.70);
+            --txt-white: #fff;
+            --txt-hover-dark: #657283;
+
+            /* sizes */
+            --sz-top-header: 25px;
+            --sz-hero: 400px;
         }
 
         *{
@@ -41,80 +46,76 @@
 
         }
 
-        /* the navigation menu starts here */
+        .main-body{
+            width: 80%;
+            /*display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;*/
+            margin: 0px 10%;
+        }
+
+        
+        /* main nav */
         header{
+            height: auto;
             width: 100%;
+            background-color: var(--bg-black);
+            color: var(--txt-white);
+        }
+
+        header #id-logo-link{
+            height: auto;
             display: flex;
-            justify-content: space-between;
-            height: var(--nav-height);
-            background-color: var(--nav_background);
+            flex-direction: row;
+            justify-content: center;
         }
 
-        .main-nav{
-            display: flex;
-            column-gap: 80px;
-            padding: 20px;
-            margin: 0px 30px;
+        header #id-logo-link:hover{
+            color: var(--txt-hover);
         }
 
-        .nav-menu{
-            display: flex;
-            height: var(--nav-height);
-        }
-
-        .main-nav a{
-            text-decoration: none;
-            font-size: 20px;
-            color: white;
-            font-family: Arial, Arial, Helvetica, sans-serif;
-        }
-
-        .main-nav a:hover{
-            color: #e23b3b;
-        }
-
-        #selected{color: #fa8282;}
-
-        /* the nav menu ends here */
-
-        h1 {
-            text-align: center;
-            padding: 5px;
-            margin-top: 45px;
-            margin-bottom: 8px;
-        }
-
-        .logo-icon{
-            height: 50px;
-            width: auto;
-            margin: 2.5px 25px;
-            display: flex;
-        }
-
-        .logo-icon img{
-            height: 50px;
-            width: 50px;
-            margin: 5px;
-        }
-
-        .logo-icon #logo-name{
-            color: white;
-            width: 200px;
-            display: flex;
+        header #id-logo-link i{
+            height: 30px;
+            width: 30px;
             margin: 0px 10px;
+            font-size: 30px;
+            color: var(--txt-white);
         }
 
-        .logo-icon #logo-name h1{
-            margin: 15px 0px;
-            display: table-cell;
-            vertical-align: middle;
+        header .nav-link{
+            height: 40px;
+            width: auto;
+            margin: 0px 40px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        a{
-            text-decoration: none;
-            font-size: 20px;
-            color: #000000;
-            font-family: Arial, Arial, Helvetica, sans-serif;
+         header #link_signin:hover{
+            color: var(--txt-white);
+            background-color: var(--txt-hover-dark);
+        }
+
+        header #id-logo-link h1{
+            height: 30px;
+            font-size: 25px;
+            width: auto;
+            color: var(--txt-white);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header #id-nav-links{
+            margin: 0px 20px;
+            color: var(--txt-white);
+        }
+
+        header #id-nav-links a{
+            margin: 0px 20px;
+            color: var(--txt-white);
         }
 
         .main-nav a:hover{
@@ -302,22 +303,28 @@
 </head>
 <body>
      <header>
-       <div class="logo-icon">
-            <img src="icons8-pet-100.png" width="120" alt="Pet-Pals Logo"/>
-            <div id="logo-name">
+        <div class="main-body">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" id="id-logo-link" href="default.aspx">
+                <i class='bx bxs-dog'></i>
                 <h1 >Pet Pals</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"><i class='bx bx-menu-alt-right' ></i></span>
+            </button>
+              
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav" id="id-nav-links">
+                <asp:HyperLink ID="link_signin" CssClass="nav-link" runat="server" NavigateUrl="~/signin.aspx">Sign in</asp:HyperLink>
+                <a class="nav-link" href="faq.aspx">FAQs</a>
+                <a class="nav-link" href="contact.aspx">Contact</a>
+                <a class="nav-link" href="about.aspx"">About Us</a>
+              </div>
             </div>
+          </div>
+        </nav>
         </div>
-
-        <div class="nav-menu">
-            <nav class="main-nav">
-                <a href="default.aspx">Home </a>
-                <a href="about.aspx"> About </a>
-                <a href="faq.aspx"> FAQs </a>
-                <a href="contact.aspx"> Contact Us</a>
-            </nav>
-        </div>
-
     </header>
     
     <div class="class-sign-up">

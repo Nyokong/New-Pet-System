@@ -139,6 +139,7 @@
     <Content Include="signup.aspx">
       <BrowseToURL>/signup.aspx</BrowseToURL>
     </Content>
+    <Content Include="TermsAndConditions.aspx" />
     <Content Include="vet.jpg" />
     <Content Include="vetVideo.MOV" />
     <Content Include="Web.config" />
@@ -216,6 +217,13 @@
     </Compile>
     <Compile Include="signup.aspx.designer.cs">
       <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TermsAndConditions.aspx.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TermsAndConditions.aspx.designer.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

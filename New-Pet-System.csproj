@@ -94,6 +94,9 @@
       <BrowseToURL>/default.aspx</BrowseToURL>
     </Content>
     <Content Include="doc.jpg" />
+    <Content Include="docAppointment.aspx" />
+    <Content Include="docMedical.aspx" />
+    <Content Include="docProfileManagement.aspx" />
     <Content Include="doctor.jpg" />
     <Content Include="doctor1.jpg" />
     <Content Include="doctor2.jpg" />
@@ -104,7 +107,7 @@
     <Content Include="doctor7.jpg" />
     <Content Include="doctor8.jpg" />
     <Content Include="doctorProfile.aspx">
-      <BrowseToURL>/doctorProfile.aspx</BrowseToURL>
+      <BrowseToURL>doctorProfile.aspx</BrowseToURL>
     </Content>
     <Content Include="dog.jpg" />
     <Content Include="download.png" />
@@ -161,6 +164,7 @@
     <Content Include="TermsAndConditions.aspx" />
     <Content Include="vetVideo.MOV" />
     <Content Include="Web.config" />
+    <Content Include="docPatientManage.aspx" />
     <Content Include="website.jpg" />
     <Content Include="whyUS.jpg" />
   </ItemGroup>
@@ -220,6 +224,27 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="docAppointment.aspx.cs">
+      <DependentUpon>docAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="docAppointment.aspx.designer.cs">
+      <DependentUpon>docAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="docMedical.aspx.cs">
+      <DependentUpon>docMedical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="docMedical.aspx.designer.cs">
+      <DependentUpon>docMedical.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="docProfileManagement.aspx.cs">
+      <DependentUpon>docProfileManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="docProfileManagement.aspx.designer.cs">
+      <DependentUpon>docProfileManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="doctorProfile.aspx.cs">
       <DependentUpon>doctorProfile.aspx</DependentUpon>
@@ -305,6 +330,13 @@
     </Compile>
     <Compile Include="TermsAndConditions.aspx.designer.cs">
       <DependentUpon>TermsAndConditions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="docPatientManage.aspx.cs">
+      <DependentUpon>docPatientManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="docPatientManage.aspx.designer.cs">
+      <DependentUpon>docPatientManage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

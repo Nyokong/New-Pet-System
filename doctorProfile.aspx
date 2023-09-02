@@ -61,14 +61,19 @@
   <div class="offcanvas-body">
     <div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"> Profile Management </li>
-        <li class="list-group-item"> Patient Management </li>
-        <li class="list-group-item"> Appointment Management </li>
-        <li class="list-group-item"> Medical Records </li>
-        <li class="list-group-item"> Billing and Payment </li>
-        <li class="list-group-item"> Task and Reminder Management </li>
-        <li class="list-group-item"> Prescription Management </li>
-        <li class="list-group-item"> Communication Tools </li>
+        <li class="list-group-item">
+            <a href ="docProfileManagement.aspx.cs">Profile Management</a>
+        </li>
+        <li class="list-group-item">
+            <a href = "docPatientManage.aspx.cs">Patient Management</a> 
+        </li>
+        <li class="list-group-item"> 
+            <a href = "docAppointment.aspx.cs">Appointment Management</a>
+        </li>
+        <li class="list-group-item">  
+            <a href = "docMedical.aspx.cs">Medical Records</a>
+        </li>
+
      </ul>
     </div>
     <div>  

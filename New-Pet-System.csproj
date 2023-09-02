@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="customerDashboard.aspx" />
     <Content Include="customerProfile.aspx">
       <BrowseToURL>/customerProfile.aspx</BrowseToURL>
     </Content>
@@ -188,6 +189,13 @@
     </Compile>
     <Compile Include="contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="customerDashboard.aspx.cs">
+      <DependentUpon>customerDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customerDashboard.aspx.designer.cs">
+      <DependentUpon>customerDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="customerProfile.aspx.cs">
       <DependentUpon>customerProfile.aspx</DependentUpon>

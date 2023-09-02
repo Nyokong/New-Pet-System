@@ -43,6 +43,10 @@
             color: black;
         }
 
+        .col-12{
+            padding: 20px;
+        }
+
     </style>
 
 </head>

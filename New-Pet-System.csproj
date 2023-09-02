@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="customerDashboard.aspx" />
     <Content Include="App_Data\NewPetPals-Data_log.ldf">
       <DependentUpon>NewPetPals-Data.mdf</DependentUpon>
     </Content>
@@ -102,6 +103,9 @@
     <Content Include="doctor6.jpg" />
     <Content Include="doctor7.jpg" />
     <Content Include="doctor8.jpg" />
+    <Content Include="doctorProfile.aspx">
+      <BrowseToURL>/doctorProfile.aspx</BrowseToURL>
+    </Content>
     <Content Include="dog.jpg" />
     <Content Include="download.png" />
     <Content Include="faq.aspx">
@@ -189,6 +193,13 @@
     <Compile Include="contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="customerDashboard.aspx.cs">
+      <DependentUpon>customerDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="customerDashboard.aspx.designer.cs">
+      <DependentUpon>customerDashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="customerProfile.aspx.cs">
       <DependentUpon>customerProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -209,6 +220,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="doctorProfile.aspx.cs">
+      <DependentUpon>doctorProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="doctorProfile.aspx.designer.cs">
+      <DependentUpon>doctorProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="faq.aspx.cs">
       <DependentUpon>faq.aspx</DependentUpon>

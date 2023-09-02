@@ -83,7 +83,7 @@
     <Content Include="about.jpg" />
     <Content Include="Admin.aspx" />
     <Content Include="bookAppoinment.aspx">
-      <BrowseToURL>/bookAppoinment.aspx</BrowseToURL>
+      <BrowseToURL>bookAppoinment.aspx</BrowseToURL>
     </Content>
     <Content Include="display2.jpg" />
     <Content Include="contact.aspx">
@@ -154,7 +154,7 @@
       <BrowseToURL>/signup.aspx</BrowseToURL>
     </Content>
     <Content Include="updatePetDetails.aspx" />
-    <Content Include="vet.jpg" />
+    <Content Include="TermsAndConditions.aspx" />
     <Content Include="vetVideo.MOV" />
     <Content Include="Web.config" />
     <Content Include="website.jpg" />
@@ -280,6 +280,12 @@
     </Compile>
     <Compile Include="updatePetDetails.aspx.designer.cs">
       <DependentUpon>updatePetDetails.aspx</DependentUpon>
+    <Compile Include="TermsAndConditions.aspx.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TermsAndConditions.aspx.designer.cs">
+      <DependentUpon>TermsAndConditions.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

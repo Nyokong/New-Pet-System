@@ -298,6 +298,7 @@
     </Compile>
     <Compile Include="updatePetDetails.aspx.designer.cs">
       <DependentUpon>updatePetDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TermsAndConditions.aspx.cs">
       <DependentUpon>TermsAndConditions.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -316,6 +317,7 @@
     <Content Include="favicon_book\site.webmanifest" />
     <Content Include="favicon_book\Thumbs.db" />
     <None Include="packages.config" />
+    <Content Include="Terms and Conditions for Pet Pals.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

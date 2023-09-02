@@ -4,10 +4,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="UTF-8">
     <title>Frequently Asked Questions</title>
 
     <link rel="icon" type="favicon_index" href="favicon_index/favicon_index.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
    
+    <link rel ="stylesheet" href ="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="script.js" defer></script>
+
 
     <style type="text/css">
         :root {
@@ -89,6 +94,7 @@
             width: auto;
             margin: 2.5px 25px;
             display: flex;
+            justify-content: center;
         }
 
         .logo-icon img{
@@ -231,31 +237,202 @@
        {
            content: '-';
        }
-        .floating-tab {
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body
+        {
+            background: #E3F2FD;
+        }
+        .chatbot-toggler
+        {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #e23b3b;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
+            right: 40px;
+            bottom: 35px;
+            height: 50px;
+            width: 50px;
+            color:#fff;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
             cursor: pointer;
-            z-index: 9999;
+            background: #724ae8;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+        }
+        .show-chatbot .chatbot-toggler
+        {
+            transform: rotate(90deg);
+        }
+        .chatbot-toggler span
+        {
+            position: absolute;
+        } 
+        .show-chatbot .chatbot-toggler span:first-child,
+        .chatbot-toggler span:last-child
+        {
+            opacity: 0;
+        }
+        .show-chatbot .chatbot .chatbot-toggler span:last-child
+         {
+             opacity: 1;
+         }
+        .chatbot
+        {
+            position: fixed;
+            right: 40px;
+            bottom: 100px;
+            width: 420px;
+            transform: scale(0.5);
+            opacity: 0;
+            overflow: hidden;
+            background: #fff;
+            border-radius: 15px;
+            transform-origin: bottom right;
+            box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                        0 32px 64px -48px rgba(0,0,0,0.5);
+            transition: all 0.1s ease;
+        }
+        .show-chatbot .chatbot
+        {
+            transform: scale(1);
+            opacity: 1;
+            pointer-events: auto;
+        }
+         
+
+        .chatbot header
+        {
+            background: #724ae8;
+            padding: 16px 0;
+            text-align: center;
+            justify-content: center;
+        }
+        .chatbot header h2
+        {
+            color: #fff;
+            font-size: 1.4rem;
+        }
+        .chatbot header span
+        {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+            transform:translateY(-50%);
+        }
+        .chatbot .chatbox
+        {
+            height: 60vh;
+            overflow-y: auto;
+            padding: 30px 20px 100px;
+        }
+        .chatbox .chat
+        {
+            display: flex;
+        }
+        .chatbox .incoming span
+        {
+            height: 32px;
+            width: 32px;
+            color: #724ae8;
+            align-self: flex-end;
+            text-align: center;
+            line-height: 32px;
+            border-radius: 4px;
+            background: #724ae8;
+        }
+        .chatbox .outgoing
+        {
+            margin: 20px 0;
+            justify-content: flex-end;
+
+        }
+        .chatbox .chat p
+        {
+            color: #fff;
+            max-width: 75%;
+            white-space: pre-wrap;
+            font-size: 0.95rem;
+            padding: 12px 16px;
+            border-radius: 10px 10px 0 10px;
+            background: #724ae8;
+        }
+        .chatbox .chat p.error{
+            color: #721c24;
+            background: #f8d7da;
+        }
+        .chatbox .incoming p
+        {
+            color: #000;
+            background: #f2f2f2;
+            border-radius: 10px 10px 10px 0;
+        }
+        .chatbot .chat-input
+        {
+            position:absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            gap: 5px;
+            background: #fff;
+            padding: 5px 20px;
+            border-top: 1px solid #ccc;
+        }
+        .chat-input textarea
+        {
+            height: 55px;
+            width: 100%;
+            border: none;
+            outline: none;
+            max-height: 180px;
+            font-size: 0.95rem;
+            resize: none;
+            padding: 16px 15px 16px 0;
+        }
+        .chat-input span
+        {
+            align-self: flex-end;
+            height: 55px;
+            line-height: 55px;
+            color: #824ae8;
+            font-size: 1.35rem;
+            cursor: pointer;
+            visibility: hidden;
+        }
+        .chat-input textarea:valid ~ span{
+            visibility: visible;
+        }
+        @media(max-width: 490px)
+        {
+            .chatbot
+            {
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+
+            }
+            .chatbot .chatbot
+            {
+                height: 90%;
+            }
+            .chatbot header span
+            {
+                display: block;
+            }
         }
 
-        /* Chatbot container */
-        #chatbot-container {
-            display: none;
-            position: fixed;
-            height: 50vh;
-            bottom: 80px;
-            right: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            z-index: 9998;
-        }
-   
+     
     </style>
 </head>
 <body>
@@ -526,62 +703,36 @@
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
 
         <div class="image-container">
-            <img src="pukke.png" alt="North-West University (Potch)" width="100%"/>
+            <img src="pukke.png" alt="North-West University (Potch)" width="100px"/>
             <p> Team 7 - System Analyst Corp </p>
         </div>
 
     </footer>
-     <div class ="chat-bar-collapsible">
-         <button id="chat-button" type="button" class="collapsible">Chat With Us!
-             <i id="chat-icon" style ="color: #fff"; class="fa fa-fw fa-comments-o"></i>
-         </button>
-
-         <div class="content">
-             <div class ="full-chat-block">
-                 <!--Message Container-->
-                 <div class ="outer-container">
-                     <div class="chat-container">
-                         <!--Messages-->
-                         <div id="chatbox">
-                             <h5 id="chat-timestamp"></h5>
-                             <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
-                         </div>
-                         <!--User input box-->
-                         <div class="chat-bar-input-black">
-                             <div id="userInput">
-                                 <input type="text" id="textInput" class="input-box" name ="msg" 
-                                  placeholder="Tap Enter to send a message"/>
-                                 <p></p>
-                             </div>
-
-                             <div class ="chat-bar-icons">
-                                   <i id="chat-icon" style ="color: crimson"; class="fa fa-fw fa-comments-o"
-                                       oneclick="heartButton()"></i>
-                                 <i id="chat-icon" style ="color: #333"; class="fa fa-fw fa-comments-o"
-                                       oneclick="heartButton()"></i>
-                             </div>
-                         </div>
-                         <div id="chat-bar-button">
-                             <p></p>
-                         </div>
-
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
+    <button class="chatbot-toggler">
+         <span class ="material-symbols-outlined">mode_comment</span>
+        <span class ="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+        <header>
+            <h2>Chatbot</h2>
+            <span class ="close-btn material-symbols-outlined">close</span>
+        </header>
+        <ul class ="chatbox">
+            <li class="chat incoming">
+                <span class ="material-symbols-outlined">smart_toy</span>
+                <p>Hi there<br/> How can i help you today</p>
+            </li>
+            
+        </ul>
+        <div class="chat-input">
+            <textarea placeholder="Enter a message..."></textarea>
+            <span id="send-btn"  class ="material-symbols-outlined">send</span>
+        </div>
+    </div>
 
     <script>
-        // JavaScript to handle the floating tab and chatbot
-        const tab = document.getElementById("ask-question-tab");
-        const chatbotContainer = document.getElementById("chatbot-container");
-
-        function toggleChatbot() {
-            chatbotContainer.style.display = chatbotContainer.style.display === "block" ? "none" : "block";
-        }
-
-        // Attach click event to the tab
-        tab.addEventListener("click", toggleChatbot);
+        
     </script>
+     
 </body>
 </html>

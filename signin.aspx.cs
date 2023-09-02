@@ -95,5 +95,10 @@ namespace New_Pet_System
             // if the user is available return true;
             return count > 0;
         }
+
+        protected void RememberMe_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -341,7 +341,7 @@
                     <asp:Button runat="server" ID="btnSubmit" CssClass="btn-sign-up" text="Sign In" type="submit" OnClick="LoginButton_Click"/>  
                 </div>
                 <div id="id-remember">
-                    <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time" />
+                    <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time" OnCheckedChanged="RememberMe_CheckedChanged" />
                 </div>
             
             </form>

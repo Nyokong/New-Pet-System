@@ -82,7 +82,7 @@
     <Content Include="Admin.aspx" />
     <Content Include="back.jpg" />
     <Content Include="bookAppoinment.aspx">
-      <BrowseToURL>/bookAppoinment.aspx</BrowseToURL>
+      <BrowseToURL>bookAppoinment.aspx</BrowseToURL>
     </Content>
     <Content Include="display2.jpg" />
     <Content Include="contact.aspx">
@@ -130,6 +130,7 @@
     <Content Include="favicon_io\favicon-16x16.png" />
     <Content Include="favicon_io\favicon-32x32.png" />
     <Content Include="favicon_io\favicon_staff.ico" />
+    <Content Include="logout_icon.png" />
     <Content Include="home.png" />
     <Content Include="icons8-pet-100.png" />
     <Content Include="bully.jpg" />

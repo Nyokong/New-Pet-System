@@ -50,6 +50,11 @@ namespace New_Pet_System
         {
 
         }
+
+        protected void Agree_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

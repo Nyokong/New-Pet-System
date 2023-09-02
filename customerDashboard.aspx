@@ -11,6 +11,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 </head>
 <body>
+<header>
+
+</header>
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
   Profile Settings
 </button>
@@ -23,10 +26,10 @@
   <div class="offcanvas-body">
     <div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"> Profile Management </li>
-        <li class="list-group-item"> Pet Management </li>
-        <li class="list-group-item"> Book Appointment </li>
-        <li class="list-group-item"> Medical Records </li>
+        <a href="customerProfile.aspx"><li class="list-group-item"> Profile Management </li></a>
+        <a href="petDetails.aspx"><li class="list-group-item"> Pet Management </li></a>
+        <a href="bookAppointment.aspx"><li class="list-group-item"> Book Appointment </li></a>
+        <a href="medicalRecord.aspx"><li class="list-group-item"> Medical Records </li></a>
 
      </ul>
     </div>

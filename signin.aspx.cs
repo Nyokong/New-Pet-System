@@ -18,6 +18,9 @@ namespace New_Pet_System
         public SqlDataAdapter dataAdapt;
         public SqlDataReader dataRead;
 
+        // create the logged in cookie
+        HttpCookie loggedin = new HttpCookie("Logged-User");
+
         protected void Page_Load(object sender, EventArgs e)
         { 
             // check for remember me cookie
@@ -26,6 +29,7 @@ namespace New_Pet_System
                 txt_email.Text = Request.Cookies["Email"].Value;
                 txt_pass.Attributes["value"] = Request.Cookies["Password"].Value;
             }
+            
         }
 
         protected void LoginButton_Click(object sender, EventArgs e)
@@ -35,18 +39,24 @@ namespace New_Pet_System
 
             if (AuthenticateUser(email, password))
             {
+                // create the session here
                 Session["Email"] = email;
+
+                
+                loggedin.Values["Username"] = email;
+                loggedin.Expires = DateTime.Now.AddDays(2);
+                Response.Cookies.Add(loggedin);
+
+                // label alert is visible
+                lbl_conf.Visible = true;
 
                 if (RememberMe.Checked)
                 {
                     HttpCookie rememberMeCookie = new HttpCookie("RememberMe");
                     rememberMeCookie.Values["Username"] = email;
-                    rememberMeCookie.Expires = DateTime.Now.AddDays(7);
+                    rememberMeCookie.Expires = DateTime.Now.AddDays(2);
                     Response.Cookies.Add(rememberMeCookie);
-                    /**
-                    // Show the modal
-                    string script = "showModal();";
-                    ClientScript.RegisterClientScriptBlock(this.GetType(), "ShowModalScript", script, true);*/
+
                 }
                 else
                 {
@@ -58,22 +68,18 @@ namespace New_Pet_System
                     }
                 }
 
-                // Register a startup script to show the modal using jQuery
-                string script = @"<script type='text/javascript'>
-                            $(document).ready(function() {
-                                $('#loginSuccessModal').modal('show');
-                            });
-                          </script>";
-
-                ClientScript.RegisterStartupScript(this.GetType(), "ShowModalScript", script);
-
-                // Trigger the Bootstrap modal after successful login
-                ScriptManager.RegisterStartupScript(this, GetType(), "LoginSuccessScript", "$('#loginSuccessModal').modal('show');", true);
-
-                //Response.Redirect("default.aspx"); // Redirect to the home page
+                if(loggedin["Username"] == "admin@email.com")
+                {
+                    Response.Redirect("admin.aspx"); // Redirect to the admin page
+                }
+                else
+                {
+                    Response.Redirect("default.aspx"); // Redirect to the home page
+                }
             }
             else
             {
+                lbl_conf.Visible = true;
                 lbl_conf.Text = "Invalid username or password.";
             }
         }

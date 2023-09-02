@@ -68,18 +68,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="App_Data\NewPetPals-Data_log.ldf">
+      <DependentUpon>NewPetPals-Data.mdf</DependentUpon>
+    </Content>
     <Content Include="customerProfile.aspx">
       <BrowseToURL>/customerProfile.aspx</BrowseToURL>
     </Content>
     <Content Include="customerSettings.aspx" />
     <Content Include="display3.jpg" />
-    <Content Include="App_Data\faqS.mdf" />
-    <Content Include="App_Data\faqS_log.ldf">
-      <DependentUpon>faqS.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\faq_log.ldf">
-      <DependentUpon>faq.mdf</DependentUpon>
-    </Content>
+    <Content Include="App_Data\NewPetPals-Data.mdf" />
+    <Content Include="App_Data\NewPetPals-Data.mdf_log.ldf">
       <DependentUpon>NewPetPals-Data.mdf</DependentUpon>
     </Content>
     <Content Include="about.jpg" />
@@ -230,9 +228,9 @@
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-	  <Compile Include="Profile.aspx.designer.cs">
-		  <DependentUpon>Profile.aspx</DependentUpon>
-	  </Compile>
+    <Compile Include="Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="notificationSettings.aspx.cs">
       <DependentUpon>notificationSettings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

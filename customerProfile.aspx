@@ -87,19 +87,22 @@
     <form class="customer-form1" runat="server">
       <div class="form-group">
         <label for="firstName">First Name</label>
-        <asp:TextBox runat="server" type="text" class="form-control" id="first_name" aria-describedby="emailHelp" placeholder="Enter First Name" OnTextChanged="first_name_TextChanged"/>
+        <asp:TextBox runat="server" type="text" class="form-control" id="first_name" aria-describedby="emailHelp" placeholder="Enter First Name"/>
       </div>
       <div class="form-group">
         <label for="lastName">Last Name</label>
         <asp:TextBox runat="server" type="text" class="form-control" id="last_name" placeholder="Enter Last Name"/>
       </div>
       <div class="form-group">
+        <label for="lastName"> Phone Number</label>
+        <asp:TextBox runat="server" type="phone" class="form-control" id="txtPhone" placeholder="Enter Phone Number"/>
+      </div>
+      <div class="form-group">
         <label for="exampleInputEmail1">Email Address</label>
-        <asp:TextBox runat="server" type="email" class="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="Enter email" OnTextChanged="userEmail_TextChanged"/>
+        <asp:TextBox runat="server" type="email" class="form-control" id="userMail" aria-describedby="emailHelp" placeholder="Enter email" OnTextChanged="userEmail_TextChanged"/>
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
         <asp:CheckBox runat="server" class="form-check-label" text="Check me out" for="exampleCheck1" ID="cbxCheck"/>
       </div>
       <asp:Button runat="server" type="submit" Text="Update" class="btn btn-primary" OnClick="Unnamed2_Click"/>

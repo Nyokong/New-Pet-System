@@ -17,13 +17,6 @@ namespace New_Pet_System
             
         }
 
-
-
-        protected void first_name_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         protected void Unnamed2_Click(object sender, EventArgs e)
         {
 
@@ -31,15 +24,18 @@ namespace New_Pet_System
 
             if (cbxCheck.Checked == true)
             {
-                string sql = $"UPDATE Users SET FName = @NewFirstName, LName = @NewLastName, PhoneNumber = @NewPhoneNumber WHERE Email = @UserEmail";
-
-                customer.command = new SqlCommand();
-
-                customer.command.Parameters.AddWithValue("@NewFirstName", first_name);
-                customer.command.Parameters.AddWithValue("@NewLastName", last_name);
-                customer.command.Parameters.AddWithValue("@UserEmail", userEmail);
+                string sql = $"UPDATE Users SET FName = @NewFirstName, LName = @NewLastName, PhoneNumber = @NewPhoneNumber, Email = @UserEmail WHERE Email = @Username";
 
                 customer.command = new SqlCommand(sql, customer.conn);
+
+                customer.command.Parameters.AddWithValue("@NewFirstName", first_name.Text);
+                customer.command.Parameters.AddWithValue("@NewLastName", last_name.Text);
+                customer.command.Parameters.AddWithValue("@NewPhoneNumber", txtPhone.Text);
+                customer.command.Parameters.AddWithValue("@UserEmail", userMail.Text);
+
+                string userEmail = User.Identity.Name; // Get the user's email from the authenticated user
+
+                customer.command.Parameters.AddWithValue("@Username", customer.txt_email);
 
                 customer.dataAdapt = new SqlDataAdapter();
 

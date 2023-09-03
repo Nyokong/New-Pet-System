@@ -81,6 +81,7 @@
     <Content Include="bookAppoinment.aspx">
       <BrowseToURL>bookAppoinment.aspx</BrowseToURL>
     </Content>
+    <Content Include="ClinicAdminDashboard.aspx" />
     <Content Include="contact.aspx">
       <BrowseToURL>/contact.aspx</BrowseToURL>
     </Content>
@@ -168,13 +169,19 @@
     <Compile Include="bookAppoinment.aspx.designer.cs">
       <DependentUpon>bookAppoinment.aspx</DependentUpon>
     </Compile>
-
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicAdminDashboard.aspx.cs">
+      <DependentUpon>ClinicAdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClinicAdminDashboard.aspx.designer.cs">
+      <DependentUpon>ClinicAdminDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>

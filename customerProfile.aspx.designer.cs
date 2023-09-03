@@ -33,12 +33,21 @@ namespace New_Pet_System
         protected global::System.Web.UI.WebControls.TextBox last_name;
 
         /// <summary>
-        /// exampleInputEmail1 control.
+        /// userEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox exampleInputEmail1;
+        protected global::System.Web.UI.WebControls.TextBox userEmail;
+
+        /// <summary>
+        /// cbxCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbxCheck;
     }
 }

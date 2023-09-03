@@ -95,12 +95,12 @@
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Email Address</label>
-        <asp:TextBox runat="server" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+        <asp:TextBox runat="server" type="email" class="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="Enter email" OnTextChanged="userEmail_TextChanged"/>
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-        <asp:CheckBox runat="server" class="form-check-label" text="Check me out" for="exampleCheck1"/>
+        <asp:CheckBox runat="server" class="form-check-label" text="Check me out" for="exampleCheck1" ID="cbxCheck"/>
       </div>
       <asp:Button runat="server" type="submit" Text="Update" class="btn btn-primary" OnClick="Unnamed2_Click"/>
    </form>

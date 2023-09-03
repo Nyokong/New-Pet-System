@@ -135,11 +135,14 @@
       <BrowseToURL>/main.aspx</BrowseToURL>
     </Content>
     <Content Include="main.aspx" />
+    <Content Include="method.jpg" />
     <Content Include="notificationSettings.aspx" />
     <Content Include="ntja.jpg" />
     <Content Include="nwu.png" />
     <Content Include="passwordForm.aspx" />
     <Content Include="PaymentGateway.aspx" />
+    <Content Include="paymethod.jpg" />
+    <Content Include="paymethod2.jpg" />
     <Content Include="pet.jpg" />
     <Content Include="pet.png" />
     <Content Include="Profile.aspx" />

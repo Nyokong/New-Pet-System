@@ -20,7 +20,7 @@
             font-family: 'Poppins', sans-serif;
         }
         body{
-            overflow-x: hidden;
+            overflow-x: auto;
         }
         .container{
             position: absolute;
@@ -76,7 +76,7 @@
         }
         .main{
             position: absolute;
-            width: calc(100% - 300px);
+            width: 115%;
             min-height: 100vh;
             left: 300px;
             background: #f5f5f5;
@@ -88,6 +88,33 @@
             background: #fff;
             display:grid;
             grid-template-columns: 10fr 0.4fr 1fr;
+            grid-gap: 5px;
+            align-items: center;
+            color: #444;
+            padding: 0 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .top-bar .search{
+            position: relative;
+            max-width: 240px;
+        }
+
+        .search .input{
+            width: 100%;
+            min-width: 128px;
+            height: 40px;
+            padding: 0 40px;
+            font-size: 16px;
+            outline: none;
+            border: none;
+            background: #f5f5f5;
+        }
+        .search i{
+            position: absolute;
+            right: 15px;
+            top: 9px;
+            cursor: pointer;
         }
         .user{
             position: relative;
@@ -101,6 +128,22 @@
             top: 0;
             left: 0;
             object-fit: cover;
+        }
+        .cards{
+            margin-top: 60px;
+            width:100%;
+            padding: 20px 20px;
+            display:flex;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+        .cards .card{
+            background:linear-gradient(45deg, #36d0e0, #0094ff);
+            padding: 10px;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
         }
     </style>
 </head>
@@ -162,12 +205,64 @@
             <div class="main">
                 <div class="top-bar">
                     <div class="search">
-                        <input type="text" name="search" placeholder="search here" />
+                        <input type="text" name="search" placeholder=" search here..." />
                         <label for="search"><i class="fas fa-search"></i></label>
                     </div>
                     <i class="fas fa-bell"></i>
                     <div class="user">
                         <img src="vet40.png" alt="" />
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="number">
+                                <div class="number">67</div>
+                                <div class="card-name">Appointmnets</div>
+                            </div>
+                            <div class="icon-box">
+                                <i class="fas fa-briefcase-medical"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="number">
+                                <div class="number">67</div>
+                                <div class="card-name">Patient</div>
+                            </div>
+                            <div class="icon-box">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="number">
+                                <div class="number">67</div>
+                                <div class="card-name">Available Doctors</div>
+                            </div>
+                            <div class="icon-box">
+                                <i class="fas fa-nurse"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="cards">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="number">
+                                <div class="number">R45000</div>
+                                <div class="card-name">Recent Income</div>
+                            </div>
+                            <div class="icon-box">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

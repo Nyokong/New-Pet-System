@@ -81,7 +81,9 @@
     <Content Include="bookAppoinment.aspx">
       <BrowseToURL>bookAppoinment.aspx</BrowseToURL>
     </Content>
-    <Content Include="ClinicAdminDashboard.aspx" />
+    <Content Include="ClinicAdminDashboard.aspx">
+      <BrowseToURL>ClinicAdminDashboard.aspx</BrowseToURL>
+    </Content>
     <Content Include="contact.aspx">
       <BrowseToURL>/contact.aspx</BrowseToURL>
     </Content>

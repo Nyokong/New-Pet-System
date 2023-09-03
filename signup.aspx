@@ -324,7 +324,7 @@
               
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav" id="id-nav-links">
-                  <asp:HyperLink ID="link_signup" CssClass="nav-link" runat="server" NavigateUrl="~/signup.aspx">Sign Up</asp:HyperLink>
+                  <asp:HyperLink ID="link_signin" CssClass="nav-link" runat="server" NavigateUrl="~/signin.aspx">Sign In</asp:HyperLink>
                 <a class="nav-link" href="faq.aspx">FAQs</a>
                 <a class="nav-link" href="contact.aspx">Contact</a>
                 <a class="nav-link" href="about.aspx"">About Us</a>

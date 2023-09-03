@@ -15,13 +15,13 @@ namespace New_Pet_System
     {
 
         /// <summary>
-        /// link_signup control.
+        /// link_signin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink link_signup;
+        protected global::System.Web.UI.WebControls.HyperLink link_signin;
 
         /// <summary>
         /// form control.

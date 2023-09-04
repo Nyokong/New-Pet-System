@@ -138,6 +138,7 @@
       <BrowseToURL>/main.aspx</BrowseToURL>
     </Content>
     <Content Include="main.aspx" />
+    <Content Include="medicalRecords.aspx" />
     <Content Include="notificationSettings.aspx" />
     <Content Include="ntja.jpg" />
     <Content Include="nwu.png" />
@@ -239,6 +240,13 @@
     </Compile>
     <Compile Include="main.aspx.designer.cs">
       <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="medicalRecords.aspx.cs">
+      <DependentUpon>medicalRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medicalRecords.aspx.designer.cs">
+      <DependentUpon>medicalRecords.aspx</DependentUpon>
     </Compile>
     <Compile Include="Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>

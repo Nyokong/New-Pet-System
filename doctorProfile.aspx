@@ -9,6 +9,36 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 
+    <style>
+        .contain-menu{
+            margin-top: 70px;
+        }
+
+        body{
+            background-image: url("doctor1.jpg");
+            background-size: cover;
+        }
+
+        .logout{
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            margin-top: 450px;
+        }
+
+        .logout a:hover{
+            color: #00ff21;          
+            cursor: pointer;
+        }
+
+        .nav-item {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+    </style>
+
 </head>
 <body>
 <nav class="navbar" style="background-color: #e3f2fd;">
@@ -24,33 +54,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="main.aspx"> Home </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"/></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+            <a class="nav-link active" aria-current="page" href="main.aspx"> Employee Dashboard </a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
+      <form runat="server" class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <asp:Button runat="server" Text="Search" class="btn btn-outline-success" type="submit"/>
       </form>
     </div>
   </div>
 </nav>
 
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
-  Quick Access
+  Profile Menu
 </button>
 
 <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
@@ -59,20 +78,16 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <div>
+    <div class="contain-menu">
       <ul class="list-group list-group-flush">
         <li class="list-group-item"> Profile Management </li>
-        <li class="list-group-item"> Patient Management </li>
         <li class="list-group-item"> Appointment Management </li>
         <li class="list-group-item"> Medical Records </li>
-        <li class="list-group-item"> Billing and Payment </li>
-        <li class="list-group-item"> Task and Reminder Management </li>
-        <li class="list-group-item"> Prescription Management </li>
-        <li class="list-group-item"> Communication Tools </li>
      </ul>
     </div>
-    <div>  
-        <h2> Logout </h2>
+    <div class="logout">
+        <img src="logout_icon.png" alt="logout icon" /> 
+        <a href="main.aspx"><h2> Logout </h2></a>
     </div>
   </div>
 </div>

@@ -58,7 +58,7 @@
           <a class="nav-link active" aria-current="page" href="main.aspx"> Home </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="main.aspx"> Employee Dashboard </a>
+            <a class="nav-link active" aria-current="page" href="doctorProfile.aspx"> Employee Dashboard </a>
         </li>
       </ul>
       <form runat="server" class="d-flex" role="search">
@@ -83,7 +83,7 @@
       <ul class="list-group list-group-flush">
         <li class="list-group-item"> Profile Management </li>
         <li class="list-group-item"> Appointment Management </li>
-        <li class="list-group-item"> Medical Records </li>
+        <a href="medicalRecords.aspx"><li class="list-group-item"> Medical Records </li></a>
      </ul>
     </div>
     <div class="logout">

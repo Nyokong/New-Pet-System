@@ -70,6 +70,7 @@
 
     </header>
 
+<div class="form-body">
     <h1> Add New Medical Record </h1>
 
 
@@ -114,6 +115,7 @@
       <asp:Button runat="server" type="Add Record" Text="Update" class="btn btn-primary"/>
    </form>
 </div>
+    </div>
 
 </body>
 </html>

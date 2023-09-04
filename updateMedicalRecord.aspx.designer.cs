@@ -11,7 +11,7 @@ namespace New_Pet_System
 {
 
 
-    public partial class medicalRecords
+    public partial class updateMedicalRecord
     {
 
         /// <summary>

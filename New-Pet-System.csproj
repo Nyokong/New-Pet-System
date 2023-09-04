@@ -73,6 +73,7 @@
       <BrowseToURL>customerProfile.aspx</BrowseToURL>
     </Content>
     <Content Include="customerSettings.aspx" />
+    <Content Include="deleteMedicalRecord.aspx" />
     <Content Include="display3.jpg" />
     <Content Include="App_Data\NewPetPals-Data.mdf" />
     <Content Include="App_Data\NewPetPals-Data_log.ldf">
@@ -156,6 +157,7 @@
     <Content Include="signup.aspx">
       <BrowseToURL>/signup.aspx</BrowseToURL>
     </Content>
+    <Content Include="updateMedicalRecord.aspx" />
     <Content Include="updatePetDetails.aspx" />
     <Content Include="vet.jpg" />
     <Content Include="vetVideo.MOV" />
@@ -219,6 +221,13 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deleteMedicalRecord.aspx.cs">
+      <DependentUpon>deleteMedicalRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deleteMedicalRecord.aspx.designer.cs">
+      <DependentUpon>deleteMedicalRecord.aspx</DependentUpon>
     </Compile>
     <Compile Include="doctorProfile.aspx.cs">
       <DependentUpon>doctorProfile.aspx</DependentUpon>
@@ -297,6 +306,13 @@
     </Compile>
     <Compile Include="signup.aspx.designer.cs">
       <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updateMedicalRecord.aspx.cs">
+      <DependentUpon>updateMedicalRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updateMedicalRecord.aspx.designer.cs">
+      <DependentUpon>updateMedicalRecord.aspx</DependentUpon>
     </Compile>
     <Compile Include="updatePetDetails.aspx.cs">
       <DependentUpon>updatePetDetails.aspx</DependentUpon>

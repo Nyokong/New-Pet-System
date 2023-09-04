@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Admin Dashboard</title>
 
     <style type="text/css">
@@ -29,7 +30,8 @@
         }
         h1,
         h2{
-            color: #0d1212;
+            color: white;
+            font-size: larger;
         }
         h3{
             color: #8e8888;
@@ -64,12 +66,13 @@
         }
 
         .side-menu{
-            position:fixed;
-            background:  #0094ff;
-            width: 16vw;
-            min-height: 100vh;
-            display: flex;
-            flex-direction:column;
+            position: fixed;
+            width: 250px;
+            height: 100%;
+            background: linear-gradient(45deg, #36d0e0, #0094ff);
+            overflow-x: hidden;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            z-index: 2;
         }
         .side-menu .brand-name{
             height: 10vh;
@@ -79,10 +82,11 @@
             border-block-color:aquamarine;
             align-items:center;
             justify-content: center;
+            color: white;
         }
         .side-menu li{
-            font-size: 20px;
-            padding: 10px 30px;
+            font-size: 25px;
+            padding: 15px 30px;
             color: white;
             display:flex;
             align-items:center;
@@ -268,16 +272,15 @@
     <form id="form1" runat="server">
         <div class="side-menu">
             <div class="brand-name">
-                <h1><img src="pet60_w.png" alt="" /> Pet-Pals</h1>
+                <h1><img src="pet60_w.png" alt="" />Pet-Pals</h1>
             </div>
             <ul>
-                <li><img src="home30.png" alt="" />&nbsp; <span> Home</span></li>
-                <li><img src="admin30.png" alt="" />&nbsp; <span>Admin</span></li>
-                <li><img src="employee30_1.png" alt="" />&nbsp; <span>Employee</span></li>
-                <li><img src="customer30.png" alt="" />&nbsp; <span>Customer</span></li>
-                <li><img src="record30.png" alt="" />&nbsp; <span>Medical Records</span> </li>
-                <li><img src="report30_1.png" alt="" />&nbsp; <span>Report</span></li>
-                <li><img src="profit30.png" alt="" />&nbsp; <span>Income</span></li>
+                <li><i class="fas fa-th-large"></i>&nbsp; <span> Dashboard</span></li>
+                <li><i class="fas fa-user-md"></i>&nbsp; <span> Doctors</span></li>
+                <li><i class="fas fa-question"></i>&nbsp; <span> Customer</span></li>
+                <li><i class="fas fa-question"></i>&nbsp; <span> Medical Record</span></li>
+                <li><i class="fas fa-question"></i>&nbsp; <span> Report</span></li>
+                <li><i class="fas fa-hand-holding-usd"></i>&nbsp; <span> Payments</span></li>          
             </ul>
 
         </div> 

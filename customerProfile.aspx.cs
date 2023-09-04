@@ -24,7 +24,7 @@ namespace New_Pet_System
 
             if (cbxCheck.Checked == true)
             {
-                string sql = $"UPDATE Users SET FName = @NewFirstName, LName = @NewLastName, PhoneNumber = @NewPhoneNumber, Email = @UserEmail WHERE Email = @Username";
+                string sql = $"UPDATE Users SET FName = @NewFirstName, LName = @NewLastName, PNumber = @NewPhoneNumber, Email = @UserEmail WHERE Email = @Username";
 
                 customer.command = new SqlCommand(sql, customer.conn);
 
@@ -35,7 +35,7 @@ namespace New_Pet_System
 
                 string userEmail = User.Identity.Name; // Get the user's email from the authenticated user
 
-                customer.command.Parameters.AddWithValue("@Username", customer.txt_email);
+                customer.command.Parameters.AddWithValue("@Username", userEmail);
 
                 customer.dataAdapt = new SqlDataAdapter();
 

@@ -90,7 +90,7 @@
       <div class="form-group form-check">
         <asp:CheckBox runat="server" class="form-check-label" text="Confirm you want to delete the medical record." for="exampleCheck1" ID="cbxCheck"/>
       </div>
-      <asp:Button runat="server" type="submit" Text="Delete Record" class="btn btn-primary"/>
+      <asp:Button runat="server" type="submit" Text="Delete Record" ID="btnDelete" CssClass="btn btn-primary" OnClick="btnDelete_Click"/>
    </form>
 </div>
 </div>

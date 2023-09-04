@@ -112,7 +112,7 @@
       <div class="form-group form-check">
         <asp:CheckBox runat="server" class="form-check-label" text="Confirm you want to add a record." required="required" for="exampleCheck1" ID="cbxCheck"/>
       </div>
-      <asp:Button runat="server" type="Add Record" Text="Update" class="btn btn-primary"/>
+      <asp:Button runat="server" type="Add Record" Text="Update" ID="btnAddRecord" class="btn btn-primary" OnClick="btnAddRecord_Click"/>
    </form>
 </div>
     </div>

@@ -13,5 +13,15 @@ namespace New_Pet_System
         {
 
         }
+
+        protected void Unnamed1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnUpdateMedicalRecord_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

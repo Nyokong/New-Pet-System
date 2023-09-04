@@ -256,7 +256,9 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="number">
-                                <div class="number">R45000</div>
+                                <div class="number">
+                                    <asp:Label ID="lbl_income" runat="server" Text="R45000" ViewStateMode="Enabled"></asp:Label>
+                                </div>
                                 <div class="card-name">Recent Income</div>
                             </div>
                             <div class="icon-box">

@@ -20,6 +20,7 @@
         }
         body{
             min-height: 100vh;
+            width: 200px;
 
         }
         a{
@@ -28,13 +29,16 @@
         li{
             list-style: none;
         }
-        h1,
-        h2{
+        h1 {
             color: white;
-            font-size: larger;
+            font-size: xx-large;
+            padding: 10px 30px;
+        }
+        h2{
+           color: #0094ff;
         }
         h3{
-            color: #8e8888;
+            color: rgba(0, 0, 0, 0.3);
         }
         .btn{
             background:#74caef;
@@ -57,21 +61,23 @@
             border-bottom: 2px solid #999;
         }
         table{
-            padding: 10px;
+            padding: 20px;
 
         }
         th,td{
             text-align: left;
             padding: 8px;
+            width:fit-content;
         }
 
         .side-menu{
             position: fixed;
-            width: 250px;
+            width: 300px;
             height: 100%;
+            padding:10px 10px;
             background: linear-gradient(45deg, #36d0e0, #0094ff);
             overflow-x: hidden;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
             z-index: 2;
         }
         .side-menu .brand-name{
@@ -98,10 +104,10 @@
         }
         .container{
             position:absolute;
-            right:0;
-            width:80vw;
-            height:80vh;
-
+            right:88px;
+            width:100vw;
+            height:90vh;
+            top: 5px;
         }
         .container .header{
             position: fixed;
@@ -146,7 +152,7 @@
             height:30px;
         }
         .container .header .nav .user{
-            flex: 1;
+            flex: 2;
             display:flex;
             justify-content: space-between;
             align-items:center;
@@ -179,7 +185,11 @@
             position: relative;
             margin-top: 10vh;
             min-height: 90vh;
-            background: white;
+            background: #67dff5;
+            width: 100%;
+            padding-block: 20px 20px;
+            top: 1px;
+            left: -5px;
         }
         .container .content .cards{
             padding: 30px 15px;
@@ -191,10 +201,10 @@
         .container .content .cards .card{
             width: 250px;
             height: 150px;
-            background: white;
+            background: linear-gradient(45deg, #36d0e0, #c3f1f7);
             margin: 20px 10px;
             display: flex;
-            align-items: center;
+            align-items:inherit;
             justify-content: space-around;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
@@ -208,7 +218,7 @@
         .container .content .content-2 .recent-payments{
             min-height: 50vh;
             flex: 5;
-            background: white;
+            background: #c3f1f7;
             margin: 0 25px 25px 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             display:flex;
@@ -216,7 +226,7 @@
         }
         .container .content .content-2 .new-students{
             flex: 2;
-            background: white;
+            background: #c3f1f7;
             min-height: 50vh;
             margin: 0 25px 25px 25px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -275,12 +285,13 @@
                 <h1><img src="pet60_w.png" alt="" />Pet-Pals</h1>
             </div>
             <ul>
-                <li><i class="fas fa-th-large"></i>&nbsp; <span> Dashboard</span></li>
-                <li><i class="fas fa-user-md"></i>&nbsp; <span> Doctors</span></li>
-                <li><i class="fas fa-question"></i>&nbsp; <span> Customer</span></li>
-                <li><i class="fas fa-question"></i>&nbsp; <span> Medical Record</span></li>
-                <li><i class="fas fa-question"></i>&nbsp; <span> Report</span></li>
-                <li><i class="fas fa-hand-holding-usd"></i>&nbsp; <span> Payments</span></li>          
+                <a href="AdminDashboard.aspx"><li><i class="fas fa-th-large"></i>&nbsp;<span> Dashboard</span></li></a>
+                <a href="AdminDashboard.aspx"><li><i class="fas fa-hospital-user"></i>&nbsp; <span> Doctors</span></li></a>
+                <a href="AdminDashboard.aspx"><li><i class="fas fa-users"></i>&nbsp; <span> Customer</span></li></a>
+                <a href="AdminDashboard.aspx"><li><i class="fas fa-file-medical"></i>&nbsp; <span> Medical Record</span></li></a>
+                <a href="AdminDashboard.aspx"><li><i class="far fa-file-alt"></i>&nbsp; <span> Report</span></li></a>
+                <a href="AdminDashboard.aspx"><li><i class="fas fa-hand-holding-usd"></i>&nbsp; <span> Payments</span></li></a> 
+                <a href="default.aspx" ><li><i class='fas fa-sign-out-alt'></i>&nbsp; <span> Logout</span></li></a> 
             </ul>
 
         </div> 
@@ -304,38 +315,46 @@
                 <div class="cards">
                     <div class="card">
                         <div class="box">
-                            <h1>219</h1>
-                            <h3>Active Users</h3>
+                            <h2>
+                                <asp:Label ID="lbl_appointments" runat="server" Text="10"></asp:Label>
+                            </h2>
+                            <h3>Appointments</h3>
                         </div>
                         <div class="icon-case">
-                            <img src="users50.png" alt="" />
+                            <i class="fas fa-briefcase-medical" style='font-size:48px'></i>
                         </div>
                     </div>
                     <div class="card">
                         <div class="box">
-                            <h1>50</h1>
-                            <h3>Doctors Available</h3>
+                            <h2>
+                                <asp:Label ID="lbl_vet" runat="server" Text="30"></asp:Label>
+                            </h2>
+                            <h3>Available Doctors</h3>
                         </div>
                         <div class="icon-case">
-                            <img src="vet50.png" alt="" />
+                            <i class="fas fa-user-md" style='font-size:48px'></i>
                         </div>
                         </div>
                     <div class="card">
                         <div class="box">
-                            <h1>19</h1>
+                            <h2>
+                                <asp:Label ID="lbl_patients" runat="server" Text="20"></asp:Label>
+                            </h2>
                             <h3>Patients</h3>
                         </div>
                         <div class="icon-case">
-                            <img src="pet50.png" alt="" />
+                            <i class="fas fa-bed" style='font-size:48px'></i>
                         </div>
                         </div>
                     <div class="card">
                         <div class="box">
-                            <h1>R219400</h1>
+                            <h2>
+                                <asp:Label ID="Income" runat="server" Text="R45000"></asp:Label>
+                            </h2>
                             <h3>Income</h3>
                         </div>
                         <div class="icon-case">
-                            <img src="income50.png" alt="" />
+                            <i class="fas fa-dollar-sign" style='font-size:48px'></i>
                         </div>
                 </div>
                 <div class="content-2">
@@ -382,6 +401,7 @@
                 </div>
             </div>
         </div>
+      </div>
     </form>
 
     <!-- bootsrap -->

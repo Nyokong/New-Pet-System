@@ -42,13 +42,31 @@ namespace New_Pet_System
         protected global::System.Web.UI.WebControls.TextBox pet;
 
         /// <summary>
-        /// doc control.
+        /// dateSelected control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox doc;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl dateSelected;
+
+        /// <summary>
+        /// timeSelected control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl timeSelected;
+
+        /// <summary>
+        /// textArea control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea textArea;
 
         /// <summary>
         /// submit control.

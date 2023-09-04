@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="bookAppoinment.aspx.cs" Inherits="New_Pet_System.bookAppoinment" %>
+﻿﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="bookAppoinment.aspx.cs" Inherits="New_Pet_System.bookAppoinment" %>
 
 <!DOCTYPE html>
 
@@ -275,19 +275,20 @@
                         <p> Email Address </p>
                         <asp:TextBox runat="server" CssClass="bf-col-6" type="email" required="required" placeholder="Email Address" name="email" id="email"/>
                     </div>
-
                 </div>
-
                 <div class="bf-row">
-
                     <div class="bf-col-6">
                         <p> Pet Species </p>
                         <asp:TextBox runat="server" CssClass="bf-col-6" type="text" required="required" placeholder="Pet Species" name="pet" id="pet"/>
                     </div>
-
                     <div class="bf-col-6">
                         <p> Choose Doctor </p>
-                        <asp:TextBox runat="server" CssClass="bf-col-6" type="text" required="required" name="doc" id="doc"/>
+                       <select id="selectDoctor" name="selectDoctor">
+                            <option value="Dr Tshego Smith">Dr Tshego Smith</option>
+                            <option value="Dr Jameson Anderson">Dr Jameson Anderson</option>
+                            <option value="Dr Micheal Lee"> Dr Micheal Lee</option>
+                            
+                        </select>
                     </div>
 
                 </div>
@@ -296,12 +297,12 @@
 
                     <div class="bf-col-6">
                         <p> Select Date: </p>
-                        <input type="date" name="date" required="required" id="date" />
+                        <input type="date" name="date" required="required" id="dateSelected" runat="server"/>
                     </div>
 
                     <div class="bf-col-6">
                         <p> Choose the time: </p>
-                        <input type="time" name="time" required="required" id="time" />
+                        <input type="time" name="time" required="required" id="timeSelected" runat="server" />
                     </div>
 
                 </div>
@@ -310,9 +311,9 @@
 
                     <div class="bf-col-6">
                         <p> Description: </p>
-                        <textarea rows="5" cols="59" required="required" placeholder="Your Description"></textarea>
+                        <textarea rows="5" cols="59" required="required" placeholder="Your Description" id="textArea"  runat="server"></textarea>
                     </div>
-
+                    
                 </div>
 
                 <div class="bf-row">

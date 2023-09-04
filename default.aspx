@@ -563,6 +563,7 @@
                 <a class="nav-link" href="faq.aspx">FAQs</a>
                 <a class="nav-link" href="contact.aspx">Contact</a>
                 <a class="nav-link" href="about.aspx"">About Us</a>
+                  <asp:HyperLink ID="link_booking" CssClass="nav-link" runat="server" NavigateUrl="~/bookAppointment.aspx">Book an Appointment</asp:HyperLink>
               </div>
             </div>
           </div>

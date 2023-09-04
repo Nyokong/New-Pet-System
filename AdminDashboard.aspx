@@ -286,7 +286,7 @@
             </div>
             <ul>
                 <a href="AdminDashboard.aspx"><li><i class="fas fa-th-large"></i>&nbsp;<span> Dashboard</span></li></a>
-                <a href="AdminDashboard.aspx"><li><i class="fas fa-hospital-user"></i>&nbsp; <span> Doctors</span></li></a>
+                <a href="admin_doc_tab.aspx"><li><i class="fas fa-hospital-user"></i>&nbsp; <span> Doctors</span></li></a>
                 <a href="AdminDashboard.aspx"><li><i class="fas fa-users"></i>&nbsp; <span> Customer</span></li></a>
                 <a href="AdminDashboard.aspx"><li><i class="fas fa-file-medical"></i>&nbsp; <span> Medical Record</span></li></a>
                 <a href="AdminDashboard.aspx"><li><i class="far fa-file-alt"></i>&nbsp; <span> Report</span></li></a>

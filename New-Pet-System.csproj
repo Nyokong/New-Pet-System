@@ -69,7 +69,6 @@
   <ItemGroup>
     <Content Include="about.aspx" />
     <Content Include="AdminDashboard.aspx" />
-    <Content Include="admin_doc_tab.aspx" />
     <Content Include="App_Data\NewPetPals-Data.mdf" />
     <Content Include="App_Data\NewPetPals-Data_log.ldf">
       <DependentUpon>NewPetPals-Data.mdf</DependentUpon>
@@ -164,13 +163,6 @@
     </Compile>
     <Compile Include="AdminDashboard.aspx.designer.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin_doc_tab.aspx.cs">
-      <DependentUpon>admin_doc_tab.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin_doc_tab.aspx.designer.cs">
-      <DependentUpon>admin_doc_tab.aspx</DependentUpon>
     </Compile>
     <Compile Include="bookAppoinment.aspx.cs">
       <DependentUpon>bookAppoinment.aspx</DependentUpon>

@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using System.Data;
 
 
-namespace New_Pet_System
+/*namespace New_Pet_System
 {
     public partial class signin : System.Web.UI.Page
     {
@@ -47,7 +47,7 @@ namespace New_Pet_System
                     // Show the modal
                     string script = "showModal();";
                     ClientScript.RegisterClientScriptBlock(this.GetType(), "ShowModalScript", script, true);*/
-                }
+                /*}
                 else
                 {
                     if (Request.Cookies["RememberMe"] != null)
@@ -123,7 +123,7 @@ namespace New_Pet_System
             }
 
 */
-        }
+  //      }
 
-    }
-}
+//    }
+//}

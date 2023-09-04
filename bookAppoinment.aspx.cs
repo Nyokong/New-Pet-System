@@ -26,7 +26,7 @@ namespace New_Pet_System
 
         protected void submit_Click(object sender, EventArgs e)
         {
-            signin sign = new signin();
+            /*signin sign = new signin();
             sign.conn.Open();
 
             string insertQuery = "INSERT INTO Appointments (UserId, DoctorId, AppointmentDate, AppointmentTime) " + "VALUES (@UserId, @DoctorId, @AppointmentDate, @AppointmentTime)";
@@ -51,7 +51,7 @@ namespace New_Pet_System
                 Console.WriteLine("Failed to book appointment.");
             }
 
-            sign.conn.Close();
+            sign.conn.Close();*/
         }
 
         public int GetUserById()

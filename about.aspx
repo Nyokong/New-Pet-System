@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signin.aspx.cs" Inherits="New_Pet_System.signin" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="about.aspx.cs" Inherits="New_Pet_System.about" %>
 
 <!DOCTYPE html>
 
@@ -10,336 +10,306 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
+    <link rel="icon" type="image/jpg" href="favicon_index/favicon_index.ico"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+
+
     <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+         :root {
+            /* background */
+            --bg-off : #f3f3f3;
+            --bg-black: #434e5c;
+            --bg-tint: #787878;
 
+            /* front */
+            --fr-white: #ffffff;
+
+            /* texts */
+            --txt-black: #1a1a1a;
+            --txt-hover: rgb(219 135 98 / 0.70);
+            --txt-white: #fff;
+
+            /* sizes */
+            --sz-top-header: 25px;
+            --sz-hero: 400px;
+        }
         body{
-            font-family:Arial, Arial, Helvetica, sans-serif;
-            margin: 0;
-        }
-
-
-        header{
+            background-color: var(--bg-off);
             width: 100%;
-            display: flex;
-            justify-content: space-between;
-            /*box-shadow: 0px 10px 25px #000000;*/
-            height: var(--nav-height);
-            background-color: var(--nav_background);
-        }
-            
-
-        .main-nav{
-            display: flex;
-            padding: 10px;
-            column-gap: 80px;
-            padding: 20px;
-            margin: auto;
         }
 
-        a{
-            text-decoration: none;
-            font-size: 20px;
-            color: #000000;
-            font-family: Arial, Arial, Helvetica, sans-serif;
-        }
-
-        .main-nav a:hover{
-            color: #fb6376;
-        }
-
-        #selected{color: #5762D5}
-
-        .footer{
-            padding: 20px;
-            background-color: #483D8B;
-            height: 180px;
+        /* top header */
+        .top-header {
+            height: var(--sz-top-header);
             width: 100%;
-            color: black;
-            text-align: center;
+            display:flex;
+            justify-content: left;
+            align-items: center;
+            font-size: 10px;
+            background-color: var(--bg-black);
+            color: var(--txt-white);
+        }
+
+        .top-header p{
+            color: var(--txt-white);
+            margin: 0px 20px;
+            width: auto;
             font-weight: bold;
         }
 
-
-        .image-container {
-            width: 100%;
-            overflow: auto;
-        }
-
-        img{
-            float: left;
-            margin-right: 10px;
-        }
-
-        .footer p {
-             margin: 0;
-             font-size: 16px;
-        }
-
-        h4{
-            margin-top: 20px;
-            padding: 20px 25px;
-            font-size: 16px;
-        }
-
-        .logo-icon{
-            height: 50px;
-            width: auto;
-            margin:5px;
-            display: block;
-            vertical-align: central;
-        }
-
-        .logo-icon img{
-            height: 50px;
-            width: 50px;
-            margin: 5px;
-        }
-
-        .logo-icon #logo-name{
-            color: white;
-            width: 200px;
-            margin-left: 3px;
-            margin-right: 3px;
-            text-align: center;
-
-        }
-        .about-us{
-            padding: 80px 0px;
-        }
-
-        /*the main about page - container*/
-
-        .container{
+        .top-header .contact-header{
             display: flex;
             align-items: center;
-            justify-content: center;
-            width: auto;
-            padding: 20px;
             flex-direction: row;
-        }
-        .flex{
-            max-width: 50%;
-            padding: 20px;
-        }
-        .about-us h2{
-            font-size: 45px;
-            colour:#333;
-        }
-        .about-us h3{
-            font-size: 22px;
-            color:#888;
-        }
-        .about-us p{
-            font-size: 18px;
-            line-height: 1.5;
-            color: #555;
-        }
-        .about-us img{
-            display: block;
-            height: 400px;
-            margin: 0 auto;
-        }
-        .social-links{
-            margin-bottom: 20px;
-        }
-        .social-links a{
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            border-radius: 50%;
-            margin-right: 10px;
-            color: #fff;
-            background-color: #333;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-            transition: all 0.4s ease;
-
-        }
-        .social-links a:hover{
-            transform: translateY(-3px);
-        }
-        .btn{
-            text-decoration: none;
-            color: #fff;
-            display: inline-block;
-            padding:10px 20px;
-            font-size: 18px;
-            font-weight: bold;
-            text-transform:uppercase;
-            border-radius: 5px;
-            background-color: #333;
-            transition: all 0.4s ease;
-        }
-        .btn:hover{
-            transform: translateY(-3px);
-        }
-        @media screen and (max-width: 768px)
-        {
-            .row {
-                flex-direction: column;
-            }
-
-            .flex {
-                max-width: 100%;
-            }
-
-            .about-us h2 {
-                font-size: 31px;
-            }
-
-            .about-us p {
-                font-size: 16px;
-            }
-
-            .social-links a {
-                width: 30px;
-                height: 30px;
-                line-height: 30px;
-                font-size: 14px;
-                margin-right: 5px;
-            }
-
-            .btn {
-                font-size: 16px;
-                padding: 8px 16px;
-                margin-bottom: 30px;
-            }
-        }
-        .why_container{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            align-items:baseline;
-
-
-        }
-        .why_image{
-            max-width: 400px;
-            margin: auto;
-            border-radius: 10px;
-        }
-        .why_content p{
-            color: var(--text-light);
-        }
-        .why_grid{
-            margin=top: 4rem;
-            display: grid;
-            grid-template-columns: 80px auto;
-            gap: 2rem;
-
-        }
-        .why_grid span{
-            display: inline-flex;
-            align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            border-radius: 10px;
-            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-        }
-        .why_grid h4{
-            margin-bottom: 5rem;
-            font-size: 1.2rem;
-            font-weight:  600;
-            color: var(--text-dark);
-        }
-        .why_grid p{
-            color: var(--text-light);
-        }
-       
-        .doctors_header{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-        }
-        .doctors_header_content p{
-            max-width: 600px;
-            color: var(--text-light);
-
-        }
-        .doctors_nav{
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .doctors_nav span{
-            padding: 5px 15px;
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            background-color: var(--primary-color-light);
-            cursor: pointer;
         }
 
-        .doctors_grid{
-            margin-top: 4rem;
-            display: grid;
-           
-           
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-
-        }
-        .doctors_card{
-            text-align: center;
-            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            cursor: pointer;
-            overflow: hidden;
-        }
-        
-        .doctors_card_image{
-            position: relative;
-            overflow: hidden;
-
-        }
-        .doctors_socials{
-
-            position: absolute;
-            left:0;
-            bottom: -4rem;
+        /* main nav */
+        header{
+            height: auto;
             width: 100%;
+            background-color: var(--bg-black);
+            color: var(--txt-white);
+        }
+
+        header #id-logo-link{
+            height: auto;
             display: flex;
-            align-items: center;
+            flex-direction: row;
             justify-content: center;
-            gap: 1rem;
-            transition: 0.5s;
         }
 
-        .doctors_socials span{
-            display: inline-block;
-            padding: 6px 12px;
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            background-color: var(--white);
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
+        header #id-logo-link:hover{
+            color: var(--txt-hover);
         }
 
-        .doctors_socials span:hover{
-            color: var(--primary-color);
-
+        header #id-logo-link i{
+            height: 30px;
+            width: 30px;
+            margin: 0px 10px;
+            font-size: 30px;
+            color: var(--txt-white);
         }
 
-        .doctors_card:hover .doctors_socials{
-            bottom: 2rem;
+        header #id-logo-link h1{
+            height: 30px;
+            font-size: 25px;
+            width: auto;
+            color: var(--txt-white);
+            display:flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .doctors_card h4{
-            margin-top: 1rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--text-dark);
+        header #id-nav-links{
+            margin: 0px 20px;
+            color: var(--txt-white);
+        }
+
+        header #id-nav-links a{
+            margin: 0px 20px;
+            color: var(--txt-white);
+        }
 
 
+
+        footer{
+            height: 300px;
+            color: var(--txt-white);
+            width: 100%;
+            background-color: var(--bg-black);
+            margin-top: 224px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
-        .doctors_card p{
-            margin-bottom: 1rem;
-            color: var(--text-light);
+
+        .class-footer-contains{
+            width: 33%;
+            height: auto;
         }
-            
+
+        .class-footer-contains i{
+            font-size:200px;
+            color: var(--fr-white);
+        }
+        *
+        {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Poopins', sans-serif;
+        }
+        .section
+        {
+            width: 100%;
+        }
+        .section .container{
+            width: 107%;
+            display: block;
+            margin: 0px auto;
+            padding: 50px 0px;
+        }
+        .container .title
+        {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 50px;
+
+        }
+        .container .title h1
+        {
+            text-transform: uppercase;
+            font-size : 35px;
+            color: #88941e;
+
+        }
+        .container .title h1::after
+        {
+            content:"";
+            height: 5px;
+            width: 100px;
+            background-color: #c4d156;
+            border-radius: 25px;
+            display: block;
+            margin: auto;
+
+        }
+        .content
+        {
+            float: left;
+            width: 50%;
+
+        }
+        .image-section
+        {
+            float: right;
+            width: 50%;
+            height: auto;
+        }
+        .image-section img
+        {
+            width: 100%;
+            height: auto;
+        }
+        .content .article  h3
+        {
+            color: ##a3a3a3;
+            font-size: 17px;
+        }
+        .content .article p
+        {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+        .contact .article .button
+        {
+            margin-top:  50px;
+
+        }
+         .contact .article .button a
+        {
+           text-decoration: none;
+           padding: 8px 25px;
+           background-color: #88941e;
+           border-radius: 40px;
+           color: #fff;
+           font-size: 18px;
+           letter-spacing: 1.5px;
+
+        }
+         .contact .article .button a:hover
+        {
+            color: #fff;
+            background-color: #f28f92;
+            transition: 1s ease;
+        }
+         .container .social
+         {
+             width: 100%;
+             clear: both;
+             margin-top: 50px;
+             text-align: center;
+             display: inline-block;
+
+         }
+         .container .social i
+         {
+             color: #fff;
+             font-size: 22px;
+             height: 45px;
+             width: 45px;
+             border-radius: 50%;
+             line-height: 45px;
+             text-align: center;
+             background-color: #f28f92;
+             margin: 0px 5px;
+         }
+
+          .container .social i:hover
+          {
+              color: #fff;
+              background-color: #88941e;
+              transition: 1s ease;
+              transform: rotate(360deg);
+          }
+          @media screen and (max-height: 768px)
+          {
+              .section .container
+              {
+                  width: 80%;
+                  display: block;
+                  margin: auto;
+              }
+              .content 
+              {
+                  float: none;
+                  width: 100%;
+                  display: block;
+                  margin:auto;
+              }
+              .image-section
+              {
+                  float: none;
+                  width: 100%;
+                  margin-top: 50px;
+
+              }
+              .image-section img
+              {
+                  width: 100%;
+                  height: auto;
+                  display: block;
+                  margin: auto;
+
+              }
+              .container .title h1
+              {
+                  text-align: center;
+                  font-size: 30px;
+              }
+              .container .article .button
+              {
+                  text-align: center;
+              }
+              .container .article .button a
+              {
+                  padding: 6px 15px;
+                  font-size: 16px;
+              }
+              .container .social i
+              {
+                  font-size: 19px;
+                  height: 35px;
+                  width: 35px;
+                  line-height: 35px;
+              }
+          }
 
             
 
@@ -349,155 +319,82 @@
     </style>
 </head>
 <body>
-     <header>
-       <div class="logo-icon">
-            <img src="icons8-pet-100.png" width="120" alt="Pet-Pals Logo"/>
-            <h1 id="logo-name">
-                Pet Pals
-            </h1>
+    <div class="top-header">
+        <div class="contact-header">
+            <p> Contact Details </p>
+            <p>Call : 012 232 3243</p>
+            <p>Email : info@petpals.com</p>
         </div>
-
-        <nav class="main-nav">
-            <a href="default.aspx" >Home </a>
-            <a href="about.aspx" id="selected"> About </a>
-            <a href="signin.aspx"> Sign In </a>
-            <a href="faq.aspx"> FAQs </a>
-           <a href="contact.aspx"> Contact Us</a>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" id="id-logo-link" href="main.aspx">
+                <i class='bx bxs-dog'></i>
+                <h1 >Pet Pals</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"><i class='bx bx-menu-alt-right' ></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav" id="id-nav-links">
+                <a class="nav-link" href="faq.aspx">FAQs</a>
+                <a class="nav-link" href="contact.aspx">Contact</a>
+                <a class="nav-link" href="about.aspx"">About Us</a>
+              </div>
+            </div>
+          </div>
         </nav>
     </header>
-
-    <div class="about-us">
-        <div class="container">
-            <div class="flex">
-                <h2>About Us</h2>
-                <h3>Discover Our Team's Story</h3>
-                <p>Welcome to Pet Pals, your trusted partner in pet care. 
-                   Established with a profound love for animals and a commitment 
-                   to their well-being, we are a dedicated veterinary clinic offering
-                   comprehensive and compassionate care to your beloved pets.</p>
-                <div class="social-links">
-                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                    <a href=""><i class="fab fa-twitter"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
+    <div class="section">
+        <div class ="container">
+        <div class="title">
+            <h1>About Us</h1>
+        </div>
+        <div class="content">
+            <div class="article">
+                <h3>
+                    At Pet-Pals Clinic System, we believe that pets are more than just animals;
+                </h3>
+                <p>
+                  At Pet-Pals Clinic System, we believe that pets are more than just animals;
+                  they are beloved members of our families. Our mission is to provide exceptional 
+                  veterinary care and support to ensure the health and well-being of your furry, 
+                  feathered, or scaled companions. With a deep-rooted passion for animals and a 
+                  commitment to excellence, we have become a trusted partner in the care of pets in our community.   
+                </p>
+                <div class="button">
+                    <a href="">Read More</a>
                 </div>
-                <a href="" class="btn">Learn More</a>
             </div>
-            <div class="flex">
-                <img src="about.jpg"/>
+            <div class ="image-section">
+                <img src="display3.jpg" />
+            </div>
+            <div class="social">
+                <a href=""><i class ="fab fa-facebook-f"></i></a>
+                <a href=""><i class ="fab fa-twitter"></i></a>
+                <a href=""><i class ="fab fa-instagram"></i></a>
             </div>
         </div>
     </div>
 
-    <section class="section_container why_container">
-        <div class ="why_image">
-            <img src ="whyUS.jpg" alt="why choose us" />
+    </div>
+    
 
-        </div>
-        <div class ="why_content">
-            <h2 class="section_header">Why Choose Us</h2>
-            <p>
-              With a steadfast commitment to your pet's well-being, our team of highly
-              trained healthcare proffessionals ensures that you receive nothing
-              short of exceptional patient experiences.
-            </p>
-            <div class="why_grid">
-                <span><i class="ri-hand-heart-fill"></i></span>
-                <div>
-                    <h4>Intensive Care</h4>
-                    <p>
-                      Our Intensive Care Unit is equipped with advanced technology and 
-                      stafffed by team of proffessionals.
-                    </p>
-                </div>
-                <span><i class="ri-truck-line"></i></span>
-                <div>
-                    <h4>Free Ambulance Car</h4>
-                    <p>
-                      A compassionate initiative to prioritize your pet's health and 
-                      well-being without any financial burden.
-                    </p>
-                </div>
-                <span><i class="ri-hospital-line"></i></span>
-                <div>
-                    <h4>Medical and Surgical</h4>
-                    <p>
-                      Our Medical and Surgical services offer advaced healthcare
-                      solutions to address medical needs.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class ="section_container doctors_container">
-        <div class="doctors_header">
-            <div class="doctors_header_content">
-                <h2 class="section_header">Our  Special Doctors</h2>
-                <p>
-                    We take pride in our exceptional team of doctors, each a specialist
-                    in their respective fields.
-                </p>
-            </div>
-            <div class="doctors_nav">
-                <span><i class="ri-arrow-left-line"></i></span>
-                <span><i class="ri-arrow-right-line"></i></span>
-            </div>
-        </div>
-        <div class="doctors_grid">
-            <div class="doctors_card">
-                <div class="doctors_card_image">
-                    <img src="doctor7.jpg" alt="doctor" />
-                    <div class="doctors_socials">
-                        <span><i class="ri-instagram-line"></i></span>
-                        <span><i class="ri-facebook-fill"></i></span>
-                        <span><i class="ri-heart-fill"></i></span>
-                        <span><i class="ri-twitter-x-line"></i></span>
-                    </div>
-                </div>
-                <h4>Dr. Tshego Smith</h4>
-                <p>Speciality here</p>
-            </div>
-            </div>
-            <div class="doctors_grid">
-            <div class="doctors_card">
-                <div class="doctors_card_image">
-                    <img src="doctor6.jpg" alt="doctor" />
-                    <div class="doctors_socials">
-                        <span><i class="ri-instagram-line"></i></span>
-                        <span><i class="ri-facebook-fill"></i></span>
-                        <span><i class="ri-heart-fill"></i></span>
-                        <span><i class="ri-twitter-x-line"></i></span>
-                    </div>
-                </div>
-                <h4>Dr. JAmeson Anderson</h4>
-                <p>Speciality here</p>
-            </div>
-                </div>
-                <div class="doctors_grid">
-            <div class="doctors_card">
-                <div class="doctors_card_image">
-                    <img src="doctor5.jpg" alt="doctor" />
-                    <div class="doctors_socials">
-                        <span><i class="ri-instagram-line"></i></span>
-                        <span><i class="ri-facebook-fill"></i></span>
-                        <span><i class="ri-heart-fill"></i></span>
-                        <span><i class="ri-twitter-x-line"></i></span>
-                    </div>
-                </div>
-                <h4>Dr. Michael Lee</h4>
-                <p>Speciality here</p>
-            </div>
-        </div>
-    </section>
-
+    
 
     <footer class="footer">
-        <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>
-
-        <div class="image-container">
-            <img src="pukke.png" alt="North-West University (Potch)" width="100"/>
-            <p> Team 7 - System Analyst Corp </p>
+        <div class="class-footer-contains">
+            <i class='bx bxl-baidu'></i>
         </div>
+        <div class="class-footer-contains"></div>
+        <div class="class-footer-contains"></div>
         
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
     </body>
 </html>

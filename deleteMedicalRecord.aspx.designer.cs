@@ -15,13 +15,13 @@ namespace New_Pet_System
     {
 
         /// <summary>
-        /// first_name control.
+        /// emailAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox first_name;
+        protected global::System.Web.UI.WebControls.TextBox emailAddress;
 
         /// <summary>
         /// cbxCheck control.

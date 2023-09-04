@@ -15,31 +15,58 @@ namespace New_Pet_System
     {
 
         /// <summary>
-        /// first_name control.
+        /// petName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox first_name;
+        protected global::System.Web.UI.WebControls.TextBox petName;
 
         /// <summary>
-        /// last_name control.
+        /// symptoms control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox last_name;
+        protected global::System.Web.UI.WebControls.TextBox symptoms;
 
         /// <summary>
-        /// txtPhone control.
+        /// treatment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPhone;
+        protected global::System.Web.UI.WebControls.TextBox treatment;
+
+        /// <summary>
+        /// prescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox prescription;
+
+        /// <summary>
+        /// medicalNotes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox medicalNotes;
+
+        /// <summary>
+        /// docterName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox docterName;
 
         /// <summary>
         /// cbxCheck control.

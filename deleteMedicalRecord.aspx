@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title> Delete Medical Records </title>
-    <link rel="icon" type="image/jpg" href="favicon_client/favicon.ico"/>
+    <link rel="icon" type="image/jpg" href="favicon_io/favicon_staff.ico" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -84,8 +84,8 @@
 <div class="form-container">
     <form class="customer-form1" runat="server">
       <div class="form-group">
-        <label for="firstName">Email Address:</label>
-        <asp:TextBox runat="server" type="email" class="form-control" id="first_name" aria-describedby="emailHelp" placeholder="Enter Email Address"/>
+        <label for="emailAddress">Email Address:</label>
+        <asp:TextBox runat="server" type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp" placeholder="Enter Email Address"/>
       </div>
       <div class="form-group form-check">
         <asp:CheckBox runat="server" class="form-check-label" text="Confirm you want to delete the medical record." for="exampleCheck1" ID="cbxCheck"/>

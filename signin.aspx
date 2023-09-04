@@ -342,16 +342,16 @@
                 <h1> Sign In </h1>
             </div>
             <div class="form-group">
-                <label for="email"> Email: </label><br/>
+                <label for="txt_email"> Email: </label><br/>
                 <asp:TextBox runat="server" class="fields form-control" type="email" ID="txt_email" required="required" placeholder="Email: "/>
                 
             </div>
             <div class="form-group">
-                <label for="password"> Password: </label><br/>
+                <label for="txt_pass"> Password: </label><br/>
                 <asp:TextBox runat="server" class="fields form-control" type="password" ID="txt_pass" required="required" placeholder="Password: "/>
             </div>
             <div class="form-group">
-                <label style="font-size: 16px;" for="signup"> Don't have an account ? Click <a href="signup.aspx"> here </a> to register an account. </label>
+                <label style="font-size: 16px;" for="btnSubmit"> Don't have an account ? Click <a href="signup.aspx"> here </a> to register an account. </label>
             </div>
              <div id="id-remember">
                 <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time" />

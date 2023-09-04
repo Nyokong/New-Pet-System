@@ -57,6 +57,8 @@ namespace New_Pet_System
                     rememberMeCookie.Expires = DateTime.Now.AddDays(2);
                     Response.Cookies.Add(rememberMeCookie);
 
+                    Session["Cookies"] = "Free Services";
+
                 }
                 else
                 {

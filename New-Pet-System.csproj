@@ -81,6 +81,7 @@
     <Content Include="bookAppoinment.aspx">
       <BrowseToURL>bookAppoinment.aspx</BrowseToURL>
     </Content>
+    <Content Include="client_management.aspx" />
     <Content Include="ClinicAdminDashboard.aspx">
       <BrowseToURL>ClinicAdminDashboard.aspx</BrowseToURL>
     </Content>
@@ -131,8 +132,10 @@
     <Content Include="icons8-pet-100.png" />
     <Content Include="bully.jpg" />
     <Content Include="main.aspx" />
+    <Content Include="medical_record_admin.aspx" />
     <Content Include="ntja.jpg" />
     <Content Include="nwu.png" />
+    <Content Include="Payment Management.aspx" />
     <Content Include="pet.jpg" />
     <Content Include="pet.png" />
     <Content Include="pukke.png" />
@@ -144,6 +147,7 @@
       <BrowseToURL>/signup.aspx</BrowseToURL>
     </Content>
     <Content Include="vet.jpg" />
+    <Content Include="veterinarian_management.aspx" />
     <Content Include="vetVideo.MOV" />
     <Content Include="Web.config" />
     <Content Include="website.jpg" />
@@ -177,6 +181,13 @@
     </Compile>
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="client_management.aspx.cs">
+      <DependentUpon>client_management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="client_management.aspx.designer.cs">
+      <DependentUpon>client_management.aspx</DependentUpon>
     </Compile>
     <Compile Include="ClinicAdminDashboard.aspx.cs">
       <DependentUpon>ClinicAdminDashboard.aspx</DependentUpon>
@@ -220,6 +231,20 @@
     <Compile Include="main.aspx.designer.cs">
       <DependentUpon>main.aspx</DependentUpon>
     </Compile>
+    <Compile Include="medical_record_admin.aspx.cs">
+      <DependentUpon>medical_record_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="medical_record_admin.aspx.designer.cs">
+      <DependentUpon>medical_record_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Payment Management.aspx.cs">
+      <DependentUpon>Payment Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment Management.aspx.designer.cs">
+      <DependentUpon>Payment Management.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="signin.aspx.cs">
       <DependentUpon>signin.aspx</DependentUpon>
@@ -234,6 +259,13 @@
     </Compile>
     <Compile Include="signup.aspx.designer.cs">
       <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="veterinarian_management.aspx.cs">
+      <DependentUpon>veterinarian_management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="veterinarian_management.aspx.designer.cs">
+      <DependentUpon>veterinarian_management.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

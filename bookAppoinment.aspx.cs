@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
 
 namespace New_Pet_System
 {
@@ -15,13 +15,13 @@ namespace New_Pet_System
         SqlConnection conn;
         SqlCommand cmd;
 
+        
+
         //connectionString declaration
         string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Admin\Source\Repos\Nyokong\New-Pet-System\App_Data\NewPetPals-Data.mdf;Integrated Security=True";
 
-        // User input (date, time, doctor, etc.)
-        DateTime selectedDate = DateTime.Parse("2023-09-01");
-        TimeSpan selectedTime = TimeSpan.Parse("14:30:00");
-        int selectedDoctorId = 1; // Assuming doctor ID
+
+     
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -37,14 +37,14 @@ namespace New_Pet_System
         {
             conn = new SqlConnection(connString);
 
-            conn.Open();
+           conn.Open();
 
             int userId = GetUserById();
             int petId = GetPetById();
             int doctorId = GetVetById();
 
 
-            conn.Close();
+           conn.Close();
         }
         public int GetUserById()
         {
@@ -79,13 +79,13 @@ namespace New_Pet_System
                         insertCmd.Parameters.AddWithValue("@AppStatus", "Scheduled");
 
                     }
-
+                 
                 }
-
+          
 
             }
-
-            return userId;
+            
+                return userId;
         }
         public int GetVetById()
         {
@@ -94,7 +94,7 @@ namespace New_Pet_System
             int doctorId = 2; // Replace with the actual doctor ID
             using (SqlCommand selectCmdDoctor = new SqlCommand(sqlSelectDoctor, conn))
             {
-
+                
                 selectCmdDoctor.Parameters.AddWithValue("@DoctorId", doctorId);
                 // Execute the SELECT queries to retrieve IDs
                 object doctorResult = selectCmdDoctor.ExecuteScalar();
@@ -102,7 +102,7 @@ namespace New_Pet_System
                 // Check if all necessary IDs were found
                 if (doctorResult != null && doctorResult != DBNull.Value)
                 {
-
+                    
                     int doctorIdResult = (int)doctorResult;
 
 
@@ -127,7 +127,7 @@ namespace New_Pet_System
 
                 }
             }
-            return doctorId;
+                return doctorId;
         }
 
         public int GetPetById()
@@ -146,7 +146,7 @@ namespace New_Pet_System
 
                 if (petResult != null && petResult != DBNull.Value)
                 {
-
+                    
                     int petIdResult = (int)petResult;
 
 
@@ -164,12 +164,12 @@ namespace New_Pet_System
                         insertCmd.Parameters.AddWithValue("@AppDate", dateSelected.Value);
                         insertCmd.Parameters.AddWithValue("@AppTime", timeSelected.Value);
                         insertCmd.Parameters.AddWithValue("@AppStatus", "Scheduled");
-                    }
-
+                    }                       
+                    
                 }
-
+                
             }
-            return petId;
+                return petId;
         }
 
         public void SendNotification(int userId, string message)
@@ -177,5 +177,8 @@ namespace New_Pet_System
             // Implement notification logic here (email, SMS, etc.)
             Console.WriteLine($"Notification sent to User ID {userId}: {message}");
         }
+    
     }
+
+    
 }

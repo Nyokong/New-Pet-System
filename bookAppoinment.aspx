@@ -1,4 +1,4 @@
-﻿﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="bookAppoinment.aspx.cs" Inherits="New_Pet_System.bookAppoinment" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="bookAppoinment.aspx.cs" Inherits="New_Pet_System.bookAppoinment" %>
 
 <!DOCTYPE html>
 
@@ -275,12 +275,16 @@
                         <p> Email Address </p>
                         <asp:TextBox runat="server" CssClass="bf-col-6" type="email" required="required" placeholder="Email Address" name="email" id="email"/>
                     </div>
+
                 </div>
+
                 <div class="bf-row">
+
                     <div class="bf-col-6">
                         <p> Pet Species </p>
                         <asp:TextBox runat="server" CssClass="bf-col-6" type="text" required="required" placeholder="Pet Species" name="pet" id="pet"/>
                     </div>
+
                     <div class="bf-col-6">
                         <p> Choose Doctor </p>
                        <select id="selectDoctor" name="selectDoctor">

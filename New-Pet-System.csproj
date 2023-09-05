@@ -74,17 +74,11 @@
       <DependentUpon>NewPetPals-Data.mdf</DependentUpon>
     </Content>
     <Content Include="about.jpg" />
-    <Content Include="Admin.aspx">
-      <BrowseToURL>Admin.aspx</BrowseToURL>
-    </Content>
     <Content Include="back.jpg" />
     <Content Include="bookAppoinment.aspx">
       <BrowseToURL>bookAppoinment.aspx</BrowseToURL>
     </Content>
     <Content Include="client_management.aspx" />
-    <Content Include="ClinicAdminDashboard.aspx">
-      <BrowseToURL>ClinicAdminDashboard.aspx</BrowseToURL>
-    </Content>
     <Content Include="contact.aspx">
       <BrowseToURL>/contact.aspx</BrowseToURL>
     </Content>
@@ -101,7 +95,6 @@
     <Content Include="doctor6.jpg" />
     <Content Include="doctor7.jpg" />
     <Content Include="doctor8.jpg" />
-    <Content Include="DoctorDashboard.aspx" />
     <Content Include="dog.jpg" />
     <Content Include="download.png" />
     <Content Include="faq.aspx">
@@ -175,26 +168,12 @@
     <Compile Include="bookAppoinment.aspx.designer.cs">
       <DependentUpon>bookAppoinment.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin.aspx.cs">
-      <DependentUpon>Admin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin.aspx.designer.cs">
-      <DependentUpon>Admin.aspx</DependentUpon>
-    </Compile>
     <Compile Include="client_management.aspx.cs">
       <DependentUpon>client_management.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="client_management.aspx.designer.cs">
       <DependentUpon>client_management.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ClinicAdminDashboard.aspx.cs">
-      <DependentUpon>ClinicAdminDashboard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ClinicAdminDashboard.aspx.designer.cs">
-      <DependentUpon>ClinicAdminDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
@@ -209,13 +188,6 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DoctorDashboard.aspx.cs">
-      <DependentUpon>DoctorDashboard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DoctorDashboard.aspx.designer.cs">
-      <DependentUpon>DoctorDashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="faq.aspx.cs">
       <DependentUpon>faq.aspx</DependentUpon>

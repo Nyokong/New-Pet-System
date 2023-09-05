@@ -124,6 +124,7 @@
     <Content Include="favicon_io\favicon-32x32.png" />
     <Content Include="favicon_io\favicon_staff.ico" />
     <Content Include="home.png" />
+    <Content Include="html_demo.aspx" />
     <Content Include="icons8-pet-100.png" />
     <Content Include="bully.jpg" />
     <Content Include="main.aspx" />
@@ -197,6 +198,13 @@
     </Compile>
     <Compile Include="faq.aspx.designer.cs">
       <DependentUpon>faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="html_demo.aspx.cs">
+      <DependentUpon>html_demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="html_demo.aspx.designer.cs">
+      <DependentUpon>html_demo.aspx</DependentUpon>
     </Compile>
     <Compile Include="main.aspx.cs">
       <DependentUpon>main.aspx</DependentUpon>

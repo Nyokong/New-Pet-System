@@ -299,7 +299,7 @@
                             <a href="#" class="btn">Add New</a>
                             <a href="#" class="btn">Edit</a>
                         </div>
-                        <table class="vet">
+                        <table class="vetTable">
                             <tr>
                                 <th>Doctor_ID</th>
                                 <th>Last Name</th>

@@ -103,7 +103,7 @@
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       <div class="form-group form-check">
-        <asp:CheckBox runat="server" class="form-check-label" text="Check me out" for="exampleCheck1" ID="cbxCheck"/>
+        <asp:CheckBox runat="server" class="form-check-label" text="Check to update your changes" for="exampleCheck1" ID="cbxCheck"/>
       </div>
       <asp:Button runat="server" type="submit" Text="Update" class="btn btn-primary" OnClick="Unnamed2_Click"/>
    </form>

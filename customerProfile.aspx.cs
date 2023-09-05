@@ -17,7 +17,12 @@ namespace New_Pet_System
             
         }
 
-        protected void Unnamed2_Click(object sender, EventArgs e)
+        private string emailAddress()
+        {
+            return userMail.Text;
+        }
+
+        public void updateCustomerDetails()
         {
 
             customer.conn.Open();
@@ -31,7 +36,7 @@ namespace New_Pet_System
                 customer.command.Parameters.AddWithValue("@NewFirstName", first_name.Text);
                 customer.command.Parameters.AddWithValue("@NewLastName", last_name.Text);
                 customer.command.Parameters.AddWithValue("@NewPhoneNumber", txtPhone.Text);
-                customer.command.Parameters.AddWithValue("@UserEmail", userMail.Text);
+                customer.command.Parameters.AddWithValue("@UserEmail", emailAddress());
 
                 string userEmail = User.Identity.Name; // Get the user's email from the authenticated user
 
@@ -45,7 +50,11 @@ namespace New_Pet_System
             }
 
             customer.conn.Close();
+        }
 
+        public void Unnamed2_Click(object sender, EventArgs e)
+        {
+            updateCustomerDetails();
         }
 
         protected void userEmail_TextChanged(object sender, EventArgs e)

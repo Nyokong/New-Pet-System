@@ -146,7 +146,6 @@
             width: 100%;
             padding: 10px 10%;
             background-color: var(--bg-black);
-
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -580,14 +579,12 @@
                    <p>The love and care your pet needs, Treatment delivery medication all-year. </p>
                 </div>
                 <div id="id-mail-list">
-                
                       <div class="form-group" id="id-form-group">
                         <label for="txtEmailMail">Email address</label>
                            <asp:TextBox runat="server" class="form-control" type="email" ID="txtEmailMail" placeholder="Enter Email and Join"/>
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                       </div>
                       <asp:Button ID="btn_join" runat="server" type="submit" CssClass="btn btn-primary" Text="Join"/>
-                    
                 </div>
             </div>
 
@@ -604,16 +601,14 @@
                 </div>
               </div>
             </div>
-        </div>
     </div>
-
+    <!--
     <div class="class-label">
         <h1>
             Our Services.
         </h1>
         <p>Different types of care and Treatments</p>
     </div>
-
     <div id="id-card-tab">
         <div class="card" style="width: 18rem;">
           <i class='bx bx-medal' ></i>
@@ -742,7 +737,6 @@
                 
             </div>
         </div>
-
         <div class="main-footer">
             <div class="base-footer">
                 <span id="nwu">

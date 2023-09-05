@@ -362,6 +362,7 @@
             <div id="id-checkbox">
                 <asp:CheckBox runat="server" type="checkbox" ID="cbbAgree" AutoPostBack="true" required="required" 
                     OnCheckedChanged="cbbAgree_CheckedChanged1"/><label style="font-size: 15px;" for="agree"> I accept to the <a href="google.com"> terms and conditions </a>  of use.</label><br/>
+
                 </div>
             <div class="btn-sign-up">
                 <asp:Button ID="btnSubmit" runat="server" CssClass="btn-sign-up" text="Sign Up" OnClick="Signup_Click"/> 

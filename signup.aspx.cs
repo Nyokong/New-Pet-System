@@ -26,6 +26,7 @@ namespace New_Pet_System
                 Response.Redirect("default.aspx");
             }
 
+            // user must agree to terms and conditions
             btnSubmit.Enabled = false;
         }
 
@@ -49,7 +50,6 @@ namespace New_Pet_System
             btnSubmit.Enabled = cbbAgree.Checked;
         }
 
-
         protected void Email_TextChanged(object sender, EventArgs e)
         {
 
@@ -59,6 +59,7 @@ namespace New_Pet_System
         {
 
         }
+
         protected void Signup_Click(object sender, EventArgs e)
         {
             firstname = txtFirst_name.Text;
@@ -104,6 +105,7 @@ namespace New_Pet_System
 
             // if the user is available return true;
             return count > 0;
+
         }
     }
 }

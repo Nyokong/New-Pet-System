@@ -83,7 +83,7 @@
       </div>
 
       <div class="col-12">
-        <button class="btn btn-primary" type="submit">Remove Pet</button>
+        <asp:Button runat="server" ID="btnRemove" class="btn btn-primary" Text="Remove Pet" type="submit"/>
       </div>
     </form>
   </div>

@@ -82,7 +82,7 @@
     <form class="customer-form1" runat="server">
       <div class="form-group">
         <label for="username">Username</label>
-        <asp:TextBox runat="server" type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter email"/>
+        <asp:TextBox runat="server" type="email" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter email"/>
       </div>
 
       <div class="form-group">

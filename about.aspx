@@ -15,8 +15,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
 
 
+
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+         @import url('https://fonts.googleapis.com/css2?family=Allura|Josefin+Sans');
          :root {
             /* background */
             --bg-off : #f3f3f3;
@@ -120,7 +122,7 @@
             color: var(--txt-white);
             width: 100%;
             background-color: var(--bg-black);
-            margin-top: 224px;
+            margin-top: 4px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -148,14 +150,14 @@
             width: 100%;
         }
         .section .container{
-            width: 107%;
+            width: 99%;
             display: block;
             margin: 0px auto;
             padding: 50px 0px;
         }
         .container .title
         {
-            width: 100%;
+            width: 94%;
             text-align: center;
             margin-bottom: 50px;
 
@@ -181,19 +183,19 @@
         .content
         {
             float: left;
-            width: 50%;
+            width: 55%;
 
         }
         .image-section
         {
             float: right;
-            width: 50%;
-            height: auto;
+            width: 40%;
+            
         }
         .image-section img
         {
-            width: 100%;
-            height: auto;
+            width: 82%;
+            height: 233px;
         }
         .content .article  h3
         {
@@ -258,6 +260,7 @@
               transition: 1s ease;
               transform: rotate(360deg);
           }
+        
           @media screen and (max-height: 768px)
           {
               .section .container
@@ -268,14 +271,14 @@
               }
               .content 
               {
-                  float: none;
+                  float: left;
                   width: 100%;
                   display: block;
                   margin:auto;
               }
               .image-section
               {
-                  float: none;
+                  float: right;
                   width: 100%;
                   margin-top: 50px;
 
@@ -310,6 +313,39 @@
                   line-height: 35px;
               }
           }
+          .wrapper {
+  margin-top: 10%;
+  text-align: center; /* Center-align the content inside the wrapper */
+}
+
+.wrapper h1 {
+  font-family: 'Allura', cursive;
+  font-size: 52px;
+  margin-bottom: 60px;
+  /* Remove text-align:center; */
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap; /* Ensure the team members wrap to the next line */
+  justify-content: center; /* Center-align the team members horizontally */
+}
+
+.team .team_member {
+  background: #fff;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #8e8b8b;
+  position: relative;
+  top: -46px;
+  left: 54px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  text-align: center; /* Center-align the content within each team member */
+}
 
             
 
@@ -367,17 +403,51 @@
                     <a href="">Read More</a>
                 </div>
             </div>
-            <div class ="image-section">
-                <img src="display3.jpg" />
-            </div>
             <div class="social">
                 <a href=""><i class ="fab fa-facebook-f"></i></a>
                 <a href=""><i class ="fab fa-twitter"></i></a>
                 <a href=""><i class ="fab fa-instagram"></i></a>
             </div>
         </div>
+          <div class ="image-section">
+              <img src="about.jpg" />
+          </div>
     </div>
 
+    </div>
+    <div class ="wrapper">
+        <h1>Our Team</h1>
+        
+        <div class="team">
+            <div class =" team_member" style="display: table-column">
+                <div class ="team_img">
+                    <img src="doctor1.jpg" style="width: 76px; height: 77px" />
+                </div>
+                <h3>Dr Tshego Smith</h3>
+                <p class ="role">Veterenian</p>
+                <p>O Binne Mpogo a farafarelwa ke mangeloi</p>
+            </div>
+        </div>
+         <div class="team">
+            <div class =" team_member" style="display: table-column">
+                 <div class ="team_img">
+                    <img src="doctor6.jpg" style="width: 80px; height: 74px" />
+                </div>
+                <h3>Dr Jameson Anderson</h3>
+                <p class ="role">Veterenian</p>
+                <p>O Binne Mpogo a farafarelwa ke mangeloi</p>
+            </div>
+        </div>
+         <div class="team">
+            <div class =" team_member" style="display: table-column">
+                 <div class ="team_img">
+                    <img src="doctor4.jpg" style="width: 66px; height: 80px" />
+                </div>
+                <h3>Dr Micheal Lee</h3>
+                <p class ="role">Veterenian</p>
+                <p>O Binne Mpogo a farafarelwa ke mangeloi</p>
+            </div>
+        </div>
     </div>
     
 

@@ -301,11 +301,46 @@
                         </div>
                         <table class="vet">
                             <tr>
-                                <th>Doctor_ID</th>
+                                <th>Customer_ID</th>
                                 <th>Last Name</th>
                                 <th>First Name</th>
-                                <th>Speciality</th>
+                                <th>Email</th>
                                 <th>Contact_No</th>
+                            </tr>
+                            <tr>
+                                <td> 1</td>
+                                <td>John </td>
+                                <td>Doe</td>
+                                <td>johndoe@gmail.com</td>
+                                <td>0768532901</td>
+                            </tr>
+                           <tr>
+                                <td> 2</td>
+                                <td>Progress </td>
+                                <td>Nemaranzhe</td>
+                                <td>progress@gmail.com</td>
+                                <td>0819367291</td>
+                            </tr>
+                              <tr>
+                                <td> 3</td>
+                                <td>Beekay </td>
+                                <td>Malepe</td>
+                                <td>beekay@gmail.com</td>
+                                <td>0839675367</td>
+                            </tr>
+                             <tr>
+                                <td> 4</td>
+                                <td>Moremi </td>
+                                <td>Bond</td>
+                                <td>moremi@gmail.com</td>
+                                <td>0782340256</td>
+                            </tr>
+                              <tr>
+                                <td> 5</td>
+                                <td>Cassper </td>
+                                <td>Nyovest</td>
+                                <td>cassper@gmail.com</td>
+                                <td>0679836285</td>
                             </tr>
                         </table>
                     </div>

@@ -76,21 +76,21 @@
     <form class="row g-3">
       <div class="col-md-4">
         <label for="validationDefault01" class="form-label">Pet Name</label>
-        <input type="text" class="form-control" id="validationDefault01" required="required"/>
+        <asp:TextBox runat="server" type="text" class="form-control" id="petName" required="required"/>
       </div>
 
       <div class="col-md-4">
         <label for="validationDefault02" class="form-label">Species</label>
-        <input type="text" class="form-control" id="validationDefault02" required="required"/>
+        <asp:TextBox runat="server" type="text" class="form-control" id="species" required="required"/>
       </div>
 
       <div class="col-md-3">
         <label for="validationDefault05" class="form-label">Date Of Birth</label>
-        <input type="date" class="form-control" id="validationDefault05" required="required"/>
+        <input runat="server" type="date" class="form-control" id="dateOfBirth" required="required"/>
       </div>
 
       <div class="col-12">
-        <button class="btn btn-primary" type="submit">Add Pet Details</button>
+        <asp:Button runat="server" id="btnAdd" class="btn btn-primary" Text="Add Pet Details" type="submit"/>
       </div>
     </form>
   </div>

@@ -4,8 +4,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta charset="UTF-8">
-    <title>Frequently Asked Questions</title>
+    <title>PetPals | Frequently Asked Questions</title>
+
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="icon" type="image/jpg" href="favicon_index/favicon_index.ico"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+
 
     <link rel="icon" type="favicon_index" href="favicon_index/favicon_index.ico"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -16,55 +21,231 @@
 
     <style type="text/css">
         :root {
-            --nav_background : #333333;
-            --nav-btn-bg-color: #4f4b4b;
-            --off-white: #f3f3f3;
-          
-            --nav-height : 70px;
-            --tab-height: 450px;
+            /* background */
+            --bg-off : #f3f3f3;
+            --bg-black: #25252a;
+            --bg-tint: #787878;
 
-            --btn-BG-off-white: #f2f2f2;
-            --btn-FR-white: #fff;
-            --btn-FR-black: #000;
-            --manamela-color: #ac5252;
+            /* front */
+            --fr-white: #ffffff;
+
+            /* texts */
+            --txt-black: #1a1a1a;
+            --txt-hover: rgb(219 135 98 / 0.70);
+            --txt-white: #fff;
+            --txt-hover-dark: #657283;
+
+            /* sizes */
+            --sz-top-header: 25px;
+            --sz-hero: 400px;
         }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
+        *{
             margin: 0;
-            width: 100%;
-            background-color: #eaeaea;
-        
+            padding: 0;
         }
+
+        body{
+            background-color: var(--bg-off);
+            width: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: none;
+        }
+
+        .main-body{
+            width: 80%;
+            margin: 0px 10%;
+        }
+
+         /* top header */
+        .top-header {
+            height: var(--sz-top-header);
+            width: 100%;
+            display:flex;
+            align-items: center;
+            font-size: 10px;
+            background-color: var(--bg-black);
+            color: var(--txt-white);
+        }
+
+        .top-header p{
+            color: var(--txt-white);
+            margin: 0px 20px;
+            width: auto;
+            font-weight: bold;
+        }
+
+        .top-header .contact-header{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+        }
+
         
-        <!--Super links-->
-        a{
+        /* main nav */
+        header{
+            height: auto;
+            width: 100%;
+            background-color: var(--bg-black);
+            color: var(--txt-white);
+        }
+
+        header #id-logo-link{
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        header #id-logo-link:hover{
+            color: var(--txt-hover);
+        }
+
+        header #id-logo-link i{
+            height: 30px;
+            width: 30px;
+            margin: 0px 10px;
+            font-size: 30px;
+            color: var(--txt-white);
+        }
+
+        header .nav-link{
+            height: 40px;
+            width: auto;
+            margin: 0px 40px;
+            border-radius: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 70px;
-            background-color: #4b4b5c;
         }
-        /**
-        @keyframes scroll {
-            0% {
-            transform: translateX(-5);
-            }
-            100% {
-            transform: translateX(-100%); 
-            }
-        }*/
 
+         header #link_signin:hover{
+            color: var(--txt-white);
+            background-color: var(--txt-hover-dark);
+        }
+
+        header #id-logo-link h1{
+            height: 30px;
+            font-size: 25px;
+            width: auto;
+            color: var(--txt-white);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header #id-nav-links{
+            margin: 0px 20px;
+            color: var(--txt-white);
+        }
+
+        header #id-nav-links a{
+            margin: 0px 20px;
+            color: var(--txt-white);
+        }
+
+        .main-nav a:hover{
+            color: #fb6376;
+        }
+
+        #selected{color: #5762D5}
+
+        /*the main div container*/
+        .class-sign-up{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .class-sign-up #form
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height:auto;
+            width: 600px;
+        }
+
+        .class-sign-up #form .fields{
+            justify-content: center;
+            font-size: 16px;
+            height: 40px;
+            width: 100%;
+            padding: 0px 10px;
+            border-radius: 50px;
+            border: none;
+            text-align:center;
+        }
+
+        .fields:focus{
+            border: solid 1px #57d596;
+        }
+
+        #id-checkbox{
+            font-size: 16px;
+        }
+
+        .class-sign-up #id-box-container form #id-checkbox{
+            width:70%;
+            height: auto;
+        }
+
+        .class-sign-up #id-box-container form .btn-sign-up{
+            height: auto;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-group{
+            margin: 10px 0px;
+            width: 300px;
+        }
+
+        label{
+            font-size: 21px;
+            padding: 5px;
+        }
+
+        #form a{
+            color: #5762D5;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        #btnSubmit{
+            width: 200px;
+            height: 55px;
+            background-color: #5762D5;
+            border: none;
+            border-radius: 40px;
+            color: white;
+            padding: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /*The hover link */
+        #btnSubmit:hover{
+            background-color: #4751c0;
+            cursor: pointer;
+        }
 
         .footer{
             padding: 20px;
-            background-color: var(--nav_background);
+            background-color: var(--bg-black);
             height: 180px;
             width: auto;
-            color: #fff;
+            color: var(--fr-white);
             text-align: center;
             font-weight: bold;
-            margin-top: 161px;
         }
 
         .image-container {
@@ -75,7 +256,6 @@
         img{
             float: left;
             margin-right: 10px;
-            height: 30px;
         }
 
         .footer p {
@@ -92,9 +272,9 @@
         .logo-icon{
             height: 50px;
             width: auto;
-            margin: 2.5px 25px;
-            display: flex;
-            justify-content: center;
+            margin:5px;
+            display: block;
+            vertical-align: central;
         }
 
         .logo-icon img{
@@ -106,80 +286,27 @@
         .logo-icon #logo-name{
             color: white;
             width: 200px;
-            display: flex;
-            margin: 0px 10px;
-        }
-
-        .logo-icon #logo-name h1{
-            margin: 15px 0px;
-            display: table-cell;
-            vertical-align: middle;
-        }
-
-        /* the navigation menu starts here */
-        header{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            /*box-shadow: 0px 10px 25px #000000;*/
-            height: var(--nav-height);
-            background-color: var(--nav_background);
-        }
-
-        .main-nav{
-            display: flex;
-            padding: 10px;
-            column-gap: 80px;
-            padding: 20px;
-            margin: auto;
-        }
-
-        .nav-menu{
-            display: flex;
-            height: var(--nav-height);
-        }
-
-        .main-nav a{
-            text-decoration: none;
-            font-size: 20px;
-            color: white;
-            font-family: Arial, Arial, Helvetica, sans-serif;
-        }
-
-        .main-nav a:hover{
-            color: #e23b3b;
-        }
-
-        #selected{color: #fa8282;}
-
-        .nav-menu .signup-signin-nav{
-            height: var(--nav-height ) ;
-            width:auto;
-            padding: 0px 20px;
-            margin: 0px 20px;
-            display: flex;
-        }
-
-        .nav-menu .signup-signin-nav #id-sign-up{
-            color: #fff;
-            margin: auto;
-            background-color: var(--nav-btn-bg-color);
-            height: calc(var(--nav-height) - 30px);
-            width: 100px;
-            text-decoration: none;
+            margin-left: 3px;
+            margin-right: 3px;
             text-align: center;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
-        .nav-menu .signup-signin-nav #id-sign-up:hover{
-            color: var(--nav-btn-bg-color);
-            background-color: #fff;
+        .auto-style1 {
+            height: 86px;
+            font-size: x-large;
         }
-        *
-        {
+        .auto-style2 {
+            height: 22px;
+        }
+        .auto-style3 {
+            height: 22px;
+            width: 414px;
+        }
+        .auto-style4 {
+            width: 414px;
+        }
+
+        *{
             padding:0;
             margin: 0;
             box-sizing: border-box;
@@ -436,27 +563,40 @@
     </style>
 </head>
 <body>
-   <header class="header-menu">
-        <div class="logo-icon">
-            <img src="icons8-pet-100.png" width="120" alt="Pet-Pals Logo"/>
-            <div id="logo-name">
+   <div class="top-header">
+        <div class="main-body">
+            <div class="contact-header">
+                <p> Contact Details </p>
+                <p>Call : 012 232 3243</p>
+                <p>Email : info@petpals.com</p>
+            </div>
+        </div>
+    </div>
+     <header>
+        <div class="main-body">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" id="id-logo-link" href="default.aspx">
+                <i class='bx bxs-dog'></i>
                 <h1 >Pet Pals</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"><i class='bx bx-menu-alt-right' ></i></span>
+            </button>
+              
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav" id="id-nav-links">
+                  <asp:HyperLink ID="link_signin" CssClass="nav-link" runat="server" NavigateUrl="~/signin.aspx" Visible="False">Sign In</asp:HyperLink>
+                <a class="nav-link" href="faq.aspx">FAQs</a>
+                <a class="nav-link" href="contact.aspx">Contact</a>
+                <a class="nav-link" href="about.aspx"">About Us</a>
+              </div>
             </div>
+          </div>
+        </nav>
         </div>
-
-        <div class="nav-menu">
-            <nav class="main-nav">
-                <a href="default.aspx">Home </a>
-                <a href="about.aspx"> About </a>
-                <a href="faq.aspx" id ="selected"> FAQs </a>
-               <a href="contact.aspx"> Contact Us</a>
-            </nav>
-            <div class="signup-signin-nav">
-                <a id="id-sign-up" href="signup.aspx"> Sign Up </a>
-            </div>
-        </div>
-
     </header>
+
 
     <div class="FAQactive">
         <div class="logo-icon">

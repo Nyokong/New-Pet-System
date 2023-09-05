@@ -15,7 +15,7 @@
         :root {
             /* background */
             --bg-off : #f3f3f3;
-            --bg-black: #434e5c;
+            --bg-black: #25252a;
             --bg-tint: #787878;
 
             /* front */
@@ -38,21 +38,40 @@
         }
 
         body{
-            font-family: Arial, sans-serif;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            font-size: 14px;
-
+            background-color: var(--bg-off);
+            width: auto;
+            scroll-behavior: smooth;
+            scroll-snap-type: none;
         }
 
         .main-body{
             width: 80%;
-            /*display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;*/
             margin: 0px 10%;
+        }
+
+         /* top header */
+        .top-header {
+            height: var(--sz-top-header);
+            width: 100%;
+            display:flex;
+            align-items: center;
+            font-size: 10px;
+            background-color: var(--bg-black);
+            color: var(--txt-white);
+        }
+
+        .top-header p{
+            color: var(--txt-white);
+            margin: 0px 20px;
+            width: auto;
+            font-weight: bold;
+        }
+
+        .top-header .contact-header{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
         }
 
         
@@ -126,55 +145,30 @@
 
         /*the main div container*/
         .class-sign-up{
-            display:flex;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
             height: auto;
-            width: auto;
+            width: 100%;
+            margin-top: 20px;
         }
 
-        .class-sign-up #id-box-container{
-            height: 100%;
-        }
-
-        .class-sign-up #id-box-container #id-signup-icon
+        .class-sign-up #form
         {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            height:100px;
-            width: auto;
-            margin: 20px 0px 0px 0px;
+            height:auto;
+            width: 600px;
         }
 
-        .class-sign-up #id-box-container #id-signup-icon img{
-            height: 40px;
-            width: 40px;
-        }
-
-        .class-sign-up #id-box-container #id-signup-icon h1{
-            margin: 0px;
-        }
-
-        .class-sign-up #id-box-container form{
-            width: 500px;
-            background-color: var(--BG-sign-up);
-            border-radius: 0px;
-            color: #fff;
-            padding: 25px;
-            margin: 0px;
-            display: flex;
-            flex-direction:column;
-            justify-content:  center;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .class-sign-up #id-box-container form .fields{
+        .class-sign-up #form .fields{
             justify-content: center;
             font-size: 16px;
             height: 40px;
-            width: 80%;
+            width: 100%;
             padding: 0px 10px;
             border-radius: 50px;
             border: none;
@@ -202,23 +196,28 @@
             align-items: center;
         }
 
+        .form-group{
+            margin: 10px 0px;
+            width: 300px;
+        }
+
         label{
             font-size: 21px;
             padding: 5px;
         }
 
-        form a{
+        #form a{
             color: #5762D5;
             text-decoration: none;
             font-size: 18px;
         }
 
         #btnSubmit{
-            width: 70%;
+            width: 200px;
             height: 55px;
             background-color: #5762D5;
             border: none;
-            border-radius: 10px;
+            border-radius: 40px;
             color: white;
             padding: 10px 0;
             font-size: 16px;
@@ -233,10 +232,10 @@
 
         .footer{
             padding: 20px;
-            background-color: var(--nav_background);
+            background-color: var(--bg-black);
             height: 180px;
             width: auto;
-            color: #fff;
+            color: var(--fr-white);
             text-align: center;
             font-weight: bold;
         }
@@ -302,6 +301,15 @@
     </style>
 </head>
 <body>
+    <div class="top-header">
+        <div class="main-body">
+            <div class="contact-header">
+                <p> Contact Details </p>
+                <p>Call : 012 232 3243</p>
+                <p>Email : info@petpals.com</p>
+            </div>
+        </div>
+    </div>
      <header>
         <div class="main-body">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -316,7 +324,7 @@
               
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav" id="id-nav-links">
-                <asp:HyperLink ID="link_signin" CssClass="nav-link" runat="server" NavigateUrl="~/signin.aspx">Sign in</asp:HyperLink>
+                  <asp:HyperLink ID="link_signup" CssClass="nav-link" runat="server" NavigateUrl="~/signup.aspx">Sign Up</asp:HyperLink>
                 <a class="nav-link" href="faq.aspx">FAQs</a>
                 <a class="nav-link" href="contact.aspx">Contact</a>
                 <a class="nav-link" href="about.aspx"">About Us</a>
@@ -328,52 +336,31 @@
     </header>
     
     <div class="class-sign-up">
-        <div id="id-box-container">
+        <asp:Label ID="lbl_conf" CssClass="alert alert-primary" runat="server" Text="[confirmation]" role="alert" Visible="False"></asp:Label>
+        <form id="form" runat="server" class="mb-3 row">
             <div id="id-signup-icon">
-                 <img src="favicon_client/favicon.ico" alt="profile-image"/>
-                 <h1> Sign In </h1>
+                <h1> Sign In </h1>
             </div>
-            <form id="form" runat="server">
-
-                <label for="email"> Email: </label><br/>
-                <asp:TextBox runat="server" class="fields" type="email" ID="txt_email" required="required" placeholder="Email: "/><br/>
-                <asp:Label ID="lbl_conf" runat="server" Text="[confirmation]"></asp:Label>
-                <label for="pass"> Password: </label><br/>
-                <asp:TextBox runat="server" class="fields" type="password" ID="txt_pass" required="required" placeholder="Password: "/><br/><br/>
-
-                <label style="font-size: 16px;" for="signup"> Don't have an account ? Click <a href="signup.aspx"> here </a> to register an account. </label><br/>
-                <br/>
+            <div class="form-group">
+                <label for="txt_email"> Email: </label><br/>
+                <asp:TextBox runat="server" class="fields form-control" type="email" ID="txt_email" required="required" placeholder="Email: "/>
                 
-                <div class="btn-sign-up">
-                    <asp:Button runat="server" ID="btnSubmit" CssClass="btn-sign-up" text="Sign In" type="submit" OnClick="LoginButton_Click"/>  
-                </div>
-                <div id="id-remember">
-                    <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time" />
-                </div>
-            
-            </form>
-        </div>    
-    </div>
-
-    <div id="loginSuccessModal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Login Successful</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Welcome, you have successfully logged in!</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                </div>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="txt_pass"> Password: </label><br/>
+                <asp:TextBox runat="server" class="fields form-control" type="password" ID="txt_pass" required="required" placeholder="Password: "/>
+            </div>
+            <div class="form-group">
+                <label style="font-size: 16px;" for="btnSubmit"> Don't have an account ? Click <a href="signup.aspx"> here </a> to register an account. </label>
+            </div>
+             <div id="id-remember">
+                <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time" />
+            </div>
+            <div class="btn-sign-up">
+                <asp:Button runat="server" ID="btnSubmit" CssClass="btn-sign-up" text="Sign In" type="submit" OnClick="LoginButton_Click"/>  
+            </div>
+        </form>
     </div>
-
 
     <footer class="footer">
         <h4> © 2023 Pet-Pals Animal Clinic | All Rights Reserved | Privacy Policy | Cookie Policy | Terms & Conditions </h4>

@@ -17,14 +17,16 @@ namespace New_Pet_System
         public SqlDataAdapter adapter;
         public SqlDataReader dataRead;
         string firstname, lastname, email, password, phone;
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if(Session["UserID"] !=null)
+            if (Session["UserID"] != null)
             {
                 Response.Redirect("default.aspx");
             }
+
+            // user must agree to terms and conditions
             btnSubmit.Enabled = false;
         }
 
@@ -45,10 +47,9 @@ namespace New_Pet_System
 
         protected void cbbAgree_CheckedChanged1(object sender, EventArgs e)
         {
-            btnSubmit.Enabled= cbbAgree.Checked;
+            btnSubmit.Enabled = cbbAgree.Checked;
         }
 
-       
         protected void Email_TextChanged(object sender, EventArgs e)
         {
 
@@ -58,9 +59,6 @@ namespace New_Pet_System
         {
 
         }
-
-        
-       
 
         protected void Signup_Click(object sender, EventArgs e)
         {
@@ -88,9 +86,26 @@ namespace New_Pet_System
             userCookie.Expires = DateTime.Now.AddHours(1);
             Response.Cookies.Add(userCookie);
             Response.Redirect("default.aspx");
+        }
 
-           
+        // authenticate user
+        private bool AuthenticateUser(string email, string password)
+        {
+            conn.Open();
+
+            string query = "SELECT COUNT(*) FROM Users WHERE Email = @Email AND Password = @Password";
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("@Email", email);
+            command.Parameters.AddWithValue("@Password", password);
+            int count = Convert.ToInt32(command.ExecuteScalar());
+
+
+            // close the connection
+            conn.Close();
+
+            // if the user is available return true;
+            return count > 0;
+
         }
     }
 }
-

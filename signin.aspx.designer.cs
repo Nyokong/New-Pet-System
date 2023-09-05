@@ -15,13 +15,22 @@ namespace New_Pet_System
     {
 
         /// <summary>
-        /// link_signin control.
+        /// link_signup control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink link_signin;
+        protected global::System.Web.UI.WebControls.HyperLink link_signup;
+
+        /// <summary>
+        /// lbl_conf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_conf;
 
         /// <summary>
         /// form control.
@@ -42,15 +51,6 @@ namespace New_Pet_System
         protected global::System.Web.UI.WebControls.TextBox txt_email;
 
         /// <summary>
-        /// lbl_conf control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_conf;
-
-        /// <summary>
         /// txt_pass control.
         /// </summary>
         /// <remarks>
@@ -60,15 +60,6 @@ namespace New_Pet_System
         protected global::System.Web.UI.WebControls.TextBox txt_pass;
 
         /// <summary>
-        /// btnSubmit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
-
-        /// <summary>
         /// RememberMe control.
         /// </summary>
         /// <remarks>
@@ -76,5 +67,14 @@ namespace New_Pet_System
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox RememberMe;
+
+        /// <summary>
+        /// btnSubmit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
     }
 }

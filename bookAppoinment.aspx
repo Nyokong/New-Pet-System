@@ -287,7 +287,12 @@
 
                     <div class="bf-col-6">
                         <p> Choose Doctor </p>
-                        <asp:TextBox runat="server" CssClass="bf-col-6" type="text" required="required" name="doc" id="doc"/>
+                       <select id="selectDoctor" name="selectDoctor">
+                            <option value="Dr Tshego Smith">Dr Tshego Smith</option>
+                            <option value="Dr Jameson Anderson">Dr Jameson Anderson</option>
+                            <option value="Dr Micheal Lee"> Dr Micheal Lee</option>
+                            
+                        </select>
                     </div>
 
                 </div>
@@ -296,12 +301,12 @@
 
                     <div class="bf-col-6">
                         <p> Select Date: </p>
-                        <input type="date" name="date" required="required" id="date" />
+                        <input type="date" name="date" required="required" id="dateSelected" runat="server"/>
                     </div>
 
                     <div class="bf-col-6">
                         <p> Choose the time: </p>
-                        <input type="time" name="time" required="required" id="time" />
+                        <input type="time" name="time" required="required" id="timeSelected" runat="server" />
                     </div>
 
                 </div>
@@ -310,9 +315,9 @@
 
                     <div class="bf-col-6">
                         <p> Description: </p>
-                        <textarea rows="5" cols="59" required="required" placeholder="Your Description"></textarea>
+                        <textarea rows="5" cols="59" required="required" placeholder="Your Description" id="textArea"  runat="server"></textarea>
                     </div>
-
+                    
                 </div>
 
                 <div class="bf-row">

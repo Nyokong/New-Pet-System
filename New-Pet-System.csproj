@@ -75,11 +75,9 @@
       <BrowseToURL>/customerProfile.aspx</BrowseToURL>
     </Content>
     <Content Include="customerSettings.aspx" />
-
     <Content Include="default.aspx">
-      <BrowseToURL>default.aspx</BrowseToURL>
+      <BrowseToURL>/default.aspx</BrowseToURL>
     </Content>
-
     <Content Include="display3.jpg" />
     <Content Include="App_Data\NewPetPals-Data.mdf" />
     <Content Include="App_Data\NewPetPals-Data.mdf_log.ldf">

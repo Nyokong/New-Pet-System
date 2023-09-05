@@ -618,27 +618,30 @@
         <div class="card" style="width: 18rem;">
           <i class='bx bx-medal' ></i>
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Wellness Examination</h5>
+            <p class="card-text">Our experienced veterinarians perform thorough physical examinations on your pets during wellness visits. 
+                These check-ups help us monitor your pet's overall health.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
           </div>
         </div>
 
         <div class="card" style="width: 18rem;">
           <i class='bx bx-plus-medical' ></i>
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Surgery</h5>
+            <p class="card-text">Our skilled veterinarians perform a wide range of surgical procedures, from routine spaying and neutering to 
+                complex soft tissue and orthopedic surgeries</p>
+            <a href="#" class="btn btn-primary">Read More</a>
           </div>
         </div>
 
         <div class="card" style="width: 18rem;">
           <i class='bx bxs-capsule' ></i>
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">Medication</h5>
+            <p class="card-text">Our experienced veterinarians are dedicated to ensuring your pet's health and well-being. 
+                We offer a range of medication services to address various medical conditions:</p>
+            <a href="#" class="btn btn-primary">Read More</a>
           </div>
         </div>
     </div>
@@ -703,16 +706,18 @@
             <div class="card">
               <img src="id_photo.jpg" alt="Avatar"/>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="card-title">Rose Haaland</h5>
+                <p class="card-text">I can't thank the team at Pet-Pals enough! When my dog, Max, had an unexpected emergency, 
+                    they were there 24/7, ready to help. The care and attention they provided during a stressful time were truly remarkable</p>
               </div>
             </div>
 
             <div class="card">
               <img src="id_photo2.jpg" alt="Avatar"/>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="card-title">Dean Musk</h5>
+                <p class="card-text">At Pet-Pals, they go above and beyond for your pets. From routine check-ups to surgeries, they've 
+                    always been professional, caring, and compassionate.</p>
               </div>
             </div>
         </div>

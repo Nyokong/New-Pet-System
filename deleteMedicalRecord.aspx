@@ -84,8 +84,8 @@
 <div class="form-container">
     <form class="customer-form1" runat="server">
       <div class="form-group">
-        <label for="emailAddress">Email Address:</label>
-        <asp:TextBox runat="server" type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp" placeholder="Enter Email Address"/>
+        <label for="emailAddress">Pet Name</label>
+        <asp:TextBox runat="server" type="text" class="form-control" id="petName" aria-describedby="emailHelp" placeholder="Enter Pet Name"/>
       </div>
       <div class="form-group form-check">
         <asp:CheckBox runat="server" class="form-check-label" text="Confirm you want to delete the medical record." for="exampleCheck1" ID="cbxCheck"/>

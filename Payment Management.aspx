@@ -269,7 +269,7 @@
                 <a href="client_management.aspx"><li><i class="fas fa-users"></i>&nbsp; <span> Client</span></li></a>
                 <a href="medical_record_admin.aspx"><li><i class="fas fa-file-medical"></i>&nbsp; <span> Medical Record</span></li></a>
                 <a href="main.aspx"><li><i class="far fa-file-alt"></i>&nbsp; <span> Report</span></li></a>
-                <a href="PaymentManagement.aspx"><li><i class="fas fa-hand-holding-usd"></i>&nbsp; <span> Payments</span></li></a> 
+                <a href="Payment Management.aspx"><li><i class="fas fa-hand-holding-usd"></i>&nbsp; <span> Payments</span></li></a> 
                 <a href="default.aspx" ><li><i class='fas fa-sign-out-alt'></i>&nbsp; <span> Logout</span></li></a> 
             </ul>
 
